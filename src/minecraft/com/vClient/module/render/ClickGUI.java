@@ -1,0 +1,33 @@
+package com.vClient.module.render;
+
+import com.vClient.module.Category;
+import com.vClient.module.Module;
+import com.vClient.vClient;
+import de.Hero.settings.Setting;
+import org.lwjgl.input.Keyboard;
+
+import java.util.ArrayList;
+
+public class ClickGUI extends Module {
+    public ClickGUI() {
+        super("ClickGUI", Keyboard.KEY_RSHIFT, Category.RENDER);
+    }
+    @Override
+    public void setup() {
+        ArrayList<String> options = new ArrayList<>();
+        options.add("New");
+        options.add("JellyLike");
+        vClient.instance.settingsManager.rSetting(new Setting("Design", this, "New", options));
+        vClient.instance.settingsManager.rSetting(new Setting("Sound", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("GuiRed", this, 100, 0, 255, true));
+        vClient.instance.settingsManager.rSetting(new Setting("GuiGreen", this, 145, 0, 255, true));
+        vClient.instance.settingsManager.rSetting(new Setting("GuiBlue", this, 255, 0, 255, true));
+    }
+    @Override
+    public void onEnable() {
+        mc.displayGuiScreen(vClient.instance.clickGui);
+        toggle();
+        super.onEnable();
+    }
+
+}

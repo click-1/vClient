@@ -1,0 +1,58 @@
+[23:08:47] [Client thread/INFO]: Setting user: Player658
+[23:08:47] [Client thread/INFO]: (Session ID is token:0:Player658)
+[23:08:48] [Client thread/INFO]: LWJGL Version: 2.9.4
+[23:08:49] [Client thread/INFO]: Reloading ResourceManager: Default
+[23:08:49] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[23:08:49] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[23:08:49] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:08:50] [Thread-6/INFO]: OpenAL initialized.
+[23:08:50] [Sound Library Loader/INFO]: Sound engine started
+[23:08:57] [Client thread/INFO]: Created: 512x512 textures-atlas
+[23:09:08] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[23:09:08] [Server thread/INFO]: Generating keypair
+[23:09:08] [Server thread/INFO]: Preparing start region for level 0
+[23:09:08] [Server thread/INFO]: Changing view distance to 5, from 10
+[23:09:09] [Server thread/INFO]: Player658[local:E:c279085b] logged in with entity id 116 at (599.329509390868, 73.0, 339.43642540991465)
+[23:09:09] [Server thread/INFO]: Player658 joined the game
+[23:09:09] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[23:09:11] [Server thread/INFO]: Saving and pausing game...
+[23:09:11] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:09:11] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:09:11] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:09:50] [Server thread/INFO]: Saving and pausing game...
+[23:09:50] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:09:51] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:09:51] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:10:26] [Server thread/INFO]: Saving and pausing game...
+[23:10:26] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:10:26] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:10:26] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:10:37] [Server thread/INFO]: Saving and pausing game...
+[23:10:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:10:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:10:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:10:42] [Server thread/INFO]: Saving and pausing game...
+[23:10:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:10:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:10:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:11:24] [Server thread/INFO]: Saving and pausing game...
+[23:11:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:11:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:11:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:11:47] [Server thread/INFO]: Saving and pausing game...
+[23:11:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:11:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:11:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:11:57] [Server thread/INFO]: Saving and pausing game...
+[23:11:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:11:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:11:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:11:58] [Server thread/INFO]: Stopping server
+[23:11:58] [Server thread/INFO]: Saving players
+[23:11:58] [Server thread/INFO]: Saving worlds
+[23:11:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:11:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:11:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:11:58] [Client thread/INFO]: Stopping!
+[23:11:58] [Client thread/INFO]: SoundSystem shutting down...
+[23:11:59] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
