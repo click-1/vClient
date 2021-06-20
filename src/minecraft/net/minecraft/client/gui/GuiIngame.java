@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Random;
 
 import com.vClient.event.events.Event2D;
+import com.vClient.vClient;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
@@ -348,6 +349,8 @@ public class GuiIngame extends Gui
             this.overlayPlayerList.updatePlayerList(true);
             this.overlayPlayerList.renderPlayerlist(i, scoreboard, scoreobjective1);
         }
+
+        vClient.instance.hud.draw();
 
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.disableLighting();

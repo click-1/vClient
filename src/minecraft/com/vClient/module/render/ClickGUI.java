@@ -16,9 +16,10 @@ public class ClickGUI extends Module {
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
         options.add("New");
-        options.add("JellyLike");
+        options.add("Jelly");
         vClient.instance.settingsManager.rSetting(new Setting("Design", this, "New", options));
-        vClient.instance.settingsManager.rSetting(new Setting("Sound", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Sound", this, true));
+        vClient.instance.settingsManager.rSetting(new Setting("display tails", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("GuiRed", this, 100, 0, 255, true));
         vClient.instance.settingsManager.rSetting(new Setting("GuiGreen", this, 145, 0, 255, true));
         vClient.instance.settingsManager.rSetting(new Setting("GuiBlue", this, 255, 0, 255, true));

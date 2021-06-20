@@ -4,6 +4,7 @@ import com.vClient.event.EventManager;
 import com.vClient.event.EventTarget;
 import com.vClient.event.events.EventKey;
 import com.vClient.module.ModuleManager;
+import com.vClient.ui.HUD;
 import de.Hero.clickgui.ClickGUI;
 import de.Hero.settings.SettingsManager;
 import org.lwjgl.opengl.Display;
@@ -14,14 +15,15 @@ public class vClient {
     public SettingsManager settingsManager;
     public EventManager eventManager;
     public ModuleManager moduleManager;
+    public HUD hud;
     public ClickGUI clickGui;
 
     public void startClient() {
         settingsManager = new SettingsManager();
         eventManager = new EventManager();
         moduleManager = new ModuleManager();
+        hud = new HUD();
         clickGui = new ClickGUI();
-
         System.out.println("["+name+"] Starting client, b"+version+", created by "+creator);
         Display.setTitle(name + " b"+version);
         eventManager.register(this);
