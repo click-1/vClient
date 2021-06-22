@@ -52,7 +52,7 @@ public class ClickGUI extends GuiScreen {
 	 */
 	public ClickGUI() {
 		setmgr = vClient.instance.settingsManager;
-		
+		allowUserInput = true;
 		FontUtil.setupFontUtils();
 		panels = new ArrayList<>();
 		double pwidth = 80;
@@ -108,6 +108,7 @@ public class ClickGUI extends GuiScreen {
 		 */
 		for (Panel p : panels) {
 			p.drawScreen(mouseX, mouseY, partialTicks);
+
 		}
 
 		
@@ -156,6 +157,7 @@ public class ClickGUI extends GuiScreen {
 								Gui.drawRect(e.x, e.y, e.x + e.width + 2, e.y + e.height, outlineColor);
 							}
 							e.drawScreen(mouseX, mouseY, partialTicks);
+
 							off += e.height;
 						}
 					}
@@ -187,6 +189,7 @@ public class ClickGUI extends GuiScreen {
 		 * gerendert werden
 		 */
 		super.drawScreen(mouseX, mouseY, partialTicks);
+
 	}
 
 	@Override
@@ -317,8 +320,9 @@ public class ClickGUI extends GuiScreen {
 			if (mc.entityRenderer.theShaderGroup != null) {
 				mc.entityRenderer.theShaderGroup.deleteShaderGroup();
 			}
-			mc.entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
+			//mc.entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
 		}
+
 	}
 
 	@Override

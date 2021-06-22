@@ -19,7 +19,8 @@ public class HUD {
                 fr.getStringWidth(((Module) m).getName())).reversed());
 
         int count = 0;
-        boolean tails = vClient.instance.settingsManager.getSettingByName("display tails").getValBoolean();
+        boolean tails = vClient.instance.settingsManager.getSettingByName("tails").getValBoolean();
+        boolean boxes = vClient.instance.settingsManager.getSettingByName("boxes").getValBoolean();
         /**
          * match tail color with ClickGUI RGB. default orange
          * int r = (int) vClient.instance.settingsManager.getSettingByName("guired").getValDouble();
@@ -32,7 +33,8 @@ public class HUD {
             if (!m.isToggled())
                 continue;
             double offset = count * (fr.FONT_HEIGHT + 6);
-            Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(m.getName()) - 8, offset, sr.getScaledWidth(), 6 + fr.FONT_HEIGHT + offset, 0x90000000);
+            if (boxes)
+                Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(m.getName()) - 8, offset, sr.getScaledWidth(), 6 + fr.FONT_HEIGHT + offset, 0x90000000);
             if (tails)
                 Gui.drawRect(sr.getScaledWidth() - fr.getStringWidth(m.getName()) - 10, offset, sr.getScaledWidth() - fr.getStringWidth(m.getName()) - 8, 6 + fr.FONT_HEIGHT + offset, 0xffff7000);
             fr.drawString(m.getName(), sr.getScaledWidth() - fr.getStringWidth(m.getName()) - 4, 4 + offset, -1);

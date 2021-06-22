@@ -4,6 +4,7 @@ import de.Hero.clickgui.ClickGUI;
 import de.Hero.clickgui.elements.menu.ElementComboBox;
 import de.Hero.clickgui.util.FontUtil;
 import de.Hero.settings.Setting;
+import net.minecraft.client.gui.GuiScreen;
 
 /**
  *  Made by HeroCode
@@ -41,7 +42,7 @@ public class Element {
 		height = 15;
 		
 		/*
-		 * Title der Box bestimmen und falls nötig die Breite der CheckBox
+		 * Title der Box bestimmen und falls nï¿½tig die Breite der CheckBox
 		 * erweitern
 		 */
 		String sname = set.getName();

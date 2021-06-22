@@ -9,6 +9,7 @@ import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 
+import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.input.Keyboard;
 
 import de.Hero.clickgui.Panel;

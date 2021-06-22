@@ -25,7 +25,7 @@ public class Antibot extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Antibot Mode", this, "Advanced", options));
     }
     @EventTarget
-    public void onReceivePacket(EventReceivePacket event) {
+    public void onEventReceivePacket(EventReceivePacket event) {
         String mode = vClient.instance.settingsManager.getSettingByName("Antibot Mode").getValString();
         if (mode.equalsIgnoreCase("Advanced") && event.getPacket() instanceof S0CPacketSpawnPlayer) {
             S0CPacketSpawnPlayer packet = (S0CPacketSpawnPlayer) event.getPacket();

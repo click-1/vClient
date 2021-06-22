@@ -13,6 +13,6 @@ import com.vClient.vClient;
 public class ColorUtil {
 	
 	public static Color getClickGUIColor(){
-		return new Color((int) vClient.instance.settingsManager.getSettingByName("GuiRed").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("GuiGreen").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("GuiBlue").getValDouble());
+		return new Color((int) vClient.instance.settingsManager.getSettingByName("Red").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Green").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Blue").getValDouble());
 	}
 }

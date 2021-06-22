@@ -16,13 +16,14 @@ public class ClickGUI extends Module {
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
         options.add("New");
-        options.add("Jelly");
+        options.add("JellyLike");
         vClient.instance.settingsManager.rSetting(new Setting("Design", this, "New", options));
         vClient.instance.settingsManager.rSetting(new Setting("Sound", this, true));
-        vClient.instance.settingsManager.rSetting(new Setting("display tails", this, true));
-        vClient.instance.settingsManager.rSetting(new Setting("GuiRed", this, 100, 0, 255, true));
-        vClient.instance.settingsManager.rSetting(new Setting("GuiGreen", this, 145, 0, 255, true));
-        vClient.instance.settingsManager.rSetting(new Setting("GuiBlue", this, 255, 0, 255, true));
+        vClient.instance.settingsManager.rSetting(new Setting("tails", this, true));
+        vClient.instance.settingsManager.rSetting(new Setting("boxes", this, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Red", this, 100, 0, 255, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Green", this, 145, 0, 255, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Blue", this, 255, 0, 255, true));
     }
     @Override
     public void onEnable() {
@@ -30,5 +31,4 @@ public class ClickGUI extends Module {
         toggle();
         super.onEnable();
     }
-
 }
