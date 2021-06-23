@@ -8,6 +8,7 @@ import net.minecraft.client.gui.Gui;
 import de.Hero.clickgui.elements.ModuleButton;
 import de.Hero.clickgui.util.ColorUtil;
 import de.Hero.clickgui.util.FontUtil;
+import net.minecraft.client.gui.GuiScreen;
 
 /**
  *  Made by HeroCode
@@ -16,7 +17,7 @@ import de.Hero.clickgui.util.FontUtil;
  *
  *  @author HeroCode
  */
-public class Panel {
+public class Panel extends GuiScreen {
 	public String title;
 	public double x;
 	public double y;
@@ -43,6 +44,7 @@ public class Panel {
 		this.dragging = false;
 		this.visible = true;
 		this.clickgui = parent;
+		allowUserInput = true;
 		setup();
 	}
 
@@ -99,7 +101,7 @@ public class Panel {
 	 * Zum Bewegen und Extenden des Panels
 	 * usw.
 	 */
-	public boolean mouseClicked(int mouseX, int mouseY, int mouseButton) {
+	public boolean mouseClicked(int mouseX, int mouseY, int mouseButton, int dummy) {
 		if (!this.visible) {
 			return false;
 		}

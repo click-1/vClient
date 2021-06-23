@@ -230,7 +230,7 @@ public class ClickGUI extends GuiScreen {
 		 * und Panels 'gegriffen' werden knnen
 		 */
 		for (Panel p : rpanels) {
-			if (p.mouseClicked(mouseX, mouseY, mouseButton))
+			if (p.mouseClicked(mouseX, mouseY, mouseButton, 5))
 				return;
 		}
 		
