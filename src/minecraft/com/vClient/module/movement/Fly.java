@@ -12,7 +12,6 @@ import org.lwjgl.input.Keyboard;
 import java.util.ArrayList;
 
 public class Fly extends Module {
-    private String mode = vClient.instance.settingsManager.getSettingByName("Fly Mode").getValString();
     public Fly() {
         super("Fly", Keyboard.CHAR_NONE, Category.MOVEMENT);
     }
@@ -25,8 +24,10 @@ public class Fly extends Module {
     }
     @EventTarget
     public void onUpdate(EventUpdate event) {
+        String mode = vClient.instance.settingsManager.getSettingByName("Fly Mode").getValString();
         this.setDisplayName("Fly + " + mode);
         if (mode.equalsIgnoreCase("Hypixel")) {
+            mc.thePlayer.capabilities.isFlying = false;
             double y, y1;
             mc.thePlayer.motionY = 0;
             if (mc.thePlayer.ticksExisted % 3 == 0) {
@@ -43,8 +44,6 @@ public class Fly extends Module {
     @Override
     public void onDisable() {
         super.onDisable();
-        if (mode.equalsIgnoreCase("Vanilla")) {
-            mc.thePlayer.capabilities.isFlying = false;
-        }
+        mc.thePlayer.capabilities.isFlying = false;
     }
 }

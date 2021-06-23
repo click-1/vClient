@@ -69,10 +69,10 @@ public class Panel extends GuiScreen {
 		int outlineColor = new Color(temp.getRed(), temp.getGreen(), temp.getBlue(), 170).getRGB();
 		
 		Gui.drawRect(x, y, x + width, y + height, 0xff121212);
-		if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("New")){
+		if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Classic")){
 			Gui.drawRect(x - 2, y, x, y + height, outlineColor);
 			FontUtil.drawStringWithShadow(title, x + 2, y + height / 2 - FontUtil.getFontHeight()/2, 0xffefefef);
-		}else if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("JellyLike")){
+		}else if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Jelly")){
 			Gui.drawRect(x + 4,			y + 2, x + 4.3, 		y + height - 2, 0xffaaaaaa);
 			Gui.drawRect(x - 4 + width, y + 2, x - 4.3 + width, y + height - 2, 0xffaaaaaa);
 			FontUtil.drawTotalCenteredStringWithShadow(title, x + width / 2, y + height / 2, 0xffefefef);
@@ -80,7 +80,7 @@ public class Panel extends GuiScreen {
 		
 		if (this.extended && !Elements.isEmpty()) {
 			double startY = y + height;
-			int epanelcolor = vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("New") ? 0xff232323 : vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("JellyLike") ? 0xbb151515 : 0;;
+			int epanelcolor = vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Classic") ? 0xff232323 : vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Jelly") ? 0xbb151515 : 0;
 			for (ModuleButton et : Elements) {
 				if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("New")){
 					Gui.drawRect(x - 2, startY, x + width, startY + et.height + 1, outlineColor);

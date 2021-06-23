@@ -1,26 +1,30 @@
-[20:15:56] [Client thread/INFO]: Setting user: Player935
-[20:15:56] [Client thread/INFO]: (Session ID is token:0:Player935)
-[20:15:58] [Client thread/INFO]: LWJGL Version: 2.9.4
-[20:15:58] [Client thread/INFO]: Reloading ResourceManager: Default
-[20:15:59] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[20:15:59] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[20:15:59] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[20:16:00] [Thread-6/INFO]: OpenAL initialized.
-[20:16:00] [Sound Library Loader/INFO]: Sound engine started
-[20:16:03] [Client thread/INFO]: Created: 512x512 textures-atlas
-[20:16:06] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[20:16:06] [Server thread/INFO]: Generating keypair
-[20:16:06] [Server thread/INFO]: Preparing start region for level 0
-[20:16:07] [Server thread/INFO]: Changing view distance to 5, from 10
-[20:16:08] [Server thread/INFO]: Player935[local:E:04af454e] logged in with entity id 129 at (609.2736661730064, 67.0, 385.5966007224451)
-[20:16:08] [Server thread/INFO]: Player935 joined the game
-[20:16:08] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[20:16:41] [Client thread/INFO]: Stopping!
-[20:16:41] [Client thread/INFO]: SoundSystem shutting down...
-[20:16:42] [Server thread/INFO]: Stopping server
-[20:16:42] [Server thread/INFO]: Saving players
-[20:16:42] [Server thread/INFO]: Saving worlds
-[20:16:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[20:16:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[20:16:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[20:16:42] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[20:57:56] [Client thread/INFO]: Setting user: Player847
+[20:57:56] [Client thread/INFO]: (Session ID is token:0:Player847)
+[20:57:57] [Client thread/INFO]: LWJGL Version: 2.9.4
+[20:57:57] [Client thread/INFO]: Reloading ResourceManager: Default
+[20:57:58] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[20:57:58] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[20:57:58] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[20:57:59] [Thread-6/INFO]: OpenAL initialized.
+[20:57:59] [Sound Library Loader/INFO]: Sound engine started
+[20:58:01] [Client thread/INFO]: Created: 512x512 textures-atlas
+[20:58:05] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[20:58:05] [Server thread/INFO]: Generating keypair
+[20:58:05] [Server thread/INFO]: Preparing start region for level 0
+[20:58:06] [Server thread/INFO]: Changing view distance to 5, from 10
+[20:58:06] [Server thread/INFO]: Player847[local:E:6db7d181] logged in with entity id 171 at (625.3088739650965, 71.29296626126231, 383.309513365407)
+[20:58:06] [Server thread/INFO]: Player847 joined the game
+[20:58:06] [Server thread/INFO]: Saving and pausing game...
+[20:58:06] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[20:58:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:58:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:58:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:58:49] [Client thread/INFO]: Stopping!
+[20:58:50] [Client thread/INFO]: SoundSystem shutting down...
+[20:58:50] [Server thread/INFO]: Stopping server
+[20:58:50] [Server thread/INFO]: Saving players
+[20:58:50] [Server thread/INFO]: Saving worlds
+[20:58:50] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:58:50] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:58:50] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:58:50] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
