@@ -1,5 +1,6 @@
 package net.minecraft.client.multiplayer;
 
+import com.vClient.vClient;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -305,6 +306,7 @@ public class PlayerControllerMP
             }
             else
             {
+
                 this.curBlockDamageMP += block.getPlayerRelativeBlockHardness(this.mc.thePlayer, this.mc.thePlayer.worldObj, posBlock);
 
                 if (this.stepSoundTickCounter % 4.0F == 0.0F)
@@ -314,7 +316,7 @@ public class PlayerControllerMP
 
                 ++this.stepSoundTickCounter;
 
-                if (this.curBlockDamageMP >= 1.0F)
+                if (this.curBlockDamageMP >= 1.0F || (this.curBlockDamageMP >= 0.4F && vClient.instance.moduleManager.getModulebyName("FastBreak").isToggled()))
                 {
                     this.isHittingBlock = false;
                     this.netClientHandler.addToSendQueue(new C07PacketPlayerDigging(C07PacketPlayerDigging.Action.STOP_DESTROY_BLOCK, posBlock, directionFacing));

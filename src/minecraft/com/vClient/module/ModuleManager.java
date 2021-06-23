@@ -23,7 +23,10 @@ public class ModuleManager {
         modules.add(new Sprint());
         //RENDER
         modules.add(new ClickGUI());
+        modules.add(new FullBright());
         //PLAYER
+        modules.add(new Autoclicker());
+        modules.add(new FastBreak());
         modules.add(new NoFall());
         modules.add(new Velocity());
         //MISC

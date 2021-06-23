@@ -1505,7 +1505,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         }
     }
 
-    private void clickMouse()
+    public void clickMouse()
     {
         if (this.leftClickCounter <= 0)
         {
@@ -1517,7 +1517,10 @@ public class Minecraft implements IThreadListener, IPlayerUsage
 
                 if (this.playerController.isNotCreative())
                 {
-                    this.leftClickCounter = 10;
+                    if (vClient.instance.moduleManager.getModulebyName("Autoclicker").isToggled())
+                        this.leftClickCounter = 0;
+                    else
+                        this.leftClickCounter = 10;
                 }
             }
             else
@@ -1541,7 +1544,10 @@ public class Minecraft implements IThreadListener, IPlayerUsage
                     default:
                         if (this.playerController.isNotCreative())
                         {
-                            this.leftClickCounter = 10;
+                            if (vClient.instance.moduleManager.getModulebyName("Autoclicker").isToggled())
+                                this.leftClickCounter = 0;
+                            else
+                                this.leftClickCounter = 10;
                         }
                 }
             }

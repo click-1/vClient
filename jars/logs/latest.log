@@ -1,30 +1,30 @@
-[20:57:56] [Client thread/INFO]: Setting user: Player847
-[20:57:56] [Client thread/INFO]: (Session ID is token:0:Player847)
-[20:57:57] [Client thread/INFO]: LWJGL Version: 2.9.4
-[20:57:57] [Client thread/INFO]: Reloading ResourceManager: Default
-[20:57:58] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[20:57:58] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[20:57:58] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[20:57:59] [Thread-6/INFO]: OpenAL initialized.
-[20:57:59] [Sound Library Loader/INFO]: Sound engine started
-[20:58:01] [Client thread/INFO]: Created: 512x512 textures-atlas
-[20:58:05] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[20:58:05] [Server thread/INFO]: Generating keypair
-[20:58:05] [Server thread/INFO]: Preparing start region for level 0
-[20:58:06] [Server thread/INFO]: Changing view distance to 5, from 10
-[20:58:06] [Server thread/INFO]: Player847[local:E:6db7d181] logged in with entity id 171 at (625.3088739650965, 71.29296626126231, 383.309513365407)
-[20:58:06] [Server thread/INFO]: Player847 joined the game
-[20:58:06] [Server thread/INFO]: Saving and pausing game...
-[20:58:06] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[20:58:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[20:58:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[20:58:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[20:58:49] [Client thread/INFO]: Stopping!
-[20:58:50] [Client thread/INFO]: SoundSystem shutting down...
-[20:58:50] [Server thread/INFO]: Stopping server
-[20:58:50] [Server thread/INFO]: Saving players
-[20:58:50] [Server thread/INFO]: Saving worlds
-[20:58:50] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[20:58:50] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[20:58:50] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[20:58:50] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:21:20] [Client thread/INFO]: Setting user: Player187
+[16:21:20] [Client thread/INFO]: (Session ID is token:0:Player187)
+[16:21:22] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:21:22] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:21:22] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:21:22] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[16:21:22] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:21:23] [Thread-6/INFO]: OpenAL initialized.
+[16:21:23] [Sound Library Loader/INFO]: Sound engine started
+[16:21:27] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:21:31] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[16:21:31] [Server thread/INFO]: Generating keypair
+[16:21:31] [Server thread/INFO]: Preparing start region for level 0
+[16:21:32] [Server thread/INFO]: Changing view distance to 5, from 10
+[16:21:33] [Server thread/INFO]: Player187[local:E:3fef9f91] logged in with entity id 129 at (583.3487694839565, 73.0, 332.9219237856839)
+[16:21:33] [Server thread/INFO]: Player187 joined the game
+[16:21:33] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[16:22:16] [Server thread/INFO]: Saving and pausing game...
+[16:22:17] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:22:17] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:22:17] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:22:18] [Server thread/INFO]: Stopping server
+[16:22:18] [Server thread/INFO]: Saving players
+[16:22:18] [Server thread/INFO]: Saving worlds
+[16:22:18] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:22:18] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:22:18] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:22:19] [Client thread/INFO]: Stopping!
+[16:22:19] [Client thread/INFO]: SoundSystem shutting down...
+[16:22:19] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
