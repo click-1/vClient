@@ -316,7 +316,7 @@ public class PlayerControllerMP
 
                 ++this.stepSoundTickCounter;
 
-                if (this.curBlockDamageMP >= 1.0F || (this.curBlockDamageMP >= 0.4F && vClient.instance.moduleManager.getModulebyName("FastBreak").isToggled()))
+                if (this.curBlockDamageMP >= 1.0F || (vClient.instance.moduleManager.getModulebyName("FastBreak").isToggled() && this.curBlockDamageMP >= vClient.instance.settingsManager.getSettingByName("Break Damage").getValDouble()))
                 {
                     this.isHittingBlock = false;
                     this.netClientHandler.addToSendQueue(new C07PacketPlayerDigging(C07PacketPlayerDigging.Action.STOP_DESTROY_BLOCK, posBlock, directionFacing));
