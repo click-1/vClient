@@ -45,7 +45,6 @@ public class Antibot extends Module {
     public void onUpdate(EventUpdate event) {
         String mode = vClient.instance.settingsManager.getSettingByName("Antibot Mode").getValString();
         this.setDisplayName("Antibot \u00A77" + mode);
-
         if (mode.equalsIgnoreCase("Watchdog")) {
             for (Object entity : mc.theWorld.loadedEntityList) {
                 if (((Entity) entity).isInvisible() && entity != mc.thePlayer) {

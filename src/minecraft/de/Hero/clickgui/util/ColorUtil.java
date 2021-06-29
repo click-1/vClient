@@ -15,4 +15,8 @@ public class ColorUtil {
 	public static Color getClickGUIColor(){
 		return new Color((int) vClient.instance.settingsManager.getSettingByName("Red").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Green").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Blue").getValDouble());
 	}
+	public static int getRainbow(float seconds, float saturation, float brightness) {
+		float hue = (System.currentTimeMillis() % (int)(seconds * 1000)) / (float)(seconds * 1000);
+		return Color.HSBtoRGB(hue, saturation, brightness);
+	}
 }
