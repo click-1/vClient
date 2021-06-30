@@ -1,6 +1,7 @@
 package com.vClient.command;
 
 import com.vClient.command.commands.Bind;
+import com.vClient.command.commands.Info;
 import com.vClient.command.commands.Say;
 import com.vClient.command.commands.Toggle;
 import com.vClient.event.events.EventChat;
@@ -22,6 +23,7 @@ public class CommandManager {
         commands.add(new Toggle());
         commands.add(new Say());
         commands.add(new Bind());
+        commands.add(new Info());
     }
 
     public void handleChat(EventChat event) {

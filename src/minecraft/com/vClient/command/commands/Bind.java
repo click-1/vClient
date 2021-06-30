@@ -7,18 +7,24 @@ import org.lwjgl.input.Keyboard;
 
 public class Bind extends Command {
     public Bind() {
-        super("Bind", "Bind a module to a key", "bind <module> <key> | <clear> | <list>", "b");
+        super("Bind", "Bind a module to a key", ".bind <module> <key> | <clear> | <list>", "b");
     }
 
     @Override
     public void onCommand(String[] args, String command) {
+        if (args.length == 0) {
+            vClient.addChatMessage("\2478Bind Commands:");
+            vClient.addChatMessage(".bind <module> <key>");
+            vClient.addChatMessage(".bind <clear>");
+            vClient.addChatMessage(".bind <list>");
+        }
         if (args.length == 2) {
             String moduleName = args[0], keyName = args[1];
             boolean foundModule = false;
             for (Module m : vClient.instance.moduleManager.getModules()) {
                 if (m.getName().equalsIgnoreCase(moduleName)) {
                     m.setKey(Keyboard.getKeyIndex(keyName.toUpperCase()));
-                    vClient.addChatMessage(String.format("Bound %s to \2476%s", m.getName(), Keyboard.getKeyName(m.getKey())));
+                    vClient.addChatMessage(String.format("Bound \2473%s to \2476%s", m.getName(), Keyboard.getKeyName(m.getKey())));
                     foundModule = true;
                     break;
                 }
@@ -35,9 +41,10 @@ public class Bind extends Command {
                 return;
             }
             if (args[0].equalsIgnoreCase("list")) {
+                vClient.addChatMessage("\2478Current binds:");
                 for (Module m : vClient.instance.moduleManager.getModules())
                     if (m.getKey() != 0)
-                        vClient.addChatMessage(String.format("%s : \2476%s", m.getName(), Keyboard.getKeyName(m.getKey())));
+                        vClient.addChatMessage(String.format("\2473%s : \2476%s", m.getName(), Keyboard.getKeyName(m.getKey())));
                 return;
             }
             vClient.addChatMessage("Invalid bind command.");

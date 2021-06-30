@@ -1,20 +1,20 @@
-[14:01:01] [Client thread/INFO]: Setting user: Player648
-[14:01:01] [Client thread/INFO]: (Session ID is token:0:Player648)
-[14:01:02] [Client thread/INFO]: LWJGL Version: 2.9.4
-[14:01:02] [Client thread/INFO]: Reloading ResourceManager: Default
-[14:01:02] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[14:01:02] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[14:01:02] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[14:01:03] [Thread-6/INFO]: OpenAL initialized.
-[14:01:03] [Sound Library Loader/INFO]: Sound engine started
-[14:01:05] [Client thread/INFO]: Created: 512x512 textures-atlas
-[14:01:08] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[14:01:08] [Server thread/INFO]: Generating keypair
-[14:01:08] [Server thread/INFO]: Preparing start region for level 0
-[14:01:09] [Server thread/INFO]: Changing view distance to 5, from 10
-[14:01:09] [Server thread/INFO]: Player648[local:E:b7e8b5c6] logged in with entity id 111 at (584.7624999880791, 73.0, 326.75946358474596)
-[14:01:09] [Server thread/INFO]: Player648 joined the game
-[14:01:09] [Texture Downloader #1/ERROR]: Couldn't download http texture
+[14:39:43] [Client thread/INFO]: Setting user: Player353
+[14:39:43] [Client thread/INFO]: (Session ID is token:0:Player353)
+[14:39:45] [Client thread/INFO]: LWJGL Version: 2.9.4
+[14:39:45] [Client thread/INFO]: Reloading ResourceManager: Default
+[14:39:45] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[14:39:45] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[14:39:45] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[14:39:46] [Thread-6/INFO]: OpenAL initialized.
+[14:39:46] [Sound Library Loader/INFO]: Sound engine started
+[14:39:48] [Client thread/INFO]: Created: 512x512 textures-atlas
+[14:39:51] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[14:39:51] [Server thread/INFO]: Generating keypair
+[14:39:51] [Server thread/INFO]: Preparing start region for level 0
+[14:39:52] [Server thread/INFO]: Changing view distance to 5, from 10
+[14:39:52] [Server thread/INFO]: Player353[local:E:527317a9] logged in with entity id 96 at (584.5325191427237, 73.0, 328.7060126457582)
+[14:39:52] [Server thread/INFO]: Player353 joined the game
+[14:39:52] [Texture Downloader #1/ERROR]: Couldn't download http texture
 java.net.UnknownHostException: s.optifine.net
 	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:220) ~[?:?]
 	at java.base/java.net.Socket.connect(Socket.java:591) ~[?:?]
@@ -30,28 +30,34 @@ java.net.UnknownHostException: s.optifine.net
 	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1075) ~[?:?]
 	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1009) ~[?:?]
 	at net.minecraft.client.renderer.ThreadDownloadImageData$1.run(ThreadDownloadImageData.java:124) [bin/:?]
-[14:01:13] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound NoSlow to §6V
-[14:01:21] [Client thread/INFO]: [CHAT] §9[vClient]§7: Invalid bind command.
-[14:01:23] [Client thread/INFO]: [CHAT] §9[vClient]§7: Invalid bind command.
-[14:01:32] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound Killaura to §6R
-[14:01:38] [Client thread/INFO]: [CHAT] §9[vClient]§7: Couldn't find command.
-[14:01:39] [Client thread/INFO]: [CHAT] §9[vClient]§7: Killaura : §6R
-[14:01:39] [Client thread/INFO]: [CHAT] §9[vClient]§7: ClickGUI : §6RSHIFT
-[14:01:39] [Client thread/INFO]: [CHAT] §9[vClient]§7: NoSlow : §6V
-[14:01:51] [Client thread/INFO]: [CHAT] §9[vClient]§7: Killaura : §6R
-[14:01:51] [Client thread/INFO]: [CHAT] §9[vClient]§7: ClickGUI : §6RSHIFT
-[14:01:51] [Client thread/INFO]: [CHAT] §9[vClient]§7: NoSlow : §6V
-[14:02:12] [Client thread/INFO]: [CHAT] §9[vClient]§7: Cleared all binds.
-[14:02:16] [Client thread/INFO]: [CHAT] §9[vClient]§7: ClickGUI : §6RSHIFT
-[14:02:32] [Client thread/INFO]: [CHAT] §9[vClient]§7: Enabled InventoryMove
-[14:02:55] [Server thread/INFO]: <Player648> .bind scaffold n
-[14:02:55] [Client thread/INFO]: [CHAT] <Player648> .bind scaffold n
-[14:03:06] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound Autoclicker to §6F
-[14:03:12] [Client thread/INFO]: [CHAT] §9[vClient]§7: Autoclicker : §6F
-[14:03:12] [Client thread/INFO]: [CHAT] §9[vClient]§7: ClickGUI : §6RSHIFT
-[14:03:27] [Client thread/INFO]: [CHAT] §9[vClient]§7: Cleared all binds.
-[14:03:37] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound Velocity to §6R
-[14:04:29] [Server thread/INFO]: Saving and pausing game...
-[14:04:29] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:04:29] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:04:29] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[14:39:52] [Server thread/INFO]: Saving and pausing game...
+[14:39:52] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[14:39:52] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[14:39:52] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[14:39:54] [Client thread/INFO]: [CHAT] §9[vClient]§7: §2vClient 1.0§7 developed by §2click_1
+[14:39:54] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.info
+[14:39:54] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.bind
+[14:39:54] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.toggle
+[14:39:54] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.say
+[14:40:20] [Client thread/INFO]: [CHAT] §9[vClient]§7: §8Bind Commands:
+[14:40:20] [Client thread/INFO]: [CHAT] §9[vClient]§7: .bind <module> <key>
+[14:40:20] [Client thread/INFO]: [CHAT] §9[vClient]§7: .bind <clear>
+[14:40:20] [Client thread/INFO]: [CHAT] §9[vClient]§7: .bind <list>
+[14:40:31] [Client thread/INFO]: [CHAT] §9[vClient]§7: §2vClient 1.0§7 developed by §2click_1
+[14:40:31] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.info
+[14:40:31] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.bind
+[14:40:31] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.toggle
+[14:40:31] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.say
+[14:42:07] [Server thread/INFO]: Saving and pausing game...
+[14:42:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[14:42:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[14:42:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[14:42:08] [Server thread/INFO]: Stopping server
+[14:42:08] [Server thread/INFO]: Saving players
+[14:42:08] [Server thread/INFO]: Saving worlds
+[14:42:08] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[14:42:08] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[14:42:08] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[14:42:09] [Client thread/INFO]: Stopping!
+[14:42:09] [Client thread/INFO]: SoundSystem shutting down...
+[14:42:09] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

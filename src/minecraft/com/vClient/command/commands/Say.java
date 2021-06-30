@@ -6,7 +6,7 @@ import net.minecraft.network.play.client.C01PacketChatMessage;
 
 public class Say extends Command {
     public Say() {
-        super("Say", "Say anything in chat", "say <text>", "s");
+        super("Say", "Say anything in chat", ".say <text>", "s");
     }
 
     @Override
