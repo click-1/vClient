@@ -11,7 +11,6 @@ import java.util.Comparator;
 
 public class ArrayListHUD {
     public Minecraft mc = Minecraft.getMinecraft();
-    private int chroma = ColorUtil.getRainbow(5, 0.8f, 1);
     
     public void draw() {
         ScaledResolution sr = new ScaledResolution(mc);
@@ -31,6 +30,7 @@ public class ArrayListHUD {
         String hex = String.format("#%02x%02x%02x", r, g, b);
         **/
         int color = ColorUtil.getClickGUIColor().getRGB();
+        int chroma = ColorUtil.getRainbow(5, 0.8f, 1);
         for (Module m : vClient.instance.moduleManager.getModules()) {
             if (!m.isToggled())
                 continue;
