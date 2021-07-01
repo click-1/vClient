@@ -24,7 +24,7 @@ public class Bind extends Command {
             for (Module m : vClient.instance.moduleManager.getModules()) {
                 if (m.getName().equalsIgnoreCase(moduleName)) {
                     m.setKey(Keyboard.getKeyIndex(keyName.toUpperCase()));
-                    vClient.addChatMessage(String.format("Bound \2473%s to \2476%s", m.getName(), Keyboard.getKeyName(m.getKey())));
+                    vClient.addChatMessage(String.format("Bound \2473%s \2477to \2476%s", m.getName(), Keyboard.getKeyName(m.getKey())));
                     foundModule = true;
                     break;
                 }
@@ -44,7 +44,7 @@ public class Bind extends Command {
                 vClient.addChatMessage("\2478Current binds:");
                 for (Module m : vClient.instance.moduleManager.getModules())
                     if (m.getKey() != 0)
-                        vClient.addChatMessage(String.format("\2473%s : \2476%s", m.getName(), Keyboard.getKeyName(m.getKey())));
+                        vClient.addChatMessage(String.format("\2473%s \2477: \2476%s", m.getName(), Keyboard.getKeyName(m.getKey())));
                 return;
             }
             vClient.addChatMessage("Invalid bind command.");
