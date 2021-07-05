@@ -15,8 +15,8 @@ public class Bind extends Command {
         if (args.length == 0) {
             vClient.addChatMessage("\2478Bind Commands:");
             vClient.addChatMessage(".bind <module> <key>");
-            vClient.addChatMessage(".bind <clear>");
-            vClient.addChatMessage(".bind <list>");
+            vClient.addChatMessage(".bind clear");
+            vClient.addChatMessage(".bind list");
         }
         if (args.length == 2) {
             String moduleName = args[0], keyName = args[1];

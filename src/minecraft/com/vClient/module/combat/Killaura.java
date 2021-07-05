@@ -18,7 +18,7 @@ import net.minecraft.util.MathHelper;
 import org.lwjgl.input.Keyboard;
 
 public class Killaura extends Module {
-    private EntityLivingBase target;
+    public EntityLivingBase target;
     private long current, last;
     private int delay = 8;
     private float yaw, pitch;
@@ -37,7 +37,7 @@ public class Killaura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Invisibles", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Players", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Animals", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Monsters", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Mobs", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Villagers", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Teams", this, true));
     }

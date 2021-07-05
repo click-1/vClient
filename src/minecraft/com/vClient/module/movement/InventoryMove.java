@@ -4,14 +4,10 @@ import com.vClient.event.EventTarget;
 import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
-import de.Hero.clickgui.ClickGUI;
-import de.Hero.clickgui.elements.Element;
-import de.Hero.clickgui.elements.ModuleButton;
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
-import java.util.Objects;
 
 public class InventoryMove extends Module {
     public InventoryMove() {

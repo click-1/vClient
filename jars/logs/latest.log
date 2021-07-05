@@ -1,74 +1,13 @@
-[17:51:23] [Client thread/INFO]: Setting user: Player44
-[17:51:23] [Client thread/INFO]: (Session ID is token:0:Player44)
-[17:51:24] [Client thread/INFO]: LWJGL Version: 2.9.4
-[17:51:25] [Client thread/INFO]: Reloading ResourceManager: Default
-[17:51:25] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:51:25] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[17:51:25] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:51:26] [Thread-6/INFO]: OpenAL initialized.
-[17:51:26] [Sound Library Loader/INFO]: Sound engine started
-[17:51:28] [Client thread/INFO]: Created: 512x512 textures-atlas
-[17:51:34] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[17:51:34] [Server thread/INFO]: Generating keypair
-[17:51:34] [Server thread/INFO]: Preparing start region for level 0
-[17:51:35] [Server thread/INFO]: Changing view distance to 5, from 10
-[17:51:35] [Server thread/INFO]: Player44[local:E:50825de8] logged in with entity id 102 at (593.6188885363123, 73.0, 349.0848041786546)
-[17:51:35] [Server thread/INFO]: Player44 joined the game
-[17:51:35] [Server thread/INFO]: Saving and pausing game...
-[17:51:35] [Texture Downloader #1/ERROR]: Couldn't download http texture
-java.net.UnknownHostException: s.optifine.net
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:220) ~[?:?]
-	at java.base/java.net.Socket.connect(Socket.java:591) ~[?:?]
-	at java.base/java.net.Socket.connect(Socket.java:540) ~[?:?]
-	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1242) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1221) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1075) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1009) ~[?:?]
-	at net.minecraft.client.renderer.ThreadDownloadImageData$1.run(ThreadDownloadImageData.java:124) [bin/:?]
-[17:51:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[17:51:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[17:51:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[17:51:39] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound §3NoSlow §7to §6F
-[17:51:48] [Client thread/INFO]: [CHAT] §9[vClient]§7: Cleared all binds.
-[17:51:54] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound §3NoSlow §7to §6A
-[17:51:59] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound §3NoFall §7to §6G
-[17:52:04] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound §3Killaura §7to §6V
-[17:52:08] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound §3Velocity §7to §6R
-[17:52:17] [Client thread/INFO]: [CHAT] §9[vClient]§7: §8Current binds:
-[17:52:17] [Client thread/INFO]: [CHAT] §9[vClient]§7: §3Velocity : §6R
-[17:52:17] [Client thread/INFO]: [CHAT] §9[vClient]§7: §3Killaura : §6V
-[17:52:17] [Client thread/INFO]: [CHAT] §9[vClient]§7: §3ClickGUI : §6RSHIFT
-[17:52:17] [Client thread/INFO]: [CHAT] §9[vClient]§7: §3NoSlow : §6A
-[17:52:17] [Client thread/INFO]: [CHAT] §9[vClient]§7: §3NoFall : §6G
-[17:53:03] [Client thread/INFO]: [CHAT] §9[vClient]§7: §8Bind Commands:
-[17:53:03] [Client thread/INFO]: [CHAT] §9[vClient]§7: .bind <module> <key>
-[17:53:03] [Client thread/INFO]: [CHAT] §9[vClient]§7: .bind <clear>
-[17:53:03] [Client thread/INFO]: [CHAT] §9[vClient]§7: .bind <list>
-[17:53:07] [Client thread/INFO]: [CHAT] §9[vClient]§7: §8Toggle Commands:
-[17:53:07] [Client thread/INFO]: [CHAT] §9[vClient]§7: .toggle <module>
-[17:53:11] [Client thread/INFO]: [CHAT] §9[vClient]§7: §2vClient 1.0§7 developed by §2click_1
-[17:53:11] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.info
-[17:53:11] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.bind
-[17:53:11] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.toggle
-[17:53:11] [Client thread/INFO]: [CHAT] §9[vClient]§7: §1.say
-[17:53:17] [Server thread/INFO]: <Player44> 
-[17:53:17] [Client thread/INFO]: [CHAT] <Player44> 
-[17:53:24] [Server thread/INFO]: <Player44> 
-[17:53:24] [Client thread/INFO]: [CHAT] <Player44> 
-[17:53:26] [Server thread/INFO]: <Player44> 
-[17:53:26] [Client thread/INFO]: [CHAT] <Player44> 
-[17:53:37] [Client thread/INFO]: Stopping!
-[17:53:37] [Client thread/INFO]: SoundSystem shutting down...
-[17:53:37] [Server thread/INFO]: Stopping server
-[17:53:37] [Server thread/INFO]: Saving players
-[17:53:37] [Server thread/INFO]: Saving worlds
-[17:53:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[17:53:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[17:53:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[17:53:37] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:54:06] [Client thread/INFO]: Setting user: Player498
+[18:54:06] [Client thread/INFO]: (Session ID is token:0:Player498)
+[18:54:07] [Client thread/INFO]: LWJGL Version: 2.9.4
+[18:54:07] [Client thread/INFO]: Reloading ResourceManager: Default
+[18:54:07] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:54:08] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[18:54:08] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:54:08] [Thread-6/INFO]: OpenAL initialized.
+[18:54:08] [Sound Library Loader/INFO]: Sound engine started
+[18:54:10] [Client thread/INFO]: Created: 512x512 textures-atlas
+[18:59:00] [Client thread/INFO]: Stopping!
+[18:59:00] [Client thread/INFO]: SoundSystem shutting down...
+[18:59:00] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

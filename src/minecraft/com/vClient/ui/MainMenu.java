@@ -2,6 +2,7 @@ package com.vClient.ui;
 
 import com.vClient.ui.login.GuiAltLogin;
 import de.Hero.clickgui.util.ColorUtil;
+import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.gui.*;
 import net.minecraft.util.ResourceLocation;
 
@@ -45,23 +46,22 @@ public class MainMenu extends GuiScreen {
         float y = height - 20;
         float ymax = y + mc.fontRendererObj.FONT_HEIGHT;
         if (mouseX >= x1 && mouseY >= y && mouseX < x1 + mc.fontRendererObj.getStringWidth("Singleplayer") && mouseY < ymax) {
+            mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiSelectWorld(this));
-            return;
         } else if (mouseX >= x2 && mouseY >= y && mouseX < x2 + mc.fontRendererObj.getStringWidth("Multiplayer") && mouseY < ymax) {
+            mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiMultiplayer(this));
-            return;
         } else if (mouseX >= x3 && mouseY >= y && mouseX < x3 + mc.fontRendererObj.getStringWidth("Settings") && mouseY < ymax) {
+            mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiOptions(this, mc.gameSettings));
-            return;
         } else if (mouseX >= x4 && mouseY >= y && mouseX < x4 + mc.fontRendererObj.getStringWidth("Login") && mouseY < ymax) {
+            mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiAltLogin(this));
-            return;
         } else if (mouseX >= x5 && mouseY >= y && mouseX < x5 + mc.fontRendererObj.getStringWidth("Language") && mouseY < ymax) {
+            mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiLanguage(this, mc.gameSettings, mc.getLanguageManager()));
-            return;
         } else if (mouseX >= x6 && mouseY >= y && mouseX < x6 + mc.fontRendererObj.getStringWidth("Quit") && mouseY < ymax) {
             mc.shutdown();
-            return;
         } else {
             return;
         }

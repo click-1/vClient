@@ -1,9 +1,6 @@
 package com.vClient.command;
 
-import com.vClient.command.commands.Bind;
-import com.vClient.command.commands.Info;
-import com.vClient.command.commands.Say;
-import com.vClient.command.commands.Toggle;
+import com.vClient.command.commands.*;
 import com.vClient.event.events.EventChat;
 import com.vClient.vClient;
 
