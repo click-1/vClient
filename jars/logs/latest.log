@@ -1,13 +1,2208 @@
-[18:54:06] [Client thread/INFO]: Setting user: Player498
-[18:54:06] [Client thread/INFO]: (Session ID is token:0:Player498)
-[18:54:07] [Client thread/INFO]: LWJGL Version: 2.9.4
-[18:54:07] [Client thread/INFO]: Reloading ResourceManager: Default
-[18:54:07] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:54:08] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[18:54:08] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:54:08] [Thread-6/INFO]: OpenAL initialized.
-[18:54:08] [Sound Library Loader/INFO]: Sound engine started
-[18:54:10] [Client thread/INFO]: Created: 512x512 textures-atlas
-[18:59:00] [Client thread/INFO]: Stopping!
-[18:59:00] [Client thread/INFO]: SoundSystem shutting down...
-[18:59:00] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[13:52:14] [Client thread/INFO]: Setting user: Player900
+[13:52:14] [Client thread/INFO]: (Session ID is token:0:Player900)
+[13:52:15] [Client thread/INFO]: LWJGL Version: 2.9.4
+[13:52:15] [Client thread/INFO]: Reloading ResourceManager: Default
+[13:52:15] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[13:52:16] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[13:52:16] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[13:52:16] [Thread-6/INFO]: OpenAL initialized.
+[13:52:16] [Sound Library Loader/INFO]: Sound engine started
+[13:52:19] [Client thread/INFO]: Created: 512x512 textures-atlas
+[13:52:40] [Alt Login Thread/INFO]: Logging in with username & password
+[13:52:45] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[13:52:45] [Server thread/INFO]: Generating keypair
+[13:52:45] [Server thread/INFO]: Preparing start region for level 0
+[13:52:46] [Server thread/INFO]: Changing view distance to 5, from 10
+[13:52:46] [Server thread/INFO]: Mikey320[local:E:2c931fd2] logged in with entity id 148 at (559.642823900194, 72.0, 314.95983185352685)
+[13:52:46] [Server thread/INFO]: Mikey320 joined the game
+[13:52:46] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[13:52:48] [Client thread/INFO]: [CHAT] §9[vClient]§7: Enabled §3Sprint
+[13:53:12] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound §3Velocity §7to §6R
+[13:53:18] [Client thread/INFO]: [CHAT] §9[vClient]§7: Enabled §3StableFOV
+[13:53:20] [Server thread/INFO]: Saving and pausing game...
+[13:53:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[13:53:21] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[13:53:21] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[13:53:21] [Server thread/INFO]: Stopping server
+[13:53:21] [Server thread/INFO]: Saving players
+[13:53:21] [Server thread/INFO]: Saving worlds
+[13:53:21] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[13:53:21] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[13:53:21] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[13:53:25] [Client thread/INFO]: Connecting to mc.hypixel.net, 25565
+[13:53:27] [Client thread/INFO]: [CHAT]                                      
+[13:53:27] [Client thread/INFO]: [CHAT]                          
+[13:53:27] [Client thread/INFO]: [CHAT] §aYou have §b3 §aunclaimed leveling rewards!
+[13:53:27] [Client thread/INFO]: [CHAT] §eClick here to view them!
+[13:53:33] [Client thread/INFO]: [CHAT] §b[MVP§0+§b] eboyaamelia§f §6joined the lobby!
+[13:53:36] [Client thread/INFO]: [CHAT] Sending you to mega69B!
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeObjective(Scoreboard.java:218) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleScoreboardObjective(NetHandlerPlayClient.java:1887) ~[bin/:?]
+	at net.minecraft.network.play.server.S3BPacketScoreboardObjective.processPacket(S3BPacketScoreboardObjective.java:64) ~[bin/:?]
+	at net.minecraft.network.play.server.S3BPacketScoreboardObjective.processPacket(S3BPacketScoreboardObjective.java:10) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:37] [Client thread/INFO]: [CHAT]        
+[13:53:37] [Client thread/INFO]: [CHAT] The game is starting in 378 seconds!
+[13:53:37] [Client thread/INFO]: [CHAT] Mikey320 has joined (38/100)!
+[13:53:41] [Client thread/INFO]: [CHAT] Subetenokabe has quit!
+[13:53:42] [Client thread/INFO]: [CHAT] You have selected the Cow class!
+[13:53:42] [Client thread/INFO]: [CHAT] lahmayo has joined (38/100)!
+[13:53:42] [Client thread/INFO]: [CHAT] lohmayo has joined (39/100)!
+[13:53:48] [Client thread/INFO]: [CHAT] Subetenokabe has joined (40/100)!
+[13:53:49] [Client thread/INFO]: [CHAT] bembyn has joined (41/100)!
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeObjective(Scoreboard.java:218) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleScoreboardObjective(NetHandlerPlayClient.java:1887) ~[bin/:?]
+	at net.minecraft.network.play.server.S3BPacketScoreboardObjective.processPacket(S3BPacketScoreboardObjective.java:64) ~[bin/:?]
+	at net.minecraft.network.play.server.S3BPacketScoreboardObjective.processPacket(S3BPacketScoreboardObjective.java:10) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:54] [Client thread/INFO]: [CHAT]                                      
+[13:53:54] [Client thread/INFO]: [CHAT]                          
+[13:53:55] [Client thread/INFO]: [CHAT] §aYou have §b3 §aunclaimed leveling rewards!
+[13:53:55] [Client thread/INFO]: [CHAT] §eClick here to view them!
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeObjective(Scoreboard.java:218) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleScoreboardObjective(NetHandlerPlayClient.java:1887) ~[bin/:?]
+	at net.minecraft.network.play.server.S3BPacketScoreboardObjective.processPacket(S3BPacketScoreboardObjective.java:64) ~[bin/:?]
+	at net.minecraft.network.play.server.S3BPacketScoreboardObjective.processPacket(S3BPacketScoreboardObjective.java:10) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:53:57] [Client thread/INFO]: [CHAT]                                      
+[13:53:57] [Client thread/INFO]: [CHAT]                          
+[13:53:57] [Client thread/INFO]: [CHAT] §b[MVP§9+§b] green_wolfy§f §6joined the lobby!
+[13:53:57] [Client thread/INFO]: [CHAT] §aYou have §b3 §aunclaimed leveling rewards!
+[13:53:57] [Client thread/INFO]: [CHAT] §eClick here to view them!
+[13:54:00] [Client thread/INFO]: [CHAT] §e§6✫ §e§lClassic Grandmaster III§r §a[VIP] LivingLikeLarry0§f: blippitus bloppitus?
+[13:54:02] [Client thread/INFO]: [CHAT] §b[MVP§f+§b] Alcenola§f §6joined the lobby!
+[13:54:05] [Client thread/INFO]: [CHAT] Sending you to mini164J!
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeObjective(Scoreboard.java:218) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleScoreboardObjective(NetHandlerPlayClient.java:1887) ~[bin/:?]
+	at net.minecraft.network.play.server.S3BPacketScoreboardObjective.processPacket(S3BPacketScoreboardObjective.java:64) ~[bin/:?]
+	at net.minecraft.network.play.server.S3BPacketScoreboardObjective.processPacket(S3BPacketScoreboardObjective.java:10) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:05] [Client thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:20) [bin/:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1096) [bin/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:423) [bin/:?]
+	at net.minecraft.client.main.Main.main(Main.java:113) [bin/:?]
+	at Start.main(Start.java:11) [bin/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.scoreboard.Scoreboard.removeTeam(Scoreboard.java:296) ~[bin/:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleTeams(NetHandlerPlayClient.java:1996) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:140) ~[bin/:?]
+	at net.minecraft.network.play.server.S3EPacketTeams.processPacket(S3EPacketTeams.java:12) ~[bin/:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[bin/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at net.minecraft.util.Util.func_181617_a(Util.java:19) ~[bin/:?]
+	... 4 more
+[13:54:06] [Client thread/INFO]: [CHAT]        
+[13:54:06] [Client thread/INFO]: [CHAT] Mikey320 has joined (1/2)!
+[13:54:25] [Client thread/INFO]: [CHAT] Cold_Prince has joined (2/2)!
+[13:54:26] [Client thread/INFO]: [CHAT] The game starts in 10 seconds!
+[13:54:28] [Client thread/INFO]: [CHAT] §9[vClient]§7: Bound §3Killaura §7to §6V
+[13:54:31] [Client thread/INFO]: [CHAT] The game starts in 5 seconds!
+[13:54:32] [Client thread/INFO]: [CHAT] The game starts in 4 seconds!
+[13:54:33] [Client thread/INFO]: [CHAT] The game starts in 3 seconds!
+[13:54:34] [Client thread/INFO]: [CHAT] The game starts in 2 seconds!
+[13:54:35] [Client thread/INFO]: [CHAT] The game starts in 1 second!
+[13:54:36] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[13:54:36] [Client thread/INFO]: [CHAT]                               MegaWalls Duel
+[13:54:36] [Client thread/INFO]: [CHAT] 
+[13:54:36] [Client thread/INFO]: [CHAT]                      Eliminate your opponents!
+[13:54:36] [Client thread/INFO]: [CHAT] 
+[13:54:36] [Client thread/INFO]: [CHAT]                     Opponent:  [MVP+] Cold_Prince
+[13:54:36] [Client thread/INFO]: [CHAT] 
+[13:54:36] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[13:54:41] [Client thread/INFO]: [CHAT] 
+[13:54:41] [Client thread/INFO]: [CHAT]   >>  CLICK HERE to see how the Solo Leaderboard works!  <<
+[13:54:41] [Client thread/INFO]: [CHAT] 
+[13:54:52] [Client thread/INFO]: [CHAT] Your Wrath skill struck Cold_Prince!
+[13:54:56] [Client thread/INFO]: [CHAT] +5 coins! (Time Played)
+[13:54:57] [Client thread/INFO]: [CHAT] Your Wrath skill struck Cold_Prince!
+[13:55:00] [Client thread/INFO]: [CHAT] Your Wrath skill struck Cold_Prince!
+[13:55:00] [Client thread/INFO]: [CHAT] Cold_Prince was killed by Mikey320.
+[13:55:00] [Client thread/INFO]: [CHAT] +15 coins! (Win)
+[13:55:00] [Client thread/INFO]: [CHAT] §e§ka§a>>   §aAchievement Unlocked: §6§6Untouchable§a   <<§e§ka
+[13:55:00] [Client thread/INFO]: [CHAT] §e§ka§a>>   §aAchievement Unlocked: §6§6Speed Duel§a   <<§e§ka
+[13:55:00] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[13:55:00] [Client thread/INFO]: [CHAT]                         MegaWalls Duel - 00:23
+[13:55:00] [Client thread/INFO]: [CHAT] 
+[13:55:00] [Client thread/INFO]: [CHAT]                 Mikey320 WINNER!  [MVP+] Cold_Prince
+[13:55:00] [Client thread/INFO]: [CHAT] 
+[13:55:00] [Client thread/INFO]: [CHAT]                       41❤ - Damage Dealt - 44❤
+[13:55:00] [Client thread/INFO]: [CHAT]                     80% - Melee Accuracy - 38.2%
+[13:55:00] [Client thread/INFO]: [CHAT]                      N/A - Bow Accuracy - 16.7%
+[13:55:00] [Client thread/INFO]: [CHAT]                          0 - Blocks Placed - 0
+[13:55:00] [Client thread/INFO]: [CHAT]                   5❤ - Health Regenerated - 2❤
+[13:55:00] [Client thread/INFO]: [CHAT]                     Herobrine - Kit Used - Hunter
+[13:55:00] [Client thread/INFO]: [CHAT] 
+[13:55:00] [Client thread/INFO]: [CHAT] ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[13:55:00] [Client thread/INFO]: [CHAT] §7[SPECTATOR] §f§6✫ §fTNT Iron IV§r §b[MVP§c+§b] Cold_Prince§f: gg
+[13:55:02] [Client thread/INFO]: [CHAT] §a§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+§r                            §f§lReward Summary§f§l
+
+   §7You earned
+§r     • §635 Duels Coins
+§r     • §336 Hypixel Experience
+
+§a§l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+[13:55:02] [Client thread/INFO]: [CHAT] [GAME] Mikey320: gg
+[13:55:02] [Client thread/INFO]: [CHAT] +5 Karma!
+[13:55:02] [Client thread/INFO]: [CHAT] 
+[13:55:02] [Client thread/INFO]: [CHAT] YOU WON! Want to play again? CLICK HERE! 
+[13:55:02] [Client thread/INFO]: [CHAT] 
+[13:55:19] [Client thread/INFO]: Stopping!
+[13:55:19] [Client thread/INFO]: SoundSystem shutting down...
+[13:55:19] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

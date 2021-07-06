@@ -12,78 +12,67 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.BlockPos;
 import org.lwjgl.input.Keyboard;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+
 public class TargetStrafe extends Module {
-    private int direction = 1;
+    private double normalX;
+    private double normalZ;
+    private EntityLivingBase target;
     public TargetStrafe() {
         super("TargetStrafe", Keyboard.CHAR_NONE, Category.COMBAT);
     }
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("Radius", this, 6, 0.5, 8, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Speed", this, 0.07, 0.01, 1, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Angle", this, 180, 30, 180, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Radius", this, 2.68, 0.5, 8, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Speed", this, 0.28, 0.01, 1, false));
+    }
+    @Override
+    public void onEnable() {
+        normalX = mc.thePlayer.motionX;
+        normalZ = mc.thePlayer.motionZ;
+        super.onEnable();
     }
     @EventTarget
     public void onPre(EventPreMotionUpdate event) {
         if (!vClient.instance.moduleManager.getModulebyName("Killaura").isToggled())
             return;
-        EntityLivingBase target = getClosest(3.0);
+        double radius = vClient.instance.settingsManager.getSettingByName("Radius").getValDouble();
+        target = getClosest(radius);
         if (target == null)
             return;
         if (mc.gameSettings.keyBindForward.pressed && !mc.gameSettings.keyBindSneak.pressed && mc.thePlayer.moveStrafing == 0F) {
-            double distance = Math.sqrt(Math.pow(mc.thePlayer.posX - target.posX, 2) + Math.pow(mc.thePlayer.posZ - target.posZ, 2));
-            double strafeYaw = Math.atan2(target.posZ - mc.thePlayer.posZ, target.posX - mc.thePlayer.posX);
-            double yaw = strafeYaw - (0.5 * Math.PI);
-            double[] predict = {target.posX + (2 * (target.posX - target.lastTickPosX)), target.posZ + (2 * (target.posZ - target.lastTickPosZ))};
-
-            double radius = vClient.instance.settingsManager.getSettingByName("Radius").getValDouble();
-            double speed = vClient.instance.settingsManager.getSettingByName("Speed").getValDouble();
-            int angle = (int) vClient.instance.settingsManager.getSettingByName("Angle").getValDouble();
-
-            if ((distance - speed) > radius || Math.abs(((((yaw * 180 / Math.PI - mc.thePlayer.rotationYaw) % 360) + 540) % 360) - 180) > angle || !isAboveGround(predict[0], target.posY, predict[1]))
-                return;
-
-            double encirclement = distance - radius < -speed ? -speed : distance - radius;
-            double encirclementX = -Math.sin(yaw) * encirclement;
-            double encirclementZ = Math.cos(yaw) * encirclement;
-            double strafeX = -Math.sin(strafeYaw) * speed * direction;
-            double strafeZ = Math.cos(strafeYaw) * speed * direction;
-
-            if (mc.thePlayer.onGround && (!isAboveGround(mc.thePlayer.posX + encirclementX + (2 * strafeX), mc.thePlayer.posY, mc.thePlayer.posZ + encirclementZ + (2 * strafeZ)) || mc.thePlayer.isCollidedHorizontally)) {
-                direction *= -1;
-                strafeX *= -1;
-                strafeZ *= -1;
-            }
-            mc.thePlayer.motionX += (encirclementX + strafeX);
-            mc.thePlayer.motionZ += (encirclementZ + strafeZ);
-        }
-
-
-    }
-
-    private boolean isAboveGround(double x, double y, double z) {
-        for (int i = (int) Math.ceil(y); y - 5 < i; i--)
-            if (!mc.theWorld.isAirBlock(new BlockPos(x, i, z)))
-                return true;
-        return false;
-    }
-
-    private EntityLivingBase getClosest(double range) {
-        double dist = range;
-        EntityLivingBase the_target = null;
-        for (Object object : mc.theWorld.loadedEntityList) {
-            Entity entity = (Entity) object;
-            if (entity instanceof EntityLivingBase) {
-                EntityLivingBase player = (EntityLivingBase) entity;
-                if (mc.thePlayer.getDistanceToEntity(player) <= dist) {
-                    double currDist = mc.thePlayer.getDistanceToEntity(player);
-                    if (currDist <= dist) {
-                        dist = currDist;
-                        the_target = player;
+            if (Math.sqrt(Math.pow(mc.thePlayer.posX - target.posX, 2) + Math.pow(mc.thePlayer.posZ - target.posZ, 2)) != 0) {
+                double c1 = (mc.thePlayer.posX - target.posX) / (Math.sqrt(Math.pow(mc.thePlayer.posX - target.posX, 2) + Math.pow(mc.thePlayer.posZ - target.posZ, 2)));
+                double s1 = (mc.thePlayer.posZ - target.posZ) / (Math.sqrt(Math.pow(mc.thePlayer.posX - target.posX, 2) + Math.pow(mc.thePlayer.posZ - target.posZ, 2)));
+                if(Math.sqrt(Math.pow(mc.thePlayer.posX - target.posX,2) + Math.pow(mc.thePlayer.posZ - target.posZ,2)) <= radius && !target.isDead) {
+                    double speed = vClient.instance.settingsManager.getSettingByName("Speed").getValDouble();
+                    if(mc.gameSettings.keyBindLeft.pressed) {
+                        mc.thePlayer.motionX = -speed*s1 - 1.38*speed*c1;
+                        mc.thePlayer.motionZ = speed*c1 - 1.38*speed*s1;
+                    }else if (mc.gameSettings.keyBindRight.pressed){
+                        mc.thePlayer.motionX = speed*s1 - 1.38*speed*c1;
+                        mc.thePlayer.motionZ = -speed*c1 - 1.38*speed*s1;
                     }
                 }
             }
         }
-        return the_target;
+    }
+    @EventTarget
+    public void onPost(EventPostMotionUpdate event) {
+        if (target == null)
+            return;
+        mc.thePlayer.motionX = normalX;
+        mc.thePlayer.motionZ = normalZ;
+    }
+    private EntityLivingBase getClosest(double range) {
+        ArrayList<EntityLivingBase> list = new ArrayList<>();
+        for (Entity entity : mc.theWorld.loadedEntityList)
+            if (mc.thePlayer.getDistanceToEntity(entity) <= range && entity instanceof EntityLivingBase && entity != mc.thePlayer)
+                list.add((EntityLivingBase) entity);
+        list.sort(Comparator.comparingDouble(e -> mc.thePlayer.getDistanceToEntity(e)));
+        if (list.size() == 0)
+            return null;
+        return list.get(0);
     }
 }

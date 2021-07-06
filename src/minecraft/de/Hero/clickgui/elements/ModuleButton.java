@@ -112,9 +112,7 @@ public class ModuleButton {
 		 */
 		if (mouseButton == 0) {
 			mod.toggle();
-			
-			if(vClient.instance.settingsManager.getSettingByName("Sound").getValBoolean())
-			Minecraft.getMinecraft().thePlayer.playSound("random.click", 0.5f, 0.5f);
+
 		} else if (mouseButton == 1) {
 			/*
 			 * Wenn ein Settingsmenu existiert dann sollen alle Settingsmenus 
@@ -126,7 +124,7 @@ public class ModuleButton {
 				this.extended = b;
 				
 				if(vClient.instance.settingsManager.getSettingByName("Sound").getValBoolean())
-				if(extended)Minecraft.getMinecraft().thePlayer.playSound("tile.piston.out", 1f, 1f);else Minecraft.getMinecraft().thePlayer.playSound("tile.piston.in", 1f, 1f);
+				if(extended)Minecraft.getMinecraft().thePlayer.playSound("tile.piston.out", 0.8f, 0.8f);else Minecraft.getMinecraft().thePlayer.playSound("tile.piston.in", 0.8f, 0.8f);
 			}
 		} else if (mouseButton == 2) {
 			/*

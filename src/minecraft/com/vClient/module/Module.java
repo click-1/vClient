@@ -24,7 +24,10 @@ public class Module {
     public void onDisable() {
         vClient.instance.eventManager.unregister(this);
     }
-    public void onToggle() {}
+    public void onToggle() {
+        if(vClient.instance.settingsManager.getSettingByName("Sound").getValBoolean())
+            Minecraft.getMinecraft().thePlayer.playSound("random.click", 0.8f, 0.8f);
+    }
     public void toggle() {
         toggled = !toggled;
         onToggle();
