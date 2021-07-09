@@ -51,7 +51,7 @@ public class PlayerControllerMP
     /**
      * Delays the first damage on the block after the first click on the block
      */
-    private int blockHitDelay;
+    public int blockHitDelay;
 
     /** Tells if the player is hitting a block */
     private boolean isHittingBlock;
@@ -323,7 +323,10 @@ public class PlayerControllerMP
                     this.onPlayerDestroyBlock(posBlock, directionFacing);
                     this.curBlockDamageMP = 0.0F;
                     this.stepSoundTickCounter = 0.0F;
-                    this.blockHitDelay = 5;
+                    if (vClient.instance.moduleManager.getModulebyName("FastBreak").isToggled())
+                        this.blockHitDelay = 0;
+                    else
+                        this.blockHitDelay = 5;
                 }
 
                 this.mc.theWorld.sendBlockBreakProgress(this.mc.thePlayer.getEntityId(), this.currentBlock, (int)(this.curBlockDamageMP * 10.0F) - 1);

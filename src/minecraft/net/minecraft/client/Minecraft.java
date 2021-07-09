@@ -1563,7 +1563,10 @@ public class Minecraft implements IThreadListener, IPlayerUsage
     {
         if (!this.playerController.func_181040_m())
         {
-            this.rightClickDelayTimer = 4;
+            if (vClient.instance.moduleManager.getModulebyName("FastPlace").isToggled())
+                this.rightClickDelayTimer = (int) vClient.instance.settingsManager.getSettingByName("Block Delay").getValDouble();
+            else
+                this.rightClickDelayTimer = 4;
             boolean flag = true;
             ItemStack itemstack = this.thePlayer.inventory.getCurrentItem();
 

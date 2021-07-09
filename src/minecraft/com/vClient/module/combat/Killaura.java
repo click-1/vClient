@@ -14,7 +14,6 @@ import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSword;
-import net.minecraft.network.play.client.C02PacketUseEntity;
 import net.minecraft.network.play.client.C07PacketPlayerDigging;
 import net.minecraft.network.play.client.C08PacketPlayerBlockPlacement;
 import net.minecraft.util.BlockPos;
@@ -89,7 +88,7 @@ public class Killaura extends Module {
         mc.playerController.attackEntity(mc.thePlayer, entity);
         boolean canBlock = vClient.instance.settingsManager.getSettingByName("AutoBlock").getValBoolean() && mc.thePlayer.getHeldItem() != null && mc.thePlayer.getHeldItem().getItem() instanceof ItemSword;
         if (mc.thePlayer.isBlocking() || canBlock)
-            startBlocking(entity);
+            startBlocking();
     }
 
     private void updateTime() {
@@ -111,7 +110,7 @@ public class Killaura extends Module {
         return list.get(0);
     }
 
-    private void startBlocking(Entity interactEntity) {
+    private void startBlocking() {
         mc.getNetHandler().addToSendQueue(new C08PacketPlayerBlockPlacement(mc.thePlayer.inventory.getCurrentItem()));
         blockingStatus = true;
     }

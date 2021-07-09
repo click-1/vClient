@@ -15,7 +15,7 @@ public class ModuleManager {
         modules.add(new Antibot());
         modules.add(new Killaura());
         modules.add(new Reach());
-        modules.add(new TargetStrafe());
+        //modules.add(new TargetStrafe());
         //MOVEMENT
         modules.add(new Fly());
         modules.add(new InventoryMove());
@@ -29,6 +29,7 @@ public class ModuleManager {
         //PLAYER
         modules.add(new Autoclicker());
         modules.add(new FastBreak());
+        modules.add(new FastPlace());
         modules.add(new NoFall());
         modules.add(new Velocity());
         //MISC
