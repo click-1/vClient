@@ -3,6 +3,7 @@ package de.Hero.clickgui;
 import java.awt.Color;
 import java.util.ArrayList;
 
+import com.vClient.module.Module;
 import com.vClient.vClient;
 import net.minecraft.client.gui.Gui;
 import de.Hero.clickgui.elements.ModuleButton;
@@ -85,7 +86,7 @@ public class Panel extends GuiScreen {
 				if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("New")){
 					Gui.drawRect(x - 2, startY, x + width, startY + et.height + 1, outlineColor);
 				}
-				Gui.drawRect(x, 	startY, x + width, startY + et.height + 1, epanelcolor);
+				Gui.drawRect(x, startY, x + width, startY + et.height + 1, epanelcolor);
 				et.x = x + 2;
 				et.y = startY;
 				et.width = width - 4;
@@ -93,7 +94,6 @@ public class Panel extends GuiScreen {
 				startY += et.height + 1;
 			}
 			Gui.drawRect(x, startY + 1, x + width, startY + 1, epanelcolor);
-		
 		}
 	}
 

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class Fly extends Module {
     public Fly() {
-        super("Fly", Keyboard.CHAR_NONE, Category.MOVEMENT);
+        super("Fly", Keyboard.CHAR_NONE, Category.MOVEMENT, "Enable player to fly.");
     }
     @Override
     public void setup() {

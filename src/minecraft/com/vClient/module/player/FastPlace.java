@@ -8,7 +8,7 @@ import org.lwjgl.input.Keyboard;
 
 public class FastPlace extends Module {
     public FastPlace() {
-        super("FastPlace", Keyboard.CHAR_NONE, Category.PLAYER);
+        super("FastPlace", Keyboard.CHAR_NONE, Category.PLAYER, "Remove block placing delay.");
     }
     @Override
     public void setup() {

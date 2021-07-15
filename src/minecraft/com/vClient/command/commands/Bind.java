@@ -13,7 +13,7 @@ public class Bind extends Command {
     @Override
     public void onCommand(String[] args) {
         if (args.length == 0) {
-            vClient.addChatMessage("\2478Bind Commands:");
+            vClient.addChatMessage("\2478" + getDescription());
             vClient.addChatMessage(".bind <module> <key>");
             vClient.addChatMessage(".bind clear");
             vClient.addChatMessage(".bind list");

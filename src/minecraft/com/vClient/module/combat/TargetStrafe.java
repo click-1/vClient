@@ -9,7 +9,6 @@ import com.vClient.vClient;
 import de.Hero.settings.Setting;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.util.BlockPos;
 import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ public class TargetStrafe extends Module {
     private double normalZ;
     private EntityLivingBase target;
     public TargetStrafe() {
-        super("TargetStrafe", Keyboard.CHAR_NONE, Category.COMBAT);
+        super("TargetStrafe", Keyboard.CHAR_NONE, Category.COMBAT, "Automatically strafe around KillAura target. ");
     }
     @Override
     public void setup() {

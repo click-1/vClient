@@ -44,4 +44,8 @@ public class CommandManager {
         if (!foundCommand)
             vClient.addChatMessage("Couldn't find command.");
     }
+
+    public Command getCommandByName(String name) {
+        return commands.stream().filter(c -> c.getName().equalsIgnoreCase(name)).findFirst().get();
+    }
 }

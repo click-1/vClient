@@ -8,7 +8,7 @@ import org.lwjgl.input.Keyboard;
 
 public class FastBreak extends Module {
     public FastBreak() {
-        super("FastBreak", Keyboard.CHAR_NONE, Category.PLAYER);
+        super("FastBreak", Keyboard.CHAR_NONE, Category.PLAYER, "Increase player mining speed.");
     }
     @Override
     public void setup() {

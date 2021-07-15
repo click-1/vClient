@@ -10,7 +10,7 @@ import org.lwjgl.input.Keyboard;
 
 public class Velocity extends Module {
     public Velocity() {
-        super("Velocity", Keyboard.CHAR_NONE, Category.PLAYER);
+        super("Velocity", Keyboard.CHAR_NONE, Category.PLAYER, "Remove player knockback effects.");
     }
     @EventTarget
     public void onEventReceivePacket(EventReceivePacket event) {

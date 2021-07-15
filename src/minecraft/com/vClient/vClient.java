@@ -11,15 +11,11 @@ import de.Hero.clickgui.ClickGUI;
 import de.Hero.clickgui.util.IconUtil;
 import de.Hero.settings.SettingsManager;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ChatComponentText;
 import org.lwjgl.opengl.Display;
 
-import static org.lwjgl.opengl.GL11.GL_COLOR;
-import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
-
 public class vClient {
-    public String name = "vClient", version = "1", creator = "click_1";
+    public String name = "vClient", version = "2", creator = "click_1";
     public static vClient instance = new vClient();
     public SettingsManager settingsManager;
     public EventManager eventManager;

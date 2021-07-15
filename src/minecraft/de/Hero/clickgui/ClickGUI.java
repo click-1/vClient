@@ -178,10 +178,25 @@ public class ClickGUI extends GuiScreen {
 			GL11.glScalef(4.0F, 4.0F, 0F);
 			FontUtil.drawTotalCenteredStringWithShadow("Listening...", 0, -10, 0xffffffff);
 			GL11.glScalef(0.5F, 0.5F, 0F);
-			FontUtil.drawTotalCenteredStringWithShadow("Press 'ESCAPE' to unbind " + mb.mod.getName() + (mb.mod.getKey() > -1 ? " (" + Keyboard.getKeyName(mb.mod.getKey())+ ")" : ""), 0, 0, 0xffffffff);
+			FontUtil.drawTotalCenteredStringWithShadow("Press 'ESCAPE' to cancel", 0, 0, 0xffffffff);
 			GL11.glScalef(0.25F, 0.25F, 0F);
 			FontUtil.drawTotalCenteredStringWithShadow("by HeroCode", 0, 20, 0xffffffff);
 			GL11.glPopMatrix();
+		}
+
+		description:
+		for (Panel pl : panels) {
+			if (pl.extended && pl.visible && pl.Elements != null) {
+				for (ModuleButton b : pl.Elements) {
+					if (b.isHovered(mouseX, mouseY)) {
+						FontUtil.getFontRenderer().setUnicodeFlag(true);
+						Gui.drawRect(mouseX + 7, mouseY - 2, mouseX + 13 + FontUtil.getStringWidth(b.mod.getDescription()), mouseY + b.height, 0x80a2aab8);
+						FontUtil.drawStringWithShadow(b.mod.getDescription(), mouseX + 10, mouseY, -1);
+						FontUtil.getFontRenderer().setUnicodeFlag(false);
+						break description;
+					}
+				}
+			}
 		}
 		
 		/*

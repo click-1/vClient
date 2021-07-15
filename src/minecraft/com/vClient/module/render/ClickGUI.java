@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class ClickGUI extends Module {
     public ClickGUI() {
-        super("ClickGUI", Keyboard.KEY_RSHIFT, Category.RENDER);
+        super("ClickGUI", Keyboard.KEY_RSHIFT, Category.RENDER, "The ClickGUI.");
     }
     @Override
     public void setup() {

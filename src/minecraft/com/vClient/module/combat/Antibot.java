@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class Antibot extends Module {
     public Antibot() {
-        super("Antibot", Keyboard.CHAR_NONE, Category.COMBAT);
+        super("Antibot", Keyboard.CHAR_NONE, Category.COMBAT, "Prevent KillAura from attacking server-side bots. ");
     }
     @Override
     public void setup() {

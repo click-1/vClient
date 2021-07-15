@@ -11,7 +11,7 @@ import org.lwjgl.input.Keyboard;
 
 public class InventoryMove extends Module {
     public InventoryMove() {
-        super("InventoryMove", Keyboard.CHAR_NONE, Category.MOVEMENT);
+        super("InventoryMove", Keyboard.CHAR_NONE, Category.MOVEMENT, "Allow player to move while accessing inventory, chests, etc. ");
     }
 
     @EventTarget

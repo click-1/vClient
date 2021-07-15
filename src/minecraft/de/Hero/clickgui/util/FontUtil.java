@@ -14,6 +14,9 @@ import net.minecraft.util.StringUtils;
 public class FontUtil {
 	private static FontRenderer fontRenderer;
 
+	public static FontRenderer getFontRenderer() {
+		return fontRenderer;
+	}
 
 	public static void setupFontUtils() {
 		fontRenderer = Minecraft.getMinecraft().fontRendererObj;

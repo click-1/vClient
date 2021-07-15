@@ -5,15 +5,16 @@ import net.minecraft.client.Minecraft;
 
 public class Module {
     protected Minecraft mc = Minecraft.getMinecraft();
-    private String name, displayName;
+    private String name, displayName, description;
     private int key;
     private Category category;
     private boolean toggled;
 
-    public Module(String name, int key, Category category) {
+    public Module(String name, int key, Category category, String description) {
         this.name = name;
         this.key = key;
         this.category = category;
+        this.description = description;
         toggled = false;
         setup();
     }
@@ -62,5 +63,11 @@ public class Module {
     }
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

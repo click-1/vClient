@@ -8,7 +8,7 @@ import org.lwjgl.input.Keyboard;
 
 public class Sprint extends Module {
     public Sprint() {
-        super("Sprint", Keyboard.CHAR_NONE, Category.MOVEMENT);
+        super("Sprint", Keyboard.CHAR_NONE, Category.MOVEMENT, "Keepsprint.");
     }
     @EventTarget
     public void onUpdate(EventUpdate event) {

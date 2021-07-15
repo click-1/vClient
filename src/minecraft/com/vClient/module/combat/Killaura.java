@@ -32,7 +32,7 @@ public class Killaura extends Module {
     private boolean blockingStatus = false;
 
     public Killaura() {
-        super("Killaura", Keyboard.CHAR_NONE, Category.COMBAT);
+        super("Killaura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
     }
 
     @Override

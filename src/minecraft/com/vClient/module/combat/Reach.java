@@ -8,7 +8,7 @@ import org.lwjgl.input.Keyboard;
 
 public class Reach extends Module {
     public Reach() {
-        super("Reach", Keyboard.CHAR_NONE, Category.COMBAT);
+        super("Reach", Keyboard.CHAR_NONE, Category.COMBAT, "Increase player attack range.");
     }
     @Override
     public void setup() {

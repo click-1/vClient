@@ -9,7 +9,7 @@ import org.lwjgl.input.Keyboard;
 
 public class NoFall extends Module {
     public NoFall() {
-        super("NoFall", Keyboard.CHAR_NONE, Category.PLAYER);
+        super("NoFall", Keyboard.CHAR_NONE, Category.PLAYER, "Negate fall damage.");
     }
     @EventTarget
     public void onUpdate(EventUpdate event) {

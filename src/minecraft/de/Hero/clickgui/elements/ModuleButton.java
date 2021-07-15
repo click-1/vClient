@@ -143,10 +143,8 @@ public class ModuleButton {
 		if (listening) {
 			if (keyCode != Keyboard.KEY_ESCAPE) {
 				//Client.sendChatMessage("Bound '" + mod.getName() + "'" + " to '" + Keyboard.getKeyName(keyCode) + "'");
-				mod.setKey(keyCode);
-			} else {
-				//Client.sendChatMessage("Unbound '" + mod.getName() + "'");
-				mod.setKey(Keyboard.KEY_NONE);
+				mod.setKey(Keyboard.getKeyIndex(Keyboard.getKeyName(keyCode).toUpperCase()));
+				vClient.addChatMessage(String.format("Bound \2473%s \2477to \2476%s", mod.getName(), Keyboard.getKeyName(mod.getKey()).toUpperCase()));
 			}
 			listening = false;
 			return true;

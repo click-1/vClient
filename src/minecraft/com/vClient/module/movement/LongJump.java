@@ -9,7 +9,7 @@ import org.lwjgl.input.Keyboard;
 
 public class LongJump extends Module {
     public LongJump() {
-        super("LongJump", Keyboard.CHAR_NONE, Category.MOVEMENT);
+        super("LongJump", Keyboard.CHAR_NONE, Category.MOVEMENT, "Enable player to take extended steps.");
     }
 
     @EventTarget
