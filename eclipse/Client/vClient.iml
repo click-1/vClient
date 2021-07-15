@@ -355,5 +355,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="discord-rpc" level="project" />
   </component>
 </module>

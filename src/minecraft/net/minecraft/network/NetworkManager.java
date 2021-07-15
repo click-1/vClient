@@ -155,9 +155,8 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet>
             {
                 EventReceivePacket eventReceivePacket = new EventReceivePacket(p_channelRead0_2_);
                 eventReceivePacket.call();
-                if (eventReceivePacket.isCancelled()) {
+                if (eventReceivePacket.isCancelled())
                     return;
-                }
                 p_channelRead0_2_.processPacket(this.packetListener);
             }
             catch (ThreadQuickExitException var4)

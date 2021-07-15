@@ -324,7 +324,7 @@ public class PlayerControllerMP
                     this.curBlockDamageMP = 0.0F;
                     this.stepSoundTickCounter = 0.0F;
                     if (vClient.instance.moduleManager.getModulebyName("FastBreak").isToggled())
-                        this.blockHitDelay = 0;
+                        this.blockHitDelay = -1;
                     else
                         this.blockHitDelay = 5;
                 }

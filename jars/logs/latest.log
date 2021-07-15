@@ -1,44 +1,13 @@
-[01:18:21] [Client thread/INFO]: Setting user: Player245
-[01:18:21] [Client thread/INFO]: (Session ID is token:0:Player245)
-[01:18:23] [Client thread/INFO]: LWJGL Version: 2.9.4
-[01:18:23] [Client thread/INFO]: Reloading ResourceManager: Default
-[01:18:24] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[01:18:24] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[01:18:24] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[01:18:24] [Thread-6/INFO]: OpenAL initialized.
-[01:18:24] [Sound Library Loader/INFO]: Sound engine started
-[01:18:27] [Client thread/INFO]: Created: 512x512 textures-atlas
-[01:18:32] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[01:18:32] [Server thread/INFO]: Generating keypair
-[01:18:32] [Server thread/INFO]: Preparing start region for level 0
-[01:18:33] [Server thread/INFO]: Changing view distance to 5, from 10
-[01:18:33] [Server thread/INFO]: Player245[local:E:3d683eda] logged in with entity id 138 at (561.8287397297006, 71.0, 304.49785956334784)
-[01:18:33] [Server thread/INFO]: Player245 joined the game
-[01:18:33] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[01:18:34] [Server thread/INFO]: Saving and pausing game...
-[01:18:34] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[01:18:34] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[01:18:34] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[01:18:38] [Client thread/INFO]: [CHAT] §9[vClient]§7: Enabled §3Sprint
-[01:18:55] [Server thread/INFO]: Player245 has just earned the achievement [Taking Inventory]
-[01:18:55] [Client thread/INFO]: [CHAT] Player245 has just earned the achievement [Taking Inventory]
-[01:19:08] [Server thread/INFO]: [Player245: Set own game mode to Creative Mode]
-[01:19:08] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[01:19:50] [Client thread/INFO]: [CHAT] §9[vClient]§7: Enabled §3StableFOV
-[01:20:06] [Server thread/INFO]: [Player245: Set own game mode to Survival Mode]
-[01:20:06] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[01:20:14] [Server thread/INFO]: [Player245: Given [Stone Pickaxe] * 1 to Player245]
-[01:20:14] [Client thread/INFO]: [CHAT] Given [Stone Pickaxe] * 1 to Player245
-[01:21:45] [Server thread/INFO]: Saving and pausing game...
-[01:21:45] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[01:21:45] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[01:21:45] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[01:21:46] [Server thread/INFO]: Stopping server
-[01:21:46] [Server thread/INFO]: Saving players
-[01:21:46] [Server thread/INFO]: Saving worlds
-[01:21:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[01:21:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[01:21:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[01:21:47] [Client thread/INFO]: Stopping!
-[01:21:47] [Client thread/INFO]: SoundSystem shutting down...
-[01:21:47] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[17:24:48] [Client thread/INFO]: Setting user: Player208
+[17:24:48] [Client thread/INFO]: (Session ID is token:0:Player208)
+[17:24:50] [Client thread/INFO]: LWJGL Version: 2.9.4
+[17:24:50] [Client thread/INFO]: Reloading ResourceManager: Default
+[17:24:51] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:24:51] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[17:24:51] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:24:52] [Thread-6/INFO]: OpenAL initialized.
+[17:24:52] [Sound Library Loader/INFO]: Sound engine started
+[17:24:55] [Client thread/INFO]: Created: 512x512 textures-atlas
+[17:26:04] [Client thread/INFO]: Stopping!
+[17:26:04] [Client thread/INFO]: SoundSystem shutting down...
+[17:26:04] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

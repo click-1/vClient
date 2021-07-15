@@ -5,6 +5,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.Date;
+
+import com.vClient.discord.DiscordHandler;
 import net.minecraft.client.AnvilConverterException;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
@@ -48,6 +50,7 @@ public class GuiSelectWorld extends GuiScreen implements GuiYesNoCallback
      */
     public void initGui()
     {
+        DiscordHandler.getInstance().getDiscordRP().update("Idle", "Singleplayer");
         this.field_146628_f = I18n.format("selectWorld.title", new Object[0]);
 
         try

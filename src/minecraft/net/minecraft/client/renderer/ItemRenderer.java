@@ -348,8 +348,9 @@ public class ItemRenderer
                         break;
 
                     case BLOCK:
-                        this.transformFirstPersonItem(f, 0.0F);
+                        this.transformFirstPersonItem(0.2F, f1);
                         this.func_178103_d();
+                        GlStateManager.translate(-0.5F, 0.2F, 0.0F);
                         break;
 
                     case BOW:

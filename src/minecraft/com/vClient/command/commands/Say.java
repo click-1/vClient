@@ -10,7 +10,7 @@ public class Say extends Command {
     }
 
     @Override
-    public void onCommand(String[] args, String command) {
+    public void onCommand(String[] args) {
         Minecraft.getMinecraft().thePlayer.sendQueue.addToSendQueue(new C01PacketChatMessage(String.join(" ", args)));
     }
 }

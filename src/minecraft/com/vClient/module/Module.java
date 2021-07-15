@@ -31,11 +31,10 @@ public class Module {
     public void toggle() {
         toggled = !toggled;
         onToggle();
-        if (toggled) {
+        if (toggled)
             onEnable();
-        } else {
+        else
             onDisable();
-        }
     }
     public String getName() {
         return name;

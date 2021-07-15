@@ -10,7 +10,7 @@ public class Toggle extends Command {
     }
 
     @Override
-    public void onCommand(String[] args, String command) {
+    public void onCommand(String[] args) {
         if (args.length == 0) {
             vClient.addChatMessage("\2478Toggle Commands:");
             vClient.addChatMessage(".toggle <module>");

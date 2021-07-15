@@ -41,23 +41,23 @@ public class FontRenderer implements IResourceManagerReloadListener
     /**
      * Array of the start/end column (in upper/lower nibble) for every glyph in the /font directory.
      */
-    private byte[] glyphWidth = new byte[65536];
+    protected byte[] glyphWidth = new byte[65536];
 
     /**
      * Array of RGB triplets defining the 16 standard chat colors followed by 16 darker version of the same colors for
      * drop shadows.
      */
     private int[] colorCode = new int[32];
-    private ResourceLocation locationFontTexture;
+    protected ResourceLocation locationFontTexture;
 
     /** The RenderEngine used to load and setup glyph textures. */
-    private final TextureManager renderEngine;
+    protected final TextureManager renderEngine;
 
     /** Current X coordinate at which to draw the next character. */
-    private float posX;
+    protected float posX;
 
     /** Current Y coordinate at which to draw the next character. */
-    private float posY;
+    protected float posY;
 
     /**
      * If true, strings should be rendered with Unicode fonts instead of the default.png font
@@ -88,7 +88,7 @@ public class FontRenderer implements IResourceManagerReloadListener
     private boolean randomStyle;
 
     /** Set if the "l" style (bold) is active in currently rendering string */
-    private boolean boldStyle;
+    public boolean boldStyle;
 
     /** Set if the "o" style (italic) is active in currently rendering string */
     private boolean italicStyle;
@@ -317,7 +317,7 @@ public class FontRenderer implements IResourceManagerReloadListener
     /**
      * Render a single Unicode character at current (posX,posY) location using one of the /font/glyph_XX.png files...
      */
-    private float renderUnicodeChar(char p_78277_1_, boolean p_78277_2_)
+    protected float renderUnicodeChar(char p_78277_1_, boolean p_78277_2_)
     {
         if (this.glyphWidth[p_78277_1_] == 0)
         {
@@ -596,7 +596,7 @@ public class FontRenderer implements IResourceManagerReloadListener
     /**
      * Render single line string by setting GL color, current (posX,posY), and calling renderStringAtPos()
      */
-    private int renderString(String text, float x, float y, int color, boolean dropShadow)
+    protected int renderString(String text, float x, float y, int color, boolean dropShadow)
     {
         if (text == null)
         {
@@ -678,7 +678,54 @@ public class FontRenderer implements IResourceManagerReloadListener
                 }
             }
 
-            return (int)f;
+            return (int) f;
+        }
+    }
+    public float getPreciseStringWidth(String text)
+    {
+        if (text == null)
+        {
+            return 0;
+        }
+        else
+        {
+            float f = 0.0F;
+            boolean flag = false;
+
+            for (int i = 0; i < text.length(); ++i)
+            {
+                char c0 = text.charAt(i);
+                float f1 = this.getCharWidthFloat(c0);
+
+                if (f1 < 0.0F && i < text.length() - 1)
+                {
+                    ++i;
+                    c0 = text.charAt(i);
+
+                    if (c0 != 108 && c0 != 76)
+                    {
+                        if (c0 == 114 || c0 == 82)
+                        {
+                            flag = false;
+                        }
+                    }
+                    else
+                    {
+                        flag = true;
+                    }
+
+                    f1 = 0.0F;
+                }
+
+                f += f1;
+
+                if (flag && f1 > 0.0F)
+                {
+                    ++f;
+                }
+            }
+
+            return f;
         }
     }
 

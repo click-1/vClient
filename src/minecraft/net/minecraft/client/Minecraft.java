@@ -36,6 +36,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 import javax.imageio.ImageIO;
 
+import com.vClient.discord.DiscordHandler;
 import com.vClient.event.events.EventKey;
 import com.vClient.ui.MainMenu;
 import com.vClient.vClient;
@@ -51,7 +52,6 @@ import net.minecraft.client.gui.GuiControls;
 import net.minecraft.client.gui.GuiGameOver;
 import net.minecraft.client.gui.GuiIngame;
 import net.minecraft.client.gui.GuiIngameMenu;
-import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.client.gui.GuiMemoryErrorScreen;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiSleepMP;
@@ -469,6 +469,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
      */
     private void startGame() throws LWJGLException, IOException
     {
+        DiscordHandler.getInstance().init();
         this.gameSettings = new GameSettings(this, this.mcDataDir);
         this.defaultResourcePacks.add(this.mcDefaultResourcePack);
         this.startTimerHackThread();
@@ -1034,6 +1035,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
     {
         try
         {
+            DiscordHandler.getInstance().shutdown();
             vClient.instance.stopClient();
 
             this.stream.shutdownStream();
@@ -2332,6 +2334,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         networkmanager.sendPacket(new C00Handshake(47, socketaddress.toString(), 0, EnumConnectionState.LOGIN));
         networkmanager.sendPacket(new C00PacketLoginStart(this.getSession().getProfile()));
         this.myNetworkManager = networkmanager;
+        DiscordHandler.getInstance().getDiscordRP().update("Playing SinglePlayer", "In Game");
     }
 
     /**

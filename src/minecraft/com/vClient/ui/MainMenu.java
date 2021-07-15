@@ -1,9 +1,12 @@
 package com.vClient.ui;
 
+import com.vClient.discord.DiscordHandler;
 import com.vClient.ui.login.GuiAltLogin;
 import de.Hero.clickgui.util.ColorUtil;
+import de.Hero.clickgui.util.FontUtil;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.gui.*;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 
 public class MainMenu extends GuiScreen {
@@ -11,12 +14,22 @@ public class MainMenu extends GuiScreen {
 
     }
     public void initGui() {
-
+        DiscordHandler.getInstance().getDiscordRP().update("Successfully injected vClient!", "Main Menu");
     }
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         mc.getTextureManager().bindTexture(new ResourceLocation("pictures/rtx_revamped.jpg"));
         this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
         this.drawGradientRect(0, height - 100, width, height, 0x00000000, 0xff000000);
+
+        GlStateManager.translate(4, 4, 0);
+        GlStateManager.scale(1.8, 1.8, 1);
+        GlStateManager.translate(-4, -4, 0);
+        //FontUtil.drawString("click_1", 9, 25, ColorUtil.getControlledRainbow(25, 0.8f, 1));
+        FontUtil.drawString("click_1", 9, 25, ColorUtil.getRainbow(10, 1f, 1));
+        GlStateManager.translate(4, 4, 0);
+        GlStateManager.scale(0.555, 0.555, 1);
+        GlStateManager.translate(-4, -4, 0);
+
         int chroma = ColorUtil.getRainbow(5, 0.8f, 1);
         String[] buttons = {"Singleplayer", "Multiplayer", "Settings", "Login", "Language", "Quit"};
         int count = 0;

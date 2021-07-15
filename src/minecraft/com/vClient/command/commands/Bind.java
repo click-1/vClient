@@ -11,7 +11,7 @@ public class Bind extends Command {
     }
 
     @Override
-    public void onCommand(String[] args, String command) {
+    public void onCommand(String[] args) {
         if (args.length == 0) {
             vClient.addChatMessage("\2478Bind Commands:");
             vClient.addChatMessage(".bind <module> <key>");

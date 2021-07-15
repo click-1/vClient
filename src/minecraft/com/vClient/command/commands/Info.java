@@ -9,7 +9,7 @@ public class Info extends Command {
     }
 
     @Override
-    public void onCommand(String[] args, String command) {
+    public void onCommand(String[] args) {
         vClient.addChatMessage("\2472" + vClient.instance.name + " " + vClient.instance.version + "\2477 " + "developed by " + "\2472" + vClient.instance.creator);
         vClient.addChatMessage("\2471.info");
         vClient.addChatMessage("\2471.bind");

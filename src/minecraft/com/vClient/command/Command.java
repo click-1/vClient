@@ -14,7 +14,7 @@ public abstract class Command {
         this.aliases = Arrays.asList(aliases);
     }
 
-    public abstract void onCommand(String[] args, String command);
+    public abstract void onCommand(String[] args);
 
     public String getName() {
         return name;

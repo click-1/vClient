@@ -21,6 +21,7 @@ public class CommandManager {
         commands.add(new Say());
         commands.add(new Bind());
         commands.add(new Info());
+        commands.add(new Panic());
     }
 
     public void handleChat(EventChat event) {
@@ -34,7 +35,7 @@ public class CommandManager {
             String commandName = message.split(" ")[0];
             for (Command c : commands) {
                 if (c.getName().equalsIgnoreCase(commandName) || c.getAliases().contains(commandName)) {
-                    c.onCommand(Arrays.copyOfRange(message.split(" "), 1, message.split(" ").length), message);
+                    c.onCommand(Arrays.copyOfRange(message.split(" "), 1, message.split(" ").length));
                     foundCommand = true;
                     break;
                 }

@@ -19,4 +19,8 @@ public class ColorUtil {
 		float hue = (System.currentTimeMillis() % (int)(seconds * 1000)) / (float)(seconds * 1000);
 		return Color.HSBtoRGB(hue, saturation, brightness);
 	}
+	public static int getControlledRainbow(float seconds, float saturation, float brightness) {
+		float hue = ((System.currentTimeMillis() % (int)(seconds * 100)) + (int)(0.2 * seconds * 100)) / (float)(seconds * 1000);
+		return Color.HSBtoRGB(hue, saturation, brightness);
+	}
 }
