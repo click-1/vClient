@@ -150,7 +150,7 @@ public class Killaura extends Module {
         if (mc.thePlayer.getDisplayName() != null && entity.getDisplayName() != null) {
             String targetName = entity.getDisplayName().getFormattedText().replace("§r", "");
             String clientName = mc.thePlayer.getDisplayName().getFormattedText().replace("§r", "");
-            return targetName.startsWith("§${clientName[1]}");
+            return targetName.startsWith("§${clientName.charAt(1)}");
         }
         return false;
     }

@@ -45,7 +45,7 @@ public class GuiTextField extends Gui
      * The current character index that should be used as start of the rendered text.
      */
     private int lineScrollOffset;
-    private int cursorPosition;
+    protected int cursorPosition;
 
     /** other selection position, maybe the same as the cursor */
     private int selectionEnd;

@@ -33,7 +33,7 @@ public class vClient {
         clickGui = new ClickGUI();
         System.out.println("[" + name + "] Starting client, b" + version + ", created by " + creator);
         Display.setIcon(IconUtil.getLoadingIcon());
-        Display.setTitle(name + " b"+version);
+        Display.setTitle(name + " b" + version);
         eventManager.register(this);
     }
 

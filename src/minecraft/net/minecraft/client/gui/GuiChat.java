@@ -2,7 +2,13 @@ package net.minecraft.client.gui;
 
 import com.google.common.collect.Lists;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+
+import com.vClient.module.ModuleManager;
+import com.vClient.vClient;
 import net.minecraft.network.play.client.C14PacketTabComplete;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
@@ -29,6 +35,11 @@ public class GuiChat extends GuiScreen
     private boolean waitingOnAutocomplete;
     private int autocompleteIndex;
     private List<String> foundPlayerNames = Lists.<String>newArrayList();
+
+    /** Auto-suggestions for a Module. */
+    private List<String> moduleSuggestions = new ArrayList<>();
+    private int modulesIndex = 0;
+    private boolean prevSuggested = false;
 
     /** Chat entry field */
     protected GuiTextField inputField;
@@ -80,21 +91,87 @@ public class GuiChat extends GuiScreen
         this.inputField.updateCursorCounter();
     }
 
+    private void updateSuggestions(int mode) {
+        String typed = "";
+        switch (mode) {
+            case 3: typed += inputField.getText().substring(3);
+                break;
+            case 6: typed += inputField.getText().substring(6);
+                break;
+            case 8: typed += inputField.getText().substring(8);
+                break;
+        }
+        typed = ModuleManager.cleanString(typed);
+        if (typed == "") {
+            moduleSuggestions = vClient.instance.moduleManager.getModuleList();
+        }
+        else {
+            moduleSuggestions = vClient.instance.moduleManager.trie.prefixMatches(typed);
+        }
+    }
+
+    // My custom method to display correct module suggestions.
+    private void autocompleteModules(int mode) {
+        if (!prevSuggested)
+            updateSuggestions(mode);
+        if (moduleSuggestions == null)
+            return;
+
+        if (this.moduleSuggestions.size() > 0) {
+            if (!(inputField.getText().length() == 3))
+                this.inputField.deleteWords(-1);
+            if (this.modulesIndex >= this.moduleSuggestions.size())
+                this.modulesIndex = 0;
+        }
+
+        if (this.moduleSuggestions.size() > 0) {
+            StringBuilder stringbuilder = new StringBuilder();
+            for (String s : this.moduleSuggestions) {
+                if (stringbuilder.length() > 0)
+                    stringbuilder.append(", ");
+                stringbuilder.append(s);
+            }
+            this.mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(new ChatComponentText(stringbuilder.toString()), 1);
+            this.inputField.writeText(this.moduleSuggestions.get(this.modulesIndex++));
+        }
+    }
+
     /**
      * Fired when a key is typed (except F11 which toggles full screen). This is the equivalent of
      * KeyListener.keyTyped(KeyEvent e). Args : character (character on the key), keyCode (lwjgl Keyboard key code)
      */
     protected void keyTyped(char typedChar, int keyCode) throws IOException
     {
+
         this.waitingOnAutocomplete = false;
 
         if (keyCode == 15)
         {
-            this.autocompletePlayerNames();
+            if (this.inputField.getText().length() >= 3) {
+                String a = this.inputField.getText().substring(0, 3);
+                //String b = this.inputField.getText().substring(0, 6);
+                //String c = this.inputField.getText().substring(0, 8);
+                if (a.equalsIgnoreCase(".t ") || a.equalsIgnoreCase(".b ")) {
+                    this.autocompleteModules(3);
+                    prevSuggested = true;
+                }
+                //else if (b.equalsIgnoreCase(".bind "))
+                    //this.autocompleteModules(6);
+                //else if (c.equalsIgnoreCase(".toggle "))
+                    //this.autocompleteModules(8);
+                else {
+                    this.autocompletePlayerNames();
+                    prevSuggested = false;
+                }
+            } else {
+                autocompletePlayerNames();
+                prevSuggested = false;
+            }
         }
         else
         {
             this.playerNamesFound = false;
+            prevSuggested = false;
         }
 
         if (keyCode == 1)

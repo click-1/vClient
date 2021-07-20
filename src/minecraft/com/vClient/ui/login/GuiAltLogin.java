@@ -1,6 +1,10 @@
 package com.vClient.ui.login;
 
 import java.io.IOException;
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
@@ -13,6 +17,7 @@ extends GuiScreen {
     private final GuiScreen previousScreen;
     private AltLoginThread thread;
     private GuiTextField username;
+    private InetAddress detectedIP;
 
     public GuiAltLogin(GuiScreen previousScreen) {
         this.previousScreen = previousScreen;
@@ -45,6 +50,8 @@ extends GuiScreen {
         if (this.password.getText().isEmpty()) {
             this.drawString(this.mc.fontRendererObj, "Password", width / 2 - 96, 106, -7829368);
         }
+
+        this.drawCenteredString(this.mc.fontRendererObj, "Current IP: " + (detectedIP != null ? detectedIP.getHostAddress() : "None detected"), width / 2, 136, -1);
         super.drawScreen(x2, y2, z2);
     }
 
@@ -57,6 +64,16 @@ extends GuiScreen {
         this.password = new PasswordField(this.mc.fontRendererObj, width / 2 - 100, 100, 200, 20);
         this.username.setFocused(true);
         Keyboard.enableRepeatEvents(true);
+        detectedIP = getIP();
+    }
+
+    private InetAddress getIP() {
+        try {
+            InetAddress ip = Inet4Address.getLocalHost();
+            return ip;
+        } catch (UnknownHostException e) {
+            return null;
+        }
     }
 
     @Override

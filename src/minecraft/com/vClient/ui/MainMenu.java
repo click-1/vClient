@@ -24,7 +24,6 @@ public class MainMenu extends GuiScreen {
         GlStateManager.translate(4, 4, 0);
         GlStateManager.scale(1.8, 1.8, 1);
         GlStateManager.translate(-4, -4, 0);
-        //FontUtil.drawString("click_1", 9, 25, ColorUtil.getControlledRainbow(25, 0.8f, 1));
         FontUtil.drawString("click_1", 9, 25, ColorUtil.getRainbow(10, 1f, 1));
         GlStateManager.translate(4, 4, 0);
         GlStateManager.scale(0.555, 0.555, 1);
@@ -40,14 +39,6 @@ public class MainMenu extends GuiScreen {
             this.drawCenteredString(mc.fontRendererObj, s, (width/buttons.length) * count + (width/ buttons.length)/2f + 8, height - 20, hovering ? chroma : -1);
             count++;
         }
-        /**
-        GlStateManager.pushMatrix();
-        GlStateManager.translate(width/2f, height/2f, 0);
-        GlStateManager.scale(3, 3, 1);
-        GlStateManager.translate(-(width/2f), -(height/2f), 0);
-        this.drawCenteredString(mc.fontRendererObj, vClient.instance.name, width/2f, height/2f - mc.fontRendererObj.FONT_HEIGHT/2f - 5, 0xffff7000);
-        GlStateManager.popMatrix();
-         **/
     }
     public void mouseClicked(int mouseX, int mouseY, int button) {
         float x1 = (width/6)*0 + (width/6)/2f + 8 - mc.fontRendererObj.getStringWidth("Singleplayer")/2f;

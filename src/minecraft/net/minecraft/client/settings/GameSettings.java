@@ -793,7 +793,8 @@ public class GameSettings
 
                     if (astring[0].equals("gamma"))
                     {
-                        this.gammaSetting = this.parseFloat(astring[1]);
+                        //this.gammaSetting = this.parseFloat(astring[1]);
+                        this.gammaSetting = 100;
                     }
 
                     if (astring[0].equals("saturation"))
