@@ -28,6 +28,7 @@ public class Antibot extends Module {
     public void onEventReceivePacket(EventReceivePacket event) {
         String mode = vClient.instance.settingsManager.getSettingByName("Antibot Mode").getValString();
         if (mode.equalsIgnoreCase("Advanced") && event.getPacket() instanceof S0CPacketSpawnPlayer) {
+            this.setDisplayName("Antibot \u00A77" + mode);
             S0CPacketSpawnPlayer packet = (S0CPacketSpawnPlayer) event.getPacket();
             double posX = packet.getX() / 320D;
             double posY = packet.getY() / 320D;
@@ -44,12 +45,11 @@ public class Antibot extends Module {
     @EventTarget
     public void onUpdate(EventUpdate event) {
         String mode = vClient.instance.settingsManager.getSettingByName("Antibot Mode").getValString();
-        this.setDisplayName("Antibot \u00A77" + mode);
         if (mode.equalsIgnoreCase("Watchdog")) {
-            for (Object entity : mc.theWorld.loadedEntityList) {
-                if (((Entity) entity).isInvisible() && entity != mc.thePlayer) {
-                    mc.theWorld.removeEntity((Entity) entity);
-                }
+            this.setDisplayName("Antibot \u00A77" + mode);
+            for (Entity entity : mc.theWorld.loadedEntityList) {
+                if (entity.isInvisible() && entity != mc.thePlayer)
+                    mc.theWorld.removeEntity(entity);
             }
         }
     }

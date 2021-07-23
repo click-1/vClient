@@ -37,7 +37,7 @@ public class TargetStrafe extends Module {
         if (!vClient.instance.moduleManager.getModulebyName("Killaura").isToggled())
             return;
         double radius = vClient.instance.settingsManager.getSettingByName("Radius").getValDouble();
-        target = getClosest(radius);
+        target = Killaura.getClosest(radius);
         if (target == null)
             return;
         if (mc.gameSettings.keyBindForward.pressed && !mc.gameSettings.keyBindSneak.pressed && mc.thePlayer.moveStrafing == 0F) {
@@ -63,15 +63,5 @@ public class TargetStrafe extends Module {
             return;
         mc.thePlayer.motionX = normalX;
         mc.thePlayer.motionZ = normalZ;
-    }
-    private EntityLivingBase getClosest(double range) {
-        ArrayList<EntityLivingBase> list = new ArrayList<>();
-        for (Entity entity : mc.theWorld.loadedEntityList)
-            if (mc.thePlayer.getDistanceToEntity(entity) <= range && entity instanceof EntityLivingBase && entity != mc.thePlayer)
-                list.add((EntityLivingBase) entity);
-        list.sort(Comparator.comparingDouble(e -> mc.thePlayer.getDistanceToEntity(e)));
-        if (list.size() == 0)
-            return null;
-        return list.get(0);
     }
 }

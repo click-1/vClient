@@ -7,6 +7,7 @@ import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityMob;
@@ -42,7 +43,7 @@ public class Killaura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("FOV", this, 360, 0, 360, true));
         vClient.instance.settingsManager.rSetting(new Setting("Range", this, 3.0, 3.0, 6.0, false));
         vClient.instance.settingsManager.rSetting(new Setting("HurtTime", this, 8, 1, 25, true));
-        vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, true));
+        vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Invisibles", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Players", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Animals", this, false));
@@ -99,7 +100,7 @@ public class Killaura extends Module {
         last = System.nanoTime() / 1000000L;
     }
 
-    private EntityLivingBase getClosest(double range) {
+    public static EntityLivingBase getClosest(double range) {
         ArrayList<EntityLivingBase> list = new ArrayList<>();
         for (Entity entity : mc.theWorld.loadedEntityList)
             if (mc.thePlayer.getDistanceToEntity(entity) <= range && entity instanceof EntityLivingBase && entity != mc.thePlayer)

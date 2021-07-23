@@ -12,13 +12,11 @@ public class Sprint extends Module {
     }
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        if (!mc.thePlayer.isCollidedHorizontally && mc.thePlayer.moveForward > 0) {
-            mc.thePlayer.setSprinting(true);
-        }
+        mc.gameSettings.keyBindSprint.pressed = true;
     }
     @Override
     public void onDisable() {
         super.onDisable();
-        mc.thePlayer.setSprinting(false);
+        mc.gameSettings.keyBindSprint.pressed = false;
     }
 }

@@ -35,6 +35,7 @@ public class vClient {
         Display.setIcon(IconUtil.getLoadingIcon());
         Display.setTitle(name + " b" + version);
         eventManager.register(this);
+        prestartModules();
     }
 
     public void stopClient() {
@@ -53,5 +54,11 @@ public class vClient {
 
     public void onChat(EventChat event) {
         commandManager.handleChat(event);
+    }
+
+    private void prestartModules() {
+        moduleManager.getModulebyName("Sprint").silentToggle();
+        moduleManager.getModulebyName("StableFOV").silentToggle();
+        moduleManager.getModulebyName("TargetHUD").silentToggle();
     }
 }

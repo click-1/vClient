@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Random;
 
 import com.vClient.event.events.Event2D;
+import com.vClient.module.render.TargetHUD;
 import com.vClient.vClient;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -351,6 +352,7 @@ public class GuiIngame extends Gui
         }
 
         vClient.instance.arrayListHUD.draw();
+        ((TargetHUD) vClient.instance.moduleManager.getModulebyName("TargetHUD")).draw();
 
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.disableLighting();

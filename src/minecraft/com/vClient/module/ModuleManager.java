@@ -30,6 +30,7 @@ public class ModuleManager {
         modules.add(new ClickGUI());
         modules.add(new FullBright());
         modules.add(new StableFOV());
+        modules.add(new TargetHUD());
         //PLAYER
         modules.add(new Autoclicker());
         modules.add(new FastBreak());

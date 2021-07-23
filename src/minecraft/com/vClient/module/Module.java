@@ -4,7 +4,7 @@ import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 
 public class Module {
-    protected Minecraft mc = Minecraft.getMinecraft();
+    protected static Minecraft mc = Minecraft.getMinecraft();
     private String name, displayName, description;
     private int key;
     private Category category;
@@ -27,11 +27,18 @@ public class Module {
     }
     public void onToggle() {
         if(vClient.instance.settingsManager.getSettingByName("Sound").getValBoolean())
-            Minecraft.getMinecraft().thePlayer.playSound("random.click", 0.8f, 0.8f);
+            mc.thePlayer.playSound("random.click", 0.8f, 0.8f);
     }
     public void toggle() {
         toggled = !toggled;
         onToggle();
+        if (toggled)
+            onEnable();
+        else
+            onDisable();
+    }
+    public void silentToggle() {
+        toggled = !toggled;
         if (toggled)
             onEnable();
         else
