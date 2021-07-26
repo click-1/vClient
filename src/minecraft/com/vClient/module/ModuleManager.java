@@ -25,6 +25,7 @@ public class ModuleManager {
         modules.add(new InventoryMove());
         modules.add(new LongJump());
         modules.add(new NoSlow());
+        modules.add(new Speed());
         modules.add(new Sprint());
         //RENDER
         modules.add(new ClickGUI());

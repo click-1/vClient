@@ -9,26 +9,21 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.gui.inventory.GuiInventory;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import org.lwjgl.input.Keyboard;
 import java.awt.*;
 
 public class TargetHUD extends Module {
     private int x1, y1, x2, y2;
-
+    private EntityLivingBase target = null;
     public TargetHUD() {
         super("TargetHUD", Keyboard.CHAR_NONE, Category.RENDER, "Display current target info on screen.");
     }
 
     public void draw() {
-        if (!this.isToggled())
+        if (!this.isToggled() || !vClient.instance.moduleManager.getModulebyName("Killaura").isToggled())
             return;
-        /**
-        if (!vClient.instance.moduleManager.getModulebyName("Killaura").isToggled())
-            return;
-        Killaura KAinstance = (Killaura) vClient.instance.moduleManager.getModulebyName("Killaura");
-         */
-        EntityLivingBase target = (EntityLivingBase) mc.pointedEntity;
-
+        target = ((Killaura) vClient.instance.moduleManager.getModulebyName("Killaura")).target;
         if (target != null && target.isEntityAlive())
             display(target);
     }
@@ -37,16 +32,18 @@ public class TargetHUD extends Module {
         ScaledResolution sr = new ScaledResolution(mc);
         x1 = sr.getScaledWidth() / 2;
         y1 = sr.getScaledHeight() / 4 + 35;
-        x2 = x1 + 100;
+        x2 = x1 + 110;
         y2 = y1 + 40;
         Gui.drawRect(x1, y1, x2, y2, new Color(0 ,0, 0, 170).getRGB());
-        Gui.drawRect(x1 + 30, y1 + 9 + 18, x2 - 5, y2 - 4, new Color(145, 145, 145, 170).getRGB());
-        Gui.drawRect(x1 + 30, y1 + 9 + 18, x1 + 30 + barlength(target), y2 - 4, new Color(0, 255, 0, 255).getRGB());
+        Gui.drawRect(x1 + 30, y1 + 25, x2 - 6, y2 - 4, new Color(145, 145, 145, 170).getRGB());
+        Gui.drawRect(x1 + 30, y1 + 25, x1 + 30 + barlength(target), y2 - 4, new Color(0, 190, 60, 255).getRGB());
 
         FontUtil.drawStringWithShadow(target.getName(), x1 + 30, y1 + 5, -1);
-        FontUtil.drawStringWithShadow(round(target.getHealth(), 1) + " \u2764", x1 + 30, y1 + 7 + FontUtil.getFontHeight(), -1);
+        FontUtil.drawCenteredStringWithShadow(round(target.getHealth(), 1) + "\u2764", (x1+x2+24)/2 + 2, y1 + 27, -1);
+        if (target instanceof EntityPlayer)
+            FontUtil.drawStringWithShadow("blocking: " + (((EntityPlayer) target).isBlocking() ? "true" : "false"), x1 + 30, y1 + 6 + FontUtil.getFontHeight(), -1);
 
-        GuiInventory.drawEntityOnScreen(x1 + 13, y1 + 37, 16, -90, -30, target);
+        GuiInventory.drawEntityOnScreen(x1 + 14, y2 - 4, 16, -90, -30, target);
     }
 
     private double round (double value, int precision) {
@@ -55,8 +52,8 @@ public class TargetHUD extends Module {
         return ans > 0.0 ? ans : 0.1;
     }
     private double barlength(EntityLivingBase target) {
-        double diff = x2 - 35 - x1;
+        double diff = x2 - x1 - 36;
         double ratio = target.getHealth() / target.getMaxHealth();
-        return ratio*diff;
+        return ratio * diff;
     }
 }
