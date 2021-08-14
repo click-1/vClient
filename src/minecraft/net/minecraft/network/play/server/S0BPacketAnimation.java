@@ -9,7 +9,7 @@ import net.minecraft.network.play.INetHandlerPlayClient;
 public class S0BPacketAnimation implements Packet<INetHandlerPlayClient>
 {
     private int entityId;
-    private int type;
+    public int type;
 
     public S0BPacketAnimation()
     {

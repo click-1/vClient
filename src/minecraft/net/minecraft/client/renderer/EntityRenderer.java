@@ -13,6 +13,7 @@ import java.util.concurrent.Callable;
 
 import com.vClient.event.events.Event3D;
 import com.vClient.ui.MainMenu;
+import com.vClient.vClient;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
 import net.minecraft.block.material.Material;
@@ -642,6 +643,9 @@ public class EntityRenderer implements IResourceManagerReloadListener
 
     private void hurtCameraEffect(float partialTicks)
     {
+        if (vClient.instance.moduleManager.getModulebyName("Velocity").isToggled() && vClient.instance.settingsManager.getSettingByName("NoHurtCam").getValBoolean())
+            return;
+
         if (this.mc.getRenderViewEntity() instanceof EntityLivingBase)
         {
             EntityLivingBase entitylivingbase = (EntityLivingBase)this.mc.getRenderViewEntity();
