@@ -8,7 +8,7 @@ import com.vClient.event.events.EventKey;
 import com.vClient.module.ModuleManager;
 import com.vClient.ui.ArrayListHUD;
 import de.Hero.clickgui.ClickGUI;
-import de.Hero.clickgui.util.IconUtil;
+import com.vClient.util.IconUtil;
 import de.Hero.settings.SettingsManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ChatComponentText;
@@ -43,7 +43,7 @@ public class vClient {
     }
 
     public static void addChatMessage(String message) {
-        message = "\2479" + "[" + instance.name + "]" + "\2477: " + message;
+        message = "\2478" + "[" + "\2479" + instance.name + "\2478]" + "\2477 " + message;
         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(message));
     }
 

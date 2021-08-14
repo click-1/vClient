@@ -16,8 +16,8 @@ public class ModuleManager {
 
     public ModuleManager() {
         //COMBAT
-        modules.add(new Antibot());
-        modules.add(new Killaura());
+        modules.add(new AntiBot());
+        modules.add(new KillAura());
         modules.add(new Reach());
         //modules.add(new TargetStrafe());
         //MOVEMENT
@@ -33,7 +33,8 @@ public class ModuleManager {
         modules.add(new StableFOV());
         modules.add(new TargetHUD());
         //PLAYER
-        modules.add(new Autoclicker());
+        modules.add(new AutoClicker());
+        modules.add(new AutoTool());
         modules.add(new FastBreak());
         modules.add(new FastPlace());
         modules.add(new NoFall());

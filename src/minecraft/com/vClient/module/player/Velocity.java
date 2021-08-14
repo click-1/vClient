@@ -4,6 +4,7 @@ import com.vClient.event.EventTarget;
 import com.vClient.event.events.EventReceivePacket;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
+import net.minecraft.network.play.server.S0BPacketAnimation;
 import net.minecraft.network.play.server.S12PacketEntityVelocity;
 import net.minecraft.network.play.server.S27PacketExplosion;
 import org.lwjgl.input.Keyboard;
@@ -22,7 +23,13 @@ public class Velocity extends Module {
             ((S12PacketEntityVelocity) event.getPacket()).motionY = 0;
             ((S12PacketEntityVelocity) event.getPacket()).motionZ = 0;
         }
+
         if (event.getPacket() instanceof S27PacketExplosion)
             event.setCancelled(true);
+
+        if (event.getPacket() instanceof S0BPacketAnimation) {
+            if (((S0BPacketAnimation) event.getPacket()).getAnimationType() == 1)
+                event.setCancelled(true);
+        }
     }
 }

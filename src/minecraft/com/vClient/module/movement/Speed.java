@@ -5,15 +5,31 @@ import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.util.MovementUtil;
+import com.vClient.vClient;
+import de.Hero.settings.Setting;
 import org.lwjgl.input.Keyboard;
+
+import java.util.ArrayList;
 
 public class Speed extends Module {
     public Speed() {
         super("Speed", Keyboard.CHAR_NONE, Category.MOVEMENT, "Modify player movement.");
     }
+
+    @Override
+    public void setup() {
+        ArrayList<String> options = new ArrayList<>();
+        options.add("NCPHop");
+        options.add("Watchdog");
+        vClient.instance.settingsManager.rSetting(new Setting("Speed Mode", this, "NCPHop", options));
+    }
     @Override
     public void onEnable() {
-        mc.timer.timerSpeed = 1.0865F;
+        String mode = vClient.instance.settingsManager.getSettingByName("Speed Mode").getValString();
+        if (mode.equalsIgnoreCase("NCPHop"))
+            mc.timer.timerSpeed = 1.0865F;
+        if (mode.equalsIgnoreCase("Watchdog"))
+            mc.timer.timerSpeed = 1.0F;
         super.onEnable();
     }
 
@@ -25,11 +41,14 @@ public class Speed extends Module {
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
+        String mode = vClient.instance.settingsManager.getSettingByName("Speed Mode").getValString();
         if (MovementUtil.isMoving()) {
             if (mc.thePlayer.onGround)
                 mc.thePlayer.jump();
-
-            MovementUtil.strafe();
+            if (mode.equalsIgnoreCase("NCPHop"))
+                MovementUtil.strafe();
+            else
+                MovementUtil.strafe(MovementUtil.getSpeed() * 1.015F);
         } else {
             mc.thePlayer.motionX = 0D;
             mc.thePlayer.motionZ = 0D;

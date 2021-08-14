@@ -2,7 +2,7 @@ package com.vClient.ui;
 
 import com.vClient.discord.DiscordHandler;
 import com.vClient.ui.login.GuiAltLogin;
-import de.Hero.clickgui.util.ColorUtil;
+import com.vClient.util.ColorUtil;
 import de.Hero.clickgui.util.FontUtil;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.gui.*;

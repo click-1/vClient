@@ -25,15 +25,15 @@ import org.lwjgl.input.Keyboard;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Killaura extends Module {
+public class KillAura extends Module {
     public EntityLivingBase target;
     private long current, last;
     private int delay;
     private float yaw, pitch;
     private boolean blockingStatus = false;
 
-    public Killaura() {
-        super("Killaura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
+    public KillAura() {
+        super("KillAura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
     }
 
     @Override

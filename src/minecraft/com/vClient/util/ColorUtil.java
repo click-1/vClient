@@ -1,4 +1,4 @@
-package de.Hero.clickgui.util;
+package com.vClient.util;
 
 import java.awt.Color;
 import com.vClient.vClient;
@@ -11,9 +11,10 @@ import com.vClient.vClient;
  *  @author HeroCode
  */
 public class ColorUtil {
-	
+	public static Color baseColor = getClickGUIColor();
+	public static int baseColorint = baseColor.getRGB();
 	public static Color getClickGUIColor(){
-		return new Color((int) vClient.instance.settingsManager.getSettingByName("Red").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Green").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Blue").getValDouble());
+		return new Color((int)vClient.instance.settingsManager.getSettingByName("Red").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Green").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Blue").getValDouble());
 	}
 	public static int getRainbow(float seconds, float saturation, float brightness) {
 		float hue = (System.currentTimeMillis() % (int)(seconds * 1000)) / (float)(seconds * 1000);

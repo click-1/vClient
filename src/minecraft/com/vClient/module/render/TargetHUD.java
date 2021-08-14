@@ -2,7 +2,8 @@ package com.vClient.module.render;
 
 import com.vClient.module.Category;
 import com.vClient.module.Module;
-import com.vClient.module.combat.Killaura;
+import com.vClient.module.combat.KillAura;
+import com.vClient.util.ColorUtil;
 import com.vClient.vClient;
 import de.Hero.clickgui.util.FontUtil;
 import net.minecraft.client.gui.Gui;
@@ -21,9 +22,9 @@ public class TargetHUD extends Module {
     }
 
     public void draw() {
-        if (!this.isToggled() || !vClient.instance.moduleManager.getModulebyName("Killaura").isToggled())
+        if (!this.isToggled() || !vClient.instance.moduleManager.getModulebyName("KillAura").isToggled())
             return;
-        target = ((Killaura) vClient.instance.moduleManager.getModulebyName("Killaura")).target;
+        target = ((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).target;
         if (target != null && target.isEntityAlive())
             display(target);
     }
@@ -36,7 +37,7 @@ public class TargetHUD extends Module {
         y2 = y1 + 40;
         Gui.drawRect(x1, y1, x2, y2, new Color(0 ,0, 0, 170).getRGB());
         Gui.drawRect(x1 + 30, y1 + 25, x2 - 6, y2 - 4, new Color(145, 145, 145, 170).getRGB());
-        Gui.drawRect(x1 + 30, y1 + 25, x1 + 30 + barlength(target), y2 - 4, new Color(0, 190, 60, 255).getRGB());
+        Gui.drawRect(x1 + 30, y1 + 25, x1 + 30 + barlength(target), y2 - 4, ColorUtil.baseColorint);
 
         FontUtil.drawStringWithShadow(target.getName(), x1 + 30, y1 + 5, -1);
         FontUtil.drawCenteredStringWithShadow(round(target.getHealth(), 1) + "\u2764", (x1+x2+24)/2 + 2, y1 + 27, -1);

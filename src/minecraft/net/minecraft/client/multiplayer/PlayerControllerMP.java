@@ -1,5 +1,6 @@
 package net.minecraft.client.multiplayer;
 
+import com.vClient.event.events.EventClickBlock;
 import com.vClient.vClient;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -224,6 +225,9 @@ public class PlayerControllerMP
         }
         else
         {
+            EventClickBlock eventClickBlock = new EventClickBlock(loc);
+            eventClickBlock.call();
+
             if (this.currentGameType.isCreative())
             {
                 this.netClientHandler.addToSendQueue(new C07PacketPlayerDigging(C07PacketPlayerDigging.Action.START_DESTROY_BLOCK, loc, face));

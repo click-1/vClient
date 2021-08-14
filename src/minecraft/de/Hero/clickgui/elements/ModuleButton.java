@@ -9,14 +9,13 @@ import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 
-import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.input.Keyboard;
 
 import de.Hero.clickgui.Panel;
 import de.Hero.clickgui.elements.menu.ElementCheckBox;
 import de.Hero.clickgui.elements.menu.ElementComboBox;
 import de.Hero.clickgui.elements.menu.ElementSlider;
-import de.Hero.clickgui.util.ColorUtil;
+import com.vClient.util.ColorUtil;
 import de.Hero.clickgui.util.FontUtil;
 import de.Hero.settings.Setting;
 

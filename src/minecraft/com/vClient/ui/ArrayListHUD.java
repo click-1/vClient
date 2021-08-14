@@ -2,7 +2,7 @@ package com.vClient.ui;
 
 import com.vClient.module.Module;
 import com.vClient.vClient;
-import de.Hero.clickgui.util.ColorUtil;
+import com.vClient.util.ColorUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;

@@ -6,9 +6,9 @@ import com.vClient.module.Category;
 import com.vClient.module.Module;
 import org.lwjgl.input.Keyboard;
 
-public class Autoclicker extends Module {
-    public Autoclicker() {
-        super("Autoclicker", Keyboard.CHAR_NONE, Category.PLAYER, "Repeated swinging while holding left mouse button. ");
+public class AutoClicker extends Module {
+    public AutoClicker() {
+        super("AutoClicker", Keyboard.CHAR_NONE, Category.PLAYER, "Repeated swinging while holding left mouse button. ");
     }
     @EventTarget
     public void onUpdate(EventUpdate event) {

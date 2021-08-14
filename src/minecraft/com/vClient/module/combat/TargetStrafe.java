@@ -7,12 +7,8 @@ import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import org.lwjgl.input.Keyboard;
-
-import java.util.ArrayList;
-import java.util.Comparator;
 
 public class TargetStrafe extends Module {
     private double normalX;
@@ -34,10 +30,10 @@ public class TargetStrafe extends Module {
     }
     @EventTarget
     public void onPre(EventPreMotionUpdate event) {
-        if (!vClient.instance.moduleManager.getModulebyName("Killaura").isToggled())
+        if (!vClient.instance.moduleManager.getModulebyName("KillAura").isToggled())
             return;
         double radius = vClient.instance.settingsManager.getSettingByName("Radius").getValDouble();
-        target = Killaura.getClosest(radius);
+        target = KillAura.getClosest(radius);
         if (target == null)
             return;
         if (mc.gameSettings.keyBindForward.pressed && !mc.gameSettings.keyBindSneak.pressed && mc.thePlayer.moveStrafing == 0F) {

@@ -6,7 +6,7 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.util.MathHelper;
 import de.Hero.clickgui.elements.Element;
 import de.Hero.clickgui.elements.ModuleButton;
-import de.Hero.clickgui.util.ColorUtil;
+import com.vClient.util.ColorUtil;
 import de.Hero.clickgui.util.FontUtil;
 import de.Hero.settings.Setting;
 

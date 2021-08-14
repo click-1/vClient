@@ -13,22 +13,22 @@ import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
 
-public class Antibot extends Module {
-    public Antibot() {
-        super("Antibot", Keyboard.CHAR_NONE, Category.COMBAT, "Prevent KillAura from attacking server-side bots. ");
+public class AntiBot extends Module {
+    public AntiBot() {
+        super("AntiBot", Keyboard.CHAR_NONE, Category.COMBAT, "Prevent KillAura from attacking server-side bots. ");
     }
     @Override
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
         options.add("Advanced");
         options.add("Watchdog");
-        vClient.instance.settingsManager.rSetting(new Setting("Antibot Mode", this, "Advanced", options));
+        vClient.instance.settingsManager.rSetting(new Setting("AntiBot Mode", this, "Advanced", options));
     }
     @EventTarget
     public void onEventReceivePacket(EventReceivePacket event) {
-        String mode = vClient.instance.settingsManager.getSettingByName("Antibot Mode").getValString();
+        String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
         if (mode.equalsIgnoreCase("Advanced") && event.getPacket() instanceof S0CPacketSpawnPlayer) {
-            this.setDisplayName("Antibot \u00A77" + mode);
+            this.setDisplayName("AntiBot \u00A77" + mode);
             S0CPacketSpawnPlayer packet = (S0CPacketSpawnPlayer) event.getPacket();
             double posX = packet.getX() / 320D;
             double posY = packet.getY() / 320D;
@@ -44,9 +44,9 @@ public class Antibot extends Module {
     }
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        String mode = vClient.instance.settingsManager.getSettingByName("Antibot Mode").getValString();
+        String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
         if (mode.equalsIgnoreCase("Watchdog")) {
-            this.setDisplayName("Antibot \u00A77" + mode);
+            this.setDisplayName("AntiBot \u00A77" + mode);
             for (Entity entity : mc.theWorld.loadedEntityList) {
                 if (entity.isInvisible() && entity != mc.thePlayer)
                     mc.theWorld.removeEntity(entity);

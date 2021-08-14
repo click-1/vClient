@@ -1,4 +1,4 @@
-package de.Hero.clickgui.util;
+package com.vClient.util;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

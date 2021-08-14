@@ -3,11 +3,10 @@ package de.Hero.clickgui;
 import java.awt.Color;
 import java.util.ArrayList;
 
-import com.vClient.module.Module;
 import com.vClient.vClient;
 import net.minecraft.client.gui.Gui;
 import de.Hero.clickgui.elements.ModuleButton;
-import de.Hero.clickgui.util.ColorUtil;
+import com.vClient.util.ColorUtil;
 import de.Hero.clickgui.util.FontUtil;
 import net.minecraft.client.gui.GuiScreen;
 
