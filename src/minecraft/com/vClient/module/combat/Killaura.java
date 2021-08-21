@@ -55,7 +55,7 @@ public class KillAura extends Module {
     @EventTarget
     public void onPre(EventPreMotionUpdate event) {
         target = getClosest(vClient.instance.settingsManager.getSettingByName("Range").getValDouble());
-        if (target == null || !canAttack(target))
+        if (target == null)
             return;
         delay = (int) vClient.instance.settingsManager.getSettingByName("HurtTime").getValDouble();
         updateTime();
@@ -103,12 +103,10 @@ public class KillAura extends Module {
     public static EntityLivingBase getClosest(double range) {
         ArrayList<EntityLivingBase> list = new ArrayList<>();
         for (Entity entity : mc.theWorld.loadedEntityList)
-            if (mc.thePlayer.getDistanceToEntity(entity) <= range && entity instanceof EntityLivingBase && entity != mc.thePlayer)
+            if (mc.thePlayer.getDistanceToEntity(entity) <= range && entity instanceof EntityLivingBase && entity != mc.thePlayer && KillAura.canAttack((EntityLivingBase) entity))
                 list.add((EntityLivingBase) entity);
         list.sort(Comparator.comparingDouble(e -> mc.thePlayer.getDistanceToEntity(e)));
-        if (list.size() == 0)
-            return null;
-        return list.get(0);
+        return list.size() > 0 ? list.get(0) : null;
     }
 
     private void startBlocking() {
@@ -123,7 +121,7 @@ public class KillAura extends Module {
         }
     }
 
-    private boolean canAttack(EntityLivingBase player) {
+    private static boolean canAttack(EntityLivingBase player) {
         boolean conditions = player.isEntityAlive() && player.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
         if (!conditions)
             return false;
@@ -144,31 +142,31 @@ public class KillAura extends Module {
         return true;
     }
 
-    private boolean checkIfSameTeam(EntityLivingBase entity) {
+    private static boolean checkIfSameTeam(EntityLivingBase entity) {
         if (mc.thePlayer.getTeam() != null && entity.getTeam() != null &&
                 mc.thePlayer.getTeam().isSameTeam(entity.getTeam()))
             return true;
         if (mc.thePlayer.getDisplayName() != null && entity.getDisplayName() != null) {
             String targetName = entity.getDisplayName().getFormattedText().replace("§r", "");
             String clientName = mc.thePlayer.getDisplayName().getFormattedText().replace("§r", "");
-            return targetName.startsWith("§${clientName.charAt(1)}");
+            return targetName.startsWith("§" + clientName.charAt(1));
         }
         return false;
     }
 
-    private boolean isInFOV(EntityLivingBase entity, double angle) {
+    private static boolean isInFOV(EntityLivingBase entity, double angle) {
         angle *= .5D;
         double angleDiff = getAngleDifference(mc.thePlayer.rotationYaw, getRotations(entity.posX, entity.posY, entity.posZ)[0]);
         return (angleDiff > 0 && angleDiff < angle) || (-angle < angleDiff && angleDiff < 0);
     }
 
-    private float getAngleDifference(float dir, float yaw) {
+    private static float getAngleDifference(float dir, float yaw) {
         float f = Math.abs(yaw - dir) % 360F;
         float dist = f > 180F ? 360F - f : f;
         return dist;
     }
 
-    private float[] getRotations(double x, double y, double z) {
+    private static float[] getRotations(double x, double y, double z) {
         double diffX = x + .5D - mc.thePlayer.posX;
         double diffY = (y + .5D) / 2D - (mc.thePlayer.posY + mc.thePlayer.getEyeHeight());
         double diffZ = z + .5D - mc.thePlayer.posZ;
