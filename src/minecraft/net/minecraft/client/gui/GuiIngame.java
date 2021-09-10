@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Random;
 
 import com.vClient.event.events.Event2D;
+import com.vClient.event.events.EventTick;
 import com.vClient.module.render.TargetHUD;
 import com.vClient.vClient;
 import net.minecraft.block.material.Material;
@@ -1093,6 +1094,9 @@ public class GuiIngame extends Gui
 
         if (this.mc.thePlayer != null)
         {
+            EventTick eventTick = new EventTick();
+            eventTick.call();
+
             ItemStack itemstack = this.mc.thePlayer.inventory.getCurrentItem();
 
             if (itemstack == null)
