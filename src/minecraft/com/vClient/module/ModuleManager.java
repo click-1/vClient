@@ -20,6 +20,7 @@ public class ModuleManager {
         modules.add(new KillAura());
         modules.add(new Reach());
         //modules.add(new TargetStrafe());
+        modules.add(new WTap());
         //MOVEMENT
         modules.add(new Fly());
         modules.add(new InventoryMove());

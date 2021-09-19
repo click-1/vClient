@@ -7,7 +7,6 @@ import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityMob;
