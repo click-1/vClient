@@ -1,6 +1,6 @@
 invertYMouse:false
 mouseSensitivity:0.5
-fov:0.3
+fov:0.5
 gamma:100.0
 saturation:0.0
 renderDistance:5
@@ -10,7 +10,7 @@ bobView:false
 anaglyph3d:false
 maxFps:260
 fboEnable:true
-difficulty:2
+difficulty:3
 fancyGraphics:false
 ao:0
 renderClouds:false
