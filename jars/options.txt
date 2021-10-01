@@ -10,7 +10,7 @@ bobView:false
 anaglyph3d:false
 maxFps:260
 fboEnable:true
-difficulty:3
+difficulty:2
 fancyGraphics:false
 ao:0
 renderClouds:false
@@ -90,7 +90,7 @@ key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
 key_Zoom:46
-soundCategory_master:0.105960265
+soundCategory_master:0.052980132
 soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0

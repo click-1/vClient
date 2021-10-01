@@ -7,6 +7,7 @@ import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityMob;
@@ -21,7 +22,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 import org.lwjgl.input.Keyboard;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -31,6 +31,7 @@ public class KillAura extends Module {
     private int delay;
     private float yaw, pitch;
     private boolean blockingStatus = false;
+    private int right_click = mc.gameSettings.keyBindUseItem.getKeyCode();
 
     public KillAura() {
         super("KillAura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
@@ -70,7 +71,8 @@ public class KillAura extends Module {
     @EventTarget
     public void onPost(EventPostMotionUpdate event) {
         if (target == null || !canAttack(target)) {
-            stopBlocking();
+            if (blockingStatus)
+                stopBlocking();
             return;
         }
         mc.thePlayer.rotationYaw = yaw;
@@ -78,17 +80,12 @@ public class KillAura extends Module {
     }
 
     private void attack(Entity entity) {
-        if (mc.thePlayer.isBlocking() || blockingStatus) {
-            mc.getNetHandler().addToSendQueue(new C07PacketPlayerDigging(C07PacketPlayerDigging.Action.RELEASE_USE_ITEM, BlockPos.ORIGIN, EnumFacing.DOWN));
-            blockingStatus = false;
-        }
-        for (int i = 0; i < vClient.instance.settingsManager.getSettingByName("Crack Size").getValDouble(); i++) {
+        boolean canBlock = vClient.instance.settingsManager.getSettingByName("AutoBlock").getValBoolean() && mc.thePlayer.getHeldItem() != null && mc.thePlayer.getHeldItem().getItem() instanceof ItemSword;
+        for (int i = 0; i < vClient.instance.settingsManager.getSettingByName("Crack Size").getValDouble(); i++)
             mc.thePlayer.onCriticalHit(entity);
-        }
         mc.thePlayer.swingItem();
         mc.playerController.attackEntity(mc.thePlayer, entity);
-        boolean canBlock = vClient.instance.settingsManager.getSettingByName("AutoBlock").getValBoolean() && mc.thePlayer.getHeldItem() != null && mc.thePlayer.getHeldItem().getItem() instanceof ItemSword;
-        if (mc.thePlayer.isBlocking() || canBlock)
+        if (!mc.thePlayer.isBlocking() && !blockingStatus && canBlock)
             startBlocking();
     }
 
@@ -110,15 +107,13 @@ public class KillAura extends Module {
     }
 
     private void startBlocking() {
-        mc.getNetHandler().addToSendQueue(new C08PacketPlayerBlockPlacement(mc.thePlayer.inventory.getCurrentItem()));
+        KeyBinding.setKeyBindState(right_click, true);
         blockingStatus = true;
     }
 
     private void stopBlocking() {
-        if (blockingStatus) {
-            mc.getNetHandler().addToSendQueue(new C07PacketPlayerDigging(C07PacketPlayerDigging.Action.RELEASE_USE_ITEM, BlockPos.ORIGIN, EnumFacing.DOWN));
-            blockingStatus = false;
-        }
+        KeyBinding.setKeyBindState(right_click, false);
+        blockingStatus = false;
     }
 
     private static boolean canAttack(EntityLivingBase player) {
