@@ -15,23 +15,20 @@ import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSword;
-import net.minecraft.network.play.client.C02PacketUseEntity;
-import net.minecraft.network.play.client.C07PacketPlayerDigging;
-import net.minecraft.network.play.client.C08PacketPlayerBlockPlacement;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 import org.lwjgl.input.Keyboard;
 import java.util.ArrayList;
 import java.util.Comparator;
 
 public class KillAura extends Module {
-    public EntityLivingBase target;
+    public ArrayList<EntityLivingBase> targets;
+    public EntityLivingBase active_target;
     private long current, last;
     private int delay;
     private float yaw, pitch;
     private boolean blockingStatus = false;
     private int right_click = mc.gameSettings.keyBindUseItem.getKeyCode();
+    private int num_attacks;
 
     public KillAura() {
         super("KillAura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
@@ -44,6 +41,7 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("FOV", this, 360, 0, 360, true));
         vClient.instance.settingsManager.rSetting(new Setting("Range", this, 3.0, 3.0, 6.0, false));
         vClient.instance.settingsManager.rSetting(new Setting("HurtTime", this, 8, 1, 25, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Multi", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Invisibles", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Players", this, true));
@@ -55,22 +53,42 @@ public class KillAura extends Module {
 
     @EventTarget
     public void onPre(EventPreMotionUpdate event) {
-        target = getClosest(vClient.instance.settingsManager.getSettingByName("Range").getValDouble());
-        if (target == null)
+        targets = getClosest(vClient.instance.settingsManager.getSettingByName("Range").getValDouble());
+        if (targets.size() == 0)
             return;
+        num_attacks = vClient.instance.settingsManager.getSettingByName("Multi").getValBoolean() ? 3 : 1;
         delay = (int) vClient.instance.settingsManager.getSettingByName("HurtTime").getValDouble();
         updateTime();
         yaw = mc.thePlayer.rotationYaw;
         pitch = mc.thePlayer.rotationPitch;
         if (current - last > 1000 / delay) {
-            attack(target);
+            boolean canBlock = vClient.instance.settingsManager.getSettingByName("AutoBlock").getValBoolean() && mc.thePlayer.getHeldItem() != null && mc.thePlayer.getHeldItem().getItem() instanceof ItemSword;
+            if (canBlock)
+                stopBlocking();
+            mc.thePlayer.swingItem();
+            for (int i = 0; i < num_attacks; i++) {
+                if (targets.size() >= i+1) {
+                    active_target = targets.get(i);
+                    attack(active_target);
+                }
+            }
+            if (!mc.thePlayer.isBlocking() && !blockingStatus && canBlock)
+                startBlocking();
             resetTime();
         }
     }
 
+    private boolean no_longer_attacking() {
+        for (int i = 0; i < num_attacks; i++) {
+            if (canAttack(targets.get(i)))
+                return false;
+        }
+        return true;
+    }
+
     @EventTarget
     public void onPost(EventPostMotionUpdate event) {
-        if (target == null || !canAttack(target)) {
+        if (targets == null || targets.size() == 0 || no_longer_attacking()) {
             if (blockingStatus)
                 stopBlocking();
             return;
@@ -80,13 +98,9 @@ public class KillAura extends Module {
     }
 
     private void attack(Entity entity) {
-        boolean canBlock = vClient.instance.settingsManager.getSettingByName("AutoBlock").getValBoolean() && mc.thePlayer.getHeldItem() != null && mc.thePlayer.getHeldItem().getItem() instanceof ItemSword;
         for (int i = 0; i < vClient.instance.settingsManager.getSettingByName("Crack Size").getValDouble(); i++)
             mc.thePlayer.onCriticalHit(entity);
-        mc.thePlayer.swingItem();
         mc.playerController.attackEntity(mc.thePlayer, entity);
-        if (!mc.thePlayer.isBlocking() && !blockingStatus && canBlock)
-            startBlocking();
     }
 
     private void updateTime() {
@@ -97,13 +111,13 @@ public class KillAura extends Module {
         last = System.nanoTime() / 1000000L;
     }
 
-    public static EntityLivingBase getClosest(double range) {
+    public ArrayList<EntityLivingBase> getClosest(double range) {
         ArrayList<EntityLivingBase> list = new ArrayList<>();
         for (Entity entity : mc.theWorld.loadedEntityList)
-            if (mc.thePlayer.getDistanceToEntity(entity) <= range && entity instanceof EntityLivingBase && entity != mc.thePlayer && KillAura.canAttack((EntityLivingBase) entity))
+            if (mc.thePlayer.getDistanceToEntity(entity) <= range && entity instanceof EntityLivingBase && entity != mc.thePlayer && canAttack((EntityLivingBase) entity))
                 list.add((EntityLivingBase) entity);
         list.sort(Comparator.comparingDouble(e -> mc.thePlayer.getDistanceToEntity(e)));
-        return list.size() > 0 ? list.get(0) : null;
+        return list;
     }
 
     private void startBlocking() {
@@ -117,7 +131,7 @@ public class KillAura extends Module {
     }
 
     private static boolean canAttack(EntityLivingBase player) {
-        boolean conditions = player.isEntityAlive() && player.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
+        boolean conditions = player != null && player.isEntityAlive() && player.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
         if (!conditions)
             return false;
         if (player instanceof EntityPlayer && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())

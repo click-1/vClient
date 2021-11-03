@@ -33,8 +33,8 @@ public class TargetStrafe extends Module {
         if (!vClient.instance.moduleManager.getModulebyName("KillAura").isToggled())
             return;
         double radius = vClient.instance.settingsManager.getSettingByName("Radius").getValDouble();
-        target = KillAura.getClosest(radius);
-        if (target == null)
+        target = ((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).active_target;
+        if (target == null || !target.isEntityAlive())
             return;
         if (mc.gameSettings.keyBindForward.pressed && !mc.gameSettings.keyBindSneak.pressed && mc.thePlayer.moveStrafing == 0F) {
             if (Math.sqrt(Math.pow(mc.thePlayer.posX - target.posX, 2) + Math.pow(mc.thePlayer.posZ - target.posZ, 2)) != 0) {

@@ -1,6 +1,7 @@
 package com.vClient.module;
 
 import com.vClient.module.combat.*;
+import com.vClient.module.misc.GameSpeed;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
 import com.vClient.module.render.*;
@@ -41,6 +42,7 @@ public class ModuleManager {
         modules.add(new NoFall());
         modules.add(new Velocity());
         //MISC
+        modules.add(new GameSpeed());
 
         modules.sort(Comparator.comparing(m -> m.getName()));
         Set<String> cleanedStrings = new HashSet<>();
