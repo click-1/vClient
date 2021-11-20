@@ -1,6 +1,7 @@
 package com.vClient.module.player;
 
 import com.vClient.event.EventTarget;
+import com.vClient.event.events.EventReceivePacket;
 import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
@@ -15,6 +16,8 @@ public class NoFall extends Module {
     public void onUpdate(EventUpdate event) {
         if (mc.thePlayer.fallDistance > 2F) {
             mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer(true));
+            //mc.thePlayer.onGround = false;
+            mc.thePlayer.fallDistance = .1f;
         }
     }
 }

@@ -7,6 +7,7 @@ import com.vClient.event.events.EventChat;
 import com.vClient.event.events.EventKey;
 import com.vClient.module.ModuleManager;
 import com.vClient.ui.ArrayListHUD;
+import com.vClient.util.custom_font.CustomFontUtil;
 import de.Hero.clickgui.ClickGUI;
 import com.vClient.util.IconUtil;
 import de.Hero.settings.SettingsManager;
@@ -25,6 +26,7 @@ public class vClient {
     public ClickGUI clickGui;
 
     public void startClient() {
+        CustomFontUtil.bootstrap();
         settingsManager = new SettingsManager();
         eventManager = new EventManager();
         moduleManager = new ModuleManager();
@@ -43,7 +45,7 @@ public class vClient {
     }
 
     public static void addChatMessage(String message) {
-        message = "\2478" + "[" + "\2479" + instance.name + "\2478]" + "\2477 " + message;
+        message = "\247b" + "[" + instance.name + "]" + "\2477 " + message;
         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(message));
     }
 

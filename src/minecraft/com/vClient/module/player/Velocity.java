@@ -21,7 +21,7 @@ public class Velocity extends Module {
     @EventTarget
     public void onEventReceivePacket(EventReceivePacket event) {
         if (event.getPacket() instanceof S12PacketEntityVelocity) {
-            if ((mc.theWorld.getEntityByID(((S12PacketEntityVelocity) event.getPacket()).getEntityID())) != mc.thePlayer)
+            if (mc.theWorld.getEntityByID(((S12PacketEntityVelocity) event.getPacket()).getEntityID()) != mc.thePlayer)
                 return;
             event.setCancelled(true);
         }

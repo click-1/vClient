@@ -3,6 +3,7 @@ package com.vClient.ui;
 import com.vClient.discord.DiscordHandler;
 import com.vClient.ui.login.GuiAltLogin;
 import com.vClient.util.ColorUtil;
+import com.vClient.util.custom_font.CustomFontUtil;
 import de.Hero.clickgui.util.FontUtil;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.gui.*;
@@ -24,7 +25,7 @@ public class MainMenu extends GuiScreen {
         GlStateManager.translate(4, 4, 0);
         GlStateManager.scale(1.8, 1.8, 1);
         GlStateManager.translate(-4, -4, 0);
-        FontUtil.drawString("click_1", 9, 25, ColorUtil.getRainbow(10, 1f, 1));
+        CustomFontUtil.arial.drawString("click_1", 9, 25, ColorUtil.getRainbow(10, 1f, 1));
         GlStateManager.translate(4, 4, 0);
         GlStateManager.scale(0.555, 0.555, 1);
         GlStateManager.translate(-4, -4, 0);

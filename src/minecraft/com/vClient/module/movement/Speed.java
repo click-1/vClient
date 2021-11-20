@@ -43,12 +43,14 @@ public class Speed extends Module {
     public void onUpdate(EventUpdate event) {
         String mode = vClient.instance.settingsManager.getSettingByName("Speed Mode").getValString();
         if (MovementUtil.isMoving()) {
+            //vClient.addChatMessage(String.valueOf(MovementUtil.getSpeed()*20.0));
             if (mc.thePlayer.onGround)
                 mc.thePlayer.jump();
             if (mode.equalsIgnoreCase("NCPHop"))
                 MovementUtil.strafe();
             else
-                MovementUtil.strafe(MovementUtil.getSpeed() * 1.015F);
+                MovementUtil.strafe(MovementUtil.getSpeed() * 1.005f);
+
         } else {
             mc.thePlayer.motionX = 0D;
             mc.thePlayer.motionZ = 0D;

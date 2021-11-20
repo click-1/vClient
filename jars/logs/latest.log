@@ -1,48 +1,37 @@
-[22:18:03] [Client thread/INFO]: Setting user: Player103
-[22:18:03] [Client thread/INFO]: (Session ID is token:0:Player103)
-[22:18:05] [Client thread/INFO]: LWJGL Version: 2.9.4
-[22:18:05] [Client thread/INFO]: Reloading ResourceManager: Default
-[22:18:05] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[22:18:05] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[22:18:05] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[22:18:06] [Thread-6/INFO]: OpenAL initialized.
-[22:18:06] [Sound Library Loader/INFO]: Sound engine started
-[22:18:13] [Client thread/INFO]: Created: 512x512 textures-atlas
-[22:18:31] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[22:18:31] [Server thread/INFO]: Generating keypair
-[22:18:31] [Server thread/INFO]: Preparing start region for level 0
-[22:18:32] [Server thread/INFO]: Preparing spawn area: 33%
-[22:18:33] [Server thread/INFO]: Changing view distance to 5, from 10
-[22:18:33] [Server thread/INFO]: Player103[local:E:987647ba] logged in with entity id 200 at (592.3138914092438, 72.97058246775816, 351.11887166895895)
-[22:18:33] [Server thread/INFO]: Player103 joined the game
-[22:18:33] [Server thread/INFO]: Saving and pausing game...
-[22:18:33] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[22:18:33] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:18:33] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:18:33] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:18:39] [Server thread/INFO]: [Player103: Set the time to 1000]
-[22:18:39] [Client thread/INFO]: [CHAT] Set the time to 1000
-[22:18:42] [Client thread/INFO]: [CHAT] gamespeed
-[22:18:43] [Client thread/INFO]: [CHAT] §8[§9vClient§8]§7 Bound §3GameSpeed §7to §6R
-[22:18:58] [Client thread/INFO]: [CHAT] speed, sprint
-[22:18:59] [Client thread/INFO]: [CHAT] §8[§9vClient§8]§7 Bound §3Speed §7to §6X
-[22:19:27] [Client thread/INFO]: [CHAT] nofall, noslow
-[22:19:27] [Client thread/INFO]: [CHAT] nofall, noslow
-[22:19:27] [Client thread/INFO]: [CHAT] §8[§9vClient§8]§7 Enabled §3NoSlow
-[22:20:27] [Server thread/INFO]: Saving and pausing game...
-[22:20:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:20:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:20:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:20:55] [Server thread/INFO]: Saving and pausing game...
-[22:20:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:20:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:20:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:20:55] [Server thread/INFO]: Stopping server
-[22:20:55] [Server thread/INFO]: Saving players
-[22:20:55] [Server thread/INFO]: Saving worlds
-[22:20:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:20:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:20:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:20:56] [Client thread/INFO]: Stopping!
-[22:20:56] [Client thread/INFO]: SoundSystem shutting down...
-[22:20:57] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[12:46:20] [Client thread/INFO]: Setting user: Player125
+[12:46:20] [Client thread/INFO]: (Session ID is token:0:Player125)
+[12:46:23] [Client thread/INFO]: LWJGL Version: 2.9.4
+[12:46:23] [Client thread/INFO]: Reloading ResourceManager: Default
+[12:46:23] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[12:46:24] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[12:46:24] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[12:46:24] [Thread-6/INFO]: OpenAL initialized.
+[12:46:24] [Sound Library Loader/INFO]: Sound engine started
+[12:46:28] [Client thread/INFO]: Created: 512x512 textures-atlas
+[12:46:33] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[12:46:33] [Server thread/INFO]: Generating keypair
+[12:46:33] [Server thread/INFO]: Preparing start region for level 0
+[12:46:34] [Server thread/INFO]: Preparing spawn area: 56%
+[12:46:34] [Server thread/INFO]: Changing view distance to 5, from 10
+[12:46:35] [Server thread/INFO]: Player125[local:E:ff3c7363] logged in with entity id 125 at (589.6971353874607, 76.0, 349.69999998807907)
+[12:46:35] [Server thread/INFO]: Player125 joined the game
+[12:46:35] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[12:46:35] [Server thread/INFO]: Saving and pausing game...
+[12:46:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[12:46:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[12:46:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[12:46:37] [Client thread/INFO]: [CHAT] nofall, noslow
+[12:46:38] [Client thread/INFO]: [CHAT] §b[vClient]§7 Enabled §3NoFall
+[12:47:32] [Server thread/INFO]: Saving and pausing game...
+[12:47:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[12:47:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[12:47:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[12:48:13] [Client thread/INFO]: Stopping!
+[12:48:13] [Client thread/INFO]: SoundSystem shutting down...
+[12:48:13] [Server thread/INFO]: Stopping server
+[12:48:13] [Server thread/INFO]: Saving players
+[12:48:13] [Server thread/INFO]: Saving worlds
+[12:48:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[12:48:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[12:48:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[12:48:14] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
