@@ -1,6 +1,7 @@
 package com.vClient.module.player;
 
 import com.vClient.event.EventTarget;
+import com.vClient.event.events.EventPreMotionUpdate;
 import com.vClient.event.events.EventReceivePacket;
 import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;

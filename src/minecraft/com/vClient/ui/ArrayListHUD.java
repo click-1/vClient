@@ -53,7 +53,6 @@ public class ArrayListHUD {
 
     private double round (double value, int precision) {
         int scale = (int) Math.pow(10, precision);
-        double ans = (double) Math.round(value * scale) / scale;
-        return ans > 0.0 ? ans : 0.1;
+        return (double) Math.round(value * scale) / scale;
     }
 }

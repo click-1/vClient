@@ -83,6 +83,7 @@ public class KillAura extends Module {
             if (canAttack(targets.get(i)))
                 return false;
         }
+        active_target = null;
         return true;
     }
 

@@ -38,6 +38,7 @@ import javax.imageio.ImageIO;
 
 import com.vClient.discord.DiscordHandler;
 import com.vClient.event.events.EventKey;
+import com.vClient.module.combat.KillAura;
 import com.vClient.ui.MainMenu;
 import com.vClient.vClient;
 import de.Hero.clickgui.ClickGUI;

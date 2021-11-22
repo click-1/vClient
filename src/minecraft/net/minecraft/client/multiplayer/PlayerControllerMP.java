@@ -1,6 +1,7 @@
 package net.minecraft.client.multiplayer;
 
 import com.vClient.event.events.EventClickBlock;
+import com.vClient.module.combat.KillAura;
 import com.vClient.vClient;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -425,6 +426,9 @@ public class PlayerControllerMP
                     }
                 }
             }
+
+            if (vClient.instance.moduleManager.getModulebyName("KillAura").isToggled() && mc.thePlayer.isSwingInProgress)
+                return false;
 
             this.netClientHandler.addToSendQueue(new C08PacketPlayerBlockPlacement(hitPos, side.getIndex(), player.inventory.getCurrentItem(), f, f1, f2));
 
