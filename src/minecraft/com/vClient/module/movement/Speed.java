@@ -49,7 +49,7 @@ public class Speed extends Module {
             if (mode.equalsIgnoreCase("NCPHop"))
                 MovementUtil.strafe();
             else
-                MovementUtil.strafe(MovementUtil.getSpeed() * 1.005f);
+                MovementUtil.strafe(MovementUtil.getSpeed() * .995f);
 
         } else {
             mc.thePlayer.motionX = 0D;

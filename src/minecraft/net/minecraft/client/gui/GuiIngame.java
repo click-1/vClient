@@ -9,6 +9,7 @@ import java.util.Random;
 
 import com.vClient.event.events.Event2D;
 import com.vClient.event.events.EventTick;
+import com.vClient.module.render.ESP;
 import com.vClient.module.render.TargetHUD;
 import com.vClient.vClient;
 import net.minecraft.block.material.Material;

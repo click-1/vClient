@@ -25,8 +25,9 @@ public class KillAura extends Module {
     public EntityLivingBase active_target;
     private long current, last;
     private int delay;
+    private double range;
     private float yaw, pitch;
-    private boolean blockingStatus = false;
+    public boolean blockingStatus = false;
     private int right_click = mc.gameSettings.keyBindUseItem.getKeyCode();
     private int num_attacks;
 
@@ -51,13 +52,19 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Teams", this, true));
     }
 
-    @EventTarget
-    public void onPre(EventPreMotionUpdate event) {
-        targets = getClosest(vClient.instance.settingsManager.getSettingByName("Range").getValDouble());
-        if (targets.size() == 0)
-            return;
+    @Override
+    public void onEnable() {
         num_attacks = vClient.instance.settingsManager.getSettingByName("Multi").getValBoolean() ? 3 : 1;
         delay = (int) vClient.instance.settingsManager.getSettingByName("HurtTime").getValDouble();
+        range = vClient.instance.settingsManager.getSettingByName("Range").getValDouble();
+        super.onEnable();
+    }
+
+    @EventTarget
+    public void onPre(EventPreMotionUpdate event) {
+        targets = getClosest(range);
+        if (targets.size() == 0)
+            return;
         updateTime();
         yaw = mc.thePlayer.rotationYaw;
         pitch = mc.thePlayer.rotationPitch;

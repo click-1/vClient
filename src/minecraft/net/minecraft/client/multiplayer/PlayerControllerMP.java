@@ -427,7 +427,7 @@ public class PlayerControllerMP
                 }
             }
 
-            if (vClient.instance.moduleManager.getModulebyName("KillAura").isToggled() && mc.thePlayer.isSwingInProgress)
+            if (vClient.instance.moduleManager.getModulebyName("KillAura").isToggled() && ((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).blockingStatus)
                 return false;
 
             this.netClientHandler.addToSendQueue(new C08PacketPlayerBlockPlacement(hitPos, side.getIndex(), player.inventory.getCurrentItem(), f, f1, f2));

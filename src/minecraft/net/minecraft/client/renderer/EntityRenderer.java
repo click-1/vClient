@@ -12,6 +12,7 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 
 import com.vClient.event.events.Event3D;
+import com.vClient.module.render.ESP;
 import com.vClient.ui.MainMenu;
 import com.vClient.vClient;
 import net.minecraft.block.Block;
@@ -1667,6 +1668,8 @@ public class EntityRenderer implements IResourceManagerReloadListener
 
         this.mc.mcProfiler.endStartSection("hand");
         boolean flag3 = Reflector.callBoolean(Reflector.ForgeHooksClient_renderFirstPersonHand, new Object[] {this.mc.renderGlobal, Float.valueOf(partialTicks), Integer.valueOf(pass)});
+
+        ((ESP) vClient.instance.moduleManager.getModulebyName("ESP")).draw();
 
         if (!flag3 && this.renderHand)
         {
