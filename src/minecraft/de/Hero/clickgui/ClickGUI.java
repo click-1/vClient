@@ -7,6 +7,7 @@ import java.util.Collections;
 
 import com.vClient.module.Category;
 import com.vClient.module.Module;
+import com.vClient.util.custom_font.CustomFontUtil;
 import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -187,10 +188,8 @@ public class ClickGUI extends GuiScreen {
 			if (pl.extended && pl.visible && pl.Elements != null) {
 				for (ModuleButton b : pl.Elements) {
 					if (b.isHovered(mouseX, mouseY)) {
-						FontUtil.getFontRenderer().setUnicodeFlag(true);
-						Gui.drawRect(mouseX + 7, mouseY - 2, mouseX + 13 + FontUtil.getStringWidth(b.mod.getDescription()), mouseY + b.height, 0x80a2aab8);
-						FontUtil.drawStringWithShadow(b.mod.getDescription(), mouseX + 10, mouseY, -1);
-						FontUtil.getFontRenderer().setUnicodeFlag(false);
+						Gui.drawRect(mouseX + 7, mouseY - 3, mouseX + 13 + CustomFontUtil.descriptions.getStringWidth(b.mod.getDescription()), mouseY + b.height -3, new Color(115, 115, 115).getRGB());
+						CustomFontUtil.descriptions.drawString(b.mod.getDescription(), mouseX + 10, mouseY + 1, new Color(255, 170, 0).getRGB());
 						break description;
 					}
 				}

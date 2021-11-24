@@ -3,6 +3,7 @@ package com.vClient.module.render;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.vClient;
+import de.Hero.settings.Setting;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
@@ -26,15 +27,29 @@ import static org.lwjgl.opengl.GL11.*;
 
 public class ESP extends Module {
     private Map<Integer, Boolean> glCapMap = new HashMap<>();
+    private boolean outline, box3d;
     public ESP() {
         super("ESP", Keyboard.CHAR_NONE, Category.RENDER, "Extrasensory perception. ");
+    }
+
+    @Override
+    public void setup() {
+        vClient.instance.settingsManager.rSetting(new Setting("Outline", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Box3D", this, true));
+    }
+
+    @Override
+    public void onEnable() {
+        outline = vClient.instance.settingsManager.getSettingByName("Outline").getValBoolean();
+        box3d = vClient.instance.settingsManager.getSettingByName("Box3D").getValBoolean();
+        super.onEnable();
     }
 
     public void draw() {
         if (!this.isToggled())
             return;
         for (Entity entity : mc.theWorld.loadedEntityList) {
-            if (entity instanceof EntityLivingBase && entity != mc.thePlayer && canDisplay((EntityLivingBase) entity)) {
+            if (entity instanceof EntityLivingBase && entity != mc.thePlayer && canDisplay((EntityLivingBase) entity) && mc.thePlayer.getDistanceToEntity(entity) >= 1F) {
                 final EntityLivingBase entityLiving = (EntityLivingBase) entity;
                 Color color = getColor(entityLiving);
 
@@ -64,13 +79,16 @@ public class ESP extends Module {
                         entityBox.maxZ - entity.posZ + z + 0.05D
                 );
 
-                //glLineWidth(1.5F);
-                //setGlCap(GL_LINE_SMOOTH, true);
-                //GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, color.getAlpha() / 255F);
-                //drawSelectionBoundingBox(axisAlignedBB);
-
-                GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, 50 / 255F);
-                drawFilledBox(axisAlignedBB);
+                if (outline) {
+                    glLineWidth(2.5F - 2.5F / (float)Math.pow(mc.thePlayer.getDistanceToEntity(entityLiving), 2));
+                    setGlCap(GL_LINE_SMOOTH, true);
+                    GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, color.getAlpha() / 255F);
+                    drawSelectionBoundingBox(axisAlignedBB);
+                }
+                if (box3d) {
+                    GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, 50 / 255F);
+                    drawFilledBox(axisAlignedBB);
+                }
 
                 GlStateManager.resetColor();
                 glDepthMask(true);
