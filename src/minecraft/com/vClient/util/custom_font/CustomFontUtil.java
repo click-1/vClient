@@ -50,7 +50,7 @@ public class CustomFontUtil {
             Map<String, Font> locationMap = new HashMap<>();
             arial_ = getFont(locationMap, "arial.ttf", 18);
             big_ = getFont(locationMap, "roboto.ttf", 24);
-            descriptions_ = getFont(locationMap, "roboto.ttf", 14);
+            descriptions_ = getFont(locationMap, "arialn.ttf", 15);
             completed++;
         }).start();
         new Thread(() ->

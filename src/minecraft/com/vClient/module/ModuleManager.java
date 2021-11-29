@@ -30,6 +30,7 @@ public class ModuleManager {
         modules.add(new Speed());
         modules.add(new Sprint());
         //RENDER
+        modules.add(new Camera());
         modules.add(new ClickGUI());
         modules.add(new ESP());
         modules.add(new FullBright());

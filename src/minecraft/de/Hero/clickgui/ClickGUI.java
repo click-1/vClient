@@ -189,7 +189,7 @@ public class ClickGUI extends GuiScreen {
 				for (ModuleButton b : pl.Elements) {
 					if (b.isHovered(mouseX, mouseY)) {
 						Gui.drawRect(mouseX + 7, mouseY - 3, mouseX + 13 + CustomFontUtil.descriptions.getStringWidth(b.mod.getDescription()), mouseY + b.height -3, new Color(115, 115, 115).getRGB());
-						CustomFontUtil.descriptions.drawString(b.mod.getDescription(), mouseX + 10, mouseY + 1, new Color(255, 170, 0).getRGB());
+						CustomFontUtil.descriptions.drawString(b.mod.getDescription(), mouseX + 10, mouseY + 1, new Color(250, 129, 0).getRGB());
 						break description;
 					}
 				}

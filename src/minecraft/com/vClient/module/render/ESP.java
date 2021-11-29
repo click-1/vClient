@@ -82,11 +82,11 @@ public class ESP extends Module {
                 if (outline) {
                     glLineWidth(2.5F - 2.5F / (float)Math.pow(mc.thePlayer.getDistanceToEntity(entityLiving), 2));
                     setGlCap(GL_LINE_SMOOTH, true);
-                    GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, color.getAlpha() / 255F);
+                    GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, color.getAlpha() / 510F);
                     drawSelectionBoundingBox(axisAlignedBB);
                 }
                 if (box3d) {
-                    GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, 50 / 255F);
+                    GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, 40 / 255F);
                     drawFilledBox(axisAlignedBB);
                 }
 
