@@ -24,6 +24,7 @@ public class ModuleManager {
         modules.add(new WTap());
         //MOVEMENT
         modules.add(new Fly());
+        //modules.add(new Freeze());
         modules.add(new InventoryMove());
         modules.add(new LongJump());
         modules.add(new NoSlow());

@@ -36,7 +36,7 @@ public class ArrayListHUD {
                 continue;
             float offset = count * (cfr.getHeight() + 6);
             if (boxes)
-                Gui.drawRect(sr.getScaledWidth() - cfr.getStringWidth(m.getName()) - 7, offset, sr.getScaledWidth(), offset + CustomFontUtil.arial.getHeight() + 6, 0x90000000);
+                Gui.drawRect(sr.getScaledWidth() - cfr.getStringWidth(m.getName()) - 7, offset, sr.getScaledWidth(), offset + CustomFontUtil.arial.getHeight() + 6, new Color(66, 66, 66, 86).getRGB());
             if (tails)
                 Gui.drawRect(sr.getScaledWidth() - cfr.getStringWidth(m.getName()) - 9, offset, sr.getScaledWidth() - cfr.getStringWidth(m.getName()) - 7, 6 + cfr.getHeight() + offset, chrome ? chroma: color);
 
