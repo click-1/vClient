@@ -1520,10 +1520,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
 
                 if (this.playerController.isNotCreative())
                 {
-                    if (vClient.instance.moduleManager.getModulebyName("AutoClicker").isToggled())
-                        this.leftClickCounter = 0;
-                    else
-                        this.leftClickCounter = 10;
+                    this.leftClickCounter = vClient.instance.moduleManager.getModulebyName("AutoClicker").isToggled() ? 0 : 10;
                 }
             }
             else

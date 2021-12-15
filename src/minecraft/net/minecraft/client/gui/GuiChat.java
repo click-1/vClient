@@ -127,10 +127,10 @@ public class GuiChat extends GuiScreen
         if (this.moduleSuggestions.size() > 0) {
             StringBuilder stringbuilder = new StringBuilder();
             for (String s : this.moduleSuggestions) {
-                if (stringbuilder.length() > 0)
-                    stringbuilder.append(", ");
                 stringbuilder.append(s);
+                stringbuilder.append(", ");
             }
+            stringbuilder.delete(stringbuilder.length() - 2, stringbuilder.length());
             this.mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(new ChatComponentText(stringbuilder.toString()), 1);
             this.inputField.writeText(this.moduleSuggestions.get(this.modulesIndex++));
         }

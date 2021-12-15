@@ -12,6 +12,6 @@ public class Reach extends Module {
     }
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("Reach", this, 3.0, 3.0, 6.0, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Reach", this, 4.0, 3.0, 6.0, false));
     }
 }

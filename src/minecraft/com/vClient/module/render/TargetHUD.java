@@ -25,7 +25,7 @@ public class TargetHUD extends Module {
         if (!this.isToggled() || !vClient.instance.moduleManager.getModulebyName("KillAura").isToggled())
             return;
         target = ((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).active_target;
-        if (target != null && target.isEntityAlive() && mc.thePlayer.getDistanceToEntity(target) <= vClient.instance.settingsManager.getSettingByName("Range").getValDouble())
+        if (target != null && mc.thePlayer.getDistanceToEntity(target) <= vClient.instance.settingsManager.getSettingByName("Range").getValDouble())
             display(target);
     }
 

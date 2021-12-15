@@ -5,68 +5,69 @@ import com.vClient.module.misc.*;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
 import com.vClient.module.render.*;
+import com.vClient.util.MyTrie;
+import com.vClient.util.custom_font.CustomFontUtil;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class ModuleManager {
-    private ArrayList<Module> modules = new ArrayList<>();
     public MyTrie trie;
+    private HashMap<String, Module> moduleMap = new HashMap<>();
+    private ArrayList<String> nameList = new ArrayList<>();
+    private ArrayList<Module> moduleList = new ArrayList<>();
 
     public ModuleManager() {
         //COMBAT
-        modules.add(new AntiBot());
-        modules.add(new KillAura());
-        modules.add(new Reach());
-        //modules.add(new TargetStrafe());
-        modules.add(new WTap());
+        moduleMap.put("AntiBot", new AntiBot());
+        moduleMap.put("KillAura", new KillAura());
+        moduleMap.put("Reach", new Reach());
+        //moduleMap.put(new TargetStrafe());
+        moduleMap.put("WTap", new WTap());
         //MOVEMENT
-        modules.add(new Fly());
-        //modules.add(new Freeze());
-        modules.add(new InventoryMove());
-        modules.add(new LongJump());
-        modules.add(new NoSlow());
-        modules.add(new Speed());
-        modules.add(new Sprint());
+        moduleMap.put("Fly", new Fly());
+        //moduleMap.put(new Freeze());
+        moduleMap.put("InventoryMove", new InventoryMove());
+        moduleMap.put("LongJump", new LongJump());
+        moduleMap.put("NoSlow", new NoSlow());
+        moduleMap.put("Speed", new Speed());
+        moduleMap.put("Sprint", new Sprint());
         //RENDER
-        modules.add(new Camera());
-        modules.add(new ClickGUI());
-        modules.add(new ESP());
-        modules.add(new FullBright());
-        modules.add(new StableFOV());
-        modules.add(new TargetHUD());
+        moduleMap.put("Camera", new Camera());
+        moduleMap.put("ClickGUI", new ClickGUI());
+        moduleMap.put("ESP", new ESP());
+        moduleMap.put("FullBright", new FullBright());
+        moduleMap.put("StableFOV", new StableFOV());
+        moduleMap.put("TargetHUD", new TargetHUD());
         //PLAYER
-        modules.add(new AutoClicker());
-        modules.add(new AutoTool());
-        modules.add(new FastBreak());
-        modules.add(new FastPlace());
-        modules.add(new NoFall());
-        modules.add(new Velocity());
+        moduleMap.put("AutoClicker", new AutoClicker());
+        moduleMap.put("AutoTool", new AutoTool());
+        moduleMap.put("FastBreak", new FastBreak());
+        moduleMap.put("FastPlace", new FastPlace());
+        moduleMap.put("NoFall", new NoFall());
+        moduleMap.put("Velocity", new Velocity());
         //MISC
-        modules.add(new GameSpeed());
-        modules.add(new Disabler());
+        moduleMap.put("GameSpeed", new GameSpeed());
+        moduleMap.put("Disabler", new Disabler());
 
-        modules.sort(Comparator.comparing(m -> m.getName()));
+
+        moduleList.addAll(moduleMap.values());
+        moduleList.sort(Comparator.comparingDouble(m -> CustomFontUtil.arial.getStringWidth(((Module) m).getName())).reversed());
         Set<String> cleanedStrings = new HashSet<>();
-        for (Module m : modules)
+        for (Module m : moduleList)
             cleanedStrings.add(cleanString(m.getName()));
         trie = new MyTrie(cleanedStrings);
+        nameList.addAll(cleanedStrings);
     }
     public ArrayList<Module> getModules() {
-        return modules;
+        return moduleList;
     }
     public Module getModulebyName(String name) {
-        return modules.stream().filter(module -> module.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
+        return moduleMap.get(name);
     }
     public static String cleanString(String s) {
         return s.replaceAll("[^a-zA-Z ]", "").toLowerCase();
     }
     public ArrayList<String> getModuleList() {
-        ArrayList<String> ans = new ArrayList<>();
-        for (Module m : modules)
-            ans.add(m.getName());
-        return ans;
+        return nameList;
     }
 }

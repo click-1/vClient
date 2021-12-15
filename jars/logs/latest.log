@@ -1,53 +1,37 @@
-[14:22:15] [Client thread/INFO]: Setting user: Player174
-[14:22:15] [Client thread/INFO]: (Session ID is token:0:Player174)
-[14:22:17] [Client thread/INFO]: LWJGL Version: 2.9.4
-[14:22:17] [Client thread/INFO]: Reloading ResourceManager: Default
-[14:22:17] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[14:22:18] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[14:22:18] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[14:22:18] [Thread-6/INFO]: OpenAL initialized.
-[14:22:18] [Sound Library Loader/INFO]: Sound engine started
-[14:22:21] [Client thread/INFO]: Created: 512x512 textures-atlas
-[14:22:29] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[14:22:29] [Server thread/INFO]: Generating keypair
-[14:22:29] [Server thread/INFO]: Preparing start region for level 0
-[14:22:30] [Server thread/INFO]: Changing view distance to 5, from 10
-[14:22:30] [Server thread/INFO]: Player174[local:E:dfa120f8] logged in with entity id 137 at (575.4025394832101, 79.0, 316.85061884130664)
-[14:22:30] [Server thread/INFO]: Player174 joined the game
-[14:22:30] [Server thread/INFO]: Saving and pausing game...
-[14:22:30] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[14:22:30] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:22:31] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:22:31] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:22:40] [Client thread/INFO]: [CHAT] fastbreak, fastplace
-[14:22:41] [Client thread/INFO]: [CHAT] fastbreak, fastplace
-[14:22:41] [Client thread/INFO]: [CHAT] §b[vClient]§7 Enabled §3FastPlace
-[14:23:13] [Server thread/INFO]: [Player174: Set own game mode to Creative Mode]
-[14:23:13] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[14:23:13] [Server thread/INFO]: Player174 has just earned the achievement [Taking Inventory]
-[14:23:13] [Client thread/INFO]: [CHAT] Player174 has just earned the achievement [Taking Inventory]
-[14:23:14] [Server thread/INFO]: Saving and pausing game...
-[14:23:14] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:23:15] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:23:15] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:24:06] [Server thread/INFO]: Saving and pausing game...
-[14:24:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:24:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:24:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:24:09] [Server thread/INFO]: Saving and pausing game...
-[14:24:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:24:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:24:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:25:58] [Server thread/INFO]: Saving and pausing game...
-[14:25:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:25:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:25:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:25:59] [Client thread/INFO]: Stopping!
-[14:25:59] [Client thread/INFO]: SoundSystem shutting down...
-[14:25:59] [Server thread/INFO]: Stopping server
-[14:25:59] [Server thread/INFO]: Saving players
-[14:25:59] [Server thread/INFO]: Saving worlds
-[14:25:59] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:25:59] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:25:59] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:25:59] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[23:24:20] [Client thread/INFO]: Setting user: Player716
+[23:24:20] [Client thread/INFO]: (Session ID is token:0:Player716)
+[23:24:21] [Client thread/INFO]: LWJGL Version: 2.9.4
+[23:24:22] [Client thread/INFO]: Reloading ResourceManager: Default
+[23:24:22] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[23:24:22] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[23:24:22] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:24:23] [Thread-6/INFO]: OpenAL initialized.
+[23:24:23] [Sound Library Loader/INFO]: Sound engine started
+[23:24:25] [Client thread/INFO]: Created: 512x512 textures-atlas
+[23:24:34] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[23:24:34] [Server thread/INFO]: Generating keypair
+[23:24:34] [Server thread/INFO]: Preparing start region for level 0
+[23:24:35] [Server thread/INFO]: Changing view distance to 5, from 10
+[23:24:35] [Server thread/INFO]: Player716[local:E:b6149a2a] logged in with entity id 137 at (586.9812612016963, 73.0, 355.16659645248666)
+[23:24:35] [Server thread/INFO]: Player716 joined the game
+[23:24:35] [Server thread/INFO]: Saving and pausing game...
+[23:24:35] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[23:24:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:24:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:24:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:24:51] [Client thread/INFO]: [CHAT] reach
+[23:24:51] [Client thread/INFO]: [CHAT] §b[vClient]§7 Enabled §3Reach
+[23:25:02] [Client thread/INFO]: [CHAT] §b[vClient]§7 Disabled §3Reach
+[23:25:57] [Server thread/INFO]: Saving and pausing game...
+[23:25:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:25:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:25:57] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:25:57] [Client thread/INFO]: Stopping!
+[23:25:58] [Client thread/INFO]: SoundSystem shutting down...
+[23:25:58] [Server thread/INFO]: Stopping server
+[23:25:58] [Server thread/INFO]: Saving players
+[23:25:58] [Server thread/INFO]: Saving worlds
+[23:25:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[23:25:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[23:25:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[23:25:58] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

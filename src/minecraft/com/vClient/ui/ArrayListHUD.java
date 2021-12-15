@@ -12,7 +12,6 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.util.EnumChatFormatting;
 
 import java.awt.*;
-import java.util.Comparator;
 
 public class ArrayListHUD {
     Minecraft mc = Minecraft.getMinecraft();
@@ -20,10 +19,6 @@ public class ArrayListHUD {
     MinecraftFontRenderer big = CustomFontUtil.big;
     public void draw() {
         ScaledResolution sr = new ScaledResolution(mc);
-
-        vClient.instance.moduleManager.getModules().sort(Comparator.comparingDouble(m ->
-                cfr.getStringWidth(((Module)m).getName())).reversed());
-
         int count = 0;
         boolean tails = vClient.instance.settingsManager.getSettingByName("tails").getValBoolean();
         boolean chrome =vClient.instance.settingsManager.getSettingByName("chroma").getValBoolean();
@@ -36,7 +31,7 @@ public class ArrayListHUD {
                 continue;
             float offset = count * (cfr.getHeight() + 6);
             if (boxes)
-                Gui.drawRect(sr.getScaledWidth() - cfr.getStringWidth(m.getName()) - 7, offset, sr.getScaledWidth(), offset + CustomFontUtil.arial.getHeight() + 6, new Color(66, 66, 66, 86).getRGB());
+                Gui.drawRect(sr.getScaledWidth() - cfr.getStringWidth(m.getName()) - 7, offset, sr.getScaledWidth(), offset + CustomFontUtil.arial.getHeight() + 6, new Color(66, 66, 66, 102).getRGB());
             if (tails)
                 Gui.drawRect(sr.getScaledWidth() - cfr.getStringWidth(m.getName()) - 9, offset, sr.getScaledWidth() - cfr.getStringWidth(m.getName()) - 7, 6 + cfr.getHeight() + offset, chrome ? chroma: color);
 
@@ -48,7 +43,7 @@ public class ArrayListHUD {
         if (vClient.instance.settingsManager.getSettingByName("BPS").getValBoolean())
             cfr.drawString("blocks/s: " + round(MovementUtil.getSpeed() * 20.0f, 2), sr.getScaledWidth() *.01f,sr.getScaledHeight() *.95f, chrome ? chroma : color);
 
-        big.drawSmoothString(EnumChatFormatting.BOLD + "vCLIENT", sr.getScaledWidth() *.01f, sr.getScaledHeight() *.04f, new Color(158, 255, 255, 255).getRGB());
+        big.drawSmoothString(EnumChatFormatting.BOLD + "vCLIENT", sr.getScaledWidth() *.01f, sr.getScaledHeight() *.04f, new Color(135, 255, 255, 255).getRGB());
 
         
     }

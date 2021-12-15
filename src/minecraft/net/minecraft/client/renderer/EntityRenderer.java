@@ -446,10 +446,18 @@ public class EntityRenderer implements IResourceManagerReloadListener
         {
             this.mc.mcProfiler.startSection("pick");
             this.mc.pointedEntity = null;
-            double d0 = (double)this.mc.playerController.getBlockReachDistance();
+
+            boolean reachToggled = vClient.instance.moduleManager.getModulebyName("Reach").isToggled();
+            double d0 = reachToggled ? 6.0 : (double)this.mc.playerController.getBlockReachDistance();
             this.mc.objectMouseOver = entity.rayTrace(d0, partialTicks);
-            double d1 = d0;
             Vec3 vec3 = entity.getPositionEyes(partialTicks);
+            if (this.mc.objectMouseOver.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK && this.mc.objectMouseOver.hitVec.distanceTo(vec3) > (double)this.mc.playerController.getBlockReachDistance()) {
+                d0 = (double)this.mc.playerController.getBlockReachDistance();
+                this.mc.objectMouseOver = entity.rayTrace(d0, partialTicks);
+            }
+
+            double d1 = d0;
+
             boolean flag = false;
             boolean flag1 = true;
 
@@ -528,7 +536,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
                 }
             }
 
-            if (this.pointedEntity != null && flag && vec3.distanceTo(vec33) > 3.0D)
+            if (this.pointedEntity != null && flag && vec3.distanceTo(vec33) > (reachToggled ? vClient.instance.settingsManager.getSettingByName("Reach").getValDouble() : 3.0))
             {
                 this.pointedEntity = null;
                 this.mc.objectMouseOver = new MovingObjectPosition(MovingObjectPosition.MovingObjectType.MISS, vec33, (EnumFacing)null, new BlockPos(vec33));

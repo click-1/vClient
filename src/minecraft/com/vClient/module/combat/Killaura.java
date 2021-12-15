@@ -5,6 +5,7 @@ import com.vClient.event.events.EventPostMotionUpdate;
 import com.vClient.event.events.EventPreMotionUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
+import com.vClient.util.TargetUtil;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
 import net.minecraft.client.settings.KeyBinding;
@@ -49,6 +50,7 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Animals", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Mobs", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Villagers", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Dead", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Teams", this, true));
     }
 
@@ -138,23 +140,25 @@ public class KillAura extends Module {
         blockingStatus = false;
     }
 
-    private static boolean canAttack(EntityLivingBase player) {
-        boolean conditions = player != null && player.isEntityAlive() && player.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
+    private static boolean canAttack(EntityLivingBase entity) {
+        boolean conditions = entity != null && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
         if (!conditions)
             return false;
-        if (player instanceof EntityPlayer && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())
+        if (TargetUtil.isPlayer(entity) && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())
             return false;
-        if (player instanceof EntityAnimal && !vClient.instance.settingsManager.getSettingByName("Animals").getValBoolean())
+        if (TargetUtil.isAnimal(entity) && !vClient.instance.settingsManager.getSettingByName("Animals").getValBoolean())
             return false;
-        if (player instanceof EntityMob && !vClient.instance.settingsManager.getSettingByName("Mobs").getValBoolean())
+        if (TargetUtil.isMob(entity) && !vClient.instance.settingsManager.getSettingByName("Mobs").getValBoolean())
             return false;
-        if (player instanceof EntityVillager && !vClient.instance.settingsManager.getSettingByName("Villagers").getValBoolean())
+        if (entity instanceof EntityVillager && !vClient.instance.settingsManager.getSettingByName("Villagers").getValBoolean())
             return false;
-        if (checkIfSameTeam(player) && vClient.instance.settingsManager.getSettingByName("Teams").getValBoolean())
+        if (checkIfSameTeam(entity) && vClient.instance.settingsManager.getSettingByName("Teams").getValBoolean())
             return false;
-        if (player.isInvisible() && !vClient.instance.settingsManager.getSettingByName("Invisibles").getValBoolean())
+        if (entity.isInvisible() && !vClient.instance.settingsManager.getSettingByName("Invisibles").getValBoolean())
             return false;
-        if (!isInFOV(player, vClient.instance.settingsManager.getSettingByName("FOV").getValDouble()))
+        if (!entity.isEntityAlive() && !vClient.instance.settingsManager.getSettingByName("Dead").getValBoolean())
+            return false;
+        if (!isInFOV(entity, vClient.instance.settingsManager.getSettingByName("FOV").getValDouble()))
             return false;
         return true;
     }
