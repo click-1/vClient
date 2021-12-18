@@ -14,9 +14,11 @@ public class CustomFontUtil {
     public static MinecraftFontRenderer arial;
     public static MinecraftFontRenderer big;
     public static MinecraftFontRenderer descriptions;
+    public static MinecraftFontRenderer hud;
     private static Font arial_;
     private static Font big_;
     private static Font descriptions_;
+    private static Font hud_;
 
     private static Font getFont(Map<String, Font> locationMap, String location, int size) {
         Font font = null;
@@ -51,6 +53,7 @@ public class CustomFontUtil {
             arial_ = getFont(locationMap, "arial.ttf", 18);
             big_ = getFont(locationMap, "roboto.ttf", 24);
             descriptions_ = getFont(locationMap, "arialn.ttf", 15);
+            hud_ = getFont(locationMap, "roboto.ttf", 20);
             completed++;
         }).start();
         new Thread(() ->
@@ -76,5 +79,6 @@ public class CustomFontUtil {
         arial = new MinecraftFontRenderer(arial_, true, true);
         big = new MinecraftFontRenderer(big_, true, true);
         descriptions = new MinecraftFontRenderer(descriptions_, true, true);
+        hud = new MinecraftFontRenderer(hud_, true, true);
     }
 }

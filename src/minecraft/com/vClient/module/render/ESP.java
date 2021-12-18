@@ -2,6 +2,7 @@ package com.vClient.module.render;
 
 import com.vClient.module.Category;
 import com.vClient.module.Module;
+import com.vClient.util.TargetUtil;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
 import net.minecraft.client.renderer.GlStateManager;
@@ -247,19 +248,21 @@ public class ESP extends Module {
         return new Color(Integer.MAX_VALUE);
     }
 
-    public boolean canDisplay(EntityLivingBase player) {
-        boolean conditions = player != null && player.isEntityAlive() && player.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
+    public boolean canDisplay(EntityLivingBase entity) {
+        boolean conditions = entity != null && entity.isEntityAlive() && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
         if (!conditions)
             return false;
-        if (player instanceof EntityPlayer && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())
+        if (TargetUtil.isPlayer(entity) && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())
             return false;
-        if (player instanceof EntityAnimal && !vClient.instance.settingsManager.getSettingByName("Animals").getValBoolean())
+        if (TargetUtil.isAnimal(entity) && !vClient.instance.settingsManager.getSettingByName("Animals").getValBoolean())
             return false;
-        if (player instanceof EntityMob && !vClient.instance.settingsManager.getSettingByName("Mobs").getValBoolean())
+        if (TargetUtil.isMob(entity) && !vClient.instance.settingsManager.getSettingByName("Mobs").getValBoolean())
             return false;
-        if (player instanceof EntityVillager && !vClient.instance.settingsManager.getSettingByName("Villagers").getValBoolean())
+        if (entity instanceof EntityVillager && !vClient.instance.settingsManager.getSettingByName("Villagers").getValBoolean())
             return false;
-        if (player.isInvisible() && !vClient.instance.settingsManager.getSettingByName("Invisibles").getValBoolean())
+        if (entity.isInvisible() && !vClient.instance.settingsManager.getSettingByName("Invisible").getValBoolean())
+            return false;
+        if (!entity.isEntityAlive() && !vClient.instance.settingsManager.getSettingByName("Dead").getValBoolean())
             return false;
         return true;
     }

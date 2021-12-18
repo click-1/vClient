@@ -44,8 +44,6 @@ public class ArrayListHUD {
             cfr.drawString("blocks/s: " + round(MovementUtil.getSpeed() * 20.0f, 2), sr.getScaledWidth() *.01f,sr.getScaledHeight() *.95f, chrome ? chroma : color);
 
         big.drawSmoothString(EnumChatFormatting.BOLD + "vCLIENT", sr.getScaledWidth() *.01f, sr.getScaledHeight() *.04f, new Color(135, 255, 255, 255).getRGB());
-
-        
     }
 
     private double round (double value, int precision) {

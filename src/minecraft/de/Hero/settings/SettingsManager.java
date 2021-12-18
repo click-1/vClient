@@ -51,5 +51,4 @@ public class SettingsManager {
 		System.err.println("["+ vClient.instance.name + "] Error Setting NOT found: '" + name +"'!");
 		return null;
 	}
-
 }

@@ -13,8 +13,8 @@ import net.minecraft.entity.player.EntityPlayer;
 
 public class TargetUtil {
     public static boolean isAnimal(final Entity entity) {
-        return entity instanceof EntityAnimal || entity instanceof EntitySquid || entity instanceof EntityGolem ||
-                entity instanceof EntityBat;
+        return entity instanceof EntityAnimal || entity instanceof EntitySquid ||
+                entity instanceof EntityGolem || entity instanceof EntityBat;
     }
     public static boolean isMob(final Entity entity) {
         return entity instanceof EntityMob || entity instanceof EntitySlime ||

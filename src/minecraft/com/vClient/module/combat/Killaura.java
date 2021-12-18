@@ -42,10 +42,10 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Existed", this, 30, 0, 500, true));
         vClient.instance.settingsManager.rSetting(new Setting("FOV", this, 360, 0, 360, true));
         vClient.instance.settingsManager.rSetting(new Setting("Range", this, 3.0, 3.0, 6.0, false));
-        vClient.instance.settingsManager.rSetting(new Setting("HurtTime", this, 8, 1, 25, true));
+        vClient.instance.settingsManager.rSetting(new Setting("HurtTime", this, 25, 1, 25, true));
         vClient.instance.settingsManager.rSetting(new Setting("Multi", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Invisibles", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Invisible", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Players", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Animals", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Mobs", this, false));
@@ -140,7 +140,7 @@ public class KillAura extends Module {
         blockingStatus = false;
     }
 
-    private static boolean canAttack(EntityLivingBase entity) {
+    public static boolean canAttack(EntityLivingBase entity) {
         boolean conditions = entity != null && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
         if (!conditions)
             return false;
@@ -154,7 +154,7 @@ public class KillAura extends Module {
             return false;
         if (checkIfSameTeam(entity) && vClient.instance.settingsManager.getSettingByName("Teams").getValBoolean())
             return false;
-        if (entity.isInvisible() && !vClient.instance.settingsManager.getSettingByName("Invisibles").getValBoolean())
+        if (entity.isInvisible() && !vClient.instance.settingsManager.getSettingByName("Invisible").getValBoolean())
             return false;
         if (!entity.isEntityAlive() && !vClient.instance.settingsManager.getSettingByName("Dead").getValBoolean())
             return false;
