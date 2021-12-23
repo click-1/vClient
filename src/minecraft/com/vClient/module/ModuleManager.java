@@ -19,13 +19,14 @@ public class ModuleManager {
     public ModuleManager() {
         //COMBAT
         moduleMap.put("AntiBot", new AntiBot());
+        moduleMap.put("AutoArmor", new AutoArmor());
         moduleMap.put("KillAura", new KillAura());
         moduleMap.put("Reach", new Reach());
-        //moduleMap.put(new TargetStrafe());
-        moduleMap.put("WTap", new WTap());
+        //moduleMap.put("TargetStrafe", new TargetStrafe());
+        //moduleMap.put("WTap", new WTap());
         //MOVEMENT
         moduleMap.put("Fly", new Fly());
-        //moduleMap.put(new Freeze());
+        moduleMap.put("Freeze", new Freeze());
         moduleMap.put("InventoryMove", new InventoryMove());
         moduleMap.put("LongJump", new LongJump());
         moduleMap.put("NoSlow", new NoSlow());
@@ -46,9 +47,8 @@ public class ModuleManager {
         moduleMap.put("NoFall", new NoFall());
         moduleMap.put("Velocity", new Velocity());
         //MISC
-        moduleMap.put("GameSpeed", new GameSpeed());
         moduleMap.put("Disabler", new Disabler());
-
+        moduleMap.put("GameSpeed", new GameSpeed());
 
         moduleList.addAll(moduleMap.values());
         moduleList.sort(Comparator.comparingDouble(m -> CustomFontUtil.arial.getStringWidth(((Module) m).getName())).reversed());

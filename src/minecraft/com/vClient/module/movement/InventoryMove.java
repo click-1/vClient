@@ -23,6 +23,7 @@ public class InventoryMove extends Module {
                 key.pressed = GameSettings.isKeyDown(key);
         }
     }
+
     @Override
     public void onDisable() {
         if (mc.currentScreen != null) {

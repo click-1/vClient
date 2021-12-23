@@ -706,6 +706,7 @@ public class EntityPlayerSP extends AbstractClientPlayer
 
     public void updateEntityActionState()
     {
+
         super.updateEntityActionState();
 
         if (this.isCurrentViewEntity())

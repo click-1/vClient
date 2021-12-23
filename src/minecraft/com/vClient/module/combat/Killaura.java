@@ -5,16 +5,14 @@ import com.vClient.event.events.EventPostMotionUpdate;
 import com.vClient.event.events.EventPreMotionUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
+import com.vClient.util.ClockUtil;
 import com.vClient.util.TargetUtil;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityVillager;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.MathHelper;
 import org.lwjgl.input.Keyboard;
@@ -24,13 +22,12 @@ import java.util.Comparator;
 public class KillAura extends Module {
     public ArrayList<EntityLivingBase> targets;
     public EntityLivingBase active_target;
-    private long current, last;
-    private int delay;
+    private int delay, num_attacks;
     private double range;
     private float yaw, pitch;
     public boolean blockingStatus = false;
     private int right_click = mc.gameSettings.keyBindUseItem.getKeyCode();
-    private int num_attacks;
+    private ClockUtil clock = new ClockUtil();
 
     public KillAura() {
         super("KillAura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
@@ -45,11 +42,11 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("HurtTime", this, 25, 1, 25, true));
         vClient.instance.settingsManager.rSetting(new Setting("Multi", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, true));
-        vClient.instance.settingsManager.rSetting(new Setting("Invisible", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Players", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Animals", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Mobs", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Villagers", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Invisible", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Dead", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Teams", this, true));
     }
@@ -64,13 +61,13 @@ public class KillAura extends Module {
 
     @EventTarget
     public void onPre(EventPreMotionUpdate event) {
+        clock.updateTime();
         targets = getClosest(range);
         if (targets.size() == 0)
             return;
-        updateTime();
         yaw = mc.thePlayer.rotationYaw;
         pitch = mc.thePlayer.rotationPitch;
-        if (current - last > 1000 / delay) {
+        if (clock.elapsedTime() > 1000 / delay) {
             boolean canBlock = vClient.instance.settingsManager.getSettingByName("AutoBlock").getValBoolean() && mc.thePlayer.getHeldItem() != null && mc.thePlayer.getHeldItem().getItem() instanceof ItemSword;
             if (canBlock)
                 stopBlocking();
@@ -83,7 +80,7 @@ public class KillAura extends Module {
             }
             if (!mc.thePlayer.isBlocking() && !blockingStatus && canBlock)
                 startBlocking();
-            resetTime();
+            clock.resetTime();
         }
     }
 
@@ -111,14 +108,6 @@ public class KillAura extends Module {
         for (int i = 0; i < vClient.instance.settingsManager.getSettingByName("Crack Size").getValDouble(); i++)
             mc.thePlayer.onCriticalHit(entity);
         mc.playerController.attackEntity(mc.thePlayer, entity);
-    }
-
-    private void updateTime() {
-        current = System.nanoTime() / 1000000L;
-    }
-
-    private void resetTime() {
-        last = System.nanoTime() / 1000000L;
     }
 
     public ArrayList<EntityLivingBase> getClosest(double range) {

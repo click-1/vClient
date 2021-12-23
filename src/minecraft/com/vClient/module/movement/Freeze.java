@@ -13,11 +13,10 @@ public class Freeze extends Module {
     @EventTarget
     public void onUpdate(EventUpdate event) {
         mc.thePlayer.isDead = true;
-        mc.thePlayer.rotationYaw = mc.thePlayer.cameraYaw;
-        mc.thePlayer.rotationPitch = mc.thePlayer.cameraPitch;
     }
     @Override
     public void onDisable() {
         mc.thePlayer.isDead = false;
+        super.onDisable();
     }
 }
