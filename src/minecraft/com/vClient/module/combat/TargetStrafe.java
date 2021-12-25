@@ -15,7 +15,7 @@ public class TargetStrafe extends Module {
     private double normalZ;
     private EntityLivingBase target;
     public TargetStrafe() {
-        super("TargetStrafe", Keyboard.CHAR_NONE, Category.COMBAT, "Automatically strafe around KillAura target. ");
+        super("TargetStrafe", Keyboard.CHAR_NONE, Category.COMBAT, "Automatically strafe around KillAura target.");
     }
     @Override
     public void setup() {

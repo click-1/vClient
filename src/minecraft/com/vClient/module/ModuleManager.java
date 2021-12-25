@@ -13,13 +13,12 @@ import java.util.*;
 public class ModuleManager {
     public MyTrie trie;
     private HashMap<String, Module> moduleMap = new HashMap<>();
-    private ArrayList<String> nameList = new ArrayList<>();
     private ArrayList<Module> moduleList = new ArrayList<>();
+    private ArrayList<Module> moduleList2 = new ArrayList<>();
 
     public ModuleManager() {
         //COMBAT
         moduleMap.put("AntiBot", new AntiBot());
-        moduleMap.put("AutoArmor", new AutoArmor());
         moduleMap.put("KillAura", new KillAura());
         moduleMap.put("Reach", new Reach());
         //moduleMap.put("TargetStrafe", new TargetStrafe());
@@ -27,7 +26,7 @@ public class ModuleManager {
         //MOVEMENT
         moduleMap.put("Fly", new Fly());
         moduleMap.put("Freeze", new Freeze());
-        moduleMap.put("InventoryMove", new InventoryMove());
+        moduleMap.put("InvMove", new InvMove());
         moduleMap.put("LongJump", new LongJump());
         moduleMap.put("NoSlow", new NoSlow());
         moduleMap.put("Speed", new Speed());
@@ -44,6 +43,7 @@ public class ModuleManager {
         moduleMap.put("AutoTool", new AutoTool());
         moduleMap.put("FastBreak", new FastBreak());
         moduleMap.put("FastPlace", new FastPlace());
+        moduleMap.put("InvManager", new InvManager());
         moduleMap.put("NoFall", new NoFall());
         moduleMap.put("Velocity", new Velocity());
         //MISC
@@ -51,15 +51,19 @@ public class ModuleManager {
         moduleMap.put("GameSpeed", new GameSpeed());
 
         moduleList.addAll(moduleMap.values());
-        moduleList.sort(Comparator.comparingDouble(m -> CustomFontUtil.arial.getStringWidth(((Module) m).getName())).reversed());
+        moduleList2.addAll(moduleMap.values());
+        moduleList.sort(Comparator.comparing(m -> m.getName()));
+        moduleList2.sort(Comparator.comparingDouble(m -> CustomFontUtil.arial.getStringWidth(((Module) m).getName())).reversed());
         Set<String> cleanedStrings = new HashSet<>();
         for (Module m : moduleList)
             cleanedStrings.add(cleanString(m.getName()));
         trie = new MyTrie(cleanedStrings);
-        nameList.addAll(cleanedStrings);
     }
     public ArrayList<Module> getModules() {
         return moduleList;
+    }
+    public ArrayList<Module> getModulesByLength() {
+        return moduleList2;
     }
     public Module getModulebyName(String name) {
         return moduleMap.get(name);
@@ -68,6 +72,6 @@ public class ModuleManager {
         return s.replaceAll("[^a-zA-Z ]", "").toLowerCase();
     }
     public ArrayList<String> getModuleList() {
-        return nameList;
+        return new ArrayList<>(moduleMap.keySet());
     }
 }

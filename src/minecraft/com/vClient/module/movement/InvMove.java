@@ -10,10 +10,10 @@ import net.minecraft.client.settings.GameSettings;
 import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
 
-public class InventoryMove extends Module {
+public class InvMove extends Module {
     private final KeyBinding[] moveKeys = {mc.gameSettings.keyBindForward, mc.gameSettings.keyBindBack, mc.gameSettings.keyBindLeft, mc.gameSettings.keyBindRight, mc.gameSettings.keyBindJump};
-    public InventoryMove() {
-        super("InventoryMove", Keyboard.CHAR_NONE, Category.MOVEMENT, "Allow player to move while accessing inventory, chests, etc. ");
+    public InvMove() {
+        super("InvMove", Keyboard.CHAR_NONE, Category.MOVEMENT, "Allow player to move while accessing inventory, chests, etc.");
     }
 
     @EventTarget

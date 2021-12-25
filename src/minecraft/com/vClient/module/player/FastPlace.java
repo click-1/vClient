@@ -12,6 +12,6 @@ public class FastPlace extends Module {
     }
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("Block Delay", this, 1, 0, 4, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Block Delay", this, 2, 0, 4, true));
     }
 }

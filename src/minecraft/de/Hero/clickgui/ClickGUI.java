@@ -15,6 +15,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -188,8 +189,8 @@ public class ClickGUI extends GuiScreen {
 			if (pl.extended && pl.visible && pl.Elements != null) {
 				for (ModuleButton b : pl.Elements) {
 					if (b.isHovered(mouseX, mouseY)) {
-						Gui.drawRect(mouseX + 7, mouseY - 3, mouseX + 13 + CustomFontUtil.descriptions.getStringWidth(b.mod.getDescription()), mouseY + b.height -3, new Color(115, 115, 115).getRGB());
-						CustomFontUtil.descriptions.drawString(b.mod.getDescription(), mouseX + 10, mouseY + 1, new Color(250, 129, 0).getRGB());
+						Gui.drawRect(mouseX + 7, mouseY - 3, mouseX + 13 + CustomFontUtil.descriptions.getStringWidth(EnumChatFormatting.BOLD+  b.mod.getDescription()), mouseY + b.height -3, new Color(182, 182, 182, 97).getRGB());
+						CustomFontUtil.descriptions.drawString(EnumChatFormatting.BOLD + b.mod.getDescription(), mouseX + 10, mouseY + 1, new Color(250, 129, 0).getRGB());
 						break description;
 					}
 				}

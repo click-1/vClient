@@ -11,7 +11,7 @@ import org.lwjgl.input.Keyboard;
 
 public class NoSlow extends Module {
     public NoSlow() {
-        super("NoSlow", Keyboard.CHAR_NONE, Category.MOVEMENT, "Remove movement slowing effects by items. ");
+        super("NoSlow", Keyboard.CHAR_NONE, Category.MOVEMENT, "Remove movement slowing effects by items.");
     }
     @EventTarget
     public void onPre(EventPreMotionUpdate event) {

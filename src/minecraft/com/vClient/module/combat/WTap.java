@@ -17,7 +17,7 @@ public class WTap extends Module {
     private int reset_delay;
     private int forward = mc.gameSettings.keyBindForward.getKeyCode();
     public WTap() {
-        super("WTap",Keyboard.CHAR_NONE, Category.PLAYER, "W-tap at set interval when facing target. ");
+        super("WTap",Keyboard.CHAR_NONE, Category.PLAYER, "W-tap at set interval when facing target.");
     }
     /**
     @Override

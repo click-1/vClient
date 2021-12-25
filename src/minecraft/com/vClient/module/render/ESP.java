@@ -30,7 +30,7 @@ public class ESP extends Module {
     private Map<Integer, Boolean> glCapMap = new HashMap<>();
     private boolean outline, box3d;
     public ESP() {
-        super("ESP", Keyboard.CHAR_NONE, Category.RENDER, "Extrasensory perception. ");
+        super("ESP", Keyboard.CHAR_NONE, Category.RENDER, "Extrasensory perception.");
     }
 
     @Override

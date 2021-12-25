@@ -26,7 +26,7 @@ public class ArrayListHUD {
         int color = ColorUtil.getClickGUIColor().getRGB();
         int chroma = ColorUtil.getBlueandPinkRainbow(4f, 0);
 
-        for (Module m : vClient.instance.moduleManager.getModules()) {
+        for (Module m : vClient.instance.moduleManager.getModulesByLength()) {
             if (!m.isToggled())
                 continue;
             float offset = count * (cfr.getHeight() + 6);
