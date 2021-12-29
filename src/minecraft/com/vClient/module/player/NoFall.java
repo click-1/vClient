@@ -13,11 +13,14 @@ public class NoFall extends Module {
     }
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        if (mc.thePlayer.fallDistance > 1.5F) {
+        if (mc.thePlayer.onGround)
+            mc.thePlayer.fallDistance = 0;
+        if (mc.thePlayer.fallDistance > .5F) {
             mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer(true));
             mc.thePlayer.fallDistance = 0f;
         }
     }
+
     @Override
     public void onDisable() {
         mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer(true));

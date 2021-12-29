@@ -451,7 +451,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
             double d0 = reachToggled ? 6.0 : (double)this.mc.playerController.getBlockReachDistance();
             this.mc.objectMouseOver = entity.rayTrace(d0, partialTicks);
             Vec3 vec3 = entity.getPositionEyes(partialTicks);
-            if (this.mc.objectMouseOver.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK && this.mc.objectMouseOver.hitVec.distanceTo(vec3) > (double)this.mc.playerController.getBlockReachDistance()) {
+            if (this.mc.objectMouseOver != null && this.mc.objectMouseOver.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK && this.mc.objectMouseOver.hitVec.distanceTo(vec3) > (double)this.mc.playerController.getBlockReachDistance()) {
                 d0 = (double)this.mc.playerController.getBlockReachDistance();
                 this.mc.objectMouseOver = entity.rayTrace(d0, partialTicks);
             }
