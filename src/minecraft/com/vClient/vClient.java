@@ -60,7 +60,7 @@ public class vClient {
 
     private void prestartModules() {
         moduleManager.getModulebyName("Sprint").silentToggle();
-        moduleManager.getModulebyName("StableFOV").silentToggle();
+        moduleManager.getModulebyName("StaticFOV").silentToggle();
         moduleManager.getModulebyName("TargetHUD").silentToggle();
         moduleManager.getModulebyName("Camera").silentToggle();
     }

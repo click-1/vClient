@@ -16,7 +16,7 @@ public class GuiChest extends GuiContainer
     /**
      * window height is calculated with these values; the more rows, the heigher
      */
-    private int inventoryRows;
+    public int inventoryRows;
 
     public GuiChest(IInventory upperInv, IInventory lowerInv)
     {

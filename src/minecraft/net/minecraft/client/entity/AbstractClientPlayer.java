@@ -137,7 +137,7 @@ public abstract class AbstractClientPlayer extends EntityPlayer
     {
         float f = 1.0F;
 
-        if (!vClient.instance.moduleManager.getModulebyName("StableFOV").isToggled()) {
+        if (!vClient.instance.moduleManager.getModulebyName("StaticFOV").isToggled()) {
             if (this.capabilities.isFlying) {
                 f *= 1.1F;
             }

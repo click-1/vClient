@@ -38,7 +38,7 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Crack Size", this, 0, 0, 15, true));
         vClient.instance.settingsManager.rSetting(new Setting("Existed", this, 30, 0, 500, true));
         vClient.instance.settingsManager.rSetting(new Setting("FOV", this, 360, 0, 360, true));
-        vClient.instance.settingsManager.rSetting(new Setting("Range", this, 3.0, 3.0, 6.0, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Range", this, 4.25, 3.0, 6.0, false));
         vClient.instance.settingsManager.rSetting(new Setting("HurtTime", this, 13, 1, 25, true));
         vClient.instance.settingsManager.rSetting(new Setting("Multi", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, true));

@@ -1,10 +1,10 @@
 package com.vClient.module;
 
 import com.vClient.module.combat.*;
-import com.vClient.module.misc.*;
+import com.vClient.module.exploit.*;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
-import com.vClient.module.render.*;
+import com.vClient.module.visual.*;
 import com.vClient.util.MyTrie;
 import com.vClient.util.custom_font.CustomFontUtil;
 
@@ -25,34 +25,35 @@ public class ModuleManager {
         //moduleMap.put("WTap", new WTap());
         //MOVEMENT
         moduleMap.put("Fly", new Fly());
-        moduleMap.put("Freeze", new Freeze());
         moduleMap.put("InvMove", new InvMove());
         moduleMap.put("LongJump", new LongJump());
         moduleMap.put("NoSlow", new NoSlow());
         moduleMap.put("Speed", new Speed());
         moduleMap.put("Sprint", new Sprint());
-        //RENDER
+        //VISUAL
         moduleMap.put("Camera", new Camera());
         moduleMap.put("ClickGUI", new ClickGUI());
         moduleMap.put("ESP", new ESP());
         moduleMap.put("FullBright", new FullBright());
-        moduleMap.put("StableFOV", new StableFOV());
+        moduleMap.put("StaticFOV", new StaticFOV());
         moduleMap.put("TargetHUD", new TargetHUD());
         //PLAYER
         moduleMap.put("AutoClicker", new AutoClicker());
         moduleMap.put("AutoTool", new AutoTool());
+        moduleMap.put("ChestStealer", new ChestStealer());
         moduleMap.put("FastBreak", new FastBreak());
         moduleMap.put("FastPlace", new FastPlace());
         moduleMap.put("InvManager", new InvManager());
-        moduleMap.put("NoFall", new NoFall());
         moduleMap.put("Velocity", new Velocity());
-        //MISC
+        //EXPLOIT
         moduleMap.put("Disabler", new Disabler());
+        moduleMap.put("Freeze", new Freeze());
         moduleMap.put("GameSpeed", new GameSpeed());
+        moduleMap.put("NoFall", new NoFall());
 
         moduleList.addAll(moduleMap.values());
         moduleList2.addAll(moduleMap.values());
-        moduleList.sort(Comparator.comparing(m -> m.getName()));
+        moduleList.sort(Comparator.comparing(Module::getName));
         moduleList2.sort(Comparator.comparingDouble(m -> CustomFontUtil.arial.getStringWidth(((Module) m).getName())).reversed());
         Set<String> cleanedStrings = new HashSet<>();
         for (Module m : moduleList)

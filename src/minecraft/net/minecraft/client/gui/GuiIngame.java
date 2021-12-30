@@ -4,15 +4,13 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
 
 import com.vClient.event.events.Event2D;
 import com.vClient.event.events.EventTick;
-import com.vClient.module.render.ESP;
-import com.vClient.module.render.TargetHUD;
+import com.vClient.module.visual.TargetHUD;
 import com.vClient.vClient;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;

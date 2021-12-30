@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 
 import com.vClient.event.events.Event3D;
-import com.vClient.module.render.ESP;
+import com.vClient.module.visual.ESP;
 import com.vClient.ui.MainMenu;
 import com.vClient.vClient;
 import net.minecraft.block.Block;
@@ -22,7 +22,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.gui.GuiDownloadTerrain;
-import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.client.gui.MapItemRenderer;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.multiplayer.WorldClient;

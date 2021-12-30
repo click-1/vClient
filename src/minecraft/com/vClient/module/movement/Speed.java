@@ -21,7 +21,7 @@ public class Speed extends Module {
         ArrayList<String> options = new ArrayList<>();
         options.add("NCPHop");
         options.add("Watchdog");
-        vClient.instance.settingsManager.rSetting(new Setting("Speed Mode", this, "NCPHop", options));
+        vClient.instance.settingsManager.rSetting(new Setting("Speed Mode", this, "Watchdog", options));
     }
     @Override
     public void onEnable() {
