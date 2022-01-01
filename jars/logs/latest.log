@@ -1,58 +1,13 @@
-[18:30:01] [Client thread/INFO]: Setting user: Player968
-[18:30:01] [Client thread/INFO]: (Session ID is token:0:Player968)
-[18:30:02] [Client thread/INFO]: LWJGL Version: 2.9.4
-[18:30:02] [Client thread/INFO]: Reloading ResourceManager: Default
-[18:30:03] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:30:03] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[18:30:03] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:30:04] [Thread-6/INFO]: OpenAL initialized.
-[18:30:04] [Sound Library Loader/INFO]: Sound engine started
-[18:30:05] [Client thread/INFO]: Created: 512x512 textures-atlas
-[18:34:11] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[18:34:11] [Server thread/INFO]: Generating keypair
-[18:34:12] [Server thread/INFO]: Preparing start region for level 0
-[18:34:13] [Server thread/INFO]: Preparing spawn area: 66%
-[18:34:13] [Server thread/INFO]: Changing view distance to 5, from 10
-[18:34:13] [Server thread/INFO]: Player968[local:E:0cf4cea6] logged in with entity id 185 at (580.7021525219599, 72.0, 347.6380194665686)
-[18:34:13] [Server thread/INFO]: Player968 joined the game
-[18:34:14] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[18:34:14] [Server thread/WARN]: Biome ID is out of bounds: 107712, defaulting to 0 (Ocean)
-[18:34:14] [Server thread/WARN]: Biome ID is out of bounds: 107712, defaulting to 0 (Ocean)
-[18:34:14] [Server thread/WARN]: Biome ID is out of bounds: 107712, defaulting to 0 (Ocean)
-[18:34:14] [Server thread/WARN]: Biome ID is out of bounds: 107712, defaulting to 0 (Ocean)
-[18:34:14] [Server thread/WARN]: Biome ID is out of bounds: 107712, defaulting to 0 (Ocean)
-[18:34:14] [Server thread/WARN]: Biome ID is out of bounds: 107712, defaulting to 0 (Ocean)
-[18:34:14] [Server thread/WARN]: Biome ID is out of bounds: 107712, defaulting to 0 (Ocean)
-[18:34:18] [Server thread/INFO]: [Player968: Cleared the inventory of Player968, removing 245 items]
-[18:34:18] [Client thread/INFO]: [CHAT] Cleared the inventory of Player968, removing 245 items
-[18:34:20] [Server thread/INFO]: [Player968: Cleared the inventory of Player968, removing 10 items]
-[18:34:20] [Client thread/INFO]: [CHAT] Cleared the inventory of Player968, removing 10 items
-[18:34:23] [Server thread/INFO]: [Player968: Cleared the inventory of Player968, removing 25 items]
-[18:34:23] [Client thread/INFO]: [CHAT] Cleared the inventory of Player968, removing 25 items
-[18:35:11] [Server thread/INFO]: [Player968: Set own game mode to Creative Mode]
-[18:35:11] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[18:35:33] [Server thread/INFO]: [Player968: Set own game mode to Survival Mode]
-[18:35:33] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[18:35:46] [Client thread/INFO]: [CHAT] invmanager, invmove
-[18:35:46] [Client thread/INFO]: [CHAT] §b[vClient]§7 Enabled §3InvManager
-[18:35:52] [Client thread/INFO]: [CHAT] §b[vClient]§7 Disabled §3InvManager
-[18:35:55] [Client thread/INFO]: [CHAT] §b[vClient]§7 Enabled §3InvManager
-[18:35:59] [Client thread/INFO]: [CHAT] §b[vClient]§7 Disabled §3InvManager
-[18:36:11] [Client thread/INFO]: [CHAT] §b[vClient]§7 Enabled §3InvManager
-[18:37:05] [Server thread/INFO]: Saving and pausing game...
-[18:37:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:37:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:37:05] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:37:06] [Server thread/INFO]: Saving and pausing game...
-[18:37:06] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:37:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:37:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:37:07] [Client thread/INFO]: Stopping!
-[18:37:07] [Client thread/INFO]: SoundSystem shutting down...
-[18:37:07] [Server thread/INFO]: Stopping server
-[18:37:07] [Server thread/INFO]: Saving players
-[18:37:07] [Server thread/INFO]: Saving worlds
-[18:37:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:37:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:37:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:37:07] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:41:58] [Client thread/INFO]: Setting user: Player411
+[21:41:58] [Client thread/INFO]: (Session ID is token:0:Player411)
+[21:42:00] [Client thread/INFO]: LWJGL Version: 2.9.4
+[21:42:00] [Client thread/INFO]: Reloading ResourceManager: Default
+[21:42:01] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:42:01] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[21:42:01] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:42:02] [Thread-6/INFO]: OpenAL initialized.
+[21:42:02] [Sound Library Loader/INFO]: Sound engine started
+[21:42:08] [Client thread/INFO]: Created: 512x512 textures-atlas
+[21:42:29] [Client thread/INFO]: Stopping!
+[21:42:29] [Client thread/INFO]: SoundSystem shutting down...
+[21:42:30] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

@@ -46,6 +46,7 @@ public class ModuleManager {
         moduleMap.put("InvManager", new InvManager());
         moduleMap.put("Velocity", new Velocity());
         //EXPLOIT
+        moduleMap.put("Blink", new Blink());
         moduleMap.put("Disabler", new Disabler());
         moduleMap.put("Freeze", new Freeze());
         moduleMap.put("GameSpeed", new GameSpeed());

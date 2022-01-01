@@ -246,7 +246,7 @@ public class ESP extends Module {
     }
 
     public boolean canDisplay(EntityLivingBase entity) {
-        boolean conditions = entity != null && entity.isEntityAlive() && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
+        boolean conditions = entity != null && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
         if (!conditions)
             return false;
         if (TargetUtil.isPlayer(entity) && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())
