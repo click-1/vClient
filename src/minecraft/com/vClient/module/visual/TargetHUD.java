@@ -38,6 +38,9 @@ public class TargetHUD extends Module {
     }
 
     private void display(EntityLivingBase target) {
+        GlStateManager.translate(55,55,0);
+        GlStateManager.scale(0.8,0.8,1);
+
         ScaledResolution sr = new ScaledResolution(mc);
         x1 = sr.getScaledWidth() / 2;
         y1 = sr.getScaledHeight() / 4 + 35;
@@ -59,6 +62,9 @@ public class TargetHUD extends Module {
         fr2.drawString("blocking: " + (target instanceof EntityPlayer ? ((EntityPlayer) target).isBlocking() ? "true" : "false" : ""), x1 + 30, y1 + 22 + FontUtil.getFontHeight(), new Color(255, 111, 0).getRGB());
 
         GuiInventory.drawEntityOnScreen(x1 + 14, y2 - 4, 16, -90, -30, target);
+        
+        GlStateManager.scale(1.25,1.25,1);
+        GlStateManager.translate(-55,-55,0);
     }
 
     private double round (double value, int precision) {

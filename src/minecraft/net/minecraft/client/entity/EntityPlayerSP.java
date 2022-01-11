@@ -1,9 +1,6 @@
 package net.minecraft.client.entity;
 
-import com.vClient.event.events.EventChat;
-import com.vClient.event.events.EventPostMotionUpdate;
-import com.vClient.event.events.EventPreMotionUpdate;
-import com.vClient.event.events.EventUpdate;
+import com.vClient.event.events.*;
 import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.MovingSoundMinecartRiding;
@@ -242,6 +239,7 @@ public class EntityPlayerSP extends AbstractClientPlayer
             double d4 = (double)(this.rotationPitch - this.lastReportedPitch);
             boolean flag2 = d0 * d0 + d1 * d1 + d2 * d2 > 9.0E-4D || this.positionUpdateTicks >= 20;
             boolean flag3 = d3 != 0.0D || d4 != 0.0D;
+
 
             if (this.ridingEntity == null)
             {

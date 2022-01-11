@@ -9,6 +9,7 @@ import com.vClient.vClient;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiChest;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.*;
 import org.lwjgl.input.Keyboard;
 
 public class ChestStealer extends Module {
@@ -27,7 +28,7 @@ public class ChestStealer extends Module {
             mc.thePlayer.closeScreen();
         for (int i = 0; i < chest.inventoryRows * 9; i++) {
             Slot slot = chest.inventorySlots.inventorySlots.get(i);
-            if (slot.getStack() != null) {
+            if (slot.getStack() != null && !uselessItem(slot.getStack().getItem())) {
                 mc.playerController.windowClick(chest.inventorySlots.windowId, slot.slotNumber, 0, 1, mc.thePlayer);
                 clock.resetTime();
                 return;
@@ -36,9 +37,14 @@ public class ChestStealer extends Module {
     }
     private boolean isEmpty(GuiChest chest) {
         for (int i = 0; i < chest.inventoryRows * 9; i++) {
-            if (chest.inventorySlots.inventorySlots.get(i).getStack() != null)
+            ItemStack itemStack = chest.inventorySlots.inventorySlots.get(i).getStack();
+            if (itemStack != null && !uselessItem(itemStack.getItem()))
                 return false;
         }
         return true;
+    }
+    private boolean uselessItem(Item item) {
+        return item instanceof ItemTool || item instanceof ItemSnowball ||
+                item instanceof ItemEgg;
     }
 }

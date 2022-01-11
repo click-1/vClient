@@ -63,5 +63,6 @@ public class vClient {
         moduleManager.getModulebyName("StaticFOV").silentToggle();
         moduleManager.getModulebyName("TargetHUD").silentToggle();
         moduleManager.getModulebyName("Camera").silentToggle();
+        moduleManager.getModulebyName("Disabler").silentToggle();
     }
 }

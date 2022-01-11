@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.Callable;
+
+import com.vClient.event.events.EventStep;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
@@ -799,6 +801,9 @@ public abstract class Entity implements ICommandSender
                     y = d7;
                     z = d8;
                     this.setEntityBoundingBox(axisalignedbb3);
+                } else {
+                    EventStep eventStep = new EventStep();
+                    eventStep.call();
                 }
             }
 

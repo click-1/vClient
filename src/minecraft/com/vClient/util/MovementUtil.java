@@ -18,7 +18,11 @@ public class MovementUtil {
     }
 
     public static boolean hasMotion() {
-        return mc.thePlayer.motionX != 0D && mc.thePlayer.motionZ != 0D && mc.thePlayer.motionY != 0D;
+        return mc.thePlayer.motionX != 0D || mc.thePlayer.motionZ != 0D || mc.thePlayer.motionY != 0D;
+    }
+
+    public static boolean hasLateralMotion() {
+        return mc.thePlayer.motionX != 0D || mc.thePlayer.motionZ != 0D;
     }
 
     public static void strafe(final float speed) {
@@ -53,6 +57,7 @@ public class MovementUtil {
         if(mc.thePlayer.moveStrafing < 0F)
             rotationYaw += 90F * forward;
 
+        rotationYaw = rotationYaw % 360;
         return Math.toRadians(rotationYaw);
     }
 }

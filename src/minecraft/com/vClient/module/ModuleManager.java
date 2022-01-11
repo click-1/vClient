@@ -30,6 +30,7 @@ public class ModuleManager {
         moduleMap.put("NoSlow", new NoSlow());
         moduleMap.put("Speed", new Speed());
         moduleMap.put("Sprint", new Sprint());
+        moduleMap.put("Step", new Step());
         //VISUAL
         moduleMap.put("Camera", new Camera());
         moduleMap.put("ClickGUI", new ClickGUI());

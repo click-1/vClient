@@ -13,7 +13,7 @@ public class EventPreMotionUpdate extends Event {
         this.ground = ground;
         this.x = x;
         this.y = y;
-        this.z= z;
+        this.z = z;
     }
     public float getYaw() {
         return yaw;

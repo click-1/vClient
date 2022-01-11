@@ -9,13 +9,13 @@ import net.minecraft.util.MathHelper;
 
 public class S18PacketEntityTeleport implements Packet<INetHandlerPlayClient>
 {
-    private int entityId;
+    public int entityId;
     private int posX;
     private int posY;
     private int posZ;
     private byte yaw;
     private byte pitch;
-    private boolean onGround;
+    public boolean onGround;
 
     public S18PacketEntityTeleport()
     {

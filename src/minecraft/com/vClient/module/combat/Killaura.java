@@ -39,7 +39,7 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Existed", this, 30, 0, 500, true));
         vClient.instance.settingsManager.rSetting(new Setting("FOV", this, 360, 0, 360, true));
         vClient.instance.settingsManager.rSetting(new Setting("Range", this, 4.25, 3.0, 6.0, false));
-        vClient.instance.settingsManager.rSetting(new Setting("HurtTime", this, 13, 1, 25, true));
+        vClient.instance.settingsManager.rSetting(new Setting("CPS", this, 15, 1, 25, true));
         vClient.instance.settingsManager.rSetting(new Setting("Multi", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Players", this, true));
@@ -54,9 +54,16 @@ public class KillAura extends Module {
     @Override
     public void onEnable() {
         num_attacks = vClient.instance.settingsManager.getSettingByName("Multi").getValBoolean() ? 3 : 1;
-        delay = (int) vClient.instance.settingsManager.getSettingByName("HurtTime").getValDouble();
+        delay = (int) vClient.instance.settingsManager.getSettingByName("CPS").getValDouble();
         range = vClient.instance.settingsManager.getSettingByName("Range").getValDouble();
         super.onEnable();
+    }
+
+    @Override
+    public void onDisable() {
+        stopBlocking();
+        active_target = null;
+        super.onDisable();
     }
 
     @EventTarget
@@ -73,7 +80,7 @@ public class KillAura extends Module {
                 stopBlocking();
             mc.thePlayer.swingItem();
             for (int i = 0; i < num_attacks; i++) {
-                if (targets.size() >= i+1) {
+                if (i < targets.size()) {
                     active_target = targets.get(i);
                     attack(active_target);
                 }
