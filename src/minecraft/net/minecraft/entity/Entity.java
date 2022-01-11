@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 
+import com.vClient.event.events.EventMove;
 import com.vClient.event.events.EventStep;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
@@ -589,6 +590,14 @@ public abstract class Entity implements ICommandSender
      */
     public void moveEntity(double x, double y, double z)
     {
+        EventMove eventMove = new EventMove(x, y, z);
+        eventMove.call();
+        if (eventMove.isCancelled())
+            return;
+        x = eventMove.getX();
+        y = eventMove.getY();
+        z = eventMove.getZ();
+
         if (this.noClip)
         {
             this.setEntityBoundingBox(this.getEntityBoundingBox().offset(x, y, z));
@@ -617,7 +626,7 @@ public abstract class Entity implements ICommandSender
             double d5 = z;
             boolean flag = this.onGround && this.isSneaking() && this instanceof EntityPlayer;
 
-            if (flag)
+            if (flag || eventMove.allowSafeWalk())
             {
                 double d6;
 

@@ -29,7 +29,7 @@ public class InvManager extends Module {
 
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("Delay", this, 125, 0, 1000, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Delay", this, 100, 0, 1000, true));
     }
 
     @EventTarget

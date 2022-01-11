@@ -52,6 +52,7 @@ public class ModuleManager {
         moduleMap.put("Freeze", new Freeze());
         moduleMap.put("GameSpeed", new GameSpeed());
         moduleMap.put("NoFall", new NoFall());
+        moduleMap.put("SafeWalk", new SafeWalk());
 
         moduleList.addAll(moduleMap.values());
         moduleList2.addAll(moduleMap.values());

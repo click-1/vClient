@@ -16,7 +16,7 @@ import net.minecraft.util.ChatComponentText;
 import org.lwjgl.opengl.Display;
 
 public class vClient {
-    public String name = "vClient", version = "2", creator = "click_1";
+    public String name = "vClient", version = "3", creator = "click_1";
     public static vClient instance = new vClient();
     public SettingsManager settingsManager;
     public EventManager eventManager;
