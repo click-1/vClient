@@ -3,17 +3,14 @@ package com.vClient.event.events;
 import com.vClient.event.Event;
 
 public class EventChat extends Event {
-    private String message;
-
-    public EventChat(String message) {
-        this.message = message;
+    private String incomingChat;
+    public EventChat(String incomingChat) {
+        this.incomingChat = incomingChat;
     }
-
-    public String getMessage() {
-        return message;
+    public String getIncomingChat() {
+        return incomingChat;
     }
-
-    public void setMessage(String message) {
-        this.message = message;
+    public void setIncomingChat(String incomingChat) {
+        this.incomingChat = incomingChat;
     }
 }

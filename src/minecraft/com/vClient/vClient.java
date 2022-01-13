@@ -3,7 +3,7 @@ package com.vClient;
 import com.vClient.command.CommandManager;
 import com.vClient.event.EventManager;
 import com.vClient.event.EventTarget;
-import com.vClient.event.events.EventChat;
+import com.vClient.event.events.EventMessage;
 import com.vClient.event.events.EventKey;
 import com.vClient.module.ModuleManager;
 import com.vClient.ui.ArrayListHUD;
@@ -54,8 +54,8 @@ public class vClient {
         moduleManager.getModules().stream().filter(module -> module.getKey() == event.getKey()).forEach(module -> module.toggle());
     }
 
-    public void onChat(EventChat event) {
-        commandManager.handleChat(event);
+    public void onMessage(EventMessage event) {
+        commandManager.handleMessage(event);
     }
 
     private void prestartModules() {

@@ -60,11 +60,13 @@ public class ClickGUI extends GuiScreen {
 		double pheight = 15;
 		double px = 10;
 		double py = 10;
-		double pyplus = pheight + 10;
+		double pyplus = pheight + 90;
+		double pxplus = pwidth + 50;
 		
 		/*
 		 * Zum Sortieren der Panels einfach die Reihenfolge im Enum ndern ;)
 		 */
+		int categories = 0;
 		for (Category c : Category.values()) {
 			String title = Character.toUpperCase(c.name().toLowerCase().charAt(0)) + c.name().toLowerCase().substring(1);
 			ClickGUI.panels.add(new Panel(title, px, py, pwidth, pheight, false, this) {
@@ -76,7 +78,16 @@ public class ClickGUI extends GuiScreen {
 							}
 						}
 			});
-			py += pyplus;
+			categories++;
+			if (categories < 3) {
+				px += pxplus;
+			}
+			else if (categories == 3) {
+				px = 10;
+				py += pyplus;
+			} else {
+				px += pxplus;
+			}
 		}
 		
 		/*

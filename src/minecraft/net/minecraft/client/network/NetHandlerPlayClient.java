@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.mojang.authlib.GameProfile;
+import com.vClient.event.events.EventChat;
 import com.vClient.ui.MainMenu;
 import io.netty.buffer.Unpooled;
 import java.io.File;
@@ -850,6 +851,11 @@ public class NetHandlerPlayClient implements INetHandlerPlayClient
     public void handleChat(S02PacketChat packetIn)
     {
         PacketThreadUtil.checkThreadAndEnqueue(packetIn, this, this.gameController);
+
+        EventChat eventChat = new EventChat(packetIn.getChatComponent().getUnformattedText());
+        eventChat.call();
+        if (eventChat.isCancelled())
+            return;
 
         if (packetIn.getType() == 2)
         {

@@ -2,6 +2,7 @@ package com.vClient.module.movement;
 
 import com.vClient.event.EventTarget;
 import com.vClient.event.events.EventStep;
+import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import net.minecraft.network.play.client.C03PacketPlayer;
@@ -13,10 +14,12 @@ public class Step extends Module {
     public Step() {
         super("Step", Keyboard.CHAR_NONE, Category.MOVEMENT, "Step over blocks upon collision.");
     }
-    @Override
-    public void onEnable() {
-        mc.thePlayer.stepHeight = 1f;
-        super.onEnable();
+    @EventTarget
+    public void onUpdate(EventUpdate event) {
+        if (mc.thePlayer.isCollidedHorizontally && mc.thePlayer.onGround && !mc.gameSettings.keyBindJump.isKeyDown())
+            mc.thePlayer.stepHeight = 1f;
+        else
+            mc.thePlayer.stepHeight = 0.6f;
     }
     @EventTarget
     public void onStep(EventStep event) {

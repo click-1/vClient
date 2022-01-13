@@ -1,7 +1,7 @@
 package com.vClient.command;
 
 import com.vClient.command.commands.*;
-import com.vClient.event.events.EventChat;
+import com.vClient.event.events.EventMessage;
 import com.vClient.vClient;
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ public class CommandManager {
         commands.add(new Panic());
     }
 
-    public void handleChat(EventChat event) {
+    public void handleMessage(EventMessage event) {
         String message = event.getMessage();
         if (!message.startsWith(prefix))
             return;

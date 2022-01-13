@@ -1,5 +1,6 @@
 package net.minecraft.command;
 
+import com.vClient.vClient;
 import net.minecraft.command.server.CommandAchievement;
 import net.minecraft.command.server.CommandBanIp;
 import net.minecraft.command.server.CommandBanPlayer;

@@ -5,6 +5,10 @@ import com.vClient.module.exploit.*;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
 import com.vClient.module.visual.*;
+import com.vClient.module.world.Freeze;
+import com.vClient.module.world.GameSpeed;
+import com.vClient.module.world.NoFall;
+import com.vClient.module.world.SafeWalk;
 import com.vClient.util.MyTrie;
 import com.vClient.util.custom_font.CustomFontUtil;
 
@@ -23,6 +27,11 @@ public class ModuleManager {
         moduleMap.put("Reach", new Reach());
         //moduleMap.put("TargetStrafe", new TargetStrafe());
         //moduleMap.put("WTap", new WTap());
+        //EXPLOIT
+        moduleMap.put("AntiWatchdog", new AntiWatchdog());
+        moduleMap.put("Blink", new Blink());
+        moduleMap.put("Disabler", new Disabler());
+        moduleMap.put("Spammer", new Spammer());
         //MOVEMENT
         moduleMap.put("Fly", new Fly());
         moduleMap.put("InvMove", new InvMove());
@@ -31,13 +40,6 @@ public class ModuleManager {
         moduleMap.put("Speed", new Speed());
         moduleMap.put("Sprint", new Sprint());
         moduleMap.put("Step", new Step());
-        //VISUAL
-        moduleMap.put("Camera", new Camera());
-        moduleMap.put("ClickGUI", new ClickGUI());
-        moduleMap.put("ESP", new ESP());
-        moduleMap.put("FullBright", new FullBright());
-        moduleMap.put("StaticFOV", new StaticFOV());
-        moduleMap.put("TargetHUD", new TargetHUD());
         //PLAYER
         moduleMap.put("AutoClicker", new AutoClicker());
         moduleMap.put("AutoTool", new AutoTool());
@@ -46,13 +48,19 @@ public class ModuleManager {
         moduleMap.put("FastPlace", new FastPlace());
         moduleMap.put("InvManager", new InvManager());
         moduleMap.put("Velocity", new Velocity());
-        //EXPLOIT
-        moduleMap.put("Blink", new Blink());
-        moduleMap.put("Disabler", new Disabler());
+        //VISUAL
+        moduleMap.put("Camera", new Camera());
+        moduleMap.put("ClickGUI", new ClickGUI());
+        moduleMap.put("ESP", new ESP());
+        moduleMap.put("FullBright", new FullBright());
+        moduleMap.put("StaticFOV", new StaticFOV());
+        moduleMap.put("TargetHUD", new TargetHUD());
+        //WORLD
         moduleMap.put("Freeze", new Freeze());
         moduleMap.put("GameSpeed", new GameSpeed());
         moduleMap.put("NoFall", new NoFall());
         moduleMap.put("SafeWalk", new SafeWalk());
+
 
         moduleList.addAll(moduleMap.values());
         moduleList2.addAll(moduleMap.values());
