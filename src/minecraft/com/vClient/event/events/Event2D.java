@@ -3,18 +3,15 @@ package com.vClient.event.events;
 import com.vClient.event.Event;
 
 public class Event2D extends Event {
-    private float width, height;
-    public Event2D(float width, float height) {
+    private int width, height;
+    public Event2D(int width, int height) {
         this.width = width;
-        this. height = height;
-
+        this.height = height;
     }
-    public float getWidth() {
+    public int getWidth() {
         return width;
     }
-    public float getHeight() {
-        return  height;
+    public int getHeight() {
+        return height;
     }
-
-
 }

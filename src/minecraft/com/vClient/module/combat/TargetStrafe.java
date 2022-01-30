@@ -10,10 +10,9 @@ import de.Hero.settings.Setting;
 import net.minecraft.entity.EntityLivingBase;
 import org.lwjgl.input.Keyboard;
 
-public class TargetStrafe extends Module {
+public class TargetStrafe extends Module{
     private double normalX;
     private double normalZ;
-    private EntityLivingBase target;
     public TargetStrafe() {
         super("TargetStrafe", Keyboard.CHAR_NONE, Category.COMBAT, "Automatically strafe around KillAura target.");
     }
@@ -33,8 +32,8 @@ public class TargetStrafe extends Module {
         if (!vClient.instance.moduleManager.getModulebyName("KillAura").isToggled())
             return;
         double radius = vClient.instance.settingsManager.getSettingByName("Radius").getValDouble();
-        target = ((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).active_target;
-        if (target == null || !target.isEntityAlive())
+        EntityLivingBase target = ((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).active_target;
+        if (!KillAura.canAttack(target))
             return;
         if (mc.gameSettings.keyBindForward.pressed && !mc.gameSettings.keyBindSneak.pressed && mc.thePlayer.moveStrafing == 0F) {
             if (Math.sqrt(Math.pow(mc.thePlayer.posX - target.posX, 2) + Math.pow(mc.thePlayer.posZ - target.posZ, 2)) != 0) {
@@ -55,7 +54,7 @@ public class TargetStrafe extends Module {
     }
     @EventTarget
     public void onPost(EventPostMotionUpdate event) {
-        if (target == null)
+        if (((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).active_target == null)
             return;
         mc.thePlayer.motionX = normalX;
         mc.thePlayer.motionZ = normalZ;

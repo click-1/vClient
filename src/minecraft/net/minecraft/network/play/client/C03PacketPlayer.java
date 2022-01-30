@@ -10,11 +10,11 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
     protected double x;
     protected double y;
     protected double z;
-    protected float yaw;
-    protected float pitch;
+    public float yaw;
+    public float pitch;
     public boolean onGround;
     protected boolean moving;
-    protected boolean rotating;
+    public boolean rotating;
 
     public C03PacketPlayer()
     {

@@ -50,10 +50,11 @@ public class ModuleManager {
         moduleMap.put("Velocity", new Velocity());
         //VISUAL
         moduleMap.put("Camera", new Camera());
+        moduleMap.put("Clairvoyance", new Clairvoyance());
         moduleMap.put("ClickGUI", new ClickGUI());
         moduleMap.put("ESP", new ESP());
-        moduleMap.put("FullBright", new FullBright());
         moduleMap.put("StaticFOV", new StaticFOV());
+        moduleMap.put("StorageESP", new StorageESP());
         moduleMap.put("TargetHUD", new TargetHUD());
         //WORLD
         moduleMap.put("Freeze", new Freeze());

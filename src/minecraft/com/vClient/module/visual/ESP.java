@@ -1,5 +1,7 @@
 package com.vClient.module.visual;
 
+import com.vClient.event.EventTarget;
+import com.vClient.event.events.Event3D;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.util.TargetUtil;
@@ -16,6 +18,7 @@ import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Timer;
 import org.lwjgl.input.Keyboard;
+import org.w3c.dom.events.Event;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -43,7 +46,8 @@ public class ESP extends Module {
         super.onEnable();
     }
 
-    public void draw() {
+    @EventTarget
+    public void on3D(Event3D event) {
         if (!this.isToggled())
             return;
         for (Entity entity : mc.theWorld.loadedEntityList) {

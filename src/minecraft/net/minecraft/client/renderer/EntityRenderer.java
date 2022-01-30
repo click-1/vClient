@@ -1676,8 +1676,6 @@ public class EntityRenderer implements IResourceManagerReloadListener
         this.mc.mcProfiler.endStartSection("hand");
         boolean flag3 = Reflector.callBoolean(Reflector.ForgeHooksClient_renderFirstPersonHand, new Object[] {this.mc.renderGlobal, Float.valueOf(partialTicks), Integer.valueOf(pass)});
 
-        ((ESP) vClient.instance.moduleManager.getModulebyName("ESP")).draw();
-
         if (!flag3 && this.renderHand)
         {
             GlStateManager.clear(256);

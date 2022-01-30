@@ -16,7 +16,7 @@ public class Step extends Module {
     }
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        if (mc.thePlayer.isCollidedHorizontally && mc.thePlayer.onGround && !mc.gameSettings.keyBindJump.isKeyDown())
+        if (!mc.gameSettings.keyBindJump.isKeyDown())
             mc.thePlayer.stepHeight = 1f;
         else
             mc.thePlayer.stepHeight = 0.6f;

@@ -1,5 +1,6 @@
 package net.minecraft.entity;
 
+import com.vClient.event.events.EventRotations;
 import net.minecraft.util.MathHelper;
 
 public class EntityBodyHelper

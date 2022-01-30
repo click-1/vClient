@@ -9,8 +9,8 @@ import net.minecraft.world.World;
 
 public class S19PacketEntityHeadLook implements Packet<INetHandlerPlayClient>
 {
-    private int entityId;
-    private byte yaw;
+    public int entityId;
+    public byte yaw;
 
     public S19PacketEntityHeadLook()
     {

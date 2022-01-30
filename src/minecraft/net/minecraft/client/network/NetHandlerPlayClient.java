@@ -5,6 +5,7 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.mojang.authlib.GameProfile;
 import com.vClient.event.events.EventChat;
+import com.vClient.event.events.EventRotations;
 import com.vClient.ui.MainMenu;
 import io.netty.buffer.Unpooled;
 import java.io.File;
@@ -640,6 +641,15 @@ public class NetHandlerPlayClient implements INetHandlerPlayClient
     {
         PacketThreadUtil.checkThreadAndEnqueue(packetIn, this, this.gameController);
         Entity entity = packetIn.getEntity(this.clientWorldController);
+
+        EventRotations eventRotations = new EventRotations(0, 0);
+        eventRotations.call();
+        if (eventRotations.active && entity == Minecraft.getMinecraft().thePlayer) {
+            EntityLivingBase player = (EntityLivingBase) Minecraft.getMinecraft().thePlayer;
+            player.rotationYawHead = eventRotations.yawHead;
+            player.rotationPitchHead = eventRotations.pitchHead;
+            return;
+        }
 
         if (entity != null)
         {

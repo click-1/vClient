@@ -1,5 +1,7 @@
 package com.vClient.module.visual;
 
+import com.vClient.event.EventTarget;
+import com.vClient.event.events.Event2D;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.module.combat.KillAura;
@@ -15,25 +17,25 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import org.lwjgl.Sys;
 import org.lwjgl.input.Keyboard;
 import java.awt.*;
 
 public class TargetHUD extends Module {
     private int x1, y1, x2, y2;
-    private EntityLivingBase target = null;
     private MinecraftFontRenderer fr1 = CustomFontUtil.hud;
     private MinecraftFontRenderer fr2 = CustomFontUtil.arial;
     public TargetHUD() {
         super("TargetHUD", Keyboard.CHAR_NONE, Category.VISUAL, "Display current target info on screen.");
     }
 
-    public void draw() {
-        if (!this.isToggled() || !vClient.instance.moduleManager.getModulebyName("KillAura").isToggled())
-            return;
-        target = ((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).active_target;
-        if (KillAura.canAttack(target) && mc.thePlayer.getDistanceToEntity(target) <= vClient.instance.settingsManager.getSettingByName("Range").getValDouble())
+    @EventTarget
+    public void on2D(Event2D event) {
+        EntityLivingBase target = ((KillAura) vClient.instance.moduleManager.getModulebyName("KillAura")).active_target;
+        if (this.isToggled() && target != null)
             display(target);
     }
 

@@ -3,6 +3,8 @@ package net.minecraft.client.renderer.entity;
 import com.google.common.collect.Lists;
 import java.nio.FloatBuffer;
 import java.util.List;
+
+import com.vClient.event.events.EventClairvoyance;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.FontRenderer;
@@ -93,6 +95,10 @@ public abstract class RendererLivingEntity<T extends EntityLivingBase> extends R
     {
         GlStateManager.pushMatrix();
         GlStateManager.disableCull();
+
+        EventClairvoyance eventClairvoyance = new EventClairvoyance(EventClairvoyance.State.PRE);
+        eventClairvoyance.call();
+
         this.mainModel.swingProgress = this.getSwingProgress(entity, partialTicks);
         this.mainModel.isRiding = entity.isRiding();
         this.mainModel.isChild = entity.isChild();
@@ -128,7 +134,11 @@ public abstract class RendererLivingEntity<T extends EntityLivingBase> extends R
                 }
             }
 
-            float f7 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * partialTicks;
+            float f7;
+            if (entity == Minecraft.getMinecraft().thePlayer)
+                f7 = entity.prevRotationPitchHead + (entity.rotationPitchHead - entity.prevRotationPitchHead) * partialTicks;
+            else
+                f7 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * partialTicks;
             this.renderLivingAt(entity, x, y, z);
             float f8 = this.handleRotationFloat(entity, partialTicks);
             this.rotateCorpse(entity, f8, f, partialTicks);
@@ -199,6 +209,9 @@ public abstract class RendererLivingEntity<T extends EntityLivingBase> extends R
         {
             super.doRender(entity, x, y, z, entityYaw, partialTicks);
         }
+
+        eventClairvoyance.setState(EventClairvoyance.State.POST);
+        eventClairvoyance.call();
     }
 
     protected boolean setScoreTeamColor(T entityLivingBaseIn)
