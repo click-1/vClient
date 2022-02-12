@@ -28,7 +28,7 @@ public class DiscordRP {
     }
     public void update(String firstLine, String secondLine) {
         DiscordRichPresence.Builder builder = new DiscordRichPresence.Builder(secondLine);
-        builder.setBigImage("large", "");
+        builder.setBigImage("large", "vClient b3");
         builder.setDetails(firstLine);
         builder.setStartTimestamps(created);
         DiscordRPC.discordUpdatePresence(builder.build());

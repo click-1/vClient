@@ -1360,7 +1360,7 @@ public abstract class EntityPlayer extends EntityLivingBase
                         if (i > 0)
                         {
                             targetEntity.addVelocity((double)(-MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F) * (float)i * 0.5F), 0.1D, (double)(MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F) * (float)i * 0.5F));
-                            if (!vClient.instance.moduleManager.getModulebyName("KillAura").isToggled() && !vClient.instance.moduleManager.getModulebyName("AutoClicker").isToggled()) {
+                            if (!vClient.instance.moduleManager.getModulebyName("KeepSprint").isToggled()) {
                                 this.motionX *= 0.6D;
                                 this.motionZ *= 0.6D;
                                 this.setSprinting(false);

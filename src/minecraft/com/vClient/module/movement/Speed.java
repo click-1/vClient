@@ -12,6 +12,7 @@ import org.lwjgl.input.Keyboard;
 import java.util.ArrayList;
 
 public class Speed extends Module {
+    String mode;
     public Speed() {
         super("Speed", Keyboard.CHAR_NONE, Category.MOVEMENT, "Modify player movement.");
     }
@@ -20,16 +21,20 @@ public class Speed extends Module {
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
         options.add("NCPHop");
+        options.add("SlowHop");
         options.add("Watchdog");
+        this.setDisplayMode("Watchdog");
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         vClient.instance.settingsManager.rSetting(new Setting("Speed Mode", this, "Watchdog", options));
     }
     @Override
     public void onEnable() {
-        String mode = vClient.instance.settingsManager.getSettingByName("Speed Mode").getValString();
-        if (mode.equalsIgnoreCase("NCPHop"))
+        mode = vClient.instance.settingsManager.getSettingByName("Speed Mode").getValString();
+        if (mode.equals("NCPHop"))
             mc.timer.timerSpeed = 1.0865F;
-        if (mode.equalsIgnoreCase("Watchdog"))
-            mc.timer.timerSpeed = 1.0F;
+        this.setDisplayMode(mode);
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        mode = mode.toLowerCase();
         super.onEnable();
     }
 
@@ -41,16 +46,17 @@ public class Speed extends Module {
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        String mode = vClient.instance.settingsManager.getSettingByName("Speed Mode").getValString();
         if (MovementUtil.isMoving()) {
-            //vClient.addChatMessage(String.valueOf(MovementUtil.getSpeed()*20.0));
             if (mc.thePlayer.onGround)
                 mc.thePlayer.jump();
-            if (mode.equalsIgnoreCase("NCPHop"))
-                MovementUtil.strafe();
-            else
-                MovementUtil.strafe(MovementUtil.getSpeed() * .995f);
-
+            switch (mode) {
+                case "ncphop":  MovementUtil.strafe();
+                                break;
+                case "slowhop": MovementUtil.strafe(MovementUtil.getSpeed() * .995f);
+                                break;
+                case "watchdog": MovementUtil.strafe(MovementUtil.getSpeed() * 1.0055f);
+                                break;
+            }
         } else {
             mc.thePlayer.motionX = 0D;
             mc.thePlayer.motionZ = 0D;

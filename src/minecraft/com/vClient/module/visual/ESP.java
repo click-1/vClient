@@ -21,6 +21,7 @@ import org.lwjgl.input.Keyboard;
 import org.w3c.dom.events.Event;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,28 +29,31 @@ import static org.lwjgl.opengl.GL11.*;
 
 public class ESP extends Module {
     private Map<Integer, Boolean> glCapMap = new HashMap<>();
-    private boolean outline, box3d;
+    private boolean outline;
     public ESP() {
         super("ESP", Keyboard.CHAR_NONE, Category.VISUAL, "Extrasensory perception.");
     }
 
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("Outline", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Box3D", this, true));
-    }
-
-    @Override
-    public void onEnable() {
-        outline = vClient.instance.settingsManager.getSettingByName("Outline").getValBoolean();
-        box3d = vClient.instance.settingsManager.getSettingByName("Box3D").getValBoolean();
-        super.onEnable();
+        ArrayList<String> options = new ArrayList<>();
+        options.add("Outline");
+        options.add("Box");
+        this.setDisplayMode("Box");
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        vClient.instance.settingsManager.rSetting(new Setting("ESP Mode", this, "Box", options));
     }
 
     @EventTarget
     public void on3D(Event3D event) {
-        if (!this.isToggled())
-            return;
+        outline = vClient.instance.settingsManager.getSettingByName("ESP Mode").getValString().equalsIgnoreCase("Outline");
+        if (outline)
+            this.setDisplayMode("Outline");
+        else
+            this.setDisplayMode("Box");
+
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+
         for (Entity entity : mc.theWorld.loadedEntityList) {
             if (entity instanceof EntityLivingBase && entity != mc.thePlayer && canDisplay((EntityLivingBase) entity) && mc.thePlayer.getDistanceToEntity(entity) >= 1F) {
                 final EntityLivingBase entityLiving = (EntityLivingBase) entity;
@@ -86,8 +90,7 @@ public class ESP extends Module {
                     setGlCap(GL_LINE_SMOOTH, true);
                     GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, color.getAlpha() / 510F);
                     drawSelectionBoundingBox(axisAlignedBB);
-                }
-                if (box3d) {
+                } else {
                     GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, 50 / 255F);
                     drawFilledBox(axisAlignedBB);
                 }
@@ -250,8 +253,7 @@ public class ESP extends Module {
     }
 
     public boolean canDisplay(EntityLivingBase entity) {
-        boolean conditions = entity != null && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble();
-        if (!conditions)
+        if (entity == null)
             return false;
         if (TargetUtil.isPlayer(entity) && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())
             return false;

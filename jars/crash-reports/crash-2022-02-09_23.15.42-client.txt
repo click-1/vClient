@@ -1,0 +1,81 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 2/9/22, 11:15 PM
+Description: Unexpected error
+
+java.lang.NumberFormatException: For input string: "§7"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at com.vClient.ui.ArrayListHUD.draw(ArrayListHUD.java:44)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:357)
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1275)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1135)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:424)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at com.vClient.ui.ArrayListHUD.draw(ArrayListHUD.java:44)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:357)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player871'/216, l='MpServer', x=588.70, y=72.00, z=344.30]]
+	Chunk stats: MultiplayerChunkCache: 121, 121
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 584.00,64.00,166.00 - World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 1784650 game time, 153164 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 123 total; [EntityPlayerSP['Player871'/216, l='MpServer', x=588.70, y=72.00, z=344.30], EntitySheep['Sheep'/257, l='MpServer', x=665.41, y=62.22, z=386.94], EntityVillager['Villager'/258, l='MpServer', x=662.16, y=61.91, z=393.91], EntityPig['Pig'/259, l='MpServer', x=657.63, y=67.00, z=384.94], EntityPig['Pig'/260, l='MpServer', x=656.47, y=63.00, z=415.75], EntitySheep['Sheep'/261, l='MpServer', x=660.34, y=63.00, z=424.66], EntityVillager['Villager'/43, l='MpServer', x=512.63, y=67.00, z=292.19], EntityVillager['Villager'/44, l='MpServer', x=512.25, y=69.00, z=314.41], EntitySkeleton['Skeleton'/45, l='MpServer', x=527.50, y=33.00, z=340.50], EntityPig['Pig'/46, l='MpServer', x=515.91, y=67.00, z=345.97], EntityPig['Pig'/47, l='MpServer', x=519.06, y=67.00, z=350.00], EntityVillager['Villager'/48, l='MpServer', x=525.72, y=67.00, z=340.94], EntityPig['Pig'/49, l='MpServer', x=521.19, y=67.00, z=342.31], EntityVillager['Villager'/50, l='MpServer', x=515.50, y=69.00, z=367.28], EntityPig['Pig'/51, l='MpServer', x=527.47, y=66.00, z=356.78], EntityVillager['Villager'/52, l='MpServer', x=529.38, y=65.00, z=357.66], EntityVillager['Villager'/53, l='MpServer', x=516.63, y=67.00, z=356.69], EntityVillager['Villager'/55, l='MpServer', x=541.38, y=68.00, z=278.63], EntityBat['Bat'/56, l='MpServer', x=535.03, y=60.72, z=294.75], EntityVillager['Villager'/57, l='MpServer', x=539.56, y=68.00, z=330.72], EntityZombie['Zombie'/58, l='MpServer', x=531.50, y=33.00, z=339.50], EntityVillager['Villager'/59, l='MpServer', x=535.13, y=64.00, z=364.59], EntityBat['Bat'/62, l='MpServer', x=550.78, y=58.88, z=285.03], EntityVillager['Villager'/63, l='MpServer', x=549.06, y=72.00, z=313.53], EntityZombie['Zombie'/64, l='MpServer', x=547.50, y=36.00, z=350.50], EntitySpider['Spider'/65, l='MpServer', x=545.31, y=36.00, z=362.06], EntityVillager['Villager'/66, l='MpServer', x=557.13, y=71.00, z=360.50], EntityVillager['Villager'/67, l='MpServer', x=552.72, y=71.00, z=360.50], EntitySheep['Sheep'/68, l='MpServer', x=563.31, y=59.00, z=293.44], EntityVillager['Villager'/69, l='MpServer', x=575.38, y=71.00, z=298.75], EntityPig['Pig'/70, l='MpServer', x=575.50, y=71.00, z=296.69], EntityZombie['Zombie'/71, l='MpServer', x=575.97, y=54.00, z=306.66], EntityVillager['Villager'/72, l='MpServer', x=560.16, y=72.00, z=311.41], EntityCreeper['Creeper'/73, l='MpServer', x=562.91, y=32.00, z=333.50], EntityPig['Pig'/74, l='MpServer', x=558.41, y=71.00, z=330.81], EntityPig['Pig'/75, l='MpServer', x=581.22, y=69.00, z=276.91], EntityPig['Pig'/76, l='MpServer', x=584.28, y=69.00, z=274.09], EntityVillager['Villager'/77, l='MpServer', x=587.34, y=72.00, z=307.91], EntityPig['Pig'/78, l='MpServer', x=593.47, y=72.00, z=318.84], EntityVillager['Villager'/79, l='MpServer', x=586.06, y=65.00, z=329.44], EntityPig['Pig'/80, l='MpServer', x=584.44, y=78.00, z=343.84], EntityPig['Pig'/81, l='MpServer', x=594.44, y=70.16, z=320.66], EntityZombie['Zombie'/82, l='MpServer', x=585.66, y=63.00, z=345.00], EntityVillager['Villager'/83, l='MpServer', x=585.06, y=78.00, z=339.38], EntityVillager['Villager'/84, l='MpServer', x=589.28, y=60.00, z=352.28], EntityVillager['Villager'/85, l='MpServer', x=592.34, y=67.00, z=369.22], EntityZombie['Zombie'/90, l='MpServer', x=606.53, y=17.00, z=280.06], EntitySkeleton['Skeleton'/91, l='MpServer', x=595.44, y=25.00, z=276.84], EntityVillager['Villager'/92, l='MpServer', x=601.50, y=70.00, z=283.09], EntityVillager['Villager'/93, l='MpServer', x=603.84, y=69.00, z=284.50], EntityVillager['Villager'/95, l='MpServer', x=592.84, y=67.00, z=306.34], EntityCreeper['Creeper'/97, l='MpServer', x=598.88, y=28.00, z=317.63], EntityZombie['Zombie'/98, l='MpServer', x=599.34, y=28.00, z=329.34], EntityPig['Pig'/99, l='MpServer', x=593.06, y=73.00, z=345.88], EntityPig['Pig'/100, l='MpServer', x=593.06, y=73.00, z=345.06], EntityPig['Pig'/101, l='MpServer', x=593.91, y=73.00, z=346.91], EntityVillager['Villager'/102, l='MpServer', x=594.28, y=73.00, z=352.69], EntityCreeper['Creeper'/105, l='MpServer', x=619.22, y=30.00, z=318.94], EntityCreeper['Creeper'/106, l='MpServer', x=623.50, y=30.00, z=314.50], EntitySkeleton['Skeleton'/107, l='MpServer', x=623.50, y=30.00, z=313.50], EntityVillager['Villager'/108, l='MpServer', x=619.13, y=73.00, z=308.50], EntityVillager['Villager'/109, l='MpServer', x=615.44, y=73.00, z=308.88], EntityZombie['Zombie'/110, l='MpServer', x=616.06, y=32.00, z=328.44], EntityVillager['Villager'/111, l='MpServer', x=617.56, y=66.00, z=357.91], EntityVillager['Villager'/116, l='MpServer', x=637.06, y=69.00, z=279.53], EntityItem['item.item.bone'/117, l='MpServer', x=630.94, y=27.00, z=319.19], EntityVillager['Villager'/118, l='MpServer', x=627.44, y=72.00, z=313.84], EntityMinecartChest['container.minecart'/119, l='MpServer', x=630.50, y=35.06, z=324.50], EntityPig['Pig'/120, l='MpServer', x=633.44, y=75.00, z=328.69], EntitySheep['Sheep'/121, l='MpServer', x=639.78, y=73.00, z=325.94], EntityVillager['Villager'/122, l='MpServer', x=633.22, y=73.00, z=322.50], EntityZombie['Zombie'/123, l='MpServer', x=631.06, y=36.00, z=364.06], EntityCreeper['Creeper'/124, l='MpServer', x=631.50, y=32.00, z=367.50], EntitySpider['Spider'/126, l='MpServer', x=634.50, y=32.00, z=358.50], EntitySpider['Spider'/127, l='MpServer', x=633.69, y=34.09, z=359.69], EntityVillager['Villager'/128, l='MpServer', x=643.31, y=67.00, z=347.69], EntityVillager['Villager'/129, l='MpServer', x=634.78, y=67.00, z=357.41], EntityVillager['Villager'/131, l='MpServer', x=651.25, y=70.00, z=294.72], EntityVillager['Villager'/132, l='MpServer', x=640.34, y=70.00, z=301.84], EntityVillager['Villager'/133, l='MpServer', x=640.53, y=67.00, z=294.00], EntitySheep['Sheep'/136, l='MpServer', x=659.94, y=68.00, z=287.53], EntityZombie['Zombie'/137, l='MpServer', x=661.69, y=25.00, z=335.13], EntityZombie['Zombie'/138, l='MpServer', x=660.78, y=25.00, z=334.28], EntityZombie['Zombie'/651, l='MpServer', x=603.50, y=21.00, z=275.50], EntityPig['Pig'/139, l='MpServer', x=668.00, y=69.00, z=335.91], EntityCreeper['Creeper'/448, l='MpServer', x=589.50, y=29.00, z=284.50], EntityVillager['Villager'/217, l='MpServer', x=519.19, y=69.00, z=376.53], EntityVillager['Villager'/218, l='MpServer', x=520.81, y=72.00, z=386.47], EntityPig['Pig'/219, l='MpServer', x=515.47, y=72.00, z=393.69], EntityVillager['Villager'/220, l='MpServer', x=535.34, y=71.00, z=388.78], EntityVillager['Villager'/221, l='MpServer', x=558.56, y=70.00, z=394.28], EntitySkeleton['Skeleton'/222, l='MpServer', x=590.28, y=24.00, z=376.59], EntityZombie['Zombie'/223, l='MpServer', x=591.28, y=24.00, z=370.91], EntityMinecartChest['container.minecart'/224, l='MpServer', x=591.50, y=24.00, z=372.84], EntityWitch['Witch'/225, l='MpServer', x=591.16, y=24.00, z=375.34], EntityBat['Bat'/227, l='MpServer', x=590.88, y=25.10, z=384.25], EntityPig['Pig'/228, l='MpServer', x=574.19, y=71.00, z=391.63], EntityVillager['Villager'/230, l='MpServer', x=588.75, y=69.00, z=416.31], EntityWitch['Witch'/232, l='MpServer', x=592.50, y=24.00, z=377.69], EntityBat['Bat'/233, l='MpServer', x=592.47, y=25.10, z=384.88], EntityBat['Bat'/234, l='MpServer', x=592.56, y=26.10, z=388.75], EntityPig['Pig'/235, l='MpServer', x=591.06, y=68.00, z=397.03], EntityPig['Pig'/236, l='MpServer', x=594.19, y=67.00, z=386.31], EntityPig['Pig'/237, l='MpServer', x=618.78, y=71.00, z=387.50], EntityVillager['Villager'/238, l='MpServer', x=613.19, y=68.00, z=374.47], EntityVillager['Villager'/239, l='MpServer', x=615.44, y=69.00, z=387.84], EntityVillager['Villager'/240, l='MpServer', x=613.75, y=69.00, z=396.50], EntityPig['Pig'/241, l='MpServer', x=617.31, y=70.00, z=387.41], EntityPig['Pig'/242, l='MpServer', x=608.53, y=68.00, z=403.78], EntityVillager['Villager'/243, l='MpServer', x=614.31, y=68.00, z=403.59], EntityPig['Pig'/244, l='MpServer', x=630.38, y=68.00, z=363.09], EntityPig['Pig'/245, l='MpServer', x=621.06, y=68.00, z=373.81], EntityItem['item.item.muttonRaw'/246, l='MpServer', x=638.63, y=72.00, z=406.16], EntityVillager['Villager'/247, l='MpServer', x=627.41, y=70.00, z=416.84], EntitySpider['Spider'/759, l='MpServer', x=545.50, y=36.00, z=356.50], EntityVillager['Villager'/248, l='MpServer', x=651.50, y=74.00, z=369.72], EntityVillager['Villager'/249, l='MpServer', x=654.47, y=68.00, z=393.91], EntityPig['Pig'/250, l='MpServer', x=654.03, y=63.00, z=408.63], EntityCreeper['Creeper'/762, l='MpServer', x=544.66, y=36.00, z=357.97], EntitySpider['Spider'/763, l='MpServer', x=545.50, y=36.00, z=354.50], EntityVillager['Villager'/251, l='MpServer', x=649.34, y=67.00, z=425.47], EntitySheep['Sheep'/252, l='MpServer', x=664.81, y=63.00, z=368.75], EntitySheep['Sheep'/253, l='MpServer', x=663.72, y=62.63, z=384.13]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:390)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2759)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:453)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 8x Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz
+	Java Version: 12, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 736987176 bytes (702 MB) / 1048576000 bytes (1000 MB) up to 2088763392 bytes (1992 MB)
+	JVM Flags: 1 total; -Xms1000m
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 99
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) UHD Graphics 620 GL version 4.6.0 - Build 27.20.100.9664, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz

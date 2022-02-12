@@ -9,6 +9,7 @@ import com.vClient.vClient;
 import de.Hero.settings.Setting;
 import net.minecraft.entity.Entity;
 import net.minecraft.network.play.server.S0CPacketSpawnPlayer;
+import net.minecraft.util.StringUtils;
 import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
@@ -22,13 +23,21 @@ public class AntiBot extends Module {
         ArrayList<String> options = new ArrayList<>();
         options.add("Advanced");
         options.add("Watchdog");
+        this.setDisplayMode("Advanced");
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         vClient.instance.settingsManager.rSetting(new Setting("AntiBot Mode", this, "Advanced", options));
+    }
+    @Override
+    public void onEnable() {
+        String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
+        this.setDisplayMode(mode);
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        super.onEnable();
     }
     @EventTarget
     public void onEventReceivePacket(EventReceivePacket event) {
         String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
         if (mode.equalsIgnoreCase("Advanced") && event.getPacket() instanceof S0CPacketSpawnPlayer) {
-            this.setDisplayName("AntiBot \u00A77" + mode);
             S0CPacketSpawnPlayer packet = (S0CPacketSpawnPlayer) event.getPacket();
             double posX = packet.getX() / 320D;
             double posY = packet.getY() / 320D;
@@ -46,7 +55,6 @@ public class AntiBot extends Module {
     public void onUpdate(EventUpdate event) {
         String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
         if (mode.equalsIgnoreCase("Watchdog")) {
-            this.setDisplayName("AntiBot \u00A77" + mode);
             for (Entity entity : mc.theWorld.loadedEntityList) {
                 if (entity.isInvisible() && entity != mc.thePlayer)
                     mc.theWorld.removeEntity(entity);

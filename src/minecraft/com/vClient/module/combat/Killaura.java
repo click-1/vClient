@@ -49,11 +49,19 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Invisible", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Dead", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Teams", this, true));
+
+        this.setDisplayMode("Sort");
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
     }
 
     @Override
     public void onEnable() {
         num_attacks = vClient.instance.settingsManager.getSettingByName("Multi").getValBoolean() ? 3 : 1;
+        if (num_attacks == 3)
+            this.setDisplayMode("Multi");
+        else
+            this.setDisplayMode("Sort");
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         delay = (int) vClient.instance.settingsManager.getSettingByName("CPS").getValDouble();
         range = vClient.instance.settingsManager.getSettingByName("Range").getValDouble();
         super.onEnable();

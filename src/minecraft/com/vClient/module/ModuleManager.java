@@ -10,7 +10,6 @@ import com.vClient.module.world.GameSpeed;
 import com.vClient.module.world.NoFall;
 import com.vClient.module.world.SafeWalk;
 import com.vClient.util.MyTrie;
-import com.vClient.util.custom_font.CustomFontUtil;
 
 import java.util.*;
 
@@ -18,13 +17,15 @@ public class ModuleManager {
     public MyTrie trie;
     private HashMap<String, Module> moduleMap = new HashMap<>();
     private ArrayList<Module> moduleList = new ArrayList<>();
-    private ArrayList<Module> moduleList2 = new ArrayList<>();
 
     public ModuleManager() {
         //COMBAT
         moduleMap.put("AntiBot", new AntiBot());
+        //moduleMap.put("HitBoxes", new HitBoxes());
+        moduleMap.put("KeepSprint", new KeepSprint());
         moduleMap.put("KillAura", new KillAura());
         moduleMap.put("Reach", new Reach());
+        moduleMap.put("TargetHUD", new TargetHUD());
         //moduleMap.put("TargetStrafe", new TargetStrafe());
         //moduleMap.put("WTap", new WTap());
         //EXPLOIT
@@ -53,20 +54,18 @@ public class ModuleManager {
         moduleMap.put("Clairvoyance", new Clairvoyance());
         moduleMap.put("ClickGUI", new ClickGUI());
         moduleMap.put("ESP", new ESP());
+        moduleMap.put("NoHurtCam", new NoHurtCam());
         moduleMap.put("StaticFOV", new StaticFOV());
         moduleMap.put("StorageESP", new StorageESP());
-        moduleMap.put("TargetHUD", new TargetHUD());
         //WORLD
         moduleMap.put("Freeze", new Freeze());
         moduleMap.put("GameSpeed", new GameSpeed());
         moduleMap.put("NoFall", new NoFall());
         moduleMap.put("SafeWalk", new SafeWalk());
 
-
         moduleList.addAll(moduleMap.values());
-        moduleList2.addAll(moduleMap.values());
+
         moduleList.sort(Comparator.comparing(Module::getName));
-        moduleList2.sort(Comparator.comparingDouble(m -> CustomFontUtil.arial.getStringWidth(((Module) m).getName())).reversed());
         Set<String> cleanedStrings = new HashSet<>();
         for (Module m : moduleList)
             cleanedStrings.add(cleanString(m.getName()));
@@ -74,9 +73,6 @@ public class ModuleManager {
     }
     public ArrayList<Module> getModules() {
         return moduleList;
-    }
-    public ArrayList<Module> getModulesByLength() {
-        return moduleList2;
     }
     public Module getModulebyName(String name) {
         return moduleMap.get(name);

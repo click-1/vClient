@@ -26,6 +26,8 @@ public class Fly extends Module {
         options.add("Normal");
         options.add("Hypixel");
         options.add("Vanilla");
+        this.setDisplayMode("Normal");
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         vClient.instance.settingsManager.rSetting(new Setting("Fly Mode", this, "Normal", options));
         vClient.instance.settingsManager.rSetting(new Setting("Flight Speed", this, 1.5, 0, 2, false));
         vClient.instance.settingsManager.rSetting(new Setting("Vert Speed", this, 0.4, 0, 2, false));
@@ -33,10 +35,12 @@ public class Fly extends Module {
 
     @Override
     public void onEnable() {
-        mode = vClient.instance.settingsManager.getSettingByName("Fly Mode").getValString().toLowerCase();
+        mode = vClient.instance.settingsManager.getSettingByName("Fly Mode").getValString();
         normalSpeed = (float) vClient.instance.settingsManager.getSettingByName("Flight Speed").getValDouble();
         verticalSpeed = (float) vClient.instance.settingsManager.getSettingByName("Vert Speed").getValDouble();
-        this.setDisplayName("Fly + " + mode);
+        this.setDisplayMode(mode);
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        mode = mode.toLowerCase();
         super.onEnable();
     }
 

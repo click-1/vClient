@@ -11,8 +11,6 @@ import net.minecraft.network.play.server.S12PacketEntityVelocity;
 import net.minecraft.network.play.server.S27PacketExplosion;
 import org.lwjgl.input.Keyboard;
 
-import java.util.Random;
-
 public class Velocity extends Module {
     private double horizontal, vertical, frequency;
     public Velocity() {
@@ -27,7 +25,6 @@ public class Velocity extends Module {
     }
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("NoHurtCam", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Horizontal", this, 0, 0, 1, false));
         vClient.instance.settingsManager.rSetting(new Setting("Vertical", this, 0, 0, 1, false));
         vClient.instance.settingsManager.rSetting(new Setting("Frequency", this, 1, 0, 1, false));

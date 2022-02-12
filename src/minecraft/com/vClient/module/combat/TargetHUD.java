@@ -1,4 +1,4 @@
-package com.vClient.module.visual;
+package com.vClient.module.combat;
 
 import com.vClient.event.EventTarget;
 import com.vClient.event.events.Event2D;
@@ -6,6 +6,7 @@ import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.module.combat.KillAura;
 import com.vClient.util.ColorUtil;
+import com.vClient.util.MathUtil;
 import com.vClient.util.custom_font.CustomFontUtil;
 import com.vClient.util.custom_font.MinecraftFontRenderer;
 import com.vClient.vClient;
@@ -17,10 +18,8 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import org.lwjgl.Sys;
 import org.lwjgl.input.Keyboard;
 import java.awt.*;
 
@@ -29,7 +28,7 @@ public class TargetHUD extends Module {
     private MinecraftFontRenderer fr1 = CustomFontUtil.hud;
     private MinecraftFontRenderer fr2 = CustomFontUtil.arial;
     public TargetHUD() {
-        super("TargetHUD", Keyboard.CHAR_NONE, Category.VISUAL, "Display current target info on screen.");
+        super("TargetHUD", Keyboard.CHAR_NONE, Category.COMBAT, "Display current target info on screen.");
     }
 
     @EventTarget
@@ -55,11 +54,11 @@ public class TargetHUD extends Module {
         drawHorizontalGradient(x1,y2,(int)(x1+barlength(target,x1,x2)),y2+5, Color.HSBtoRGB(0,1,1), Color.HSBtoRGB(target.getHealth() / target.getMaxHealth() /3,1,1));
         Gui.drawRect((int)(x1+barlength(target,x1,x2)), y2, x2, y2+5, new Color(0 ,0, 0, 170).getRGB());
 
-        fr2.drawString(round(mc.thePlayer.getDistanceToEntity(target), 2)+"", x1+78, y1+21, new Color(255, 111, 0).getRGB());
+        fr2.drawString(MathUtil.round(mc.thePlayer.getDistanceToEntity(target), 2)+"", x1+78, y1+21, new Color(255, 111, 0).getRGB());
         fr1.drawString(target.getName(), x1 + 30, y1 + 4, ColorUtil.baseColorint);
         FontUtil.drawString("\u27B6", x1+98, y1+20, new Color(255, 111, 0).getRGB());
         GlStateManager.scale(1.6, 1.6, 1);
-        FontUtil.drawString(round(target.getHealth(), 1) + "\u2764", (x1+30)/1.6, (y1+fr1.getHeight())/1.6 + 5, ColorUtil.baseColorint);
+        FontUtil.drawString(MathUtil.round(target.getHealth(), 1) + "\u2764", (x1+30)/1.6, (y1+fr1.getHeight())/1.6 + 5, ColorUtil.baseColorint);
         GlStateManager.scale(.625,.625,1);
         fr2.drawString("blocking: " + (target instanceof EntityPlayer ? ((EntityPlayer) target).isBlocking() ? "true" : "false" : ""), x1 + 30, y1 + 22 + FontUtil.getFontHeight(), new Color(255, 111, 0).getRGB());
 
@@ -69,11 +68,6 @@ public class TargetHUD extends Module {
         GlStateManager.translate(-55,-55,0);
     }
 
-    private double round (double value, int precision) {
-        int scale = (int) Math.pow(10, precision);
-        double ans = (double) Math.round(value * scale) / scale;
-        return ans;
-    }
     private double barlength(EntityLivingBase target, int a, int b) {
         double diff = b - a;
         double ratio = target.getHealth() / target.getMaxHealth();

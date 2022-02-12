@@ -12,8 +12,10 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 
 import com.vClient.event.events.Event3D;
+import com.vClient.module.combat.Reach;
 import com.vClient.module.visual.ESP;
 import com.vClient.ui.MainMenu;
+import com.vClient.util.MathUtil;
 import com.vClient.vClient;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
@@ -450,10 +452,6 @@ public class EntityRenderer implements IResourceManagerReloadListener
             double d0 = reachToggled ? 6.0 : (double)this.mc.playerController.getBlockReachDistance();
             this.mc.objectMouseOver = entity.rayTrace(d0, partialTicks);
             Vec3 vec3 = entity.getPositionEyes(partialTicks);
-            if (this.mc.objectMouseOver != null && this.mc.objectMouseOver.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK && this.mc.objectMouseOver.hitVec.distanceTo(vec3) > (double)this.mc.playerController.getBlockReachDistance()) {
-                d0 = (double)this.mc.playerController.getBlockReachDistance();
-                this.mc.objectMouseOver = entity.rayTrace(d0, partialTicks);
-            }
 
             double d1 = d0;
 
@@ -535,7 +533,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
                 }
             }
 
-            if (this.pointedEntity != null && flag && vec3.distanceTo(vec33) > (reachToggled ? vClient.instance.settingsManager.getSettingByName("Reach").getValDouble() : 3.0))
+            if (this.pointedEntity != null && flag && vec3.distanceTo(vec33) > (reachToggled ? MathUtil.round(vClient.instance.settingsManager.getSettingByName("Reach").getValDouble(), 2) : 3.0))
             {
                 this.pointedEntity = null;
                 this.mc.objectMouseOver = new MovingObjectPosition(MovingObjectPosition.MovingObjectType.MISS, vec33, (EnumFacing)null, new BlockPos(vec33));
@@ -551,6 +549,10 @@ public class EntityRenderer implements IResourceManagerReloadListener
                 }
             }
 
+            if (this.pointedEntity == null && vec3.distanceTo(vec32) > this.mc.playerController.getBlockReachDistance()) {
+                d0 = (double)this.mc.playerController.getBlockReachDistance();
+                this.mc.objectMouseOver = entity.rayTrace(d0, partialTicks);
+            }
             this.mc.mcProfiler.endSection();
         }
     }
@@ -651,7 +653,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
 
     private void hurtCameraEffect(float partialTicks)
     {
-        if (vClient.instance.moduleManager.getModulebyName("Velocity").isToggled() && vClient.instance.settingsManager.getSettingByName("NoHurtCam").getValBoolean())
+        if (vClient.instance.moduleManager.getModulebyName("NoHurtCam").isToggled())
             return;
 
         if (this.mc.getRenderViewEntity() instanceof EntityLivingBase)

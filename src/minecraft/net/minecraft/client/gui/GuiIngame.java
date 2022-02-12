@@ -10,7 +10,6 @@ import java.util.Random;
 
 import com.vClient.event.events.Event2D;
 import com.vClient.event.events.EventTick;
-import com.vClient.module.visual.TargetHUD;
 import com.vClient.util.ColorUtil;
 import com.vClient.vClient;
 import net.minecraft.block.material.Material;
@@ -585,8 +584,8 @@ public class GuiIngame extends Gui
         }
 
         int j1 = arraylist1.size() * this.getFontRenderer().FONT_HEIGHT;
-        int k1 = p_180475_2_.getScaledHeight() / 2 + j1 / 2; //used to be /3
-        byte b0 = 0;
+        int k1 = p_180475_2_.getScaledHeight() / 2 + j1 / 2; //used to be / 3
+        byte b0 = 0; //used to be 3
         int j = p_180475_2_.getScaledWidth() - i - b0;
         int k = 0;
 
@@ -621,7 +620,7 @@ public class GuiIngame extends Gui
         char[] chars = "best.vclient.gg".toCharArray();
         int offset = 0;
         for (char c : chars) {
-            fr.drawString(String.valueOf(c), x, y, ColorUtil.getBlueandPinkRainbow(6f, offset));
+            fr.drawStringWithShadow(String.valueOf(c), x, y, ColorUtil.getBlueandPinkRainbow(6f, offset));
             x += fr.getCharWidth(c);
             offset -= 150;
         }

@@ -5,7 +5,7 @@ import net.minecraft.client.Minecraft;
 
 public class Module {
     protected static Minecraft mc = Minecraft.getMinecraft();
-    private String name, displayName, description;
+    private String name, displayMode, fullDisplayName,description;
     private int key;
     private Category category;
     private boolean toggled;
@@ -65,16 +65,22 @@ public class Module {
     public boolean isToggled() {
         return toggled;
     }
-    public String getDisplayName() {
-        return displayName == null ? name : displayName;
+    public String getDisplayMode() {
+        return displayMode;
     }
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName;
+    public void setDisplayMode(String displayMode) {
+        this.displayMode = displayMode;
     }
     public String getDescription() {
         return description;
     }
     public void setDescription(String description) {
         this.description = description;
+    }
+    public String getFullDisplayName() {
+        return displayMode == null ? name : fullDisplayName;
+    }
+    public void setFullDisplayName(String fullDisplayName) {
+        this.fullDisplayName = fullDisplayName;
     }
 }
