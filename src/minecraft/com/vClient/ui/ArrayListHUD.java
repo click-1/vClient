@@ -41,10 +41,10 @@ public class ArrayListHUD {
                 Gui.drawRect(width - startPos - 9, offset, width - startPos - 7, 6 + cfr.getHeight() + offset, chrome ? chroma: color);
 
             if (m.getDisplayMode() != null) {
-                cfr.drawString(m.getName(), width - startPos - 4, 3 + offset, ColorUtil.getBlueandPinkRainbow(2f, -(int)offset*12));
+                cfr.drawString(EnumChatFormatting.BOLD  + m.getName(), width - startPos - 4, 3 + offset, ColorUtil.getBlueandPinkRainbow(2f, -(int)offset*12));
                 cfr.drawString(m.getDisplayMode(), width - startPos - 4 + cfr.getStringWidth(m.getName() + " "), 3 + offset, 0x00AAAAAA);
             } else {
-                cfr.drawString(m.getName(), width - startPos - 4, 3 + offset, ColorUtil.getBlueandPinkRainbow(2f, -(int)offset*12));
+                cfr.drawString(EnumChatFormatting.BOLD  + m.getName(), width - startPos - 4, 3 + offset, ColorUtil.getBlueandPinkRainbow(2f, -(int)offset*12));
             }
             count++;
         }

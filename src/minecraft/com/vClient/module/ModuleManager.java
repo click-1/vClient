@@ -30,6 +30,7 @@ public class ModuleManager {
         //moduleMap.put("WTap", new WTap());
         //EXPLOIT
         moduleMap.put("AntiWatchdog", new AntiWatchdog());
+        moduleMap.put("AutoPlay", new AutoPlay());
         moduleMap.put("Blink", new Blink());
         moduleMap.put("Disabler", new Disabler());
         moduleMap.put("Spammer", new Spammer());
