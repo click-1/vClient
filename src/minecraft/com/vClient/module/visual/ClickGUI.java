@@ -21,8 +21,8 @@ public class ClickGUI extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Sound", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Tails", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Chroma", this, true));
-        vClient.instance.settingsManager.rSetting(new Setting("Boxes", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Blur", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Boxes", this, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Blur", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("BPS", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Red", this, 100, 0, 255, true));
         vClient.instance.settingsManager.rSetting(new Setting("Green", this, 145, 0, 255, true));

@@ -1,13 +1,16 @@
 package com.vClient.module.movement;
 
 import com.vClient.event.EventTarget;
+import com.vClient.event.events.EventReceivePacket;
 import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.util.MovementUtil;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
+import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.network.play.client.C03PacketPlayer;
+import net.minecraft.network.play.client.C13PacketPlayerAbilities;
 import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
@@ -29,8 +32,8 @@ public class Fly extends Module {
         this.setDisplayMode("Normal");
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         vClient.instance.settingsManager.rSetting(new Setting("Fly Mode", this, "Normal", options));
-        vClient.instance.settingsManager.rSetting(new Setting("Flight Speed", this, 1.5, 0, 2, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Vert Speed", this, 0.4, 0, 2, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Flight Speed", this, 0.77, 0, 2, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Vert Speed", this, 0.0, 0, 2, false));
     }
 
     @Override
@@ -41,6 +44,18 @@ public class Fly extends Module {
         this.setDisplayMode(mode);
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         mode = mode.toLowerCase();
+
+        double fallDistance = 3.0125; //add 0.0125 to ensure we get the fall dmg
+        while (fallDistance > 0) {
+            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0624986421, mc.thePlayer.posZ, false));
+            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0625      , mc.thePlayer.posZ, false));
+            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0624986421, mc.thePlayer.posZ, false));
+            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0000013579, mc.thePlayer.posZ, false));
+            fallDistance -= 0.0624986421;
+        }
+        mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, true));
+
+
         super.onEnable();
     }
 
@@ -56,6 +71,7 @@ public class Fly extends Module {
                     mc.thePlayer.motionY = verticalSpeed;
                 if (mc.gameSettings.keyBindSneak.isKeyDown())
                     mc.thePlayer.motionY = -verticalSpeed;
+
                 MovementUtil.strafe(normalSpeed);
                 break;
             case "hypixel":

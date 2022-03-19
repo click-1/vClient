@@ -61,6 +61,8 @@ public class vClient {
     private void prestartModules() {
         moduleManager.getModulebyName("Camera").silentToggle();
         moduleManager.getModulebyName("Disabler").silentToggle();
+        moduleManager.getModulebyName("Effects").silentToggle();
+        moduleManager.getModulebyName("GuiMove").silentToggle();
         moduleManager.getModulebyName("KeepSprint").silentToggle();
         moduleManager.getModulebyName("NoHurtCam").silentToggle();
         moduleManager.getModulebyName("Sprint").silentToggle();

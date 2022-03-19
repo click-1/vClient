@@ -6,19 +6,21 @@ import com.vClient.module.Category;
 import com.vClient.module.Module;
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.GuiIngameMenu;
+import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.gui.inventory.GuiInventory;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
 
-public class InvMove extends Module {
+public class GuiMove extends Module {
     private final KeyBinding[] moveKeys = {mc.gameSettings.keyBindForward, mc.gameSettings.keyBindBack, mc.gameSettings.keyBindLeft, mc.gameSettings.keyBindRight, mc.gameSettings.keyBindJump};
-    public InvMove() {
-        super("InvMove", Keyboard.CHAR_NONE, Category.MOVEMENT, "Allow player to move while accessing inventory, chests, etc.");
+    public GuiMove() {
+        super("GuiMove", Keyboard.CHAR_NONE, Category.MOVEMENT, "Allow player to move while accessing inventory, chests, etc.");
     }
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        if (!(mc.currentScreen instanceof GuiChat) && !(mc.currentScreen instanceof GuiIngameMenu)) {
+        if (!(mc.currentScreen instanceof GuiChat) && !(mc.currentScreen instanceof GuiIngameMenu) && !(mc.currentScreen instanceof GuiContainer)) {
             for (KeyBinding key : moveKeys)
                 key.pressed = GameSettings.isKeyDown(key);
         }

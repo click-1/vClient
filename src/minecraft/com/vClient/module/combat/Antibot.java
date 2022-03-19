@@ -9,15 +9,14 @@ import com.vClient.vClient;
 import de.Hero.settings.Setting;
 import net.minecraft.entity.Entity;
 import net.minecraft.network.play.server.S0CPacketSpawnPlayer;
-import net.minecraft.util.StringUtils;
 import org.lwjgl.input.Keyboard;
-
 import java.util.ArrayList;
 
 public class AntiBot extends Module {
     public AntiBot() {
         super("AntiBot", Keyboard.CHAR_NONE, Category.COMBAT, "Prevent KillAura from attacking server-side bots.");
     }
+
     @Override
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
@@ -27,6 +26,7 @@ public class AntiBot extends Module {
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         vClient.instance.settingsManager.rSetting(new Setting("AntiBot Mode", this, "Advanced", options));
     }
+
     @Override
     public void onEnable() {
         String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
@@ -34,14 +34,15 @@ public class AntiBot extends Module {
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         super.onEnable();
     }
+
     @EventTarget
     public void onEventReceivePacket(EventReceivePacket event) {
         String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
         if (mode.equalsIgnoreCase("Advanced") && event.getPacket() instanceof S0CPacketSpawnPlayer) {
             S0CPacketSpawnPlayer packet = (S0CPacketSpawnPlayer) event.getPacket();
-            double posX = packet.getX() / 320D;
-            double posY = packet.getY() / 320D;
-            double posZ = packet.getZ() / 320D;
+            double posX = packet.getX() / 32D;
+            double posY = packet.getY() / 32D;
+            double posZ = packet.getZ() / 32D;
             double diffX = mc.thePlayer.posX - posX;
             double diffY = mc.thePlayer.posY - posY;
             double diffZ = mc.thePlayer.posZ - posZ;
@@ -51,6 +52,7 @@ public class AntiBot extends Module {
             }
         }
     }
+
     @EventTarget
     public void onUpdate(EventUpdate event) {
         String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();

@@ -1,12 +1,15 @@
 package com.vClient.module.movement;
 
 import com.vClient.event.EventTarget;
+import com.vClient.event.events.EventReceivePacket;
 import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.util.MovementUtil;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
+import net.minecraft.network.play.server.S18PacketEntityTeleport;
+import net.minecraft.potion.Potion;
 import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
@@ -21,7 +24,7 @@ public class Speed extends Module {
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
         options.add("NCPHop");
-        options.add("SlowHop");
+        options.add("HypixelHop");
         options.add("Watchdog");
         this.setDisplayMode("Watchdog");
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
@@ -47,19 +50,42 @@ public class Speed extends Module {
     @EventTarget
     public void onUpdate(EventUpdate event) {
         if (MovementUtil.isMoving()) {
-            if (mc.thePlayer.onGround)
-                mc.thePlayer.jump();
             switch (mode) {
-                case "ncphop":  MovementUtil.strafe();
-                                break;
-                case "slowhop": MovementUtil.strafe(MovementUtil.getSpeed() * .995f);
-                                break;
-                case "watchdog": MovementUtil.strafe(MovementUtil.getSpeed() * 1.0055f);
-                                break;
+                case "ncphop":
+                    if (mc.thePlayer.onGround)
+                        mc.thePlayer.jump();
+                    MovementUtil.strafe();
+                    break;
+                case "hypixelhop":
+                    if (mc.thePlayer.onGround) {
+                        mc.thePlayer.jump();
+                        float speed = MovementUtil.getSpeed() < 0.56F ? MovementUtil.getSpeed() * 1.045F : 0.56F;
+                        if (mc.thePlayer.onGround && mc.thePlayer.isPotionActive(Potion.moveSpeed))
+                            speed *= 1F + 0.13F * (1 + mc.thePlayer.getActivePotionEffect(Potion.moveSpeed).getAmplifier());
+                        MovementUtil.strafe(speed);
+                        return;
+                    } else if (mc.thePlayer.motionY < 0.2D)
+                        mc.thePlayer.motionY -= 0.02D;
+                    else {
+                        MovementUtil.strafe(MovementUtil.getSpeed() * 1.01889F);
+                    }
+                case "watchdog":
+                    if (mc.thePlayer.onGround)
+                        mc.thePlayer.jump();
+                    MovementUtil.strafe(MovementUtil.getSpeed() * 1.0055f);
+                    break;
             }
         } else {
             mc.thePlayer.motionX = 0D;
             mc.thePlayer.motionZ = 0D;
         }
     }
+
+//    @EventTarget
+//    public void onPacket(EventReceivePacket event) {
+//        if (event.getPacket() instanceof S18PacketEntityTeleport) {
+//            vClient.addChatMessage("Disabled " + "\2473" + "Speed" + "\2477" + " due to lagback.");
+//            this.toggle();
+//        }
+//    }
 }

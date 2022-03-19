@@ -16,7 +16,7 @@ public class GameSpeed extends Module {
     }
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("GameSpeed", this, 1.3, 1, 2, false));
+        vClient.instance.settingsManager.rSetting(new Setting("GameSpeed", this, 1.39, 1, 2, false));
         this.setDisplayMode(String.valueOf(1.3));
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
     }

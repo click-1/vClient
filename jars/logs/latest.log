@@ -1,73 +1,36 @@
-[14:41:22] [Client thread/INFO]: Setting user: Player498
-[14:41:22] [Client thread/INFO]: (Session ID is token:0:Player498)
-[14:41:24] [Client thread/INFO]: LWJGL Version: 2.9.4
-[14:41:24] [Client thread/INFO]: Reloading ResourceManager: Default
-[14:41:25] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[14:41:25] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[14:41:25] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[14:41:26] [Thread-6/INFO]: OpenAL initialized.
-[14:41:26] [Sound Library Loader/INFO]: Sound engine started
-[14:41:28] [Client thread/INFO]: Created: 512x512 textures-atlas
-[14:41:39] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[14:41:39] [Server thread/INFO]: Generating keypair
-[14:41:39] [Server thread/INFO]: Preparing start region for level 0
-[14:41:40] [Server thread/INFO]: Changing view distance to 5, from 10
-[14:41:40] [Server thread/INFO]: Player498[local:E:b66a1ee6] logged in with entity id 192 at (596.4723919905484, 73.5, 349.74483125844375)
-[14:41:40] [Server thread/INFO]: Player498 joined the game
-[14:41:40] [Server thread/INFO]: Saving and pausing game...
-[14:41:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:41:40] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[14:41:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:41:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:41:43] [Client thread/INFO]: [CHAT] autoclicker, autoplay, autotool
-[14:41:43] [Client thread/INFO]: [CHAT] autoclicker, autoplay, autotool
-[14:41:44] [Client thread/INFO]: [CHAT] §b[vClient]§7 Enabled §3AutoPlay
-[14:41:51] [Server thread/INFO]: <Player498> You won
-[14:41:51] [Client thread/INFO]: [CHAT] §b[vClient]§7 Joining new game in 5.0 sec...
-[14:41:51] [Client thread/INFO]: [CHAT] <Player498> You won
-[14:41:51] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[14:42:08] [Server thread/INFO]: <Player498> You won
-[14:42:08] [Client thread/INFO]: [CHAT] §b[vClient]§7 Joining new game in 5.0 sec...
-[14:42:08] [Client thread/INFO]: [CHAT] <Player498> You won
-[14:42:08] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[14:42:09] [Server thread/INFO]: Saving and pausing game...
-[14:42:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:42:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:42:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:44:11] [Server thread/INFO]: <Player498> You won
-[14:44:11] [Client thread/INFO]: [CHAT] §b[vClient]§7 Joining new game in 5.0 sec...
-[14:44:11] [Client thread/INFO]: [CHAT] <Player498> You won
-[14:44:17] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[14:44:31] [Server thread/INFO]: <Player498> You won
-[14:44:31] [Client thread/INFO]: [CHAT] §b[vClient]§7 Joining new game in 5.0 sec...
-[14:44:31] [Client thread/INFO]: [CHAT] <Player498> You won
-[14:44:36] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[14:44:47] [Server thread/INFO]: <Player498> You won
-[14:44:47] [Client thread/INFO]: [CHAT] §b[vClient]§7 Joining new game in 5.0 sec...
-[14:44:47] [Client thread/INFO]: [CHAT] <Player498> You won
-[14:44:52] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[14:45:03] [Server thread/INFO]: <Player498> You won
-[14:45:03] [Client thread/INFO]: [CHAT] §b[vClient]§7 Joining new game in 5.0 sec...
-[14:45:03] [Client thread/INFO]: [CHAT] <Player498> You won
-[14:45:08] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[14:45:13] [Server thread/INFO]: <Player498> You won! Enter to join new game
-[14:45:13] [Client thread/INFO]: [CHAT] §b[vClient]§7 Joining new game in 5.0 sec...
-[14:45:13] [Client thread/INFO]: [CHAT] <Player498> You won! Enter to join new game
-[14:45:18] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[14:45:33] [Server thread/INFO]: <Player498> You won! Enter to join new game
-[14:45:33] [Client thread/INFO]: [CHAT] §b[vClient]§7 Joining new game in 5.0 sec...
-[14:45:33] [Client thread/INFO]: [CHAT] <Player498> You won! Enter to join new game
-[14:45:38] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[14:46:15] [Server thread/INFO]: Saving and pausing game...
-[14:46:15] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:46:15] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:46:15] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:46:16] [Client thread/INFO]: Stopping!
-[14:46:16] [Client thread/INFO]: SoundSystem shutting down...
-[14:46:16] [Server thread/INFO]: Stopping server
-[14:46:16] [Server thread/INFO]: Saving players
-[14:46:16] [Server thread/INFO]: Saving worlds
-[14:46:16] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[14:46:16] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[14:46:16] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[14:46:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:15:02] [Client thread/INFO]: Setting user: Player343
+[16:15:02] [Client thread/INFO]: (Session ID is token:0:Player343)
+[16:15:05] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:15:05] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:15:05] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:15:05] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[16:15:05] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:15:06] [Thread-6/INFO]: OpenAL initialized.
+[16:15:06] [Sound Library Loader/INFO]: Sound engine started
+[16:15:13] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:15:33] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[16:15:33] [Server thread/INFO]: Generating keypair
+[16:15:33] [Server thread/INFO]: Preparing start region for level 0
+[16:15:34] [Server thread/INFO]: Preparing spawn area: 88%
+[16:15:35] [Server thread/INFO]: Changing view distance to 5, from 10
+[16:15:35] [Server thread/INFO]: Player343[local:E:2c099c86] logged in with entity id 180 at (597.5763659380756, 74.6707870772188, 345.3882912663754)
+[16:15:35] [Server thread/INFO]: Player343 joined the game
+[16:15:35] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[16:15:35] [Server thread/INFO]: Saving and pausing game...
+[16:15:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:15:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:15:35] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:16:58] [Client thread/INFO]: [CHAT] §b[vClient]§7 Bound §3Speed §7to §6X
+[16:18:00] [Server thread/INFO]: Saving and pausing game...
+[16:18:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:18:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:18:00] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:18:01] [Client thread/INFO]: Stopping!
+[16:18:01] [Client thread/INFO]: SoundSystem shutting down...
+[16:18:01] [Server thread/INFO]: Stopping server
+[16:18:01] [Server thread/INFO]: Saving players
+[16:18:01] [Server thread/INFO]: Saving worlds
+[16:18:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:18:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:18:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:18:01] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

@@ -2,6 +2,7 @@ package com.vClient.module;
 
 import com.vClient.module.combat.*;
 import com.vClient.module.exploit.*;
+import com.vClient.module.exploit.Queue;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
 import com.vClient.module.visual.*;
@@ -30,13 +31,13 @@ public class ModuleManager {
         //moduleMap.put("WTap", new WTap());
         //EXPLOIT
         moduleMap.put("AntiWatchdog", new AntiWatchdog());
-        moduleMap.put("AutoPlay", new AutoPlay());
         moduleMap.put("Blink", new Blink());
         moduleMap.put("Disabler", new Disabler());
+        moduleMap.put("Queue", new Queue());
         moduleMap.put("Spammer", new Spammer());
         //MOVEMENT
         moduleMap.put("Fly", new Fly());
-        moduleMap.put("InvMove", new InvMove());
+        moduleMap.put("GuiMove", new GuiMove());
         moduleMap.put("LongJump", new LongJump());
         moduleMap.put("NoSlow", new NoSlow());
         moduleMap.put("Speed", new Speed());
@@ -54,6 +55,7 @@ public class ModuleManager {
         moduleMap.put("Camera", new Camera());
         moduleMap.put("Clairvoyance", new Clairvoyance());
         moduleMap.put("ClickGUI", new ClickGUI());
+        moduleMap.put("Effects", new Effects());
         moduleMap.put("ESP", new ESP());
         moduleMap.put("NoHurtCam", new NoHurtCam());
         moduleMap.put("StaticFOV", new StaticFOV());
