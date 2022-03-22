@@ -10,6 +10,7 @@ public class AutoClicker extends Module {
     public AutoClicker() {
         super("AutoClicker", Keyboard.CHAR_NONE, Category.PLAYER, "Repeated swinging while holding left mouse button.");
     }
+
     @EventTarget
     public void onUpdate(EventUpdate event) {
         if (mc.gameSettings.keyBindAttack.isKeyDown() && !mc.gameSettings.keyBindUseItem.isKeyDown())

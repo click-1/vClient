@@ -3,74 +3,93 @@ package com.vClient.ui;
 import com.vClient.discord.DiscordHandler;
 import com.vClient.ui.login.GuiAltLogin;
 import com.vClient.util.ColorUtil;
-import com.vClient.util.custom_font.CustomFontUtil;
 import de.Hero.clickgui.util.FontUtil;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.gui.*;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 
+import java.awt.*;
+
 public class MainMenu extends GuiScreen {
     public MainMenu() {
 
     }
+
     public void initGui() {
         DiscordHandler.getInstance().getDiscordRP().update("Successfully injected vClient!", "Main Menu");
     }
+
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/rtx_revamped.jpg"));
+        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/city.jpg"));
         this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
-        this.drawGradientRect(0, height - 100, width, height, 0x00000000, 0xff000000);
+        this.drawGradientRect(0, height - 75, width, height, 0x00000000, 0xff000000); //bottom
+        this.drawGradientRect(0, 0, width, 75, 0xff000000, 0x00000000); //top
+        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/vclient_logo.png"));
+        this.drawModalRectWithCustomSizedTexture((int)(.38*width), height/4, 0, 0, 125,125,125,125);
+        renderCustomAddress((int)(.835*width), (int)(.95*height));
+        FontUtil.drawString("vClient b3", (int)(.015*width), (int)(.95*height), ColorUtil.getaqua());
 
-        GlStateManager.translate(4, 4, 0);
-        GlStateManager.scale(1.8, 1.8, 1);
-        GlStateManager.translate(-4, -4, 0);
-        CustomFontUtil.arial.drawString("click_1", 9, 25, ColorUtil.getRainbow(10, 1f, 1));
-        GlStateManager.translate(4, 4, 0);
-        GlStateManager.scale(0.555, 0.555, 1);
-        GlStateManager.translate(-4, -4, 0);
-
-        int chroma = ColorUtil.getRainbow(5, 0.8f, 1);
-        String[] buttons = {"Singleplayer", "Multiplayer", "Settings", "Login", "Language", "Quit"};
-        int count = 0;
-        for (String s : buttons) {
-            float x = (width/buttons.length)*count + (width/ buttons.length)/2f + 8 - FontUtil.getStringWidth(s)/2f;
-            float y = height - 20;
-            boolean hovering = mouseX >= x && mouseY >= y && mouseX < x + FontUtil.getStringWidth(s) && mouseY < y + FontUtil.getFontHeight();
-            this.drawCenteredString(FontUtil.getFontRenderer(), s, (width/buttons.length) * count + (width/ buttons.length)/2f + 8, height - 20, hovering ? chroma : -1);
-            count++;
+        int side = 26, by = 30;
+        for (int b = 0; b < 6; b++) {
+            boolean hover = mouseX >= 15 && mouseX <= 40 && mouseY >= by && mouseY <= by + side;
+            Gui.drawRect(15, by, 15 + side, by + side, hover ? new Color(139, 199, 255, 216).getRGB() : new Color(255, 255, 255, 188).getRGB());
+            by += side + 5;
         }
+        Gui.drawRect(0,0,0,0, new Color(255, 255, 255, 188).getRGB());
+        GlStateManager.disableLighting();
+
+        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/user.png"));
+        this.drawModalRectWithCustomSizedTexture(18, 33, 0, 0, 20, 20, 20, 20);
+        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/teamwork.png"));
+        this.drawModalRectWithCustomSizedTexture(18, 64, 0, 0, 20, 20, 20, 20);
+        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/settings.png"));
+        this.drawModalRectWithCustomSizedTexture(18, 95, 0, 0, 20, 20, 20, 20);
+        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/enter.png"));
+        this.drawModalRectWithCustomSizedTexture(18, 126, 0, 0, 20, 20, 20, 20);
+        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/internet.png"));
+        this.drawModalRectWithCustomSizedTexture(18, 157, 0, 0, 20, 20, 20, 20);
+        mc.getTextureManager().bindTexture(new ResourceLocation("pictures/cross.png"));
+        this.drawModalRectWithCustomSizedTexture(18, 188, 0, 0, 20, 20, 20, 20);
     }
+
     public void mouseClicked(int mouseX, int mouseY, int button) {
-        float x1 = (width/6)*0 + (width/6)/2f + 8 - FontUtil.getStringWidth("Singleplayer")/2f;
-        float x2 = (width/6)*1 + (width/6)/2f + 8 - FontUtil.getStringWidth("Multiplayer")/2f;
-        float x3 = (width/6)*2 + (width/6)/2f + 8 - FontUtil.getStringWidth("Settings")/2f;
-        float x4 = (width/6)*3 + (width/6)/2f + 8 - FontUtil.getStringWidth("Login")/2f;
-        float x5 = (width/6)*4 + (width/6)/2f + 8 - FontUtil.getStringWidth("Language")/2f;
-        float x6 = (width/6)*5 + (width/6)/2f + 8 - FontUtil.getStringWidth("Quit")/2f;
-        float y = height - 20;
-        float ymax = y + FontUtil.getFontHeight();
-        if (mouseX >= x1 && mouseY >= y && mouseX < x1 + FontUtil.getStringWidth("Singleplayer") && mouseY < ymax) {
+        float y1 = 30, y2 = 61, y3 = 92, y4 = 123, y5 = 154, y6 = 185;
+        float x1 = 15f;
+        float x2 = 41f;
+        if (mouseX >= x1 && mouseX <= x2 && mouseY >= y1 && mouseY <= y1 + 26) {
             mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiSelectWorld(this));
-        } else if (mouseX >= x2 && mouseY >= y && mouseX < x2 + FontUtil.getStringWidth("Multiplayer") && mouseY < ymax) {
+        } else if (mouseX >= x1 && mouseX <= x2 && mouseY >= y2 && mouseY <= y2 + 26) {
             mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiMultiplayer(this));
-        } else if (mouseX >= x3 && mouseY >= y && mouseX < x3 + FontUtil.getStringWidth("Settings") && mouseY < ymax) {
+        } else if (mouseX >= x1 && mouseX <= x2 && mouseY >= y3 && mouseY <= y3 + 26) {
             mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiOptions(this, mc.gameSettings));
-        } else if (mouseX >= x4 && mouseY >= y && mouseX < x4 + FontUtil.getStringWidth("Login") && mouseY < ymax) {
+        } else if (mouseX >= x1 && mouseX <= x2 && mouseY >= y4 && mouseY <= y4 + 26) {
             mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiAltLogin(this));
-        } else if (mouseX >= x5 && mouseY >= y && mouseX < x5 + FontUtil.getStringWidth("Language") && mouseY < ymax) {
+        } else if (mouseX >= x1 && mouseX <= x2 && mouseY >= y5 && mouseY <= y5 + 26) {
             mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
             mc.displayGuiScreen(new GuiLanguage(this, mc.gameSettings, mc.getLanguageManager()));
-        } else if (mouseX >= x6 && mouseY >= y && mouseX < x6 + FontUtil.getStringWidth("Quit") && mouseY < ymax) {
+        } else if (mouseX >= x1 && mouseX <= x2 && mouseY >= y6 && mouseY <= y6 + 26) {
             mc.shutdown();
         } else {
             return;
         }
     }
+
+    private void renderCustomAddress(int x, int y) {
+        FontRenderer fr = mc.fontRendererObj;
+        char[] chars = "best.vclient.gg".toCharArray();
+        int offset = 0;
+        for (char c : chars) {
+            fr.drawStringWithShadow(String.valueOf(c), x, y, ColorUtil.getBlueandPinkRainbow(6f, offset));
+            x += fr.getCharWidth(c);
+            offset -= 150;
+        }
+    }
+
     public void onGuiClosed() {
 
     }

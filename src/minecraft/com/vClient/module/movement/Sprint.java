@@ -11,9 +11,11 @@ public class Sprint extends Module {
     private boolean sprinting = true;
     private int ticksleft = 590;
     private final int key = mc.gameSettings.keyBindSprint.getKeyCode();
+
     public Sprint() {
         super("Sprint", Keyboard.CHAR_NONE, Category.MOVEMENT, "Keepsprint.");
     }
+
     @EventTarget
     public void onTick(EventTick event) {
         ticksleft--;
@@ -28,6 +30,7 @@ public class Sprint extends Module {
             ticksleft = 590;
         }
     }
+
     @Override
     public void onDisable() {
         super.onDisable();

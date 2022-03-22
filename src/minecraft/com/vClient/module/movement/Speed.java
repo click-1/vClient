@@ -8,14 +8,14 @@ import com.vClient.module.Module;
 import com.vClient.util.MovementUtil;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
-import net.minecraft.network.play.server.S18PacketEntityTeleport;
 import net.minecraft.potion.Potion;
 import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
 
 public class Speed extends Module {
-    String mode;
+    private String mode;
+
     public Speed() {
         super("Speed", Keyboard.CHAR_NONE, Category.MOVEMENT, "Modify player movement.");
     }

@@ -14,9 +14,11 @@ import org.lwjgl.input.Keyboard;
 
 public class ChestStealer extends Module {
     private ClockUtil clock = new ClockUtil();
+
     public ChestStealer() {
         super("ChestStealer", Keyboard.CHAR_NONE, Category.PLAYER, "Steal items from a chest.");
     }
+
     @EventTarget
     public void onUpdate(EventUpdate event) {
         clock.updateTime();
@@ -35,6 +37,7 @@ public class ChestStealer extends Module {
             }
         }
     }
+
     private boolean isEmpty(GuiChest chest) {
         for (int i = 0; i < chest.inventoryRows * 9; i++) {
             ItemStack itemStack = chest.inventorySlots.inventorySlots.get(i).getStack();
@@ -43,6 +46,7 @@ public class ChestStealer extends Module {
         }
         return true;
     }
+
     private boolean uselessItem(Item item) {
         return item instanceof ItemTool || item instanceof ItemSnowball ||
                 item instanceof ItemEgg;

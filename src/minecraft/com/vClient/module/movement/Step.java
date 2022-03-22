@@ -16,9 +16,11 @@ import java.util.ArrayList;
 public class Step extends Module {
     private double X, Y, Z;
     private boolean stutter;
+
     public Step() {
         super("Step", Keyboard.CHAR_NONE, Category.MOVEMENT, "Step over blocks upon collision.");
     }
+
     @Override
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
@@ -28,6 +30,7 @@ public class Step extends Module {
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         vClient.instance.settingsManager.rSetting(new Setting("Step Mode", this, "Instant", options));
     }
+
     @EventTarget
     public void onUpdate(EventUpdate event) {
         stutter = vClient.instance.settingsManager.getSettingByName("Step Mode").getValString().equalsIgnoreCase("Stutter");
@@ -40,6 +43,7 @@ public class Step extends Module {
         this.setDisplayMode(stutter ? "Stutter" : "Instant");
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
     }
+
     @EventTarget
     public void onStep(EventStep event) {
         X = mc.thePlayer.posX;
@@ -52,6 +56,7 @@ public class Step extends Module {
             mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(X, Y + 0.7531999805212, Z, false));
         }
     }
+
     @Override
     public void onDisable() {
         mc.thePlayer.stepHeight = 0.6f;

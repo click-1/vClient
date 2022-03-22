@@ -1,0 +1,62 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 3/21/22, 1:00 AM
+Description: Initializing game
+
+java.util.IllegalFormatConversionException: d != java.lang.String
+	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
+	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
+	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
+	at java.base/java.util.Formatter.format(Formatter.java:2673)
+	at java.base/java.util.Formatter.format(Formatter.java:2609)
+	at java.base/java.lang.String.format(String.java:2988)
+	at net.minecraft.client.Minecraft.createDisplay(Minecraft.java:628)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:488)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:405)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
+	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
+	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
+	at java.base/java.util.Formatter.format(Formatter.java:2673)
+	at java.base/java.util.Formatter.format(Formatter.java:2609)
+	at java.base/java.lang.String.format(String.java:2988)
+	at net.minecraft.client.Minecraft.createDisplay(Minecraft.java:628)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:488)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.run(Minecraft.java:405)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: <unknown>
+	Java Version: 12, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 930402512 bytes (887 MB) / 1048576000 bytes (1000 MB) up to 2088763392 bytes (1992 MB)
+	JVM Flags: 1 total; -Xms1000m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	GL Caps: 
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: <unknown>

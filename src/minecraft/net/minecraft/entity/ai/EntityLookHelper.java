@@ -1,6 +1,5 @@
 package net.minecraft.entity.ai;
 
-import com.vClient.event.events.EventRotations;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;

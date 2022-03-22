@@ -11,6 +11,7 @@ public class Clairvoyance extends Module {
     public Clairvoyance() {
         super("Clairvoyance", Keyboard.CHAR_NONE, Category.VISUAL, "See entities through blocks.");
     }
+
     @EventTarget
     public void onClairvoyance(EventClairvoyance event) {
         switch (event.getState()) {

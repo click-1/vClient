@@ -10,6 +10,7 @@ public class SafeWalk extends Module {
     public SafeWalk() {
         super("SafeWalk", Keyboard.CHAR_NONE, Category.WORLD, "Prevent player from falling off the edge of blocks.");
     }
+
     @EventTarget
     public void onMove(EventMove event) {
         if (mc.thePlayer.onGround)

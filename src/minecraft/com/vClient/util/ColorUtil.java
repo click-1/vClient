@@ -31,6 +31,6 @@ public class ColorUtil {
 		return Color.HSBtoRGB(hue, 0.5f, 1f);
 	}
 	public static int getaqua() {
-		return Color.HSBtoRGB(175,.58f,1f);
+		return new Color(107, 230, 255, 255).getRGB();
 	}
 }

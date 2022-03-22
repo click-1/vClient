@@ -1,16 +1,13 @@
 package com.vClient.module.movement;
 
 import com.vClient.event.EventTarget;
-import com.vClient.event.events.EventReceivePacket;
 import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.util.MovementUtil;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
-import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.network.play.client.C03PacketPlayer;
-import net.minecraft.network.play.client.C13PacketPlayerAbilities;
 import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;

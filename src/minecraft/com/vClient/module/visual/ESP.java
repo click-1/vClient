@@ -18,8 +18,6 @@ import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Timer;
 import org.lwjgl.input.Keyboard;
-import org.w3c.dom.events.Event;
-
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,6 +28,7 @@ import static org.lwjgl.opengl.GL11.*;
 public class ESP extends Module {
     private Map<Integer, Boolean> glCapMap = new HashMap<>();
     private boolean outline;
+
     public ESP() {
         super("ESP", Keyboard.CHAR_NONE, Category.VISUAL, "Extrasensory perception.");
     }

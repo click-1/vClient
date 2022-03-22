@@ -59,7 +59,7 @@ public class ArrayListHUD {
         if (vClient.instance.settingsManager.getSettingByName("BPS").getValBoolean())
             cfr.drawString("blocks/s: " + MathUtil.round(MovementUtil.getSpeed() * 20.0f, 2), width *.01f, height *.95f, chrome ? chroma : color);
 
-        big.drawSmoothString(EnumChatFormatting.BOLD + "vCLIENT", width *.01f, height *.04f, new Color(135, 255, 255, 255).getRGB());
+        big.drawSmoothString(EnumChatFormatting.BOLD + "vCLIENT", width *.01f, height *.04f, ColorUtil.getaqua());
     }
 
     private ArrayList<Module> getSortedList() {

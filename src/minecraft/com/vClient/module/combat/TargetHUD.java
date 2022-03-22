@@ -27,6 +27,7 @@ public class TargetHUD extends Module {
     private int x1, y1, x2, y2;
     private MinecraftFontRenderer fr1 = CustomFontUtil.hud;
     private MinecraftFontRenderer fr2 = CustomFontUtil.arial;
+
     public TargetHUD() {
         super("TargetHUD", Keyboard.CHAR_NONE, Category.COMBAT, "Display current target info on screen.");
     }

@@ -34,6 +34,7 @@ public class ModuleManager {
         moduleMap.put("Blink", new Blink());
         moduleMap.put("Disabler", new Disabler());
         moduleMap.put("Queue", new Queue());
+        moduleMap.put("Rotations", new Rotations());
         moduleMap.put("Spammer", new Spammer());
         //MOVEMENT
         moduleMap.put("Fly", new Fly());

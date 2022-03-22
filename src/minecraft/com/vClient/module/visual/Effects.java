@@ -10,18 +10,17 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
-
 import java.awt.*;
 import java.util.ArrayList;
 
 public class Effects extends Module {
     private ArrayList<PotionEffect> effects = new ArrayList<>();
     private final ResourceLocation inventoryBackground = new ResourceLocation("textures/gui/container/inventory.png");
+
     public Effects() {
         super("Effects", Keyboard.CHAR_NONE, Category.VISUAL, "Display active potion effects.");
     }
@@ -30,7 +29,6 @@ public class Effects extends Module {
     public void onUpdate(EventUpdate event) {
         effects.clear();
         effects.addAll(mc.thePlayer.getActivePotionEffects());
-        //effects.sort(Comparator.comparingDouble(e -> mc.fontRendererObj.getStringWidth(((PotionEffect)e).getEffectName())).reversed());
     }
 
     @EventTarget
@@ -52,7 +50,6 @@ public class Effects extends Module {
                     int i1 = potion.getStatusIconIndex();
                     drawTexturedModalRect(x, y, 0 + i1 % 8 * 18, 198 + i1 / 8 * 18, 18, 18);
                 }
-                //String s1 = I18n.format(potion.getName(), new Object[0]);
                 mc.fontRendererObj.drawString(Potion.getDurationString(effect), x + 22, y + 5, new Color(125, 224, 255).getRGB());
                 y -= 20;
             }

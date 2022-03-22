@@ -11,19 +11,23 @@ import org.lwjgl.input.Keyboard;
 
 public class GameSpeed extends Module {
     private float gs;
+
     public GameSpeed() {
         super("GameSpeed", Keyboard.CHAR_NONE, Category.WORLD, "Change player game speed.");
     }
+
     @Override
     public void setup() {
         vClient.instance.settingsManager.rSetting(new Setting("GameSpeed", this, 1.39, 1, 2, false));
         this.setDisplayMode(String.valueOf(1.3));
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
     }
+
     @EventTarget
     public void onUpdate(EventUpdate event) {
         mc.timer.timerSpeed = gs;
     }
+
     @Override
     public void onEnable() {
         gs = (float) MathUtil.round(vClient.instance.settingsManager.getSettingByName("GameSpeed").getValDouble(), 2);
@@ -32,6 +36,7 @@ public class GameSpeed extends Module {
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         super.onEnable();
     }
+
     @Override
     public void onDisable() {
         mc.timer.timerSpeed = 1F;

@@ -23,6 +23,7 @@ public class InvManager extends Module {
     private float bestSwordDmg;
     private int bestSwordSlot, fishingRodSlot, bestBowDmg, bestBowSlot, bestSharpness, largestStack, stackSlot;
     private ClockUtil clock = new ClockUtil();
+
     public InvManager() {
         super("InvManager", Keyboard.CHAR_NONE, Category.PLAYER, "Maintain ideal inventory setup (i.e. armor, tools, etc).");
     }

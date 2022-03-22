@@ -12,6 +12,7 @@ public class AutoTool extends Module {
     public AutoTool() {
         super("AutoTool", Keyboard.CHAR_NONE, Category.PLAYER, "Choose optimal item in hotbar for mining.");
     }
+
     @EventTarget
     public void onClickBlock(EventClickBlock event) {
         float best = 1F;

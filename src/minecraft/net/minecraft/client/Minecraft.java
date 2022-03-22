@@ -40,6 +40,7 @@ import com.vClient.discord.DiscordHandler;
 import com.vClient.event.events.EventKey;
 import com.vClient.module.combat.KillAura;
 import com.vClient.ui.MainMenu;
+import com.vClient.util.IconUtil;
 import com.vClient.vClient;
 import de.Hero.clickgui.ClickGUI;
 import net.minecraft.block.Block;
@@ -624,7 +625,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
     private void createDisplay() throws LWJGLException
     {
         Display.setResizable(true);
-        Display.setTitle(vClient.instance.name+" | DEVELOPMENT BUILD");
+        Display.setTitle(String.format("%s b%s", vClient.instance.name, vClient.instance.version));
 
         try
         {
@@ -683,7 +684,8 @@ public class Minecraft implements IThreadListener, IPlayerUsage
 
                 if (inputstream != null && inputstream1 != null)
                 {
-                    Display.setIcon(new ByteBuffer[] {this.readImageToBuffer(inputstream), this.readImageToBuffer(inputstream1)});
+                    //Display.setIcon(new ByteBuffer[] {this.readImageToBuffer(inputstream), this.readImageToBuffer(inputstream1)});
+                    Display.setIcon(IconUtil.getLoadingIcon());
                 }
             }
             catch (IOException ioexception)

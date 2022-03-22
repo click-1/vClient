@@ -5,13 +5,13 @@ import com.vClient.module.Module;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
 import org.lwjgl.input.Keyboard;
-
 import java.util.ArrayList;
 
 public class ClickGUI extends Module {
     public ClickGUI() {
         super("ClickGUI", Keyboard.KEY_RSHIFT, Category.VISUAL, "The ClickGUI.");
     }
+
     @Override
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
@@ -28,6 +28,7 @@ public class ClickGUI extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Green", this, 145, 0, 255, true));
         vClient.instance.settingsManager.rSetting(new Setting("Blue", this, 255, 0, 255, true));
     }
+
     @Override
     public void onEnable() {
         mc.displayGuiScreen(vClient.instance.clickGui);

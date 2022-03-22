@@ -13,9 +13,11 @@ import org.lwjgl.input.Keyboard;
 
 public class Velocity extends Module {
     private double horizontal, vertical, frequency;
+
     public Velocity() {
         super("Velocity", Keyboard.CHAR_NONE, Category.PLAYER, "Remove player knockback effects.");
     }
+
     @Override
     public void onEnable() {
         horizontal = vClient.instance.settingsManager.getSettingByName("Horizontal").getValDouble();
@@ -23,12 +25,14 @@ public class Velocity extends Module {
         frequency = vClient.instance.settingsManager.getSettingByName("Frequency").getValDouble();
         super.onEnable();
     }
+
     @Override
     public void setup() {
         vClient.instance.settingsManager.rSetting(new Setting("Horizontal", this, 0, 0, 1, false));
         vClient.instance.settingsManager.rSetting(new Setting("Vertical", this, 0, 0, 1, false));
         vClient.instance.settingsManager.rSetting(new Setting("Frequency", this, 1, 0, 1, false));
     }
+
     @EventTarget
     public void onEventReceivePacket(EventReceivePacket event) {
         Packet packet = event.getPacket();

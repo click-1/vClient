@@ -13,7 +13,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.item.ItemSword;
-import net.minecraft.network.play.client.C03PacketPlayer;
 import net.minecraft.util.MathHelper;
 import org.lwjgl.input.Keyboard;
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class KillAura extends Module {
     public boolean blockingStatus = false;
     private int right_click = mc.gameSettings.keyBindUseItem.getKeyCode();
     private ClockUtil clock = new ClockUtil();
-    private float[] targetRotations;
+    public float[] targetRotations;
 
     public KillAura() {
         super("KillAura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
@@ -90,17 +89,15 @@ public class KillAura extends Module {
             for (int i = 0; i < num_attacks; i++) {
                 if (i < targets.size()) {
                     this.active_target = targets.get(i);
+                    targetRotations = getRotations(this.active_target.posX, this.active_target.posY, this.active_target.posZ, this.active_target);
+                    event.setYaw(targetRotations[0]);
+                    event.setPitch(targetRotations[1]);
                     attack(this.active_target);
                 }
             }
             if (!mc.thePlayer.isBlocking() && !blockingStatus && canBlock)
                 startBlocking();
             clock.resetTime();
-        }
-
-        if (targetRotations != null) {
-            event.setYaw(targetRotations[0]);
-            event.setPitch(targetRotations[1]);
         }
     }
 
@@ -195,40 +192,12 @@ public class KillAura extends Module {
     }
 
     private static float[] getRotations(double x, double y, double z, Entity entity) {
-        double diffX = x + .5D - mc.thePlayer.posX;
-        double diffY = (y + entity.getEyeHeight() - 0.3f) - (mc.thePlayer.posY + mc.thePlayer.getEyeHeight());
-        double diffZ = z + .5D - mc.thePlayer.posZ;
+        double diffX = x - mc.thePlayer.posX;
+        double diffY = y + entity.getEyeHeight() - (mc.thePlayer.posY + mc.thePlayer.getEyeHeight() + .3f);
+        double diffZ = z - mc.thePlayer.posZ;
         double dist = MathHelper.sqrt_double(diffX * diffX + diffZ * diffZ);
         float yaw = (float)(Math.atan2(diffZ, diffX) * 180D / Math.PI) - 90F;
         float pitch = (float)-(Math.atan2(diffY, dist) * 180D / Math.PI);
         return new float[] {yaw, pitch};
-    }
-
-    @EventTarget
-    public void onPacket(EventReceivePacket event) {
-        if (event.getPacket() instanceof C03PacketPlayer && canAttack(this.active_target)) {
-            C03PacketPlayer packet = (C03PacketPlayer) event.getPacket();
-            targetRotations = getRotations(this.active_target.posX, this.active_target.posY, this.active_target.posZ, this.active_target);
-            packet.yaw = targetRotations[0];
-            packet.pitch = targetRotations[1];
-            packet.rotating = true;
-        }
-    }
-
-    @EventTarget
-    public void on3D(Event3D event) {
-        if (targetRotations != null) {
-            mc.thePlayer.rotationYawHead = targetRotations[0];
-            mc.thePlayer.rotationPitchHead = targetRotations[1];
-        }
-    }
-
-    @EventTarget
-    public void onRotations(EventRotations event) {
-        if (targetRotations != null) {
-            event.yawHead = targetRotations[0];
-            event.pitchHead = targetRotations[1];
-            event.active = true;
-        }
     }
 }

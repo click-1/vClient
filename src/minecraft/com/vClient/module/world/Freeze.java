@@ -10,10 +10,12 @@ public class Freeze extends Module {
     public Freeze() {
         super("Freeze", Keyboard.CHAR_NONE, Category.WORLD, "Freeze player at current location.");
     }
+
     @EventTarget
     public void onUpdate(EventUpdate event) {
         mc.thePlayer.isDead = true;
     }
+
     @Override
     public void onDisable() {
         mc.thePlayer.isDead = false;
