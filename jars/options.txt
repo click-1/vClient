@@ -90,7 +90,7 @@ key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
 key_Zoom:46
-soundCategory_master:0.059602648
+soundCategory_master:0.0
 soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0

@@ -734,7 +734,7 @@ public class EntityPlayerSP extends AbstractClientPlayer
         {
             --this.sprintingTicksLeft;
 
-            if (this.sprintingTicksLeft == 0 && !vClient.instance.moduleManager.getModulebyName("NoSlow").isToggled())
+            if (this.sprintingTicksLeft == 0)
             {
                 this.setSprinting(false);
             }
@@ -831,7 +831,7 @@ public class EntityPlayerSP extends AbstractClientPlayer
             this.setSprinting(true);
         }
 
-        if (this.isSprinting() && (this.movementInput.moveForward < f || this.isCollidedHorizontally || !flag3))
+        if (this.isSprinting() && ((this.movementInput.moveForward < f && !vClient.instance.moduleManager.getModulebyName("NoSlow").isToggled()) || this.isCollidedHorizontally || !flag3))
         {
             this.setSprinting(false);
         }

@@ -27,7 +27,7 @@ public class Sprint extends Module {
         if (ticksleft <= 0) {
             KeyBinding.setKeyBindState(key, false);
             mc.thePlayer.setSprinting(false);
-            ticksleft = 590;
+            ticksleft = 595;
         }
     }
 

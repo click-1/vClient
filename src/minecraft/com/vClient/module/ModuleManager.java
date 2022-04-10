@@ -27,7 +27,7 @@ public class ModuleManager {
         moduleMap.put("KillAura", new KillAura());
         moduleMap.put("Reach", new Reach());
         moduleMap.put("TargetHUD", new TargetHUD());
-        //moduleMap.put("TargetStrafe", new TargetStrafe());
+        moduleMap.put("TargetStrafe", new TargetStrafe());
         //moduleMap.put("WTap", new WTap());
         //EXPLOIT
         moduleMap.put("AntiWatchdog", new AntiWatchdog());

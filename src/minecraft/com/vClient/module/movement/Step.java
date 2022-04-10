@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class Step extends Module {
     private double X, Y, Z;
-    private boolean stutter;
+    private boolean instant;
 
     public Step() {
         super("Step", Keyboard.CHAR_NONE, Category.MOVEMENT, "Step over blocks upon collision.");
@@ -33,14 +33,18 @@ public class Step extends Module {
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        stutter = vClient.instance.settingsManager.getSettingByName("Step Mode").getValString().equalsIgnoreCase("Stutter");
-        if (!mc.gameSettings.keyBindJump.isKeyDown() && !stutter)
+        instant = vClient.instance.settingsManager.getSettingByName("Step Mode").getValString().equalsIgnoreCase("Instant");
+        if (mc.thePlayer.posY - mc.thePlayer.lastTickPosY < 0 || mc.gameSettings.keyBindJump.isKeyDown()) {
+            mc.thePlayer.stepHeight = 0.6f;
+            return;
+        }
+        if (instant)
             mc.thePlayer.stepHeight = 1f;
         else
             mc.thePlayer.stepHeight = 0.6f;
         if (mc.thePlayer.isCollidedHorizontally)
             mc.thePlayer.stepHeight = 1f;
-        this.setDisplayMode(stutter ? "Stutter" : "Instant");
+        this.setDisplayMode(instant ? "Instant" : "Shutter");
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
     }
 

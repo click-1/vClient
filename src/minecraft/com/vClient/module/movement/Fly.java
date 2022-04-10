@@ -42,16 +42,12 @@ public class Fly extends Module {
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         mode = mode.toLowerCase();
 
-        double fallDistance = 3.0125; //add 0.0125 to ensure we get the fall dmg
-        while (fallDistance > 0) {
-            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0624986421, mc.thePlayer.posZ, false));
-            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0625      , mc.thePlayer.posZ, false));
-            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0624986421, mc.thePlayer.posZ, false));
-            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0000013579, mc.thePlayer.posZ, false));
-            fallDistance -= 0.0624986421;
+        //Damage fly Moon script
+        for (int i = 0; i <= 3 / 0.0625; i++) {
+            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY + 0.0625, mc.thePlayer.posZ, false));
+            mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, false));
         }
-        mc.getNetHandler().addToSendQueue(new C03PacketPlayer.C04PacketPlayerPosition(mc.thePlayer.posX, mc.thePlayer.posY, mc.thePlayer.posZ, true));
-
+        mc.getNetHandler().addToSendQueue(new C03PacketPlayer(true));
 
         super.onEnable();
     }
@@ -68,7 +64,6 @@ public class Fly extends Module {
                     mc.thePlayer.motionY = verticalSpeed;
                 if (mc.gameSettings.keyBindSneak.isKeyDown())
                     mc.thePlayer.motionY = -verticalSpeed;
-
                 MovementUtil.strafe(normalSpeed);
                 break;
             case "hypixel":
