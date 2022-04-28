@@ -38,6 +38,7 @@ import javax.imageio.ImageIO;
 
 import com.vClient.discord.DiscordHandler;
 import com.vClient.event.events.EventKey;
+import com.vClient.event.events.EventWorld;
 import com.vClient.module.combat.KillAura;
 import com.vClient.ui.MainMenu;
 import com.vClient.util.IconUtil;
@@ -2348,6 +2349,9 @@ public class Minecraft implements IThreadListener, IPlayerUsage
      */
     public void loadWorld(WorldClient worldClientIn, String loadingMessage)
     {
+        EventWorld eventWorld = new EventWorld(worldClientIn);
+        eventWorld.call();
+
         if (worldClientIn == null)
         {
             NetHandlerPlayClient nethandlerplayclient = this.getNetHandler();

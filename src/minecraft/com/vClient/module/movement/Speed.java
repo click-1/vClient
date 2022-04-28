@@ -18,6 +18,7 @@ public class Speed extends Module {
 
     public Speed() {
         super("Speed", Keyboard.CHAR_NONE, Category.MOVEMENT, "Modify player movement.");
+        this.setDisplayNotif(true);
     }
 
     @Override

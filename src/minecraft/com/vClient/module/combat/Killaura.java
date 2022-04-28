@@ -30,6 +30,7 @@ public class KillAura extends Module {
 
     public KillAura() {
         super("KillAura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
+        this.setDisplayNotif(true);
     }
 
     @Override

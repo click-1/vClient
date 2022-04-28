@@ -356,5 +356,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="discord-rpc" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>

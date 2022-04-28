@@ -1,69 +1,68 @@
-[18:44:49] [Client thread/INFO]: Setting user: Player281
-[18:44:49] [Client thread/INFO]: (Session ID is token:0:Player281)
-[18:44:52] [Client thread/INFO]: LWJGL Version: 2.9.4
-[18:44:53] [Client thread/INFO]: Reloading ResourceManager: Default
-[18:44:53] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[18:44:53] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[18:44:53] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[18:44:53] [Thread-6/INFO]: OpenAL initialized.
-[18:44:54] [Sound Library Loader/INFO]: Sound engine started
-[18:44:59] [Client thread/INFO]: Created: 512x512 textures-atlas
-[18:45:06] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[18:45:06] [Server thread/INFO]: Generating keypair
-[18:45:06] [Server thread/INFO]: Preparing start region for level 0
-[18:45:07] [Server thread/INFO]: Preparing spawn area: 45%
-[18:45:08] [Server thread/INFO]: Changing view distance to 5, from 10
-[18:45:09] [Server thread/INFO]: Player281[local:E:e15324da] logged in with entity id 223 at (595.030857702833, 73.0, 345.39968166899837)
-[18:45:09] [Server thread/INFO]: Player281 joined the game
-[18:45:09] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[18:45:09] [Client thread/WARN]: Biome ID is out of bounds: 2049, defaulting to 0 (Ocean)
-[18:45:09] [Client thread/WARN]: Biome ID is out of bounds: 2049, defaulting to 0 (Ocean)
-[18:45:09] [Client thread/WARN]: Biome ID is out of bounds: 2049, defaulting to 0 (Ocean)
-[18:45:09] [Client thread/WARN]: Biome ID is out of bounds: 2563, defaulting to 0 (Ocean)
-[18:45:09] [Client thread/WARN]: Biome ID is out of bounds: 2049, defaulting to 0 (Ocean)
-[18:45:12] [Client thread/INFO]: [CHAT] §b[vClient]§7 Bound §3KillAura §7to §6V
-[18:45:29] [Server thread/INFO]: Saving and pausing game...
-[18:45:29] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:45:30] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:45:30] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:46:01] [Server thread/INFO]: [@: Set the time to 8000]
-[18:46:01] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[18:46:16] [Server thread/INFO]: Saving and pausing game...
-[18:46:16] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:46:17] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:46:17] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:48:10] [Server thread/INFO]: Saving and pausing game...
-[18:48:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:48:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:48:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:49:18] [Server thread/INFO]: Saving and pausing game...
-[18:49:18] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:49:19] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:49:19] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:49:35] [Server thread/INFO]: [@: Set the time to 8000]
-[18:49:35] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[18:50:51] [Server thread/INFO]: [@: Set the time to 8000]
-[18:50:51] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[18:51:17] [Server thread/INFO]: Saving and pausing game...
-[18:51:17] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:51:17] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:51:17] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:52:15] [Server thread/INFO]: [@: Set the time to 8000]
-[18:52:15] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[18:53:31] [Server thread/INFO]: [@: Set the time to 8000]
-[18:53:31] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[18:54:47] [Server thread/INFO]: [@: Set the time to 8000]
-[18:54:47] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[18:55:55] [Server thread/INFO]: Saving and pausing game...
-[18:55:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:55:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:55:55] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:55:56] [Client thread/INFO]: Stopping!
-[18:55:56] [Client thread/INFO]: SoundSystem shutting down...
-[18:55:56] [Server thread/INFO]: Stopping server
-[18:55:56] [Server thread/INFO]: Saving players
-[18:55:56] [Server thread/INFO]: Saving worlds
-[18:55:56] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[18:55:56] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[18:55:56] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[18:55:56] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:52:44] [Client thread/INFO]: Setting user: Player581
+[16:52:44] [Client thread/INFO]: (Session ID is token:0:Player581)
+[16:52:47] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:52:47] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:52:47] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:52:47] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[16:52:47] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:52:48] [Thread-6/INFO]: OpenAL initialized.
+[16:52:48] [Sound Library Loader/INFO]: Sound engine started
+[16:52:51] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:52:59] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[16:52:59] [Server thread/INFO]: Generating keypair
+[16:52:59] [Server thread/INFO]: Preparing start region for level 0
+[16:53:00] [Server thread/INFO]: Changing view distance to 5, from 10
+[16:53:01] [Server thread/INFO]: Player581[local:E:78f68ac5] logged in with entity id 224 at (599.0092440408775, 74.0, 350.22403642300134)
+[16:53:01] [Server thread/INFO]: Player581 joined the game
+[16:53:01] [Server thread/INFO]: Saving and pausing game...
+[16:53:01] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[16:53:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:53:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:53:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:53:06] [Client thread/INFO]: [CHAT] velocity
+[16:53:06] [Client thread/INFO]: [CHAT] §b[vClient]§7 Bound §3Velocity §7to §6R
+[16:53:10] [Server thread/INFO]: Saving and pausing game...
+[16:53:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:53:11] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:53:11] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:53:29] [Client thread/INFO]: [CHAT] killaura
+[16:53:29] [Client thread/INFO]: [CHAT] §b[vClient]§7 Bound §3KillAura §7to §6V
+[16:54:00] [Server thread/INFO]: [@: Set the time to 8000]
+[16:54:00] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
+[16:54:17] [Client thread/INFO]: [CHAT] fly
+[16:54:19] [Client thread/INFO]: [CHAT] §b[vClient]§7 Bound §3Fly §7to §6G
+[16:54:22] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.anvil
+[16:55:16] [Server thread/INFO]: [@: Set the time to 8000]
+[16:55:16] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
+[16:55:20] [Server thread/INFO]: Saving and pausing game...
+[16:55:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:55:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:55:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:56:33] [Server thread/INFO]: Saving and pausing game...
+[16:56:33] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:56:33] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:56:33] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:57:37] [Server thread/INFO]: Saving and pausing game...
+[16:57:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:57:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:57:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:57:42] [Server thread/INFO]: Saving and pausing game...
+[16:57:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:57:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:57:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:57:53] [Server thread/INFO]: [@: Set the time to 8000]
+[16:57:53] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
+[16:58:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.anvil
+[16:58:47] [Server thread/INFO]: Saving and pausing game...
+[16:58:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:58:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:58:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:58:47] [Client thread/INFO]: Stopping!
+[16:58:47] [Client thread/INFO]: SoundSystem shutting down...
+[16:58:47] [Server thread/INFO]: Stopping server
+[16:58:47] [Server thread/INFO]: Saving players
+[16:58:47] [Server thread/INFO]: Saving worlds
+[16:58:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:58:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:58:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:58:48] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

@@ -14,6 +14,7 @@ public class GameSpeed extends Module {
 
     public GameSpeed() {
         super("GameSpeed", Keyboard.CHAR_NONE, Category.WORLD, "Change player game speed.");
+        this.setDisplayNotif(true);
     }
 
     @Override

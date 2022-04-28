@@ -9,6 +9,7 @@ public class Module {
     private int key;
     private Category category;
     private boolean toggled;
+    protected boolean displayNotif = false;
 
     public Module(String name, int key, Category category, String description) {
         this.name = name;
@@ -26,8 +27,10 @@ public class Module {
         vClient.instance.eventManager.unregister(this);
     }
     public void onToggle() {
-        if(vClient.instance.settingsManager.getSettingByName("Sound").getValBoolean())
+        if (vClient.instance.settingsManager.getSettingByName("Sound").getValBoolean())
             mc.thePlayer.playSound("random.click", 0.8f, 0.8f);
+        if (displayNotif)
+            vClient.instance.notifications.addNotif(this);
     }
     public void toggle() {
         toggled = !toggled;
@@ -82,5 +85,11 @@ public class Module {
     }
     public void setFullDisplayName(String fullDisplayName) {
         this.fullDisplayName = fullDisplayName;
+    }
+    public boolean getDisplayNotif() {
+        return this.displayNotif;
+    }
+    public void setDisplayNotif(boolean displayNotif) {
+        this.displayNotif = displayNotif;
     }
 }

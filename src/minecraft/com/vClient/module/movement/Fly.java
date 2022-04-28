@@ -18,6 +18,7 @@ public class Fly extends Module {
 
     public Fly() {
         super("Fly", Keyboard.CHAR_NONE, Category.MOVEMENT, "Enable player to fly.");
+        this.setDisplayNotif(true);
     }
 
     @Override

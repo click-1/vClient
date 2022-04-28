@@ -6,10 +6,7 @@ import com.vClient.module.exploit.Queue;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
 import com.vClient.module.visual.*;
-import com.vClient.module.world.Freeze;
-import com.vClient.module.world.GameSpeed;
-import com.vClient.module.world.NoFall;
-import com.vClient.module.world.SafeWalk;
+import com.vClient.module.world.*;
 import com.vClient.util.MyTrie;
 
 import java.util.*;
@@ -22,6 +19,7 @@ public class ModuleManager {
     public ModuleManager() {
         //COMBAT
         moduleMap.put("AntiBot", new AntiBot());
+        //moduleMap.put("Criticals", new Criticals());
         //moduleMap.put("HitBoxes", new HitBoxes());
         moduleMap.put("KeepSprint", new KeepSprint());
         moduleMap.put("KillAura", new KillAura());
@@ -66,6 +64,7 @@ public class ModuleManager {
         moduleMap.put("GameSpeed", new GameSpeed());
         moduleMap.put("NoFall", new NoFall());
         moduleMap.put("SafeWalk", new SafeWalk());
+        //moduleMap.put("StaffAlert", new StaffAlert());
 
         moduleList.addAll(moduleMap.values());
 

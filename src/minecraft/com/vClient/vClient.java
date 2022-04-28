@@ -7,6 +7,7 @@ import com.vClient.event.events.EventMessage;
 import com.vClient.event.events.EventKey;
 import com.vClient.module.ModuleManager;
 import com.vClient.ui.ArrayListHUD;
+import com.vClient.ui.Notifications;
 import com.vClient.util.custom_font.CustomFontUtil;
 import de.Hero.clickgui.ClickGUI;
 import com.vClient.util.IconUtil;
@@ -23,6 +24,7 @@ public class vClient {
     public ModuleManager moduleManager;
     public CommandManager commandManager;
     public ArrayListHUD arrayListHUD;
+    public Notifications notifications;
     public ClickGUI clickGui;
 
     public void startClient() {
@@ -32,6 +34,7 @@ public class vClient {
         moduleManager = new ModuleManager();
         commandManager = new CommandManager();
         arrayListHUD = new ArrayListHUD();
+        notifications = new Notifications();
         clickGui = new ClickGUI();
         System.out.println("[" + name + "] Starting client, b" + version + ", created by " + creator);
         Display.setIcon(IconUtil.getLoadingIcon());

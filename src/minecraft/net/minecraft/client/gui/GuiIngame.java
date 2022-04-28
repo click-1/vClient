@@ -354,6 +354,7 @@ public class GuiIngame extends Gui
         }
 
         vClient.instance.arrayListHUD.draw();
+        vClient.instance.notifications.handleNotifs();
 
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.disableLighting();

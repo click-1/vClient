@@ -4,6 +4,8 @@ import com.google.common.collect.Lists;
 import com.google.common.primitives.Doubles;
 import com.google.common.primitives.Floats;
 import com.google.common.util.concurrent.Futures;
+import com.vClient.module.combat.Criticals;
+import com.vClient.vClient;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.util.concurrent.Future;
@@ -430,7 +432,8 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer, ITickable
 
                     this.playerEntity.onGround = packetIn.isOnGround();
                     this.serverController.getConfigurationManager().serverUpdateMountedMovingPlayer(this.playerEntity);
-                    this.playerEntity.handleFalling(this.playerEntity.posY - d7, packetIn.isOnGround());
+                    //if (!vClient.instance.moduleManager.getModulebyName("Criticals").isToggled())
+                        this.playerEntity.handleFalling(this.playerEntity.posY - d7, packetIn.isOnGround());
                 }
                 else if (this.networkTickCount - this.field_175090_f > 20)
                 {
