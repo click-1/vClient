@@ -19,8 +19,7 @@ public class ModuleManager {
     public ModuleManager() {
         //COMBAT
         moduleMap.put("AntiBot", new AntiBot());
-        //moduleMap.put("Criticals", new Criticals());
-        //moduleMap.put("HitBoxes", new HitBoxes());
+        moduleMap.put("AutoPot", new AutoPot());
         moduleMap.put("KeepSprint", new KeepSprint());
         moduleMap.put("KillAura", new KillAura());
         moduleMap.put("Reach", new Reach());
