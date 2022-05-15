@@ -33,7 +33,7 @@ public class MainMenu extends GuiScreen {
         int side = 26, by = 35;
         for (int b = 0; b < 6; b++) {
             boolean hover = mouseX >= 15 && mouseX <= 40 && mouseY >= by && mouseY <= by + side;
-            Gui.drawRect(15, by, 15 + side, by + side, hover ? new Color(139, 199, 255, 216).getRGB() : new Color(199, 199, 199, 106).getRGB());
+            Gui.drawRect(15, by, 15 + side, by + side, hover ? new Color(0, 53, 101, 216).getRGB() : new Color(199, 199, 199, 106).getRGB());
             by += side + 5;
         }
         Gui.drawRect(0,0,0,0, new Color(255, 255, 255, 188).getRGB());

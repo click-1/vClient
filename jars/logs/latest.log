@@ -1,95 +1,43 @@
-[22:47:03] [Client thread/INFO]: Setting user: Player437
-[22:47:03] [Client thread/INFO]: (Session ID is token:0:Player437)
-[22:47:05] [Client thread/INFO]: LWJGL Version: 2.9.4
-[22:47:05] [Client thread/INFO]: Reloading ResourceManager: Default
-[22:47:05] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[22:47:06] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[22:47:06] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[22:47:06] [Thread-6/INFO]: OpenAL initialized.
-[22:47:06] [Sound Library Loader/INFO]: Sound engine started
-[22:47:09] [Client thread/INFO]: Created: 512x512 textures-atlas
-[22:47:17] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[22:47:17] [Server thread/INFO]: Generating keypair
-[22:47:17] [Server thread/INFO]: Preparing start region for level 0
-[22:47:18] [Server thread/INFO]: Preparing spawn area: 60%
-[22:47:18] [Server thread/INFO]: Changing view distance to 5, from 10
-[22:47:19] [Server thread/INFO]: Player437[local:E:05f4a61b] logged in with entity id 221 at (588.3000000119209, 78.0, 349.91006984282564)
-[22:47:19] [Server thread/INFO]: Player437 joined the game
-[22:47:19] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[22:47:23] [Server thread/INFO]: Player437 has just earned the achievement [Taking Inventory]
-[22:47:24] [Client thread/INFO]: [CHAT] Player437 has just earned the achievement [Taking Inventory]
-[22:47:36] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:47:36] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:47:49] [Server thread/INFO]: [@: Set the time to 8000]
-[22:47:49] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[22:47:50] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:47:50] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:47:55] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:47:55] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:48:01] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:48:01] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:48:10] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:48:10] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:48:14] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:48:14] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:48:20] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:48:20] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:48:27] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:48:27] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:48:33] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:48:33] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:48:44] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:48:44] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:48:52] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:48:52] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:02] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:02] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:05] [Server thread/INFO]: [@: Set the time to 8000]
-[22:49:05] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[22:49:07] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:07] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:11] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:11] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:15] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:15] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:18] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:18] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:24] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:24] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:29] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:29] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:35] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:35] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:40] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:40] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:45] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:45] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:51] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:51] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:49:56] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:49:56] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:50:00] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:50:00] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:50:03] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:50:03] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:50:08] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:50:08] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:50:13] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:50:13] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:50:20] [Server thread/INFO]: [Player437: Took all effects from Player437]
-[22:50:20] [Client thread/INFO]: [CHAT] Took all effects from Player437
-[22:50:21] [Server thread/INFO]: [@: Set the time to 8000]
-[22:50:21] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
-[22:50:25] [Server thread/INFO]: Saving and pausing game...
-[22:50:25] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:50:25] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:50:25] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:50:26] [Client thread/INFO]: Stopping!
-[22:50:26] [Client thread/INFO]: SoundSystem shutting down...
-[22:50:26] [Server thread/INFO]: Stopping server
-[22:50:26] [Server thread/INFO]: Saving players
-[22:50:26] [Server thread/INFO]: Saving worlds
-[22:50:26] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:50:26] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:50:26] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:50:26] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:32:31] [Client thread/INFO]: Setting user: Player364
+[18:32:31] [Client thread/INFO]: (Session ID is token:0:Player364)
+[18:32:33] [Client thread/INFO]: LWJGL Version: 2.9.4
+[18:32:34] [Client thread/INFO]: Reloading ResourceManager: Default
+[18:32:34] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:32:34] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[18:32:34] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:32:35] [Thread-6/INFO]: OpenAL initialized.
+[18:32:35] [Sound Library Loader/INFO]: Sound engine started
+[18:32:39] [Client thread/INFO]: Created: 512x512 textures-atlas
+[18:33:01] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[18:33:01] [Server thread/INFO]: Generating keypair
+[18:33:02] [Server thread/INFO]: Preparing start region for level 0
+[18:33:03] [Server thread/INFO]: Preparing spawn area: 24%
+[18:33:04] [Server thread/INFO]: Changing view distance to 5, from 10
+[18:33:04] [Server thread/INFO]: Player364[local:E:ff9cbb39] logged in with entity id 213 at (597.0712793533495, 73.5, 347.9838398159727)
+[18:33:04] [Server thread/INFO]: Player364 joined the game
+[18:33:04] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[18:33:04] [Server thread/INFO]: [@: Set the time to 8000]
+[18:33:05] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
+[18:33:39] [Server thread/INFO]: [Player364: Took all effects from Player364]
+[18:33:39] [Client thread/INFO]: [CHAT] Took all effects from Player364
+[18:34:05] [Server thread/INFO]: [Player364: Took all effects from Player364]
+[18:34:05] [Client thread/INFO]: [CHAT] Took all effects from Player364
+[18:34:09] [Server thread/INFO]: [Player364: Took all effects from Player364]
+[18:34:09] [Client thread/INFO]: [CHAT] Took all effects from Player364
+[18:34:16] [Server thread/INFO]: [Player364: Took all effects from Player364]
+[18:34:16] [Client thread/INFO]: [CHAT] Took all effects from Player364
+[18:34:20] [Server thread/INFO]: [@: Set the time to 8000]
+[18:34:20] [Client thread/INFO]: [CHAT] [@: Set the time to 8000]
+[18:34:23] [Server thread/INFO]: Saving and pausing game...
+[18:34:23] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[18:34:23] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[18:34:23] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[18:34:24] [Client thread/INFO]: Stopping!
+[18:34:24] [Client thread/INFO]: SoundSystem shutting down...
+[18:34:24] [Server thread/INFO]: Stopping server
+[18:34:24] [Server thread/INFO]: Saving players
+[18:34:24] [Server thread/INFO]: Saving worlds
+[18:34:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[18:34:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[18:34:24] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[18:34:24] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

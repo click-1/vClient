@@ -10,11 +10,10 @@ import com.vClient.vClient
 import de.Hero.settings.Setting
 import net.minecraft.client.gui.inventory.GuiContainer
 import net.minecraft.item.ItemPotion
-import net.minecraft.network.play.client.C08PacketPlayerBlockPlacement
-import net.minecraft.network.play.client.C09PacketHeldItemChange
-import net.minecraft.network.play.client.C0DPacketCloseWindow
-import net.minecraft.network.play.client.C16PacketClientStatus
+import net.minecraft.network.play.client.*
 import net.minecraft.potion.Potion
+import net.minecraft.util.BlockPos
+import net.minecraft.util.EnumFacing
 import org.lwjgl.input.Keyboard
 
 class AutoPot : Module("AutoPot", Keyboard.CHAR_NONE, Category.COMBAT, "Automatically apply splash pots.") {
@@ -49,22 +48,26 @@ class AutoPot : Module("AutoPot", Keyboard.CHAR_NONE, Category.COMBAT, "Automati
         throwTimer.updateTime()
         invTimer.updateTime()
         fallPeriod.updateTime()
-        if (fallPeriod.elapsedTime() < 225)
+        if (fallPeriod.elapsedTime() < 250)
             return
 
         if (throwing && mc.thePlayer.onGround && mc.currentScreen !is GuiContainer && throwTimer.elapsedTime() > 250) {
+            if (finalActiveCheck())
+                return
             mc.netHandler.addToSendQueue(C09PacketHeldItemChange(potIndex - 36))
             mc.netHandler.addToSendQueue(C08PacketPlayerBlockPlacement(mc.thePlayer.heldItem))
+            mc.netHandler.addToSendQueue(C07PacketPlayerDigging(C07PacketPlayerDigging.Action.RELEASE_USE_ITEM, BlockPos.ORIGIN, EnumFacing.DOWN))
             mc.netHandler.addToSendQueue(C09PacketHeldItemChange(mc.thePlayer.inventory.currentItem))
+            potIndex = -1
             throwing = false
             fallPeriod.resetTime()
             return
         }
         if (!throwing && mc.currentScreen !is GuiContainer) {
-            val potion = findPotion(36, 45)
-            if (potion != -1) {
+            val potionIndex = findPotion(36, 45)
+            if (potionIndex != -1) {
                 throwing = true
-                potIndex = potion
+                potIndex = potionIndex
                 throwTimer.resetTime()
             }
         }
@@ -93,6 +96,20 @@ class AutoPot : Module("AutoPot", Keyboard.CHAR_NONE, Category.COMBAT, "Automati
                 }
             }
         }
+    }
+
+    private fun finalActiveCheck(): Boolean {
+        if (potIndex == -1)
+            return false
+        val stack = mc.thePlayer.inventoryContainer.getSlot(potIndex).stack ?: return false
+        val itemPotion = stack.item as ItemPotion
+        val potID = itemPotion.getEffects(stack)[0].potionID
+        if (mc.thePlayer.isPotionActive(potID)) {
+            potIndex = -1
+            throwing = false
+            return true
+        }
+        return false
     }
 
     private fun findPotion(startSlot: Int, endSlot: Int): Int {
