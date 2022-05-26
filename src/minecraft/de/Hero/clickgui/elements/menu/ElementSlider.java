@@ -47,7 +47,7 @@ public class ElementSlider extends Element {
 		/*
 		 * Die Box und Umrandung rendern
 		 */
-		Gui.drawRect(x, y, x + width, y + height, 0xff1a1a1a);
+		Gui.drawRect(x, y, x + width, y + height, renderColor);
 
 		/*
 		 * Den Text rendern
@@ -58,7 +58,7 @@ public class ElementSlider extends Element {
 		/*
 		 * Den Slider rendern
 		 */
-		Gui.drawRect(x, y + 12, x + width, y + 13.5, 0xff101010);
+		Gui.drawRect(x, y + 12, x + width, y + 13.5, 0xb3757575);
 		Gui.drawRect(x, y + 12, x + (percentBar * width), y + 13.5, color);
 		
 		if(percentBar > 0 && percentBar < 1)

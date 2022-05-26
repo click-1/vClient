@@ -4,8 +4,7 @@ import com.vClient.event.EventTarget;
 import com.vClient.event.events.*;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
-import com.vClient.util.ClockUtil;
-import com.vClient.util.TargetUtil;
+import com.vClient.util.*;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
 import net.minecraft.client.settings.KeyBinding;
@@ -30,7 +29,7 @@ public class KillAura extends Module {
 
     public KillAura() {
         super("KillAura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
-        this.setDisplayNotif(true);
+        setDisplayNotif(true);
     }
 
     @Override
@@ -50,18 +49,11 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("Dead", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("Teams", this, true));
 
-        this.setDisplayMode("Sort");
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        updateDisplay("Sort");
     }
 
     @Override
     public void onEnable() {
-        num_attacks = vClient.instance.settingsManager.getSettingByName("Multi").getValBoolean() ? 3 : 1;
-        if (num_attacks == 3)
-            this.setDisplayMode("Multi");
-        else
-            this.setDisplayMode("Sort");
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         delay = (int) vClient.instance.settingsManager.getSettingByName("CPS").getValDouble();
         range = vClient.instance.settingsManager.getSettingByName("Range").getValDouble();
         super.onEnable();
@@ -70,7 +62,7 @@ public class KillAura extends Module {
     @Override
     public void onDisable() {
         stopBlocking();
-        this.active_target = null;
+        active_target = null;
         targetRotations = null;
         super.onDisable();
     }
@@ -78,6 +70,9 @@ public class KillAura extends Module {
     @EventTarget
     public void onPre(EventPreMotionUpdate event) {
         clock.updateTime();
+        num_attacks = vClient.instance.settingsManager.getSettingByName("Multi").getValBoolean() ? 3 : 1;
+        updateDisplay(num_attacks > 1 ? "Multi" : "Sort");
+
         targets = getClosest(range);
         if (targets.size() == 0)
             return;
@@ -89,11 +84,11 @@ public class KillAura extends Module {
             mc.thePlayer.swingItem();
             for (int i = 0; i < num_attacks; i++) {
                 if (i < targets.size()) {
-                    this.active_target = targets.get(i);
-                    targetRotations = getRotations(this.active_target.posX, this.active_target.posY, this.active_target.posZ, this.active_target);
+                    active_target = targets.get(i);
+                    targetRotations = PlayerUtil.getRotations(active_target);
                     event.setYaw(targetRotations[0]);
                     event.setPitch(targetRotations[1]);
-                    attack(this.active_target);
+                    attack(active_target);
                 }
             }
             if (!mc.thePlayer.isBlocking() && !blockingStatus && canBlock)
@@ -115,7 +110,7 @@ public class KillAura extends Module {
         if (targets == null || targets.size() == 0 || no_longer_attacking()) {
             if (blockingStatus)
                 stopBlocking();
-            this.active_target = null;
+            active_target = null;
             targetRotations = null;
         }
     }
@@ -145,7 +140,7 @@ public class KillAura extends Module {
         blockingStatus = false;
     }
 
-    public static boolean canAttack(EntityLivingBase entity) {
+    private boolean canAttack(EntityLivingBase entity) {
         boolean conditions = entity != null && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble() && mc.thePlayer.getDistanceToEntity(entity) <= range;
         if (!conditions)
             return false;
@@ -168,7 +163,7 @@ public class KillAura extends Module {
         return true;
     }
 
-    private static boolean checkIfSameTeam(EntityLivingBase entity) {
+    private boolean checkIfSameTeam(EntityLivingBase entity) {
         if (mc.thePlayer.getTeam() != null && entity.getTeam() != null &&
                 mc.thePlayer.getTeam().isSameTeam(entity.getTeam()))
             return true;
@@ -180,25 +175,9 @@ public class KillAura extends Module {
         return false;
     }
 
-    private static boolean isInFOV(EntityLivingBase entity, double angle) {
+    private boolean isInFOV(EntityLivingBase entity, double angle) {
         angle *= .5D;
-        double angleDiff = getAngleDifference(mc.thePlayer.rotationYaw, getRotations(entity.posX, entity.posY, entity.posZ, entity)[0]);
+        double angleDiff = MathUtil.getAngleDifference(mc.thePlayer.rotationYaw, PlayerUtil.getRotations(entity)[0]);
         return (angleDiff > 0 && angleDiff < angle) || (-angle < angleDiff && angleDiff < 0);
-    }
-
-    private static float getAngleDifference(float dir, float yaw) {
-        float f = Math.abs(yaw - dir) % 360F;
-        float dist = f > 180F ? 360F - f : f;
-        return dist;
-    }
-
-    private static float[] getRotations(double x, double y, double z, Entity entity) {
-        double diffX = x - mc.thePlayer.posX;
-        double diffY = y + entity.getEyeHeight() - (mc.thePlayer.posY + mc.thePlayer.getEyeHeight() + .3f);
-        double diffZ = z - mc.thePlayer.posZ;
-        double dist = MathHelper.sqrt_double(diffX * diffX + diffZ * diffZ);
-        float yaw = (float)(Math.atan2(diffZ, diffX) * 180D / Math.PI) - 90F;
-        float pitch = (float)-(Math.atan2(diffY, dist) * 180D / Math.PI);
-        return new float[] {yaw, pitch};
     }
 }

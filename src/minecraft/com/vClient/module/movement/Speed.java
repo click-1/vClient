@@ -1,7 +1,6 @@
 package com.vClient.module.movement;
 
 import com.vClient.event.EventTarget;
-import com.vClient.event.events.EventReceivePacket;
 import com.vClient.event.events.EventUpdate;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
@@ -14,8 +13,6 @@ import org.lwjgl.input.Keyboard;
 import java.util.ArrayList;
 
 public class Speed extends Module {
-    private String mode;
-
     public Speed() {
         super("Speed", Keyboard.CHAR_NONE, Category.MOVEMENT, "Modify player movement.");
         this.setDisplayNotif(true);
@@ -24,22 +21,11 @@ public class Speed extends Module {
     @Override
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
-        options.add("NCPHop");
         options.add("HypixelHop");
+        options.add("NCPHop");
         options.add("Watchdog");
-        this.setDisplayMode("Watchdog");
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        updateDisplay("Watchdog");
         vClient.instance.settingsManager.rSetting(new Setting("Speed Mode", this, "Watchdog", options));
-    }
-    @Override
-    public void onEnable() {
-        mode = vClient.instance.settingsManager.getSettingByName("Speed Mode").getValString();
-        if (mode.equals("NCPHop"))
-            mc.timer.timerSpeed = 1.0865F;
-        this.setDisplayMode(mode);
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
-        mode = mode.toLowerCase();
-        super.onEnable();
     }
 
     @Override
@@ -50,14 +36,18 @@ public class Speed extends Module {
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
+        String mode = vClient.instance.settingsManager.getSettingByName("Speed Mode").getValString();
+        updateDisplay(mode);
         if (MovementUtil.isMoving()) {
             switch (mode) {
-                case "ncphop":
+                case "NCPHop":
+                    mc.timer.timerSpeed = 1.0865F;
                     if (mc.thePlayer.onGround)
                         mc.thePlayer.jump();
                     MovementUtil.strafe();
                     break;
-                case "hypixelhop":
+                case "HypixelHop":
+                    mc.timer.timerSpeed = 1F;
                     if (mc.thePlayer.onGround) {
                         mc.thePlayer.jump();
                         float speed = MovementUtil.getSpeed() < 0.56F ? MovementUtil.getSpeed() * 1.045F : 0.56F;
@@ -70,7 +60,8 @@ public class Speed extends Module {
                     else {
                         MovementUtil.strafe(MovementUtil.getSpeed() * 1.01889F);
                     }
-                case "watchdog":
+                case "Watchdog":
+                    mc.timer.timerSpeed = 1F;
                     if (mc.thePlayer.onGround)
                         mc.thePlayer.jump();
                     MovementUtil.strafe(MovementUtil.getSpeed() * 1.0055f);

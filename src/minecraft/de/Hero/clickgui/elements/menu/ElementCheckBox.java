@@ -37,13 +37,13 @@ public class ElementCheckBox extends Element {
 		/*
 		 * Die Box und Umrandung rendern
 		 */
-		Gui.drawRect(x, y, x + width, y + height, 0xff1a1a1a);
+		Gui.drawRect(x, y, x + width, y + height, renderColor);
 
 		/*
 		 * Titel und Checkbox rendern.
 		 */
 		FontUtil.drawString(setstrg, x + width - FontUtil.getStringWidth(setstrg), y + FontUtil.getFontHeight() / 2 - 0.5, 0xffffffff);
-		Gui.drawRect(x + 1, y + 2, x + 12, y + 13, set.getValBoolean() ? color : 0xff000000);
+		Gui.drawRect(x + 1, y + 2, x + 12, y + 13, set.getValBoolean() ? color : 0xb3757575);
 		if (isCheckHovered(mouseX, mouseY))
 			Gui.drawRect(x + 1, y + 2, x + 12, y + 13, 0x55111111);
 	}

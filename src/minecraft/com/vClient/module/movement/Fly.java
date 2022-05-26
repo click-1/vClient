@@ -13,7 +13,6 @@ import org.lwjgl.input.Keyboard;
 import java.util.ArrayList;
 
 public class Fly extends Module {
-    private String mode;
     private float normalSpeed, verticalSpeed;
 
     public Fly() {
@@ -24,11 +23,10 @@ public class Fly extends Module {
     @Override
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
-        options.add("Normal");
         options.add("Hypixel");
+        options.add("Normal");
         options.add("Vanilla");
-        this.setDisplayMode("Normal");
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        updateDisplay("Normal");
         vClient.instance.settingsManager.rSetting(new Setting("Fly Mode", this, "Normal", options));
         vClient.instance.settingsManager.rSetting(new Setting("Flight Speed", this, 0.77, 0, 2, false));
         vClient.instance.settingsManager.rSetting(new Setting("Vert Speed", this, 0.0, 0, 2, false));
@@ -36,12 +34,8 @@ public class Fly extends Module {
 
     @Override
     public void onEnable() {
-        mode = vClient.instance.settingsManager.getSettingByName("Fly Mode").getValString();
         normalSpeed = (float) vClient.instance.settingsManager.getSettingByName("Flight Speed").getValDouble();
         verticalSpeed = (float) vClient.instance.settingsManager.getSettingByName("Vert Speed").getValDouble();
-        this.setDisplayMode(mode);
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
-        mode = mode.toLowerCase();
 
         //Damage fly Moon script
         for (int i = 0; i <= 3 / 0.0625; i++) {
@@ -55,8 +49,10 @@ public class Fly extends Module {
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
+        String mode = vClient.instance.settingsManager.getSettingByName("Fly Mode").getValString();
+        updateDisplay(mode);
         switch (mode) {
-            case "normal":
+            case "Normal":
                 mc.thePlayer.capabilities.isFlying = false;
                 mc.thePlayer.motionY = 0;
                 mc.thePlayer.motionX = 0;
@@ -67,7 +63,7 @@ public class Fly extends Module {
                     mc.thePlayer.motionY = -verticalSpeed;
                 MovementUtil.strafe(normalSpeed);
                 break;
-            case "hypixel":
+            case "Hypixel":
                 mc.thePlayer.capabilities.isFlying = false;
                 double y, y1;
                 mc.thePlayer.motionY = 0;
@@ -78,7 +74,7 @@ public class Fly extends Module {
                 y1 = mc.thePlayer.posY + 1.0E-10D;
                 mc.thePlayer.setPosition(mc.thePlayer.posX, y1, mc.thePlayer.posZ);
                 break;
-            case "vanilla":
+            case "Vanilla":
                 mc.thePlayer.capabilities.isFlying = true;
                 break;
         }

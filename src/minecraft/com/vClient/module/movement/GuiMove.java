@@ -9,6 +9,7 @@ import net.minecraft.client.gui.GuiIngameMenu;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.network.play.client.C0DPacketCloseWindow;
 import org.lwjgl.input.Keyboard;
 
 public class GuiMove extends Module {
@@ -20,19 +21,21 @@ public class GuiMove extends Module {
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        if (!(mc.currentScreen instanceof GuiChat) && !(mc.currentScreen instanceof GuiIngameMenu) && !(mc.currentScreen instanceof GuiContainer)) {
-            for (KeyBinding key : moveKeys)
+        if (!(mc.currentScreen instanceof GuiChat || mc.currentScreen instanceof GuiIngameMenu)) {
+            for (KeyBinding key : moveKeys) {
+                if (GameSettings.isKeyDown(key) && mc.currentScreen instanceof GuiContainer)
+                    mc.getNetHandler().addToSendQueue(new C0DPacketCloseWindow(mc.thePlayer.openContainer.windowId));
                 key.pressed = GameSettings.isKeyDown(key);
+            }
         }
     }
 
     @Override
     public void onDisable() {
         if (mc.currentScreen != null) {
-            for (KeyBinding key : moveKeys) {
-                if (GameSettings.isKeyDown(key))
+            for (KeyBinding key : moveKeys)
                     key.pressed = false;
-            }
         }
+        super.onDisable();
     }
 }

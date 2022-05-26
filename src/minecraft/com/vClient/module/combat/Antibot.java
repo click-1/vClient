@@ -22,17 +22,8 @@ public class AntiBot extends Module {
         ArrayList<String> options = new ArrayList<>();
         options.add("Advanced");
         options.add("Watchdog");
-        this.setDisplayMode("Advanced");
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        updateDisplay("Advanced");
         vClient.instance.settingsManager.rSetting(new Setting("AntiBot Mode", this, "Advanced", options));
-    }
-
-    @Override
-    public void onEnable() {
-        String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
-        this.setDisplayMode(mode);
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
-        super.onEnable();
     }
 
     @EventTarget
@@ -50,17 +41,20 @@ public class AntiBot extends Module {
             if (dist <= 17D && posX != mc.thePlayer.posX && posY != mc.thePlayer.posY && posZ != mc.thePlayer.posZ) {
                 event.setCancelled(true);
             }
+            System.out.println("trolololo");
         }
     }
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
         String mode = vClient.instance.settingsManager.getSettingByName("AntiBot Mode").getValString();
+        updateDisplay(mode);
         if (mode.equalsIgnoreCase("Watchdog")) {
             for (Entity entity : mc.theWorld.loadedEntityList) {
                 if (entity.isInvisible() && entity != mc.thePlayer)
                     mc.theWorld.removeEntity(entity);
             }
+            System.out.println("trolololo");
         }
     }
 }

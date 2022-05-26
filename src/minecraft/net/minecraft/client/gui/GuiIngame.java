@@ -11,6 +11,7 @@ import java.util.Random;
 import com.vClient.event.events.Event2D;
 import com.vClient.event.events.EventTick;
 import com.vClient.util.ColorUtil;
+import com.vClient.util.RenderUtil;
 import com.vClient.vClient;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -601,7 +602,7 @@ public class GuiIngame extends Gui
             int i1 = p_180475_2_.getScaledWidth() - b0 + 2;
             drawRect(j - 2, l, i1, l + this.getFontRenderer().FONT_HEIGHT, 1342177280);
             if (k == 1)
-                renderCustomAddress(j, l);
+                RenderUtil.renderCustomAddress(j, l);
             else
                 this.getFontRenderer().drawString(s1, j, l, 553648127);
             //this.getFontRenderer().drawString(s2, i1 - this.getFontRenderer().getStringWidth(s2), l, 553648127);
@@ -613,17 +614,6 @@ public class GuiIngame extends Gui
                 drawRect(j - 2, l - 1, i1, l, 1342177280);
                 this.getFontRenderer().drawString(s3, j + i / 2 - this.getFontRenderer().getStringWidth(s3) / 2, l - this.getFontRenderer().FONT_HEIGHT, 553648127);
             }
-        }
-    }
-
-    private void renderCustomAddress(int x, int y) {
-        FontRenderer fr = this.getFontRenderer();
-        char[] chars = "best.vclient.gg".toCharArray();
-        int offset = 0;
-        for (char c : chars) {
-            fr.drawStringWithShadow(String.valueOf(c), x, y, ColorUtil.getBlueandPinkRainbow(6f, offset));
-            x += fr.getCharWidth(c);
-            offset -= 150;
         }
     }
 

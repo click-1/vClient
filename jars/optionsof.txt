@@ -1,6 +1,6 @@
 ofRenderDistanceChunks:5
 ofFogType:1
-ofFogStart:0.8
+ofFogStart:0.2
 ofMipmapType:0
 ofOcclusionFancy:false
 ofSmoothFps:true

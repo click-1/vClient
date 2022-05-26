@@ -1,5 +1,6 @@
 package net.minecraft.client.gui;
 
+import com.vClient.util.ColorUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.audio.SoundHandler;
@@ -90,6 +91,7 @@ public class GuiButton extends Gui
             this.drawTexturedModalRect(this.xPosition, this.yPosition, 0, 46 + i * 20, this.width / 2, this.height);
             this.drawTexturedModalRect(this.xPosition + this.width / 2, this.yPosition, 200 - this.width / 2, 46 + i * 20, this.width / 2, this.height);
             this.mouseDragged(mc, mouseX, mouseY);
+            /**
             int j = 14737632;
 
             if (!this.enabled)
@@ -100,8 +102,9 @@ public class GuiButton extends Gui
             {
                 j = 16777120;
             }
+             **/
 
-            this.drawCenteredString(fontrenderer, this.displayString, this.xPosition + this.width / 2, this.yPosition + (this.height - 8) / 2, j);
+            this.drawCenteredString(fontrenderer, this.displayString, this.xPosition + this.width / 2, this.yPosition + (this.height - 8) / 2, this.isMouseOver() ? ColorUtil.getRainbow(12f,0,1f,0.8f,255) : -1);
         }
     }
 

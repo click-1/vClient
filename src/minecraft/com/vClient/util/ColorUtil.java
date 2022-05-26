@@ -3,26 +3,26 @@ package com.vClient.util;
 import java.awt.Color;
 import com.vClient.vClient;
 
-import static java.lang.Math.abs;
-
 public class ColorUtil {
 	public static Color baseColor = getClickGUIColor();
-	public static int baseColorint = baseColor.getRGB();
+	public static int baseColorInt = baseColor.getRGB();
+
 	public static Color getClickGUIColor(){
 		return new Color((int)vClient.instance.settingsManager.getSettingByName("Red").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Green").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Blue").getValDouble());
 	}
-	public static int getRainbow(float seconds, float saturation, float brightness) {
-		float hue = (System.currentTimeMillis() % (int)(seconds * 1000)) / (float)(seconds * 1000);
-		return Color.HSBtoRGB(hue, saturation, brightness);
+
+	public static int getRainbow(float seconds, int offset, float saturation, float brightness, int alpha) {
+		float hue = (System.currentTimeMillis() + (int)(seconds*offset)) % (int)(seconds*360) / (seconds*360);
+		Color color = Color.getHSBColor(hue, saturation, brightness);
+		Color adjusted = new Color(color.getRed(), color.getBlue(), color.getGreen(), alpha);
+		return adjusted.getRGB();
 	}
-	public static int getControlledRainbow(float seconds, float saturation, float brightness) {
-		float hue = ((System.currentTimeMillis() % (int)(seconds * 100)) + (int)(0.2 * seconds * 100)) / (float)(seconds * 1000);
-		return Color.HSBtoRGB(hue, saturation, brightness);
+
+	public static int getBlueandPinkRainbow(float seconds, int offset, float brightness) {
+		float hue = (((int)(Math.abs((seconds*445)-((System.currentTimeMillis() + offset) % (int)(seconds*890)))) / (int)(seconds)) + 486) / 1000f;
+		return Color.HSBtoRGB(hue, 0.5f, brightness);
 	}
-	public static int getBlueandPinkRainbow(float seconds, int offset) {
-		float hue = (((int)(abs((seconds*445)-((System.currentTimeMillis() + offset) % (int)(seconds*890)))) / (int)(seconds)) + 486) / 1000f;
-		return Color.HSBtoRGB(hue, 0.5f, 1f);
-	}
+
 	public static float[] four_color(int rgb) {
 		float[] res = new float[4];
 		Color c = new Color(rgb);
@@ -32,6 +32,7 @@ public class ColorUtil {
 		res[3] = c.getAlpha();
 		return res;
 	}
+
 	public static int getaqua() {
 		return new Color(107, 230, 255, 255).getRGB();
 	}

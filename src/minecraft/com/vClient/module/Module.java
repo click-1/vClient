@@ -5,7 +5,7 @@ import net.minecraft.client.Minecraft;
 
 public class Module {
     protected static Minecraft mc = Minecraft.getMinecraft();
-    private String name, displayMode, fullDisplayName,description;
+    private String name, displayMode, fullDisplayName, description;
     private int key;
     private Category category;
     private boolean toggled;
@@ -19,19 +19,24 @@ public class Module {
         toggled = false;
         setup();
     }
-    public void setup() { }
+
+    public void setup() {}
+
     public void onEnable() {
         vClient.instance.eventManager.register(this);
     }
+
     public void onDisable() {
         vClient.instance.eventManager.unregister(this);
     }
+
     public void onToggle() {
         if (vClient.instance.settingsManager.getSettingByName("Sound").getValBoolean())
             mc.thePlayer.playSound("random.click", 0.8f, 0.8f);
         if (displayNotif)
             vClient.instance.notifications.addNotif(this);
     }
+
     public void toggle() {
         toggled = !toggled;
         onToggle();
@@ -40,6 +45,7 @@ public class Module {
         else
             onDisable();
     }
+
     public void silentToggle() {
         toggled = !toggled;
         if (toggled)
@@ -47,48 +53,68 @@ public class Module {
         else
             onDisable();
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getKey() {
         return key;
     }
+
     public void setKey(int key) {
         this.key = key;
     }
+
     public Category getCategory() {
         return this.category;
     }
+
     public void setCategory(Category category) {
         this.category = category;
     }
+
     public boolean isToggled() {
         return toggled;
     }
+
     public String getDisplayMode() {
         return displayMode;
     }
+
     public void setDisplayMode(String displayMode) {
         this.displayMode = displayMode;
     }
+
     public String getDescription() {
         return description;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
+
     public String getFullDisplayName() {
         return displayMode == null ? name : fullDisplayName;
     }
+
     public void setFullDisplayName(String fullDisplayName) {
         this.fullDisplayName = fullDisplayName;
     }
+
+    public void updateDisplay(String mode) {
+        this.setDisplayMode(mode);
+        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+    }
+
     public boolean getDisplayNotif() {
         return this.displayNotif;
     }
+
     public void setDisplayNotif(boolean displayNotif) {
         this.displayNotif = displayNotif;
     }

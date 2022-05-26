@@ -26,7 +26,8 @@ public class TargetStrafe extends Module{
 
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("Radius", this, 2.5, 0.1, 5.0, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Radius", this, 2.2, 0.1, 5.0, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Spin Speed", this, 0.8, 0.01, 1.0, false));
     }
 
     @EventTarget
@@ -47,7 +48,7 @@ public class TargetStrafe extends Module{
     public void onMove(EventMove event) {
         killAura = (KillAura) vClient.instance.moduleManager.getModulebyName("KillAura");
         if (canStrafe()) {
-            strafe(event, MovementUtil.getSpeed(event.getX(), event.getZ()));
+            strafe(event, vClient.instance.settingsManager.getSettingByName("Spin Speed").getValDouble() * MovementUtil.getSpeed(event.getX(), event.getZ()));
             if (checkVoid())
                 event.setSafeWalk(true);
         }
@@ -108,7 +109,7 @@ public class TargetStrafe extends Module{
 
             GL11.glLineWidth(2F);
             GL11.glBegin(GL11.GL_LINE_LOOP);
-            float[] chroma = ColorUtil.four_color(ColorUtil.getBlueandPinkRainbow(8,0));
+            float[] chroma = ColorUtil.four_color(ColorUtil.getBlueandPinkRainbow(8,0,1f));
             GlStateManager.color(chroma[0]/255f,chroma[1]/255f,chroma[2]/255f,chroma[3]/255f);
             for (int i = 0; i <= 360; i += 5) // You can change circle accuracy  i += _
                 GL11.glVertex2f((float)(Math.cos(i * Math.PI / 180.0) * radius), (float)(Math.sin(i * Math.PI / 180.0) * radius));

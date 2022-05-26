@@ -10,8 +10,6 @@ import de.Hero.settings.Setting;
 import org.lwjgl.input.Keyboard;
 
 public class GameSpeed extends Module {
-    private float gs;
-
     public GameSpeed() {
         super("GameSpeed", Keyboard.CHAR_NONE, Category.WORLD, "Change player game speed.");
         this.setDisplayNotif(true);
@@ -19,22 +17,21 @@ public class GameSpeed extends Module {
 
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("GameSpeed", this, 1.39, 1, 2, false));
-        this.setDisplayMode(String.valueOf(1.3));
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        vClient.instance.settingsManager.rSetting(new Setting("GameSpeed", this, 1.3, 1, 2, false));
+        updateDisplay(String.valueOf(1.3));
     }
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
+        float gs = (float) MathUtil.round(vClient.instance.settingsManager.getSettingByName("GameSpeed").getValDouble(), 2);
         mc.timer.timerSpeed = gs;
+        updateDisplay(String.valueOf(gs));
     }
 
     @Override
     public void onEnable() {
-        gs = (float) MathUtil.round(vClient.instance.settingsManager.getSettingByName("GameSpeed").getValDouble(), 2);
+        float gs = (float) MathUtil.round(vClient.instance.settingsManager.getSettingByName("GameSpeed").getValDouble(), 2);
         mc.timer.timerSpeed = gs;
-        this.setDisplayMode(String.valueOf(MathUtil.round(gs, 2)));
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
         super.onEnable();
     }
 

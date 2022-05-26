@@ -7,6 +7,7 @@ import java.util.Collections;
 
 import com.vClient.module.Category;
 import com.vClient.module.Module;
+import com.vClient.util.RenderUtil;
 import com.vClient.util.custom_font.CustomFontUtil;
 import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
@@ -14,12 +15,12 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.client.settings.GameSettings;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.ResourceLocation;
-
 import org.lwjgl.opengl.GL11;
-
 import de.Hero.clickgui.elements.Element;
 import de.Hero.clickgui.elements.ModuleButton;
 import de.Hero.clickgui.elements.menu.ElementSlider;
@@ -40,8 +41,8 @@ public class ClickGUI extends GuiScreen {
 	public static ArrayList<Panel> rpanels;
 	private ModuleButton mb = null;
 	public SettingsManager setmgr;
-	
-	/*
+
+	 /*
 	 * Konstrukor sollte nur einmal aufgerufen werden => in der MainMethode des eigenen Codes
 	 * hier Client.startClient()
 	 * das GUI wird dann so geffnet: 
@@ -57,7 +58,7 @@ public class ClickGUI extends GuiScreen {
 		FontUtil.setupFontUtils();
 		panels = new ArrayList<>();
 		double pwidth = 80;
-		double pheight = 15;
+		double pheight = 17;
 		double px = 10;
 		double py = 10;
 		double pyplus = pheight + 90;
@@ -110,6 +111,11 @@ public class ClickGUI extends GuiScreen {
 
 	@Override
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+		int width = new ScaledResolution(mc).getScaledWidth();
+		int height = new ScaledResolution(mc).getScaledHeight();
+		RenderUtil.drawHorizontalGradient(0, 0, width, height, ColorUtil.getRainbow(12f,0,1f,0.9f,60),ColorUtil.getRainbow(12f,120,1f,0.9f,60));
+		RenderUtil.drawVerticalGradient(0, 0, width, 0.4f*height, 0xcc000000, 0x00000000);
+
 		/*
 		 * Panels und damit auch Buttons rendern.
 		 * panels wird NUR hier im Code verwendet, da das
@@ -337,6 +343,18 @@ public class ClickGUI extends GuiScreen {
 	}
 
 	@Override
+	public void handleKeyboardInput() throws IOException {
+		this.handleKeyInput();
+		super.handleKeyboardInput();
+	}
+
+	private void handleKeyInput() {
+		final KeyBinding[] moveKeys = new KeyBinding[]{mc.gameSettings.keyBindForward, mc.gameSettings.keyBindBack, mc.gameSettings.keyBindLeft, mc.gameSettings.keyBindRight, mc.gameSettings.keyBindJump};
+		for (KeyBinding key : moveKeys)
+			key.pressed = GameSettings.isKeyDown(key);
+	}
+
+	@Override
 	public void initGui() {
 		/*
 		 * Start blur
@@ -347,7 +365,6 @@ public class ClickGUI extends GuiScreen {
 			if (vClient.instance.settingsManager.getSettingByName("blur").getValBoolean())
 				mc.entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
 		}
-
 	}
 
 	@Override

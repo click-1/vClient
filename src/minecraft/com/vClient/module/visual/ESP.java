@@ -27,7 +27,7 @@ import static org.lwjgl.opengl.GL11.*;
 
 public class ESP extends Module {
     private Map<Integer, Boolean> glCapMap = new HashMap<>();
-    private boolean outline;
+    private String mode;
 
     public ESP() {
         super("ESP", Keyboard.CHAR_NONE, Category.VISUAL, "Extrasensory perception.");
@@ -36,20 +36,16 @@ public class ESP extends Module {
     @Override
     public void setup() {
         ArrayList<String> options = new ArrayList<>();
-        options.add("Outline");
         options.add("Box");
-        this.setDisplayMode("Box");
-        this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
+        options.add("Outline");
+        updateDisplay("Box");
         vClient.instance.settingsManager.rSetting(new Setting("ESP Mode", this, "Box", options));
     }
 
     @EventTarget
     public void on3D(Event3D event) {
-        outline = vClient.instance.settingsManager.getSettingByName("ESP Mode").getValString().equalsIgnoreCase("Outline");
-        if (outline)
-            this.setDisplayMode("Outline");
-        else
-            this.setDisplayMode("Box");
+        mode = vClient.instance.settingsManager.getSettingByName("ESP Mode").getValString();
+        updateDisplay(mode);
 
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
 
@@ -84,7 +80,7 @@ public class ESP extends Module {
                         entityBox.maxZ - entity.posZ + z + 0.05D
                 );
 
-                if (outline) {
+                if (mode.equalsIgnoreCase("Outline")) {
                     glLineWidth(2.5F - 2.5F / (float)Math.pow(mc.thePlayer.getDistanceToEntity(entityLiving), 2));
                     setGlCap(GL_LINE_SMOOTH, true);
                     GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, color.getAlpha() / 510F);

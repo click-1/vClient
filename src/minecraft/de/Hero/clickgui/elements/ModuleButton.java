@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.vClient.module.Module;
+import com.vClient.util.RenderUtil;
 import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -72,7 +73,7 @@ public class ModuleButton {
 	 */
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 		Color temp = ColorUtil.getClickGUIColor();
-		int color = new Color(temp.getRed(), temp.getGreen(), temp.getBlue(), 150).getRGB();
+		//int color = new Color(temp.getRed(), temp.getGreen(), temp.getBlue(), 150).getRGB();
 		
 		/*
 		 * Ist das Module an, wenn ja dann soll
@@ -81,7 +82,8 @@ public class ModuleButton {
 		 */
 		int textcolor = 0xffafafaf;
 		if (mod.isToggled()) {
-			Gui.drawRect(x - 2, y, x + width + 2, y + height + 1, color);
+			//Gui.drawRect(x - 2, y, x + width + 2, y + height + 1, color);
+			RenderUtil.drawHorizontalGradient(x - 2, y, x + width + 2, y + height + 1, ColorUtil.getBlueandPinkRainbow(6f, 0, 0.8f), ColorUtil.getBlueandPinkRainbow(6f, -750, 0.8f));
 			textcolor = 0xffefefef;
 		}
 		

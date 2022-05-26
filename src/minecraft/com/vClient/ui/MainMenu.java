@@ -3,6 +3,7 @@ package com.vClient.ui;
 import com.vClient.discord.DiscordHandler;
 import com.vClient.ui.login.GuiAltLogin;
 import com.vClient.util.ColorUtil;
+import com.vClient.util.RenderUtil;
 import de.Hero.clickgui.util.FontUtil;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.gui.*;
@@ -12,10 +13,6 @@ import net.minecraft.util.ResourceLocation;
 import java.awt.*;
 
 public class MainMenu extends GuiScreen {
-    public MainMenu() {
-
-    }
-
     public void initGui() {
         DiscordHandler.getInstance().getDiscordRP().update("Successfully injected vClient!", "Main Menu");
     }
@@ -23,11 +20,11 @@ public class MainMenu extends GuiScreen {
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         mc.getTextureManager().bindTexture(new ResourceLocation("pictures/city.jpg"));
         this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
-        this.drawGradientRect(0, height - 75, width, height, 0x00000000, 0xff000000); //bottom
         this.drawGradientRect(0, 0, width, 75, 0xff000000, 0x00000000); //top
+        this.drawGradientRect(0, height - 75, width, height, 0x00000000, 0xff000000); //bottom
         mc.getTextureManager().bindTexture(new ResourceLocation("pictures/vclient_logo.png"));
         this.drawModalRectWithCustomSizedTexture((int)(.38*width), height/4, 0, 0, 125,125,125,125);
-        renderCustomAddress((int)(.835*width), (int)(.95*height));
+        RenderUtil.renderCustomAddress((int)(.835*width), (int)(.95*height));
         FontUtil.drawString("vClient b3", (int)(.015*width), (int)(.95*height), ColorUtil.getaqua());
 
         int side = 26, by = 35;
@@ -76,17 +73,6 @@ public class MainMenu extends GuiScreen {
             mc.shutdown();
         } else {
             return;
-        }
-    }
-
-    private void renderCustomAddress(int x, int y) {
-        FontRenderer fr = mc.fontRendererObj;
-        char[] chars = "best.vclient.gg".toCharArray();
-        int offset = 0;
-        for (char c : chars) {
-            fr.drawStringWithShadow(String.valueOf(c), x, y, ColorUtil.getBlueandPinkRainbow(6f, offset));
-            x += fr.getCharWidth(c);
-            offset -= 150;
         }
     }
 

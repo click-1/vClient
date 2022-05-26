@@ -4,7 +4,6 @@ import de.Hero.clickgui.ClickGUI;
 import de.Hero.clickgui.elements.menu.ElementComboBox;
 import de.Hero.clickgui.util.FontUtil;
 import de.Hero.settings.Setting;
-import net.minecraft.client.gui.GuiScreen;
 
 /**
  *  Made by HeroCode
@@ -22,6 +21,7 @@ public class Element {
 	public double y;
 	public double width;
 	public double height;
+	protected final int renderColor = 0x61000000;
 	
 	public String setstrg;
 	

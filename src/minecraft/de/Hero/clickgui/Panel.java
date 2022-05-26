@@ -3,12 +3,16 @@ package de.Hero.clickgui;
 import java.awt.Color;
 import java.util.ArrayList;
 
+import com.vClient.util.RenderUtil;
+import com.vClient.util.custom_font.CustomFontUtil;
+import com.vClient.util.custom_font.MinecraftFontRenderer;
 import com.vClient.vClient;
 import net.minecraft.client.gui.Gui;
 import de.Hero.clickgui.elements.ModuleButton;
 import com.vClient.util.ColorUtil;
 import de.Hero.clickgui.util.FontUtil;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.util.EnumChatFormatting;
 
 /**
  *  Made by HeroCode
@@ -30,6 +34,7 @@ public class Panel extends GuiScreen {
 	public boolean visible;
 	public ArrayList<ModuleButton> Elements = new ArrayList<>();
 	public ClickGUI clickgui;
+	private final MinecraftFontRenderer cfr = CustomFontUtil.hud;
 
 	/*
 	 * Konstrukor
@@ -64,14 +69,15 @@ public class Panel extends GuiScreen {
 			x = x2 + mouseX;
 			y = y2 + mouseY;
 		}
-		
+
 		Color temp = ColorUtil.getClickGUIColor().darker();
 		int outlineColor = new Color(temp.getRed(), temp.getGreen(), temp.getBlue(), 170).getRGB();
-		
-		Gui.drawRect(x, y, x + width, y + height, 0xff121212);
+
+		RenderUtil.drawHorizontalGradient(x, y, x + width, y + height, ColorUtil.getBlueandPinkRainbow(6f, 0, 0.88f), ColorUtil.getBlueandPinkRainbow(6f, -750, 0.88f));
+		//Gui.drawRect(x, y, x + width, y + height, ColorUtil.getBlueandPinkRainbow(6f,0));
 		if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Classic")){
-			Gui.drawRect(x - 2, y, x, y + height, outlineColor);
-			FontUtil.drawStringWithShadow(title, x + 2, y + height / 2 - FontUtil.getFontHeight()/2, 0xffefefef);
+			//Gui.drawRect(x - 2, y, x, y + height, outlineColor); the thin vertical bar to the left
+			cfr.drawString(title, x + 4, (float) (y + height/2 - cfr.getHeight()/2 + 1), 0xccefefef);
 		}else if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Jelly")){
 			Gui.drawRect(x + 4,			y + 2, x + 4.3, 		y + height - 2, 0xffaaaaaa);
 			Gui.drawRect(x - 4 + width, y + 2, x - 4.3 + width, y + height - 2, 0xffaaaaaa);
@@ -80,7 +86,7 @@ public class Panel extends GuiScreen {
 		
 		if (this.extended && !Elements.isEmpty()) {
 			double startY = y + height;
-			int epanelcolor = vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Classic") ? 0xff232323 : vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Jelly") ? 0xbb151515 : 0;
+				int epanelcolor = 0x61000000;
 			for (ModuleButton et : Elements) {
 				if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("New")){
 					Gui.drawRect(x - 2, startY, x + width, startY + et.height + 1, outlineColor);
