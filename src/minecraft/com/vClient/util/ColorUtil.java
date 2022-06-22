@@ -14,13 +14,15 @@ public class ColorUtil {
 	public static int getRainbow(float seconds, int offset, float saturation, float brightness, int alpha) {
 		float hue = (System.currentTimeMillis() + (int)(seconds*offset)) % (int)(seconds*360) / (seconds*360);
 		Color color = Color.getHSBColor(hue, saturation, brightness);
-		Color adjusted = new Color(color.getRed(), color.getBlue(), color.getGreen(), alpha);
+		Color adjusted = new Color(color.getRed(), color.getGreen(), color.getBlue(), alpha);
 		return adjusted.getRGB();
 	}
 
-	public static int getBlueandPinkRainbow(float seconds, int offset, float brightness) {
+	public static int getBlueandPinkRainbow(float seconds, int offset, float brightness, int alpha) {
 		float hue = (((int)(Math.abs((seconds*445)-((System.currentTimeMillis() + offset) % (int)(seconds*890)))) / (int)(seconds)) + 486) / 1000f;
-		return Color.HSBtoRGB(hue, 0.5f, brightness);
+		Color color = Color.getHSBColor(hue, 0.5f, brightness);
+		Color adjusted = new Color(color.getRed(), color.getGreen(), color.getBlue(), alpha);
+		return adjusted.getRGB();
 	}
 
 	public static float[] four_color(int rgb) {

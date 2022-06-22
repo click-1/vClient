@@ -13,6 +13,7 @@ import com.vClient.event.events.EventTick;
 import com.vClient.util.ColorUtil;
 import com.vClient.util.RenderUtil;
 import com.vClient.vClient;
+import de.Hero.clickgui.ClickGUI;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
@@ -354,7 +355,8 @@ public class GuiIngame extends Gui
             this.overlayPlayerList.renderPlayerlist(i, scoreboard, scoreobjective1);
         }
 
-        vClient.instance.arrayListHUD.draw();
+        if (!(mc.currentScreen instanceof ClickGUI))
+            vClient.instance.arrayListHUD.draw();
         vClient.instance.notifications.handleNotifs();
 
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);

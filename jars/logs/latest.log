@@ -1,34 +1,58 @@
-[21:55:10] [Client thread/INFO]: Setting user: Player703
-[21:55:10] [Client thread/INFO]: (Session ID is token:0:Player703)
-[21:55:12] [Client thread/INFO]: LWJGL Version: 2.9.4
-[21:55:13] [Client thread/INFO]: Reloading ResourceManager: Default
-[21:55:13] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:55:13] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[21:55:13] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:55:13] [Thread-6/INFO]: OpenAL initialized.
-[21:55:14] [Sound Library Loader/INFO]: Sound engine started
-[21:55:16] [Client thread/INFO]: Created: 512x512 textures-atlas
-[21:56:39] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[21:56:39] [Server thread/INFO]: Generating keypair
-[21:56:39] [Server thread/INFO]: Preparing start region for level 0
-[21:56:40] [Server thread/INFO]: Preparing spawn area: 87%
-[21:56:41] [Server thread/INFO]: Changing view distance to 5, from 10
-[21:56:41] [Server thread/INFO]: Player703[local:E:6865a96a] logged in with entity id 197 at (569.2972155024631, 71.0, 358.8220967381253)
-[21:56:41] [Server thread/INFO]: Player703 joined the game
-[21:56:41] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
-[21:56:41] [Server thread/INFO]: Saving and pausing game...
-[21:56:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[21:56:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[21:56:42] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[21:56:52] [Client thread/INFO]: [CHAT] §b[vClient]§7 Reported 0 players.
-[21:56:52] [Client thread/INFO]: [CHAT] §b[vClient]§7 Disabled §3AntiWatchdog
-[21:56:57] [Client thread/INFO]: [CHAT] §b[vClient]§7 Blink: 23
-[21:59:43] [Client thread/INFO]: Stopping!
-[21:59:43] [Client thread/INFO]: SoundSystem shutting down...
-[21:59:43] [Server thread/INFO]: Stopping server
-[21:59:43] [Server thread/INFO]: Saving players
-[21:59:43] [Server thread/INFO]: Saving worlds
-[21:59:43] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[21:59:43] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[21:59:43] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[21:59:43] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[13:12:58] [Client thread/INFO]: Setting user: Player915
+[13:12:58] [Client thread/INFO]: (Session ID is token:0:Player915)
+[13:13:01] [Client thread/INFO]: LWJGL Version: 2.9.4
+[13:13:02] [Client thread/INFO]: Reloading ResourceManager: Default
+[13:13:02] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[13:13:02] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[13:13:02] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[13:13:03] [Thread-6/INFO]: OpenAL initialized.
+[13:13:03] [Sound Library Loader/INFO]: Sound engine started
+[13:13:07] [Client thread/INFO]: Created: 512x512 textures-atlas
+[13:13:29] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[13:13:29] [Server thread/INFO]: Generating keypair
+[13:13:29] [Server thread/INFO]: Preparing start region for level 0
+[13:13:30] [Server thread/INFO]: Preparing spawn area: 62%
+[13:13:31] [Server thread/INFO]: Changing view distance to 8, from 10
+[13:13:31] [Server thread/INFO]: Player915[local:E:a4884c87] logged in with entity id 208 at (579.7778137820602, 73.0, 355.88559869176174)
+[13:13:31] [Server thread/INFO]: Player915 joined the game
+[13:13:31] [Client thread/INFO]: [CHAT] A new §eOptiFine§f version is available: §eHD Ultra I7§f
+[13:13:31] [Server thread/INFO]: Saving and pausing game...
+[13:13:31] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[13:13:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[13:13:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[13:13:36] [Client thread/INFO]: [CHAT] freecam, freeze
+[13:13:36] [Client thread/INFO]: [CHAT] §b[vClient]§7 Enabled §3FreeCam
+[13:13:52] [Texture Downloader #1/ERROR]: Couldn't download http texture
+java.net.ConnectException: Connection timed out: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method) ~[?:?]
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101) ~[?:?]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[?:?]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[?:?]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:591) ~[?:?]
+	at java.base/java.net.Socket.connect(Socket.java:540) ~[?:?]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[?:?]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1242) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1221) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1075) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1009) ~[?:?]
+	at net.minecraft.client.renderer.ThreadDownloadImageData$1.run(ThreadDownloadImageData.java:124) [bin/:?]
+[13:13:58] [Client thread/INFO]: [CHAT] §b[vClient]§7 Disabled §3FreeCam
+[13:14:09] [Server thread/INFO]: Saving and pausing game...
+[13:14:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[13:14:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[13:14:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[13:14:27] [Client thread/INFO]: Stopping!
+[13:14:27] [Client thread/INFO]: SoundSystem shutting down...
+[13:14:27] [Server thread/INFO]: Stopping server
+[13:14:27] [Server thread/INFO]: Saving players
+[13:14:27] [Server thread/INFO]: Saving worlds
+[13:14:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[13:14:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[13:14:27] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[13:14:27] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

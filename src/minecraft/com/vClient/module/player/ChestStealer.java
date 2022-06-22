@@ -13,7 +13,7 @@ import net.minecraft.item.*;
 import org.lwjgl.input.Keyboard;
 
 public class ChestStealer extends Module {
-    private ClockUtil clock = new ClockUtil();
+    private final ClockUtil clock = new ClockUtil();
 
     public ChestStealer() {
         super("ChestStealer", Keyboard.CHAR_NONE, Category.PLAYER, "Steal items from a chest.");

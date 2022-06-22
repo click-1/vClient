@@ -73,11 +73,11 @@ public class Panel extends GuiScreen {
 		Color temp = ColorUtil.getClickGUIColor().darker();
 		int outlineColor = new Color(temp.getRed(), temp.getGreen(), temp.getBlue(), 170).getRGB();
 
-		RenderUtil.drawHorizontalGradient(x, y, x + width, y + height, ColorUtil.getBlueandPinkRainbow(6f, 0, 0.88f), ColorUtil.getBlueandPinkRainbow(6f, -750, 0.88f));
+		RenderUtil.drawHorizontalGradient(x, y, x + width, y + height, ColorUtil.getBlueandPinkRainbow(6f, 0, 0.88f, 255), ColorUtil.getBlueandPinkRainbow(6f, -750, 0.88f, 255));
 		//Gui.drawRect(x, y, x + width, y + height, ColorUtil.getBlueandPinkRainbow(6f,0));
 		if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Classic")){
 			//Gui.drawRect(x - 2, y, x, y + height, outlineColor); the thin vertical bar to the left
-			cfr.drawString(title, x + 4, (float) (y + height/2 - cfr.getHeight()/2 + 1), 0xccefefef);
+			cfr.drawCenteredString(title, (float) (x + width/2), (float) (y + height/2 - cfr.getHeight()/2 + 1), 0xccefefef);
 		}else if(vClient.instance.settingsManager.getSettingByName("Design").getValString().equalsIgnoreCase("Jelly")){
 			Gui.drawRect(x + 4,			y + 2, x + 4.3, 		y + height - 2, 0xffaaaaaa);
 			Gui.drawRect(x - 4 + width, y + 2, x - 4.3 + width, y + height - 2, 0xffaaaaaa);

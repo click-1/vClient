@@ -14,6 +14,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.*;
 import org.lwjgl.input.Keyboard;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class InvManager extends Module {
@@ -22,7 +23,7 @@ public class InvManager extends Module {
     private int[] bestArmorSlot = new int[4];
     private float bestSwordDmg;
     private int bestSwordSlot, fishingRodSlot, bestBowDmg, bestBowSlot, bestSharpness, largestStack, stackSlot;
-    private ClockUtil clock = new ClockUtil();
+    private final ClockUtil clock = new ClockUtil();
 
     public InvManager() {
         super("InvManager", Keyboard.CHAR_NONE, Category.PLAYER, "Maintain ideal inventory setup (i.e. armor, tools, etc).");
@@ -31,11 +32,18 @@ public class InvManager extends Module {
     @Override
     public void setup() {
         vClient.instance.settingsManager.rSetting(new Setting("Delay", this, 100, 0, 1000, true));
+        ArrayList<String> options = new ArrayList<>();
+        options.add("Mega Walls");
+        options.add("Skywars");
+        updateDisplay("Skywars");
+        vClient.instance.settingsManager.rSetting(new Setting("Gamemode", this, "Skywars", options));
     }
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
         clock.updateTime();
+        String mode = vClient.instance.settingsManager.getSettingByName("Gamemode").getValString();
+        updateDisplay(mode);
         if (!(mc.currentScreen instanceof GuiInventory))
             return;
 
@@ -60,23 +68,23 @@ public class InvManager extends Module {
             return;
         }
 
-        if (fishingRodSlot != -1 && fishingRodSlot != 3 && clock.elapsedTime() > vClient.instance.settingsManager.getSettingByName("Delay").getValDouble()) {
+        if (mode.equalsIgnoreCase("Skywars") && fishingRodSlot != -1 && fishingRodSlot != 3 && clock.elapsedTime() > vClient.instance.settingsManager.getSettingByName("Delay").getValDouble()) {
             clearSpace();
             mc.playerController.windowClick(mc.thePlayer.inventoryContainer.windowId, fishingRodSlot < 9 ? fishingRodSlot + 36 : fishingRodSlot, 3, 2, mc.thePlayer);
             clock.resetTime();
             return;
         }
 
-        if (bestBowSlot != -1 && bestBowSlot != 2 && clock.elapsedTime() > vClient.instance.settingsManager.getSettingByName("Delay").getValDouble()) {
+        if (bestBowSlot != -1 && bestBowSlot != (mode.equalsIgnoreCase("Skywars") ? 2 : 3) && clock.elapsedTime() > vClient.instance.settingsManager.getSettingByName("Delay").getValDouble()) {
             clearSpace();
-            mc.playerController.windowClick(mc.thePlayer.inventoryContainer.windowId, bestBowSlot < 9 ? bestBowSlot + 36 : bestBowSlot, 2, 2, mc.thePlayer);
+            mc.playerController.windowClick(mc.thePlayer.inventoryContainer.windowId, bestBowSlot < 9 ? bestBowSlot + 36 : bestBowSlot, (mode.equalsIgnoreCase("Skywars") ? 2 : 3), 2, mc.thePlayer);
             clock.resetTime();
             return;
         }
 
-        if (stackSlot != -1 && stackSlot != 8 && clock.elapsedTime() > vClient.instance.settingsManager.getSettingByName("Delay").getValDouble()) {
+        if (stackSlot != -1 && stackSlot != (mode.equalsIgnoreCase("Skywars") ? 8 : 2) && clock.elapsedTime() > vClient.instance.settingsManager.getSettingByName("Delay").getValDouble()) {
             clearSpace();
-            mc.playerController.windowClick(mc.thePlayer.inventoryContainer.windowId, stackSlot < 9 ? stackSlot + 36 : stackSlot, 8, 2, mc.thePlayer);
+            mc.playerController.windowClick(mc.thePlayer.inventoryContainer.windowId, stackSlot < 9 ? stackSlot + 36 : stackSlot, (mode.equalsIgnoreCase("Skywars") ? 8 : 2), 2, mc.thePlayer);
             clock.resetTime();
             return;
         }

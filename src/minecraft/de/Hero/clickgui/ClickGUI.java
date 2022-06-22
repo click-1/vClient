@@ -113,7 +113,7 @@ public class ClickGUI extends GuiScreen {
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 		int width = new ScaledResolution(mc).getScaledWidth();
 		int height = new ScaledResolution(mc).getScaledHeight();
-		RenderUtil.drawHorizontalGradient(0, 0, width, height, ColorUtil.getRainbow(12f,0,1f,0.9f,60),ColorUtil.getRainbow(12f,120,1f,0.9f,60));
+		RenderUtil.drawHorizontalGradient(0, 0, width, height, ColorUtil.getRainbow(12f,0,1f,0.9f,60),ColorUtil.getRainbow(12f,150,1f,0.9f,60));
 		RenderUtil.drawVerticalGradient(0, 0, width, 0.4f*height, 0xcc000000, 0x00000000);
 
 		/*
@@ -133,7 +133,7 @@ public class ClickGUI extends GuiScreen {
 		/*															*/ ScaledResolution s = new ScaledResolution(mc);
   		/* DO NOT REMOVE											*/ GL11.glPushMatrix();
 		/* copyright HeroCode 2017									*/ GL11.glTranslated(s.getScaledWidth(), s.getScaledHeight(), 0);GL11.glScaled(0.5, 0.5, 0.5);
-		/* https://www.youtube.com/channel/UCJum3PIbnYvIfIEu05GL_yQ	*/ FontUtil.drawStringWithShadow("b"+"y"+ "H"+"e"+"r"+"o"+"C"+"o"+"d"+"e", -Minecraft.getMinecraft().fontRendererObj.getStringWidth("b"+"y"+ "H"+"e"+"r"+"o"+"C"+"o"+"d"+"e"), -Minecraft.getMinecraft().fontRendererObj.FONT_HEIGHT, 0xff11F86B);
+		/* https://www.youtube.com/channel/UCJum3PIbnYvIfIEu05GL_yQ	*/ FontUtil.drawStringWithShadow("click_1", -Minecraft.getMinecraft().fontRendererObj.getStringWidth("click_1"), -Minecraft.getMinecraft().fontRendererObj.FONT_HEIGHT, ColorUtil.getBlueandPinkRainbow(6f,0,1,255));
 		/*															*/ GL11.glPopMatrix();
 		
 		mb = null;
@@ -207,7 +207,7 @@ public class ClickGUI extends GuiScreen {
 				for (ModuleButton b : pl.Elements) {
 					if (b.isHovered(mouseX, mouseY)) {
 						Gui.drawRect(mouseX + 7, mouseY - 3, mouseX + 13 + CustomFontUtil.descriptions.getStringWidth(EnumChatFormatting.BOLD+  b.mod.getDescription()), mouseY + b.height -3, new Color(182, 182, 182, 97).getRGB());
-						CustomFontUtil.descriptions.drawString(EnumChatFormatting.BOLD + b.mod.getDescription(), mouseX + 10, mouseY + 1, new Color(250, 129, 0).getRGB());
+						CustomFontUtil.descriptions.drawString(EnumChatFormatting.BOLD + b.mod.getDescription(), mouseX + 10, mouseY + 1, ColorUtil.getBlueandPinkRainbow(6f, 0, 1f, 255));
 						break description;
 					}
 				}

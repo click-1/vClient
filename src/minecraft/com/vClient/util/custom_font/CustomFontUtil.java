@@ -13,16 +13,16 @@ public class CustomFontUtil {
     public static volatile int completed;
     public static MinecraftFontRenderer arial;
     public static MinecraftFontRenderer comfortaa;
-    public static MinecraftFontRenderer big;
     public static MinecraftFontRenderer descriptions;
     public static MinecraftFontRenderer hud;
     public static MinecraftFontRenderer notif;
+    public static MinecraftFontRenderer opensans;
     private static Font arial_;
     private static Font comfortaa_;
-    private static Font big_;
     private static Font descriptions_;
     private static Font hud_;
     private static Font notif_;
+    private static Font opensans_;
 
     private static Font getFont(Map<String, Font> locationMap, String location, int size) {
         Font font;
@@ -56,10 +56,10 @@ public class CustomFontUtil {
             Map<String, Font> locationMap = new HashMap<>();
             arial_ = getFont(locationMap, "arial.ttf", 15);
             comfortaa_ = getFont(locationMap, "comfortaa.ttf", 20);
-            big_ = getFont(locationMap, "roboto.ttf", 24);
             descriptions_ = getFont(locationMap, "arialn.ttf", 15);
             hud_ = getFont(locationMap, "roboto.ttf", 20);
             notif_ = getFont(locationMap, "arial.ttf", 18);
+            opensans_ = getFont(locationMap, "opensans.ttf", 18);
             completed++;
         }).start();
         new Thread(() ->
@@ -84,9 +84,9 @@ public class CustomFontUtil {
 
         arial = new MinecraftFontRenderer(arial_, true, true);
         comfortaa = new MinecraftFontRenderer(comfortaa_, true, true);
-        big = new MinecraftFontRenderer(big_, true, true);
         descriptions = new MinecraftFontRenderer(descriptions_, true, true);
         hud = new MinecraftFontRenderer(hud_, true, true);
         notif = new MinecraftFontRenderer(notif_, true, true);
+        opensans = new MinecraftFontRenderer(opensans_, true, true);
     }
 }

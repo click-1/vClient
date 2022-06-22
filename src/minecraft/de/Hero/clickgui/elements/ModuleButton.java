@@ -6,10 +6,13 @@ import java.util.ArrayList;
 
 import com.vClient.module.Module;
 import com.vClient.util.RenderUtil;
+import com.vClient.util.custom_font.CustomFontUtil;
+import com.vClient.util.custom_font.MinecraftFontRenderer;
 import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 
+import net.minecraft.util.EnumChatFormatting;
 import org.lwjgl.input.Keyboard;
 
 import de.Hero.clickgui.Panel;
@@ -38,6 +41,7 @@ public class ModuleButton {
 	public double height;
 	public boolean extended = false;
 	public boolean listening = false;
+	private final MinecraftFontRenderer cfr = CustomFontUtil.arial;
 
 	/*
 	 * Konstrukor
@@ -83,7 +87,7 @@ public class ModuleButton {
 		int textcolor = 0xffafafaf;
 		if (mod.isToggled()) {
 			//Gui.drawRect(x - 2, y, x + width + 2, y + height + 1, color);
-			RenderUtil.drawHorizontalGradient(x - 2, y, x + width + 2, y + height + 1, ColorUtil.getBlueandPinkRainbow(6f, 0, 0.8f), ColorUtil.getBlueandPinkRainbow(6f, -750, 0.8f));
+			RenderUtil.drawHorizontalGradient(x - 2, y, x + width + 2, y + height + 1, ColorUtil.getBlueandPinkRainbow(6f, 0, 0.8f, 255), ColorUtil.getBlueandPinkRainbow(6f, -750, 0.8f, 255));
 			textcolor = 0xffefefef;
 		}
 		
@@ -97,7 +101,9 @@ public class ModuleButton {
 		/*
 		 * Den Namen des Modules in die Mitte (x und y) rendern
 		 */
-		FontUtil.drawTotalCenteredStringWithShadow(mod.getName(), x + width / 2, y + 1 + height / 2, textcolor);
+		FontUtil.drawStringWithShadow(mod.getName(), x + 2, y + 2, textcolor);
+		if (mod.getKey() != 0 && mod.getName() != "ClickGUI")
+			cfr.drawString(EnumChatFormatting.BOLD + Keyboard.getKeyName(mod.getKey()), x + width - cfr.getStringWidth(Keyboard.getKeyName(mod.getKey())) - 1.5, (float) (y + 5), new Color(255, 170, 0).getRGB());
 	}
 
 	/*

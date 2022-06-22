@@ -49,7 +49,7 @@ public class ESP extends Module {
 
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
 
-        for (Entity entity : mc.theWorld.loadedEntityList) {
+        for (final Entity entity : mc.theWorld.loadedEntityList) {
             if (entity instanceof EntityLivingBase && entity != mc.thePlayer && canDisplay((EntityLivingBase) entity) && mc.thePlayer.getDistanceToEntity(entity) >= 1F) {
                 final EntityLivingBase entityLiving = (EntityLivingBase) entity;
                 Color color = getColor(entityLiving);

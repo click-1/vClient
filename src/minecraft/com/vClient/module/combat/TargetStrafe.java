@@ -109,7 +109,7 @@ public class TargetStrafe extends Module{
 
             GL11.glLineWidth(2F);
             GL11.glBegin(GL11.GL_LINE_LOOP);
-            float[] chroma = ColorUtil.four_color(ColorUtil.getBlueandPinkRainbow(8,0,1f));
+            float[] chroma = ColorUtil.four_color(ColorUtil.getBlueandPinkRainbow(8,0,1f,255));
             GlStateManager.color(chroma[0]/255f,chroma[1]/255f,chroma[2]/255f,chroma[3]/255f);
             for (int i = 0; i <= 360; i += 5) // You can change circle accuracy  i += _
                 GL11.glVertex2f((float)(Math.cos(i * Math.PI / 180.0) * radius), (float)(Math.sin(i * Math.PI / 180.0) * radius));

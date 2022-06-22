@@ -60,6 +60,7 @@ public class ModuleManager {
         moduleMap.put("StaticFOV", new StaticFOV());
         moduleMap.put("StorageESP", new StorageESP());
         //WORLD
+        moduleMap.put("FreeCam", new FreeCam());
         moduleMap.put("Freeze", new Freeze());
         moduleMap.put("GameSpeed", new GameSpeed());
         moduleMap.put("NoFall", new NoFall());

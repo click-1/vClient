@@ -31,7 +31,7 @@ public class MovementUtil {
     }
 
     public static void strafe(final float speed) {
-        if(!isMoving())
+        if (!isMoving())
             return;
 
         final double yaw = getDirection();
@@ -47,19 +47,19 @@ public class MovementUtil {
     public static double getDirection() {
         float rotationYaw = mc.thePlayer.rotationYaw;
 
-        if(mc.thePlayer.moveForward < 0F)
+        if (mc.thePlayer.moveForward < 0F)
             rotationYaw += 180F;
 
         float forward = 1F;
-        if(mc.thePlayer.moveForward < 0F)
+        if (mc.thePlayer.moveForward < 0F)
             forward = -0.5F;
-        else if(mc.thePlayer.moveForward > 0F)
+        else if (mc.thePlayer.moveForward > 0F)
             forward = 0.5F;
 
-        if(mc.thePlayer.moveStrafing > 0F)
+        if (mc.thePlayer.moveStrafing > 0F)
             rotationYaw -= 90F * forward;
 
-        if(mc.thePlayer.moveStrafing < 0F)
+        if (mc.thePlayer.moveStrafing < 0F)
             rotationYaw += 90F * forward;
 
         rotationYaw = rotationYaw % 360;

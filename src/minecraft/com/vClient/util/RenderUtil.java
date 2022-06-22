@@ -91,7 +91,7 @@ public class RenderUtil {
         char[] chars = "best.vclient.gg".toCharArray();
         int offset = 0;
         for (char c : chars) {
-            fr.drawStringWithShadow(String.valueOf(c), x, y, ColorUtil.getBlueandPinkRainbow(6f, offset,1f));
+            fr.drawStringWithShadow(String.valueOf(c), x, y, ColorUtil.getBlueandPinkRainbow(6f, offset, 1f, 255));
             x += fr.getCharWidth(c);
             offset -= 150;
         }
