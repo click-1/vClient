@@ -137,32 +137,33 @@ public abstract class AbstractClientPlayer extends EntityPlayer
     {
         float f = 1.0F;
 
-        if (!vClient.instance.moduleManager.getModulebyName("StaticFOV").isToggled()) {
-            if (this.capabilities.isFlying) {
-                f *= 1.1F;
-            }
-
-            IAttributeInstance iattributeinstance = this.getEntityAttribute(SharedMonsterAttributes.movementSpeed);
-            f = (float) ((double) f * ((iattributeinstance.getAttributeValue() / (double) this.capabilities.getWalkSpeed() + 1.0D) / 2.0D));
-
-            if (this.capabilities.getWalkSpeed() == 0.0F || Float.isNaN(f) || Float.isInfinite(f)) {
-                f = 1.0F;
-            }
-
-            if (this.isUsingItem() && this.getItemInUse().getItem() == Items.bow) {
-                int i = this.getItemInUseDuration();
-                float f1 = (float) i / 20.0F;
-
-                if (f1 > 1.0F) {
-                    f1 = 1.0F;
-                } else {
-                    f1 = f1 * f1;
-                }
-
-                f *= 1.0F - f1 * 0.15F;
-            }
-
+        /**
+         if (this.capabilities.isFlying) {
+            f *= 1.1F;
         }
+
+        IAttributeInstance iattributeinstance = this.getEntityAttribute(SharedMonsterAttributes.movementSpeed);
+        f = (float) ((double) f * ((iattributeinstance.getAttributeValue() / (double) this.capabilities.getWalkSpeed() + 1.0D) / 2.0D));
+
+        if (this.capabilities.getWalkSpeed() == 0.0F || Float.isNaN(f) || Float.isInfinite(f)) {
+            f = 1.0F;
+        }
+
+        if (this.isUsingItem() && this.getItemInUse().getItem() == Items.bow) {
+            int i = this.getItemInUseDuration();
+            float f1 = (float) i / 20.0F;
+
+            if (f1 > 1.0F) {
+                f1 = 1.0F;
+            } else {
+                f1 = f1 * f1;
+            }
+
+            f *= 1.0F - f1 * 0.15F;
+        }
+
+        **/
+
 
         return Reflector.ForgeHooksClient_getOffsetFOV.exists() ? Reflector.callFloat(Reflector.ForgeHooksClient_getOffsetFOV, new Object[] {this, Float.valueOf(f)}): f;
     }

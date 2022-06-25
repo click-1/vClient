@@ -4,6 +4,7 @@ import com.vClient.event.EventTarget;
 import com.vClient.event.events.Event3D;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
+import com.vClient.util.RenderUtil;
 import com.vClient.util.TargetUtil;
 import com.vClient.vClient;
 import de.Hero.settings.Setting;
@@ -50,7 +51,7 @@ public class ESP extends Module {
         this.setFullDisplayName(this.getName() + " " + this.getDisplayMode());
 
         for (final Entity entity : mc.theWorld.loadedEntityList) {
-            if (entity instanceof EntityLivingBase && entity != mc.thePlayer && canDisplay((EntityLivingBase) entity) && mc.thePlayer.getDistanceToEntity(entity) >= 1F) {
+            if (entity instanceof EntityLivingBase && entity != mc.thePlayer && RenderUtil.canDisplay((EntityLivingBase) entity) && mc.thePlayer.getDistanceToEntity(entity) >= 1F) {
                 final EntityLivingBase entityLiving = (EntityLivingBase) entity;
                 Color color = getColor(entityLiving);
 
@@ -245,23 +246,5 @@ public class ESP extends Module {
             break;
         }
         return new Color(Integer.MAX_VALUE);
-    }
-
-    public boolean canDisplay(EntityLivingBase entity) {
-        if (entity == null)
-            return false;
-        if (TargetUtil.isPlayer(entity) && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())
-            return false;
-        if (TargetUtil.isAnimal(entity) && !vClient.instance.settingsManager.getSettingByName("Animals").getValBoolean())
-            return false;
-        if (TargetUtil.isMob(entity) && !vClient.instance.settingsManager.getSettingByName("Mobs").getValBoolean())
-            return false;
-        if (entity instanceof EntityVillager && !vClient.instance.settingsManager.getSettingByName("Villagers").getValBoolean())
-            return false;
-        if (entity.isInvisible() && !vClient.instance.settingsManager.getSettingByName("Invisible").getValBoolean())
-            return false;
-        if (!entity.isEntityAlive() && !vClient.instance.settingsManager.getSettingByName("Dead").getValBoolean())
-            return false;
-        return true;
     }
 }

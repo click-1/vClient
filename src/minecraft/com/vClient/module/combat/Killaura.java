@@ -41,13 +41,6 @@ public class KillAura extends Module {
         vClient.instance.settingsManager.rSetting(new Setting("CPS", this, 15, 1, 25, true));
         vClient.instance.settingsManager.rSetting(new Setting("Multi", this, false));
         vClient.instance.settingsManager.rSetting(new Setting("AutoBlock", this, true));
-        vClient.instance.settingsManager.rSetting(new Setting("Players", this, true));
-        vClient.instance.settingsManager.rSetting(new Setting("Animals", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Mobs", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Villagers", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Invisible", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Dead", this, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Teams", this, true));
 
         updateDisplay("Sort");
     }
@@ -144,21 +137,21 @@ public class KillAura extends Module {
         boolean conditions = entity != null && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble() && mc.thePlayer.getDistanceToEntity(entity) <= range;
         if (!conditions)
             return false;
-        if (TargetUtil.isPlayer(entity) && !vClient.instance.settingsManager.getSettingByName("Players").getValBoolean())
+        if (TargetUtil.isPlayer(entity) && !vClient.instance.moduleManager.getModulebyName("Player").isToggled())
             return false;
-        if (TargetUtil.isAnimal(entity) && !vClient.instance.settingsManager.getSettingByName("Animals").getValBoolean())
+        if (TargetUtil.isAnimal(entity) && !vClient.instance.moduleManager.getModulebyName("Animal").isToggled())
             return false;
-        if (TargetUtil.isMob(entity) && !vClient.instance.settingsManager.getSettingByName("Mobs").getValBoolean())
+        if (TargetUtil.isMob(entity) && !vClient.instance.moduleManager.getModulebyName("Mob").isToggled())
             return false;
-        if (entity instanceof EntityVillager && !vClient.instance.settingsManager.getSettingByName("Villagers").getValBoolean())
+        if (entity instanceof EntityVillager && !vClient.instance.moduleManager.getModulebyName("Villager").isToggled())
             return false;
-        if (checkIfSameTeam(entity) && vClient.instance.settingsManager.getSettingByName("Teams").getValBoolean())
+        if (checkIfSameTeam(entity) && !vClient.instance.moduleManager.getModulebyName("Teammate").isToggled())
             return false;
-        if (entity.isInvisible() && !vClient.instance.settingsManager.getSettingByName("Invisible").getValBoolean())
+        if (entity.isInvisible() && !vClient.instance.moduleManager.getModulebyName("Invisible").isToggled())
             return false;
-        if (!entity.isEntityAlive() && !vClient.instance.settingsManager.getSettingByName("Dead").getValBoolean())
+        if (!entity.isEntityAlive() && !vClient.instance.moduleManager.getModulebyName("Dead").isToggled())
             return false;
-        if (!isInFOV(entity, vClient.instance.settingsManager.getSettingByName("FOV").getValDouble()))
+        if (!MathUtil.isInFOV(entity, vClient.instance.settingsManager.getSettingByName("FOV").getValDouble()))
             return false;
         return true;
     }
@@ -173,11 +166,5 @@ public class KillAura extends Module {
             return targetName.startsWith("§" + clientName.charAt(1));
         }
         return false;
-    }
-
-    private boolean isInFOV(EntityLivingBase entity, double angle) {
-        angle *= .5D;
-        double angleDiff = MathUtil.getAngleDifference(mc.thePlayer.rotationYaw, PlayerUtil.getRotations(entity)[0]);
-        return (angleDiff > 0 && angleDiff < angle) || (-angle < angleDiff && angleDiff < 0);
     }
 }

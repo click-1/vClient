@@ -1,5 +1,6 @@
 package com.vClient.ui;
 
+import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.util.MathUtil;
 import com.vClient.util.MovementUtil;
@@ -37,7 +38,7 @@ public class ArrayListHUD {
         int chroma = ColorUtil.getBlueandPinkRainbow(4f, 0, 1f, 255);
 
         for (Module m : getSortedList()) {
-            if (!m.isToggled())
+            if (!m.isToggled() || m.getCategory() == Category.TARGETS)
                 continue;
             int gap = cfr.getHeight() + 5;
             float offset = count * gap;

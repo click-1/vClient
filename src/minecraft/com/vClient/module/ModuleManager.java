@@ -5,6 +5,7 @@ import com.vClient.module.exploit.*;
 import com.vClient.module.exploit.Queue;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
+import com.vClient.module.targets.*;
 import com.vClient.module.visual.*;
 import com.vClient.module.world.*;
 import com.vClient.util.MyTrie;
@@ -50,6 +51,14 @@ public class ModuleManager {
         moduleMap.put("FastPlace", new FastPlace());
         moduleMap.put("InvManager", new InvManager());
         moduleMap.put("Velocity", new Velocity());
+        //TARGETS
+        moduleMap.put("Animal", new Animal());
+        moduleMap.put("Dead", new Dead());
+        moduleMap.put("Invisible", new Invisible());
+        moduleMap.put("Mob", new Mob());
+        moduleMap.put("Player", new Player());
+        moduleMap.put("Teammate", new Teammate());
+        moduleMap.put("Villager", new Villager());
         //VISUAL
         moduleMap.put("Camera", new Camera());
         moduleMap.put("Clairvoyance", new Clairvoyance());
@@ -57,8 +66,8 @@ public class ModuleManager {
         moduleMap.put("Effects", new Effects());
         moduleMap.put("ESP", new ESP());
         moduleMap.put("NoHurtCam", new NoHurtCam());
-        moduleMap.put("StaticFOV", new StaticFOV());
         moduleMap.put("StorageESP", new StorageESP());
+        moduleMap.put("Tracers", new Tracers());
         //WORLD
         moduleMap.put("FreeCam", new FreeCam());
         moduleMap.put("Freeze", new Freeze());

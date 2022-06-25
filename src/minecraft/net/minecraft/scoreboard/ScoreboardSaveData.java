@@ -53,9 +53,9 @@ public class ScoreboardSaveData extends WorldSavedData
                 this.readDisplayConfig(nbt.getCompoundTag("DisplaySlots"));
             }
 
-            if (nbt.hasKey("Teams", 9))
+            if (nbt.hasKey("Teammate", 9))
             {
-                this.readTeams(nbt.getTagList("Teams", 10));
+                this.readTeams(nbt.getTagList("Teammate", 10));
             }
         }
     }
@@ -204,7 +204,7 @@ public class ScoreboardSaveData extends WorldSavedData
         {
             nbt.setTag("Objectives", this.objectivesToNbt());
             nbt.setTag("PlayerScores", this.scoresToNbt());
-            nbt.setTag("Teams", this.func_96496_a());
+            nbt.setTag("Teammate", this.func_96496_a());
             this.func_96497_d(nbt);
         }
     }

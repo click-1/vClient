@@ -69,7 +69,8 @@ public class vClient {
         moduleManager.getModulebyName("NoHurtCam").silentToggle();
         moduleManager.getModulebyName("Rotations").silentToggle();
         moduleManager.getModulebyName("Sprint").silentToggle();
-        moduleManager.getModulebyName("StaticFOV").silentToggle();
         moduleManager.getModulebyName("TargetHUD").silentToggle();
+        //TARGETS
+        moduleManager.getModulebyName("Player").silentToggle();
     }
 }

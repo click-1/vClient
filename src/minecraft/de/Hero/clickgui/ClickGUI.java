@@ -62,7 +62,7 @@ public class ClickGUI extends GuiScreen {
 		double px = 10;
 		double py = 10;
 		double pyplus = pheight + 90;
-		double pxplus = pwidth + 50;
+		double pxplus = pwidth + 30;
 		
 		/*
 		 * Zum Sortieren der Panels einfach die Reihenfolge im Enum ndern ;)
@@ -80,10 +80,10 @@ public class ClickGUI extends GuiScreen {
 						}
 			});
 			categories++;
-			if (categories < 3) {
+			if (categories < 4) {
 				px += pxplus;
 			}
-			else if (categories == 3) {
+			else if (categories == 4) {
 				px = 10;
 				py += pyplus;
 			} else {
@@ -205,7 +205,7 @@ public class ClickGUI extends GuiScreen {
 		for (Panel pl : panels) {
 			if (pl.extended && pl.visible && pl.Elements != null) {
 				for (ModuleButton b : pl.Elements) {
-					if (b.isHovered(mouseX, mouseY)) {
+					if (b.isHovered(mouseX, mouseY) && b.mod.getDescription() != null) {
 						Gui.drawRect(mouseX + 7, mouseY - 3, mouseX + 13 + CustomFontUtil.descriptions.getStringWidth(EnumChatFormatting.BOLD+  b.mod.getDescription()), mouseY + b.height -3, new Color(182, 182, 182, 97).getRGB());
 						CustomFontUtil.descriptions.drawString(EnumChatFormatting.BOLD + b.mod.getDescription(), mouseX + 10, mouseY + 1, ColorUtil.getBlueandPinkRainbow(6f, 0, 1f, 255));
 						break description;

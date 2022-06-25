@@ -1,5 +1,6 @@
 package com.vClient.util;
 
+import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
@@ -8,6 +9,8 @@ import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.util.ResourceLocation;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -95,5 +98,25 @@ public class RenderUtil {
             x += fr.getCharWidth(c);
             offset -= 150;
         }
+    }
+
+    public static boolean canDisplay(EntityLivingBase entity) {
+        if (entity == null)
+            return false;
+        if (TargetUtil.isPlayer(entity) && !vClient.instance.moduleManager.getModulebyName("Player").isToggled())
+            return false;
+        if (TargetUtil.isAnimal(entity) && !vClient.instance.moduleManager.getModulebyName("Animal").isToggled())
+            return false;
+        if (TargetUtil.isMob(entity) && !vClient.instance.moduleManager.getModulebyName("Mob").isToggled())
+            return false;
+        if (entity instanceof EntityVillager && !vClient.instance.moduleManager.getModulebyName("Villager").isToggled())
+            return false;
+        if (entity.isInvisible() && !vClient.instance.moduleManager.getModulebyName("Invisible").isToggled())
+            return false;
+        if (!entity.isEntityAlive() && !vClient.instance.moduleManager.getModulebyName("Dead").isToggled())
+            return false;
+        if (TargetUtil.checkIfSameTeam(entity) && !vClient.instance.moduleManager.getModulebyName("Teammate").isToggled())
+            return false;
+        return true;
     }
 }
