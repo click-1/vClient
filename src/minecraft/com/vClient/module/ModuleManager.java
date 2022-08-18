@@ -30,6 +30,7 @@ public class ModuleManager {
         //EXPLOIT
         moduleMap.put("AntiAFK", new AntiAFK());
         moduleMap.put("AntiWatchdog", new AntiWatchdog());
+        moduleMap.put("AutoGG", new AutoGG());
         moduleMap.put("Blink", new Blink());
         moduleMap.put("Disabler", new Disabler());
         moduleMap.put("Queue", new Queue());

@@ -62,6 +62,7 @@ public class vClient {
     }
 
     private void prestartModules() {
+        moduleManager.getModulebyName("AutoGG").silentToggle();
         moduleManager.getModulebyName("Camera").silentToggle();
         moduleManager.getModulebyName("Disabler").silentToggle();
         moduleManager.getModulebyName("Effects").silentToggle();
