@@ -34,7 +34,7 @@ public class Module {
         if (vClient.instance.settingsManager.getSettingByName("Sound").getValBoolean())
             mc.thePlayer.playSound("random.click", 0.8f, 0.8f);
         if (displayNotif)
-            vClient.instance.notifications.addNotif(this);
+            vClient.instance.notifications.addNotif(this, "");
     }
 
     public void toggle() {

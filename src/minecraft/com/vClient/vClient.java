@@ -67,7 +67,6 @@ public class vClient {
         moduleManager.getModulebyName("Disabler").silentToggle();
         moduleManager.getModulebyName("Effects").silentToggle();
         moduleManager.getModulebyName("KeepSprint").silentToggle();
-        moduleManager.getModulebyName("NoHurtCam").silentToggle();
         moduleManager.getModulebyName("Rotations").silentToggle();
         moduleManager.getModulebyName("Sprint").silentToggle();
         moduleManager.getModulebyName("TargetHUD").silentToggle();

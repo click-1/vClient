@@ -653,9 +653,6 @@ public class EntityRenderer implements IResourceManagerReloadListener
 
     private void hurtCameraEffect(float partialTicks)
     {
-        if (vClient.instance.moduleManager.getModulebyName("NoHurtCam").isToggled())
-            return;
-
         if (this.mc.getRenderViewEntity() instanceof EntityLivingBase)
         {
             EntityLivingBase entitylivingbase = (EntityLivingBase)this.mc.getRenderViewEntity();
@@ -871,7 +868,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
             GlStateManager.translate((float)(pass * 2 - 1) * 0.1F, 0.0F, 0.0F);
         }
 
-        this.hurtCameraEffect(partialTicks);
+        //this.hurtCameraEffect(partialTicks);
 
         if (this.mc.gameSettings.viewBobbing)
         {
@@ -950,7 +947,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
             }
 
             GlStateManager.pushMatrix();
-            this.hurtCameraEffect(partialTicks);
+            //this.hurtCameraEffect(partialTicks);
 
             if (this.mc.gameSettings.viewBobbing)
             {
@@ -971,7 +968,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
             if (this.mc.gameSettings.thirdPersonView == 0 && !flag)
             {
                 this.itemRenderer.renderOverlays(partialTicks);
-                this.hurtCameraEffect(partialTicks);
+                //this.hurtCameraEffect(partialTicks);
             }
 
             if (this.mc.gameSettings.viewBobbing)

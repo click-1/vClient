@@ -138,7 +138,7 @@ public class PotionEffect
         return this.duration > 0;
     }
 
-    private int deincrementDuration()
+    public int deincrementDuration()
     {
         return --this.duration;
     }
