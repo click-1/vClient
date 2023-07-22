@@ -2,7 +2,10 @@ package com.vClient.module;
 
 import com.vClient.module.combat.*;
 import com.vClient.module.exploit.*;
-import com.vClient.module.exploit.Queue;
+import com.vClient.module.minigames.MMDetector;
+import com.vClient.module.minigames.Paintball;
+import com.vClient.module.minigames.Queue;
+import com.vClient.module.minigames.Thrower;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
 import com.vClient.module.targets.*;
@@ -33,7 +36,6 @@ public class ModuleManager {
         moduleMap.put("AutoGG", new AutoGG());
         moduleMap.put("Blink", new Blink());
         moduleMap.put("Disabler", new Disabler());
-        moduleMap.put("Queue", new Queue());
         moduleMap.put("Rotations", new Rotations());
         moduleMap.put("Spammer", new Spammer());
         //MOVEMENT
@@ -66,7 +68,6 @@ public class ModuleManager {
         moduleMap.put("ClickGUI", new ClickGUI());
         moduleMap.put("Effects", new Effects());
         moduleMap.put("ESP", new ESP());
-        moduleMap.put("Paintball", new Paintball());
         moduleMap.put("StorageESP", new StorageESP());
         moduleMap.put("Tracers", new Tracers());
         //WORLD
@@ -76,6 +77,11 @@ public class ModuleManager {
         moduleMap.put("NoFall", new NoFall());
         moduleMap.put("SafeWalk", new SafeWalk());
         //moduleMap.put("StaffAlert", new StaffAlert());
+        //MINIGAMES
+        moduleMap.put("MMDetector", new MMDetector());
+        moduleMap.put("Paintball", new Paintball());
+        moduleMap.put("Queue", new Queue());
+        moduleMap.put("Thrower", new Thrower());
 
         moduleList.addAll(moduleMap.values());
 

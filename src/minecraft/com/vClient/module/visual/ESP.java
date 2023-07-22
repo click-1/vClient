@@ -4,6 +4,7 @@ import com.vClient.event.EventTarget;
 import com.vClient.event.events.Event3D;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
+import com.vClient.module.minigames.MMDetector;
 import com.vClient.util.RenderUtil;
 import com.vClient.util.TargetUtil;
 import com.vClient.vClient;
@@ -16,6 +17,7 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityVillager;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Timer;
 import org.lwjgl.input.Keyboard;
@@ -54,6 +56,9 @@ public class ESP extends Module {
             if (entity instanceof EntityLivingBase && entity != mc.thePlayer && RenderUtil.canDisplay((EntityLivingBase) entity) && mc.thePlayer.getDistanceToEntity(entity) >= 1F) {
                 final EntityLivingBase entityLiving = (EntityLivingBase) entity;
                 Color color = getColor(entityLiving);
+                MMDetector mmDetector = (MMDetector) vClient.instance.moduleManager.getModulebyName("MMDetector");
+                if (mmDetector.isToggled() && mmDetector.murderers.contains(entity.getEntityId()))
+                    color = new Color(255, 85, 85);
 
                 final RenderManager renderManager = mc.getRenderManager();
                 final Timer timer = mc.timer;

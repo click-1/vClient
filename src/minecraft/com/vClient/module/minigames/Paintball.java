@@ -1,9 +1,10 @@
-package com.vClient.module.visual;
+package com.vClient.module.minigames;
 
 import com.vClient.event.EventTarget;
 import com.vClient.event.events.Event2D;
 import com.vClient.event.events.EventChat;
 import com.vClient.event.events.EventUpdate;
+import com.vClient.event.events.EventWorld;
 import com.vClient.module.Category;
 import com.vClient.module.Module;
 import com.vClient.vClient;
@@ -22,10 +23,10 @@ public class Paintball extends Module {
     private final HashMap<String, Integer> idmap = new HashMap<>();
     private final HashMap<Integer, String> iconmap = new HashMap<>();
     private ArrayList<PotionEffect> activeks = new ArrayList();
-    private final double endurance = 2.02;
+    private final double endurance = 2.5;
 
     public Paintball() {
-        super("Paintball", Keyboard.CHAR_NONE, Category.VISUAL, "Display Paintball killstreaks/notifications.");
+        super("Paintball", Keyboard.CHAR_NONE, Category.MINIGAMES, "Display Paintball killstreaks/notifications.");
         timermap.put("Triple Shot", (int)(30 * endurance * 20));
         timermap.put("Strong Arm", (int)(30 * endurance * 20));
         timermap.put("RAMBO", (int)(30 * endurance * 20));
@@ -93,6 +94,11 @@ public class Paintball extends Module {
             p.deincrementDuration();
     }
 
+    @EventTarget
+    public void onWorld(EventWorld event) {
+        activeks = new ArrayList<>();
+    }
+    
     private void render_icon_subscript(String s, int xPos, int yPos) {
         GlStateManager.disableLighting();
         GlStateManager.disableDepth();

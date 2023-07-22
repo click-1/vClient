@@ -145,7 +145,7 @@ public class KillAura extends Module {
             return false;
         if (entity instanceof EntityVillager && !vClient.instance.moduleManager.getModulebyName("Villager").isToggled())
             return false;
-        if (checkIfSameTeam(entity) && !vClient.instance.moduleManager.getModulebyName("Teammate").isToggled())
+        if (TargetUtil.checkIfSameTeam(entity) && !vClient.instance.moduleManager.getModulebyName("Teammate").isToggled())
             return false;
         if (entity.isInvisible() && !vClient.instance.moduleManager.getModulebyName("Invisible").isToggled())
             return false;
@@ -154,17 +154,5 @@ public class KillAura extends Module {
         if (!MathUtil.isInFOV(entity, vClient.instance.settingsManager.getSettingByName("FOV").getValDouble()))
             return false;
         return true;
-    }
-
-    private boolean checkIfSameTeam(EntityLivingBase entity) {
-        if (mc.thePlayer.getTeam() != null && entity.getTeam() != null &&
-                mc.thePlayer.getTeam().isSameTeam(entity.getTeam()))
-            return true;
-        if (mc.thePlayer.getDisplayName() != null && entity.getDisplayName() != null) {
-            String targetName = entity.getDisplayName().getFormattedText().replace("§r", "");
-            String clientName = mc.thePlayer.getDisplayName().getFormattedText().replace("§r", "");
-            return targetName.startsWith("§" + clientName.charAt(1));
-        }
-        return false;
     }
 }

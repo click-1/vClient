@@ -1,4 +1,4 @@
-package com.vClient.module.exploit;
+package com.vClient.module.minigames;
 
 import com.vClient.event.EventTarget;
 import com.vClient.event.events.EventChat;
@@ -16,7 +16,7 @@ public class Queue extends Module {
     private boolean flag;
 
     public Queue() {
-        super("Queue", Keyboard.CHAR_NONE, Category.EXPLOIT, "Automatically queue into another game.");
+        super("Queue", Keyboard.CHAR_NONE, Category.MINIGAMES, "Automatically queue into another game.");
     }
 
     @Override
