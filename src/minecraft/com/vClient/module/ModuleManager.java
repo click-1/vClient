@@ -5,7 +5,6 @@ import com.vClient.module.exploit.*;
 import com.vClient.module.minigames.MMDetector;
 import com.vClient.module.minigames.Paintball;
 import com.vClient.module.minigames.Queue;
-import com.vClient.module.minigames.Thrower;
 import com.vClient.module.movement.*;
 import com.vClient.module.player.*;
 import com.vClient.module.targets.*;
@@ -81,7 +80,6 @@ public class ModuleManager {
         moduleMap.put("MMDetector", new MMDetector());
         moduleMap.put("Paintball", new Paintball());
         moduleMap.put("Queue", new Queue());
-        moduleMap.put("Thrower", new Thrower());
 
         moduleList.addAll(moduleMap.values());
 

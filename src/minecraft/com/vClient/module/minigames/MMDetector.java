@@ -20,11 +20,12 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import org.lwjgl.input.Keyboard;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class MMDetector extends Module {
-    private boolean search = false;
-    public ArrayList<Integer> murderers = new ArrayList<>();
+    private boolean search;
+    final public LinkedList<Integer> murderers = new LinkedList<>();
+    final public LinkedList<Integer> detectives = new LinkedList<>();
 
     public MMDetector() {
         super("MMDetector", Keyboard.CHAR_NONE, Category.MINIGAMES, "Detect who the murderer(s) are.");
@@ -34,6 +35,7 @@ public class MMDetector extends Module {
     public void onWorld(EventWorld event) {
         search = false;
         murderers.clear();
+        detectives.clear();
     }
 
     @EventTarget
@@ -44,11 +46,14 @@ public class MMDetector extends Module {
 
     @EventTarget
     public void on2D(Event2D event) {
-        if (!murderers.isEmpty() && !isDeadSpectator(mc.thePlayer) && mc.theWorld.getEntityByID(murderers.get(0)) != null) {
+        if (!murderers.isEmpty() && !isDeadSpectator(mc.thePlayer)) {
             ScaledResolution sr = new ScaledResolution(mc);
-            int x1 = sr.getScaledWidth() / 10;
-            int y1 = 2 * sr.getScaledHeight() / 3;
-            GuiInventory.drawEntityOnScreen(x1, y1, 20, -90, -30, (EntityLivingBase) mc.theWorld.getEntityByID(murderers.get(0)));
+            final int x1 = sr.getScaledWidth() / 10;
+            final int y1 = 2 * sr.getScaledHeight() / 3;
+            for (int i = 0; i < murderers.size(); i++) {
+                if (mc.theWorld.getEntityByID(murderers.get(i)) != null)
+                    GuiInventory.drawEntityOnScreen(x1 + 30*i, y1, 20, -90, -30, (EntityLivingBase) mc.theWorld.getEntityByID(murderers.get(i)));
+            }
         }
     }
 
@@ -57,13 +62,16 @@ public class MMDetector extends Module {
         if (!search) return;
         for (Entity entity : mc.theWorld.loadedEntityList) {
             if (entity instanceof EntityLivingBase && TargetUtil.isPlayer(entity) && isPlayerInTabList(((EntityPlayer) entity).getGameProfile()) && !((EntityPlayer) entity).isPlayerSleeping() && !isDeadSpectator((EntityPlayer) entity)) {
-                EntityPlayer player = (EntityPlayer) entity;
+                final EntityPlayer player = (EntityPlayer) entity;
                 if (player.getCurrentEquippedItem() != null) {
-                    if (player.getCurrentEquippedItem().getDisplayName().contains("Knife")) {
-                        vClient.addChatMessage("\247c" +player.getName() + "\2477 is the murderer.");
-                        murderers.add(player.getEntityId());
-                        search = false;
-                        return;
+                    if (player.getCurrentEquippedItem().getDisplayName().contains("Knife") && !murderers.contains(player.getEntityId())) {
+                        murderers.addFirst(player.getEntityId());
+                        String name = player.getName();
+                        vClient.addChatMessage("\247c" + name + "\2477 is a murderer.");
+                    } else if (player.getCurrentEquippedItem().getDisplayName().contains("Bow") && !detectives.contains(player.getEntityId())) {
+                        detectives.addFirst(player.getEntityId());
+                        String name = player.getName();
+                        vClient.addChatMessage("\247b" + name + "\2477 is a detective.");
                     }
                 }
             }
@@ -90,7 +98,9 @@ public class MMDetector extends Module {
 
     @Override
     public void onDisable() {
+        search = false;
         murderers.clear();
+        detectives.clear();
         super.onDisable();
     }
 }

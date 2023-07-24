@@ -55,10 +55,14 @@ public class ESP extends Module {
         for (final Entity entity : mc.theWorld.loadedEntityList) {
             if (entity instanceof EntityLivingBase && entity != mc.thePlayer && RenderUtil.canDisplay((EntityLivingBase) entity) && mc.thePlayer.getDistanceToEntity(entity) >= 1F) {
                 final EntityLivingBase entityLiving = (EntityLivingBase) entity;
-                Color color = getColor(entityLiving);
+                Color color;
                 MMDetector mmDetector = (MMDetector) vClient.instance.moduleManager.getModulebyName("MMDetector");
                 if (mmDetector.isToggled() && mmDetector.murderers.contains(entity.getEntityId()))
                     color = new Color(255, 85, 85);
+                else if (mmDetector.isToggled() && mmDetector.detectives.contains(entity.getEntityId()))
+                    color = new Color(85, 255, 255);
+                else
+                    color = getColor(entityLiving);
 
                 final RenderManager renderManager = mc.getRenderManager();
                 final Timer timer = mc.timer;

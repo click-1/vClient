@@ -72,5 +72,6 @@ public class vClient {
         moduleManager.getModulebyName("TargetHUD").silentToggle();
         //TARGETS
         moduleManager.getModulebyName("Player").silentToggle();
+        moduleManager.getModulebyName("Teammate").silentToggle();
     }
 }
