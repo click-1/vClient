@@ -1,5 +1,6 @@
 package com.vClient.util;
 
+import com.vClient.module.combat.AntiBot;
 import com.vClient.vClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
@@ -101,9 +102,12 @@ public class RenderUtil {
     }
 
     public static boolean canDisplay(EntityLivingBase entity) {
+        AntiBot antiBot = (AntiBot) vClient.instance.moduleManager.getModulebyName("AntiBot");
         if (entity == null)
             return false;
         if (TargetUtil.isPlayer(entity) && !vClient.instance.moduleManager.getModulebyName("Player").isToggled())
+            return false;
+        if (antiBot.isToggled() && antiBot.isBot(entity))
             return false;
         if (TargetUtil.isAnimal(entity) && !vClient.instance.moduleManager.getModulebyName("Animal").isToggled())
             return false;

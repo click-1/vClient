@@ -135,9 +135,12 @@ public class KillAura extends Module {
 
     private boolean canAttack(EntityLivingBase entity) {
         boolean conditions = entity != null && entity.ticksExisted > vClient.instance.settingsManager.getSettingByName("Existed").getValDouble() && mc.thePlayer.getDistanceToEntity(entity) <= range;
+        AntiBot antiBot = (AntiBot) vClient.instance.moduleManager.getModulebyName("AntiBot");
         if (!conditions)
             return false;
         if (TargetUtil.isPlayer(entity) && !vClient.instance.moduleManager.getModulebyName("Player").isToggled())
+            return false;
+        if (antiBot.isToggled() && antiBot.isBot(entity))
             return false;
         if (TargetUtil.isAnimal(entity) && !vClient.instance.moduleManager.getModulebyName("Animal").isToggled())
             return false;

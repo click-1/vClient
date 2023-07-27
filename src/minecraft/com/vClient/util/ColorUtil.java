@@ -2,10 +2,19 @@ package com.vClient.util;
 
 import java.awt.Color;
 import com.vClient.vClient;
+import kotlin.jvm.JvmStatic;
+
+import java.util.regex.Pattern;
 
 public class ColorUtil {
 	public static Color baseColor = getClickGUIColor();
 	public static int baseColorInt = baseColor.getRGB();
+	private static Pattern COLOR_PATTERN = Pattern.compile("(?i)§[0-9A-FK-OR]");
+
+	@JvmStatic
+	public static String stripColor(String input) {
+		return COLOR_PATTERN.matcher(input).replaceAll("");
+	}
 
 	public static Color getClickGUIColor(){
 		return new Color((int)vClient.instance.settingsManager.getSettingByName("Red").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Green").getValDouble(), (int)vClient.instance.settingsManager.getSettingByName("Blue").getValDouble());
