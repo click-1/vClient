@@ -67,6 +67,7 @@ public class ModuleManager {
         moduleMap.put("ClickGUI", new ClickGUI());
         moduleMap.put("Effects", new Effects());
         moduleMap.put("ESP", new ESP());
+        moduleMap.put("ItemESP", new ItemESP());
         moduleMap.put("StorageESP", new StorageESP());
         moduleMap.put("Tracers", new Tracers());
         //WORLD
