@@ -16,6 +16,9 @@ import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import org.lwjgl.input.Keyboard;
@@ -64,11 +67,11 @@ public class MMDetector extends Module {
             if (entity instanceof EntityLivingBase && TargetUtil.isPlayer(entity) && isPlayerInTabList(((EntityPlayer) entity).getGameProfile()) && !((EntityPlayer) entity).isPlayerSleeping() && !isDeadSpectator((EntityPlayer) entity)) {
                 final EntityPlayer player = (EntityPlayer) entity;
                 if (player.getCurrentEquippedItem() != null) {
-                    if (player.getCurrentEquippedItem().getDisplayName().contains("Knife") && !murderers.contains(player.getEntityId())) {
+                    if (isMurderWeapon(player.getCurrentEquippedItem()) && !murderers.contains(player.getEntityId())) {
                         murderers.addFirst(player.getEntityId());
                         String name = player.getName();
                         vClient.addChatMessage("\247c" + name + "\2477 is a murderer.");
-                    } else if (player.getCurrentEquippedItem().getDisplayName().contains("Bow") && !detectives.contains(player.getEntityId())) {
+                    } else if (isDetectiveWeapon(player.getCurrentEquippedItem()) && !detectives.contains(player.getEntityId())) {
                         detectives.addFirst(player.getEntityId());
                         String name = player.getName();
                         vClient.addChatMessage("\247b" + name + "\2477 is a detective.");
@@ -76,6 +79,24 @@ public class MMDetector extends Module {
                 }
             }
         }
+    }
+
+    private boolean isMurderWeapon(ItemStack itemStack) {
+        Item item = itemStack.getItem();
+        return itemStack.getDisplayName().contains("Knife") || item == Items.iron_sword || item == Items.stone_sword
+                || item == Items.iron_shovel || item == Items.stick || item == Items.wooden_axe || item == Items.wooden_sword
+                || item == Items.stone_shovel || item == Items.blaze_rod || item == Items.diamond_shovel || item == Items.feather
+                || item == Items.pumpkin_pie || item == Items.golden_pickaxe || item == Items.carrot_on_a_stick || item == Items.bone
+                || item == Items.carrot || item == Items.golden_carrot || item == Items.cookie || item == Items.diamond_axe
+                || item == Items.golden_sword || item == Items.diamond_sword || item == Items.diamond_hoe || item == Items.shears
+                || item == Items.fish || item == Items.name_tag || item == Items.apple || item == Items.boat || item == Items.dye
+                || item == Items.spawn_egg || item == Items.prismarine_shard || item == Items.cooked_beef || item == Items.record_blocks
+                || item == Items.quartz || item == Items.netherbrick || item == Items.cooked_chicken || item == Items.golden_hoe
+                || item == Items.speckled_melon || item == Items.book;
+    }
+
+    private boolean isDetectiveWeapon(ItemStack itemStack) {
+        return itemStack.getDisplayName().contains("Bow") || itemStack.getItem() == Items.bow;
     }
 
     private static boolean isPlayerInTabList(GameProfile profile) {
