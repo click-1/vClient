@@ -23,10 +23,20 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import org.lwjgl.input.Keyboard;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 public class MMDetector extends Module {
     private boolean search;
+    final private Set<Item> weapons = new HashSet<>(Arrays.asList(Items.iron_sword, Items.stone_sword, Items.iron_shovel,
+            Items.stick, Items.wooden_axe, Items.wooden_sword, Items.stone_shovel, Items.blaze_rod, Items.diamond_shovel,
+            Items.feather, Items.pumpkin_pie, Items.golden_pickaxe, Items.carrot_on_a_stick, Items.bone, Items.carrot,
+            Items.golden_carrot, Items.cookie, Items.diamond_axe, Items.golden_sword, Items.diamond_sword, Items.diamond_hoe,
+            Items.shears, Items.fish, Items.name_tag, Items.apple, Items.boat, Items.dye, Items.spawn_egg, Items.prismarine_shard,
+            Items.cooked_beef, Items.record_blocks, Items.quartz, Items.netherbrick, Items.cooked_chicken, Items.golden_hoe,
+            Items.speckled_melon, Items.book));
     final public LinkedList<Integer> murderers = new LinkedList<>();
     final public LinkedList<Integer> detectives = new LinkedList<>();
 
@@ -82,17 +92,7 @@ public class MMDetector extends Module {
     }
 
     private boolean isMurderWeapon(ItemStack itemStack) {
-        Item item = itemStack.getItem();
-        return itemStack.getDisplayName().contains("Knife") || item == Items.iron_sword || item == Items.stone_sword
-                || item == Items.iron_shovel || item == Items.stick || item == Items.wooden_axe || item == Items.wooden_sword
-                || item == Items.stone_shovel || item == Items.blaze_rod || item == Items.diamond_shovel || item == Items.feather
-                || item == Items.pumpkin_pie || item == Items.golden_pickaxe || item == Items.carrot_on_a_stick || item == Items.bone
-                || item == Items.carrot || item == Items.golden_carrot || item == Items.cookie || item == Items.diamond_axe
-                || item == Items.golden_sword || item == Items.diamond_sword || item == Items.diamond_hoe || item == Items.shears
-                || item == Items.fish || item == Items.name_tag || item == Items.apple || item == Items.boat || item == Items.dye
-                || item == Items.spawn_egg || item == Items.prismarine_shard || item == Items.cooked_beef || item == Items.record_blocks
-                || item == Items.quartz || item == Items.netherbrick || item == Items.cooked_chicken || item == Items.golden_hoe
-                || item == Items.speckled_melon || item == Items.book;
+        return itemStack.getDisplayName().contains("Knife") || weapons.contains(itemStack.getItem());
     }
 
     private boolean isDetectiveWeapon(ItemStack itemStack) {

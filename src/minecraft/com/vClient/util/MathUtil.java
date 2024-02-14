@@ -22,4 +22,8 @@ public class MathUtil {
         double angleDiff = MathUtil.getAngleDifference(mc.thePlayer.rotationYaw, PlayerUtil.getRotations(entity)[0]);
         return (angleDiff > 0 && angleDiff < angle) || (-angle < angleDiff && angleDiff < 0);
     }
+
+    public static int randomClickDelay(int mincps, int maxcps) {
+        return (int) Math.round((Math.random() * (1000 / mincps - 1000 / maxcps) + 1000 / maxcps));
+    }
 }

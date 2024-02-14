@@ -26,6 +26,12 @@ public class ColorUtil {
 		Color adjusted = new Color(color.getRed(), color.getGreen(), color.getBlue(), alpha);
 		return adjusted.getRGB();
 	}
+	public static Color getRainbowColor(float seconds, int offset, float saturation, float brightness, int alpha) {
+		float hue = (System.currentTimeMillis() + (int)(seconds*offset)) % (int)(seconds*360) / (seconds*360);
+		Color color = Color.getHSBColor(hue, saturation, brightness);
+		Color adjusted = new Color(color.getRed(), color.getGreen(), color.getBlue(), alpha);
+		return adjusted;
+	}
 
 	public static int getBlueandPinkRainbow(float seconds, int offset, float brightness, int alpha) {
 		float hue = (((int)(Math.abs((seconds*445)-((System.currentTimeMillis() + offset) % (int)(seconds*890)))) / (int)(seconds)) + 486) / 1000f;

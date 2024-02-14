@@ -23,6 +23,7 @@ public class Paintball extends Module {
     private final HashMap<String, Integer> idmap = new HashMap<>();
     private final HashMap<Integer, String> iconmap = new HashMap<>();
     private ArrayList<PotionEffect> activeks = new ArrayList();
+    public HashMap<Integer, PotionEffect> ffs = new HashMap<>();
     private final double endurance = 2.5;
 
     public Paintball() {
@@ -51,27 +52,32 @@ public class Paintball extends Module {
 
     @EventTarget
     public void onChat(EventChat event) {
-        if (event.getIncomingChat().contains("click_1 activated")) {
-            String ksname = event.getIncomingChat().substring(18);
+        String received = event.getIncomingChat();
+        if (received.contains("click_1 activated")) {
+            String ksname = received.substring(18);
             PotionEffect ks = new PotionEffect(idmap.get(ksname), timermap.get(ksname));
             activeks.add(ks);
-        } else if (event.getIncomingChat().contains("You can now use Nuke")) {
+        } else if (received.contains("You can now use Nuke")) {
             vClient.instance.notifications.addNotif(null, "Nuke");
-        } else if (event.getIncomingChat().contains("You can now use Force Field")) {
+        } else if (received.contains("You can now use Force Field")) {
             vClient.instance.notifications.addNotif(null, "Force Field");
-        } else if (event.getIncomingChat().contains("You can now use Flashbang")) {
+        } else if (received.contains("You can now use Flashbang")) {
             vClient.instance.notifications.addNotif(null, "Flashbang");
-        } else if (event.getIncomingChat().contains("You can now use Lightning")) {
+        } else if (received.contains("You can now use Lightning")) {
             vClient.instance.notifications.addNotif(null, "Lightning");
-        } else if (event.getIncomingChat().contains("You can now use Bomber Man")) {
+        } else if (received.contains("You can now use Bomber Man")) {
             vClient.instance.notifications.addNotif(null, "Bomber Man");
+        }
+
+        if (received.contains("activated Force Field")) {
+            String ffname = received.substring(0, received.indexOf(" "));
+            if (!ffname.equalsIgnoreCase(mc.thePlayer.getName()))
+                ffs.put(mc.theWorld.getPlayerEntityByName(ffname).getEntityId(), new PotionEffect(94, 26 * 20));
         }
     }
 
     @EventTarget
     public void on2D(Event2D event) {
-        if (activeks.isEmpty())
-            return;
         for (int i = 0; i < activeks.size(); i++) {
             PotionEffect p = activeks.get(i);
             ItemStack icon = new ItemStack(Item.getByNameOrId(iconmap.get(p.getPotionID())));
@@ -84,19 +90,22 @@ public class Paintball extends Module {
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        if (activeks.isEmpty())
-            return;
         for (int i = 0; i < activeks.size(); i++) {
+            activeks.get(i).deincrementDuration();
             if (activeks.get(i).getDuration() < 0)
                 activeks.remove(i);
         }
-        for (PotionEffect p : activeks)
-            p.deincrementDuration();
+        for (var entry : ffs.entrySet()) {
+            entry.getValue().deincrementDuration();
+            if (entry.getValue().getDuration() < 0)
+                ffs.remove(entry.getKey());
+        }
     }
 
     @EventTarget
     public void onWorld(EventWorld event) {
         activeks = new ArrayList<>();
+        ffs = new HashMap<>();
     }
     
     private void render_icon_subscript(String s, int xPos, int yPos) {

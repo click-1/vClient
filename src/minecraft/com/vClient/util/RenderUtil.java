@@ -2,6 +2,7 @@ package com.vClient.util;
 
 import com.vClient.module.combat.AntiBot;
 import com.vClient.vClient;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
@@ -14,7 +15,9 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityVillager;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Timer;
 
@@ -79,10 +82,6 @@ public class RenderUtil {
             GlStateManager.color(color.getRed() / 255F, color.getGreen() / 255F, color.getBlue() / 255F, 50 / 255F);
             drawFilledBox(axisAlignedBB);
         }
-
-        GlStateManager.resetColor();
-        glDepthMask(true);
-        glCapMap.forEach(RenderUtil::setGlState);
     }
 
     public static void drawFilledBox(final AxisAlignedBB axisAlignedBB) {
@@ -144,6 +143,10 @@ public class RenderUtil {
         worldRenderer.pos(axisAlignedBB.maxX, axisAlignedBB.maxY, axisAlignedBB.maxZ).endVertex();
         worldRenderer.pos(axisAlignedBB.maxX, axisAlignedBB.minY, axisAlignedBB.maxZ).endVertex();
         tessellator.draw();
+
+        GlStateManager.resetColor();
+        glDepthMask(true);
+        glCapMap.forEach(RenderUtil::setGlState);
     }
 
     public static void drawSelectionBoundingBox(AxisAlignedBB boundingBox) {
@@ -177,6 +180,35 @@ public class RenderUtil {
         worldrenderer.pos(boundingBox.maxX, boundingBox.minY, boundingBox.minZ).endVertex();
 
         tessellator.draw();
+
+        GlStateManager.resetColor();
+        glDepthMask(true);
+        glCapMap.forEach(RenderUtil::setGlState);
+    }
+
+    public static void drawBlockBox(final BlockPos blockPos) {
+        final RenderManager renderManager = mc.getRenderManager();
+        final Timer timer = mc.timer;
+
+        final double x = blockPos.getX() - renderManager.renderPosX;
+        final double y = blockPos.getY() - renderManager.renderPosY;
+        final double z = blockPos.getZ() - renderManager.renderPosZ;
+
+        AxisAlignedBB axisAlignedBB = new AxisAlignedBB(x, y, z, x + 1.0, y + 1.0, z + 1.0);
+        final Block block = mc.theWorld.getBlockState(blockPos).getBlock();
+
+        if (block != null) {
+            final EntityPlayer player = mc.thePlayer;
+
+            final double posX = player.lastTickPosX + (player.posX - player.lastTickPosX) * (double) timer.renderPartialTicks;
+            final double posY = player.lastTickPosY + (player.posY - player.lastTickPosY) * (double) timer.renderPartialTicks;
+            final double posZ = player.lastTickPosZ + (player.posZ - player.lastTickPosZ) * (double) timer.renderPartialTicks;
+            axisAlignedBB = block.getSelectedBoundingBox(mc.theWorld, blockPos)
+                    .expand(0.0020000000949949026D, 0.0020000000949949026D, 0.0020000000949949026D)
+                    .offset(-posX, -posY, -posZ);
+        }
+
+        drawFilledBox(axisAlignedBB);
     }
 
     public static void setGlCap(final int cap, final boolean state) {
