@@ -419,7 +419,7 @@ public class EntityPlayerMP extends EntityPlayer implements ICrafting
             if (this.experienceTotal != this.lastExperience)
             {
                 this.lastExperience = this.experienceTotal;
-                this.playerNetServerHandler.sendPacket(new S1FPacketSetExperience(this.experience, this.experienceTotal, this.experienceLevel));
+                this.playerNetServerHandler.sendPacket(new S1FPacketSetExperience(this.getEntityId(), this.experience, this.experienceTotal, this.experienceLevel));
             }
 
             if (this.ticksExisted % 20 * 5 == 0 && !this.getStatFile().hasAchievementUnlocked(AchievementList.exploreAllBiomes))

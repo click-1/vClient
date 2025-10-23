@@ -30,10 +30,10 @@ public class KillAura extends Module {
         super("KillAura", Keyboard.CHAR_NONE, Category.COMBAT, "Attack entities.");
         setDisplayNotif(true);
     }
-
     @Override
     public void setup() {
         vClient.instance.settingsManager.rSetting(new Setting("Crack Size", this, 0, 0, 15, true));
+
         vClient.instance.settingsManager.rSetting(new Setting("Existed", this, 30, 0, 500, true));
         vClient.instance.settingsManager.rSetting(new Setting("FOV", this, 360, 0, 360, true));
         vClient.instance.settingsManager.rSetting(new Setting("Range", this, 4.25, 3.0, 6.0, false));
@@ -99,7 +99,7 @@ public class KillAura extends Module {
 
     @EventTarget
     public void onPost(EventPostMotionUpdate event) {
-        if (targets == null || targets.size() == 0 || no_longer_attacking()) {
+        if (targets == null || targets.isEmpty() || no_longer_attacking()) {
             if (blockingStatus)
                 stopBlocking();
             active_target = null;

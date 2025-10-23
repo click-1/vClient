@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
+import com.vClient.event.events.EventAttack;
 import com.vClient.vClient;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
@@ -1357,6 +1358,9 @@ public abstract class EntityPlayer extends EntityLivingBase
 
                     if (flag2)
                     {
+                        EventAttack eventAttack = new EventAttack(targetEntity);
+                        eventAttack.call();
+
                         if (i > 0)
                         {
                             targetEntity.addVelocity((double)(-MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F) * (float)i * 0.5F), 0.1D, (double)(MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F) * (float)i * 0.5F));

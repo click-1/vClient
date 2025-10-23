@@ -3,6 +3,7 @@ package net.minecraft.network;
 import com.google.common.collect.Queues;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.vClient.event.events.EventReceivePacket;
+import com.vClient.event.events.EventSendPacket;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelException;
@@ -181,6 +182,8 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet>
     {
         if (this.isChannelOpen())
         {
+            EventSendPacket event = new EventSendPacket(packetIn);
+            event.call();
             this.flushOutboundQueue();
             this.dispatchPacket(packetIn, (GenericFutureListener <? extends Future <? super Void >> [])null);
         }

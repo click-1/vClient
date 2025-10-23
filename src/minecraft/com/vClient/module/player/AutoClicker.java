@@ -29,9 +29,10 @@ public class AutoClicker extends Module {
         ArrayList<String> options = new ArrayList<>();
         options.add("Vanilla");
         options.add("Watchdog");
-        vClient.instance.settingsManager.rSetting(new Setting("Click Mode", this, "Vanilla", options));
-        vClient.instance.settingsManager.rSetting(new Setting("Min CPS", this, 5, 1, 20, true));
-        vClient.instance.settingsManager.rSetting(new Setting("Max CPS", this, 8, 1, 20, true));
+        updateDisplay("Watchdog");
+        vClient.instance.settingsManager.rSetting(new Setting("Click Mode", this, "Watchdog", options));
+        vClient.instance.settingsManager.rSetting(new Setting("Min CPS", this, 8, 1, 20, true));
+        vClient.instance.settingsManager.rSetting(new Setting("Max CPS", this, 10, 1, 20, true));
     }
 
     private boolean shouldAutoClick() {

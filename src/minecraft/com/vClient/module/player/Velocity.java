@@ -29,8 +29,8 @@ public class Velocity extends Module {
 
     @Override
     public void setup() {
-        vClient.instance.settingsManager.rSetting(new Setting("Horizontal", this, 0, 0, 1, false));
-        vClient.instance.settingsManager.rSetting(new Setting("Vertical", this, 0, 0, 1, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Horizontal", this, 0.7, 0, 1, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Vertical", this, 1, 0, 1, false));
         vClient.instance.settingsManager.rSetting(new Setting("Frequency", this, 1, 0, 1, false));
     }
 
@@ -38,7 +38,7 @@ public class Velocity extends Module {
     public void onEventReceivePacket(EventReceivePacket event) {
         Packet packet = event.getPacket();
         if (packet instanceof S12PacketEntityVelocity) {
-            if (mc.theWorld.getEntityByID(((S12PacketEntityVelocity) packet).getEntityID()) != mc.thePlayer || Math.random() > frequency)
+            if (((S12PacketEntityVelocity) packet).getEntityID() != mc.thePlayer.getEntityId() && Math.random() < frequency && !mc.thePlayer.onGround)
                 return;
             S12PacketEntityVelocity pack = (S12PacketEntityVelocity) packet;
             if (horizontal == 0 && vertical == 0)
@@ -46,10 +46,8 @@ public class Velocity extends Module {
             else {
                 pack.motionX = (int) (pack.getMotionX() * horizontal);
                 pack.motionZ = (int) (pack.getMotionZ() * horizontal);
-                pack.motionY = (int) (pack.getMotionX() * vertical);
+                pack.motionY = (int) (pack.getMotionY() * vertical);
             }
         }
-        if (event.getPacket() instanceof S27PacketExplosion)
-            event.setCancelled(true);
     }
 }

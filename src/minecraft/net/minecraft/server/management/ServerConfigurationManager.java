@@ -507,7 +507,7 @@ public abstract class ServerConfigurationManager
         BlockPos blockpos2 = worldserver.getSpawnPoint();
         entityplayermp.playerNetServerHandler.setPlayerLocation(entityplayermp.posX, entityplayermp.posY, entityplayermp.posZ, entityplayermp.rotationYaw, entityplayermp.rotationPitch);
         entityplayermp.playerNetServerHandler.sendPacket(new S05PacketSpawnPosition(blockpos2));
-        entityplayermp.playerNetServerHandler.sendPacket(new S1FPacketSetExperience(entityplayermp.experience, entityplayermp.experienceTotal, entityplayermp.experienceLevel));
+        entityplayermp.playerNetServerHandler.sendPacket(new S1FPacketSetExperience(entityplayermp.getEntityId(), entityplayermp.experience, entityplayermp.experienceTotal, entityplayermp.experienceLevel));
         this.updateTimeAndWeatherForPlayer(entityplayermp, worldserver);
         worldserver.getPlayerManager().addPlayer(entityplayermp);
         worldserver.spawnEntityInWorld(entityplayermp);

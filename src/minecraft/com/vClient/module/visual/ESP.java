@@ -15,10 +15,13 @@ import de.Hero.settings.Setting;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.block.BlockEnderChest;
+import net.minecraft.block.BlockOre;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
@@ -30,14 +33,18 @@ import java.util.List;
 import static com.vClient.util.RenderUtil.setGlCap;
 import static org.lwjgl.opengl.GL11.*;
 
+
 public class ESP extends Module {
-    private final Color itemsColor = new Color(255, 255, 85);
+    private final Color goldColor = new Color(255, 255, 85);
+    private final Color diamondColor = new Color(85, 255, 255);
+    private final Color potionColor = new Color(31, 31, 161);
     private final ClockUtil clock = new ClockUtil();
-    private final List<BlockPos> posList = new ArrayList<>();
+    private final List<BlockPos> chestPosList = new ArrayList<>();
+    private final List<BlockPos> diamondPosList = new ArrayList<>();
     private Thread thread;
 
     public ESP() {
-        super("ESP", Keyboard.CHAR_NONE, Category.VISUAL, "Extrasensory perception of entities.");
+        super("ESP", Keyboard.CHAR_NONE, Category.VISUAL, "Extrasensory perception of entities & dropped items.");
     }
 
     @Override
@@ -47,8 +54,9 @@ public class ESP extends Module {
         options.add("Outline");
         updateDisplay("Box");
         vClient.instance.settingsManager.rSetting(new Setting("Entities", this, true));
-        vClient.instance.settingsManager.rSetting(new Setting("Items", this, true));
+        vClient.instance.settingsManager.rSetting(new Setting("MW Drops", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("Chests", this, false));
+        vClient.instance.settingsManager.rSetting(new Setting("Diamond", this, true));
         vClient.instance.settingsManager.rSetting(new Setting("ESP Mode", this, "Box", options));
         vClient.instance.settingsManager.rSetting(new Setting("Search radius", this, 64, 5, 128, true));
     }
@@ -63,6 +71,8 @@ public class ESP extends Module {
             for (final Entity entity : mc.theWorld.loadedEntityList) {
                 if (entity != mc.thePlayer && entity instanceof EntityLivingBase && RenderUtil.canDisplay((EntityLivingBase) entity)) {
                     final EntityLivingBase entityLiving = (EntityLivingBase) entity;
+                    if (mc.playerController.isSpectator() && RenderUtil.cameraPosDistance(entityLiving) < 6.0)
+                        continue;
                     Color color;
                     MMDetector mmDetector = (MMDetector) vClient.instance.moduleManager.getModulebyName("MMDetector");
                     Paintball paintball = (Paintball) vClient.instance.moduleManager.getModulebyName("Paintball");
@@ -80,21 +90,25 @@ public class ESP extends Module {
             }
         }
 
-        if (vClient.instance.settingsManager.getSettingByName("Items").getValBoolean()) {
+        if (vClient.instance.settingsManager.getSettingByName("MW Drops").getValBoolean()) {
             for (Entity entity : mc.theWorld.loadedEntityList) {
                 if (entity instanceof EntityItem) {
                     EntityItem entityItem = (EntityItem) entity;
                     Item item = entityItem.getEntityItem() != null ? entityItem.getEntityItem().getItem() : null;
-                    if (item == Items.gold_ingot)
-                        RenderUtil.drawEntityBox(entity, itemsColor, false);
+                    if (item == Items.gold_ingot || item == Items.golden_apple)
+                        RenderUtil.drawEntityBox(entity, goldColor, false);
+                    if (item == Items.diamond || item == Items.diamond_sword)
+                        RenderUtil.drawEntityBox(entity, diamondColor, false);
+                    if (item == Items.potionitem)
+                        RenderUtil.drawEntityBox(entity, potionColor, false);
                 }
             }
         }
 
         if (vClient.instance.settingsManager.getSettingByName("Chests").getValBoolean()) {
-            synchronized (posList) {
+            synchronized (chestPosList) {
                 final Color color = new Color(122, 255, 127);
-                for (final BlockPos pos : posList) {
+                for (final BlockPos pos : chestPosList) {
                     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
                     setGlCap(GL_BLEND, true);
                     setGlCap(GL_TEXTURE_2D, false);
@@ -106,18 +120,34 @@ public class ESP extends Module {
                 }
             }
         }
+
+        if (vClient.instance.settingsManager.getSettingByName("Diamond").getValBoolean()) {
+            synchronized (diamondPosList) {
+                for (final BlockPos pos : diamondPosList) {
+                    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+                    setGlCap(GL_BLEND, true);
+                    setGlCap(GL_TEXTURE_2D, false);
+                    setGlCap(GL_DEPTH_TEST, false);
+                    glDepthMask(false);
+                    GlStateManager.color(diamondColor.getRed() / 255F, diamondColor.getGreen() / 255F, diamondColor.getBlue() / 255F, 100 / 255F);
+
+                    RenderUtil.drawBlockBox(pos);
+                }
+            }
+        }
     }
 
     @EventTarget
     public void onUpdate(EventUpdate event) {
-        if (!vClient.instance.settingsManager.getSettingByName("Chests").getValBoolean())
+        if (!vClient.instance.settingsManager.getSettingByName("Chests").getValBoolean() && !vClient.instance.settingsManager.getSettingByName("Diamond").getValBoolean())
             return;
 
         clock.updateTime();
         if (clock.elapsedTime() > 2000 && (thread == null || !thread.isAlive())) {
             int radius = (int) vClient.instance.settingsManager.getSettingByName("Search radius").getValDouble();
             thread = new Thread(() -> {
-                final List<BlockPos> blockList = new ArrayList<>();
+                final List<BlockPos> chestList = new ArrayList<>();
+                final List<BlockPos> diaList = new ArrayList<>();
 
                 for(int x = -radius; x < radius; x++) {
                     for(int y = radius; y > -radius; y--) {
@@ -129,16 +159,23 @@ public class ESP extends Module {
                             final BlockPos blockPos = new BlockPos(xPos, yPos, zPos);
                             final Block block = mc.theWorld.getBlockState(blockPos).getBlock();
                             if (block instanceof BlockChest || block instanceof BlockEnderChest) {
-                                blockList.add(blockPos);
+                                chestList.add(blockPos);
+                            }
+                            if (block == Blocks.diamond_ore) {
+                                diaList.add(blockPos);
                             }
                         }
                     }
                 }
                 clock.resetTime();
 
-                synchronized(posList) {
-                    posList.clear();
-                    posList.addAll(blockList);
+                synchronized(chestPosList) {
+                    chestPosList.clear();
+                    chestPosList.addAll(chestList);
+                }
+                synchronized(diamondPosList) {
+                    diamondPosList.clear();
+                    diamondPosList.addAll(diaList);
                 }
             });
             thread.start();

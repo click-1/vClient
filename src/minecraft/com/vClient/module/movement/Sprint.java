@@ -9,31 +9,24 @@ import org.lwjgl.input.Keyboard;
 
 public class Sprint extends Module {
     private boolean sprinting = true;
-    private int ticksleft = 590;
     private final int key = mc.gameSettings.keyBindSprint.getKeyCode();
 
     public Sprint() {
-        super("Sprint", Keyboard.CHAR_NONE, Category.MOVEMENT, "Keepsprint.");
+        super("Sprint", Keyboard.CHAR_NONE, Category.MOVEMENT, "Holds the sprint key.");
     }
 
     @EventTarget
     public void onTick(EventTick event) {
-        ticksleft--;
         sprinting = !sprinting;
         if (!sprinting)
             KeyBinding.setKeyBindState(key, Keyboard.isKeyDown(key));
         else
             KeyBinding.setKeyBindState(key, true);
-        if (ticksleft <= 0) {
-            KeyBinding.setKeyBindState(key, false);
-            mc.thePlayer.setSprinting(false);
-            ticksleft = 595;
-        }
     }
 
     @Override
     public void onDisable() {
         super.onDisable();
-        mc.gameSettings.keyBindSprint.pressed = false;
+        KeyBinding.setKeyBindState(key, false);
     }
 }

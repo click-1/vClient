@@ -62,15 +62,10 @@ public class vClient {
     }
 
     private void prestartModules() {
-        moduleManager.getModulebyName("AntiBot").silentToggle();
-        moduleManager.getModulebyName("AutoGG").silentToggle();
         moduleManager.getModulebyName("Camera").silentToggle();
-        moduleManager.getModulebyName("Disabler").silentToggle();
         moduleManager.getModulebyName("Effects").silentToggle();
-        moduleManager.getModulebyName("KeepSprint").silentToggle();
         moduleManager.getModulebyName("Rotations").silentToggle();
         moduleManager.getModulebyName("Sprint").silentToggle();
-        moduleManager.getModulebyName("TargetHUD").silentToggle();
         //TARGETS
         moduleManager.getModulebyName("Player").silentToggle();
         moduleManager.getModulebyName("Teammate").silentToggle();

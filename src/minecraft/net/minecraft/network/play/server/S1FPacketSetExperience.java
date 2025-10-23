@@ -7,6 +7,7 @@ import net.minecraft.network.play.INetHandlerPlayClient;
 
 public class S1FPacketSetExperience implements Packet<INetHandlerPlayClient>
 {
+    private int playerID;
     private float field_149401_a;
     private int totalExperience;
     private int level;
@@ -15,8 +16,9 @@ public class S1FPacketSetExperience implements Packet<INetHandlerPlayClient>
     {
     }
 
-    public S1FPacketSetExperience(float p_i45222_1_, int totalExperienceIn, int levelIn)
+    public S1FPacketSetExperience(int playerID, float p_i45222_1_, int totalExperienceIn, int levelIn)
     {
+        this.playerID = playerID;
         this.field_149401_a = p_i45222_1_;
         this.totalExperience = totalExperienceIn;
         this.level = levelIn;
@@ -63,5 +65,9 @@ public class S1FPacketSetExperience implements Packet<INetHandlerPlayClient>
     public int getLevel()
     {
         return this.level;
+    }
+
+    public int getPlayerID() {
+        return this.playerID;
     }
 }

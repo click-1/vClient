@@ -16,10 +16,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Timer;
+import net.minecraft.util.*;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -311,5 +308,12 @@ public class RenderUtil {
         if (TargetUtil.checkIfSameTeam(entity) && !vClient.instance.moduleManager.getModulebyName("Teammate").isToggled())
             return false;
         return true;
+    }
+
+    public static double cameraPosDistance(EntityLivingBase entity) {
+        float curPartialTicks = mc.timer.renderPartialTicks;
+        Vec3 playerCamPos = mc.thePlayer.getPositionEyes(curPartialTicks);
+        Vec3 entityCamPos = entity.getPositionEyes(curPartialTicks);
+        return playerCamPos.distanceTo(entityCamPos);
     }
 }
